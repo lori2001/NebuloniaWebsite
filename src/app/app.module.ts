@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {AngularFittextModule} from 'angular-fittext';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { AppComponent } from './app.component';
 
@@ -8,7 +10,9 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AngularFittextModule,
+    AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

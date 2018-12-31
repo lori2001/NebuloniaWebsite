@@ -1,0 +1,187 @@
+ /*font-family: octarineBold, Arial, sans-serif;*/
+
+ 
+/* nav-wrap */
+ #nav-wrap ul, #nav-wrap li, #nav-wrap a {
+   margin: 0;
+   padding: 0;
+   border: none;
+   outline: none;
+}
+#nav-wrap {
+  font: 12px octarineBold, 'opensans-bold', sans-serif;
+  background-color: #333 ;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  margin: 0 auto;
+  z-index: 100;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.opaque { background-color: #333; }
+ul#nav {
+  min-height: 48px;
+  width: auto;
+
+  /* center align the menu */
+  text-align: center;
+}
+ul#nav li {
+  position: relative;
+  list-style: none;
+  height: 48px;
+  display: inline-block;
+}
+
+/* Links */
+ul#nav li a {
+/* 8px padding top + 8px padding bottom + 32px line-height = 48px */
+  display: inline-block;
+  padding: 8px 13px;
+  line-height: 32px;
+  text-decoration: none;
+  text-align: left;
+  color: #fff;
+
+  -webkit-transition: color .2s ease-in-out;
+  -moz-transition: color .2s ease-in-out;
+  -o-transition: color .2s ease-in-out;
+  -ms-transition: color .2s ease-in-out;
+  transition: color .2s ease-in-out;
+}
+ul#nav li a:hover { color: #F06000 !important; }
+ul#nav li a:active { background-color: transparent !important; }
+ul#nav li.current a { color: #F06000; }
+
+/*header background*/
+header {
+   position: relative;
+   height: 100vh;
+   width: 100%;
+   min-height: 500px;
+   background: #161415 url(../assets/images/header_bg.jpg) no-repeat center;  
+   background-size: cover !important;
+	-webkit-background-size: cover !important;
+   overflow: hidden;
+}
+
+/* vertically center banner section */
+header:before {
+   content: '';
+   display: inline-block;
+   vertical-align: middle;
+   height: 100%;
+}
+header .banner {
+   display: inline-block;
+   vertical-align: middle;
+   margin: auto 5%;
+   width: 90%;
+   padding-bottom: 30px;
+}
+
+header .banner-text { 
+   width: 100%;
+}
+
+header .banner-text h1 {
+   font-family:  octarineBold, 'opensans-bold', sans-serif;
+   color: #fff;
+   text-shadow: 0px 3px 6px rgba(0, 0, 0, .8);
+   text-align: center;
+}
+header .banner-text h3 {
+   font-size: 10vw;
+   font-family: octarineLight, 'opensans-regular', serif;
+   color: #A8A8A8;
+   text-align: center;
+   text-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
+}
+header .banner-text h3 span,
+header .banner-text h3 a {
+   color: #fff;
+}
+header .banner-text hr {
+   margin: 18px auto 24px auto;
+   border-color: #fff;
+   border-top: 2px solid #fff;
+}
+
+/* header social links */
+header .social {
+   margin: 24px 0;
+   padding: 0;
+   text-align: center;
+   text-shadow: 0px 1px 2px rgba(0, 0, 0, .8);
+}
+header .social li {
+   display: inline-block;
+   margin: 0 15px;
+   padding: 0;
+}
+header .social li a { color: #fff; }
+header .social li a:hover { color: #F06000; }
+
+/* scrolldown link */
+header .scrolldown a {
+   position: absolute;
+   bottom: 40px;
+   left: 50%;
+   margin-left: -26px;
+   display: block;
+   font-size: 48px;
+   border-radius: 100%;
+   text-align: center;
+   color: #fff;
+
+   /*stroke in all browsers*/
+   -webkit-text-fill-color: white; /*will override color*/
+   -webkit-text-stroke-width: 4px;
+   -webkit-text-stroke-color: white;
+
+   -webkit-transition: all .3s ease-in-out;
+   -moz-transition: all .3s ease-in-out;
+   -o-transition: all .3s ease-in-out;
+   transition: all .3s ease-in-out;
+}
+header .scrolldown a:hover { color: #F06000; }
+
+/*Responsive Design*/
+@media screen and (min-width: 801px){
+   /*size of "Nebulonia Diakszovetseg"*/
+   header .banner-text h1 { 
+      font-size: 5vw;
+   }
+   /*size of underline*/
+   header .banner-text hr {
+      width: 43%;
+   }
+   /*size of social media icons*/
+   header .social {
+      font-size: 2.5vw;
+   }
+}
+@media screen and (min-width: 461px) and (max-width: 800px){
+   header .banner-text h1 {
+      font-size: 9vw;
+   }
+   header .banner-text hr {
+      width: 70%;
+   }
+   header .social {
+      font-size: 6vw;
+   }
+}
+@media screen and (min-width: 0px) and (max-width: 460px){
+   header .banner-text h1 {
+      font-size: 9vw;
+   }
+   header .banner-text hr {
+      width: 70%;
+   }
+   header .social {
+      font-size: 9vw;
+   }
+}

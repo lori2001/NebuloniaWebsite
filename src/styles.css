@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: octarineBold;
+    src: url(assets/fonts/Octarine-Bold.otf) format("opentype");
+  }
+@font-face {
+    font-family: octarineBoldOblique;
+    src: url(assets/fonts/Octarine-BoldOblique.otf) format("opentype");
+  }
+@font-face {
+    font-family: octarineLight;
+    src: url(assets/fonts/Octarine-Light.otf) format("opentype");
+  }
+@font-face {
+    font-family: octarineLightOblique;
+    src: url(assets/fonts/Octarine-LightOblique.otf) format("opentype");
+  }
