@@ -9,8 +9,8 @@
     "menu": {
         "home": "OTTHON",
         "about": "RÓLUNK",
-        "presidents": "ELNÖKSÉG",
         "events": "RENDEZVÉNYEK",
+        "archive": "ARCHÍVUM",
         "contact": "KAPCSOLAT",
         "class_points": "OSZTÁLYPONTOK"
     }

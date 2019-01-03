@@ -1,0 +1,86 @@
+/* font-family: octarineBold, arialBlack, Arial; */
+/* font-family: octarineLight, Arial, arialBlack; */
+
+#about {
+   border-top: 48px solid black;
+   padding-top: 60px; 
+   padding-bottom: 60px;
+   background: #2B2B2B;
+   overflow: hidden;
+   background-size: cover !important;
+	-webkit-background-size: cover !important;
+}
+
+/*makes background color transition seemless*/
+
+#about .text h2 {
+   font-family: octarineBold, arialBlack, Arial;
+   font-size: 22px;
+   margin-bottom: 12px;
+   color: white;
+}
+#about .text p {
+   font-family: octarineLight, Arial, arialBlack;
+   font-size: 16px;
+   line-height: 30px;
+   color: #7A7A7A;
+}
+#about .logo{
+   position: absolute;
+}
+#about .profile-pic {
+   position: absolute;
+   display: block;
+   right: 0px;
+   margin-right: 10%;
+   border-radius: 100%;
+}
+
+/*Responsive Design*/
+@media screen and (min-width: 1366px){
+   #about .text p {
+      margin-left: 30%;
+      margin-right: 30%;
+      width: 40%;
+   }
+   #about .text h2 {
+      margin-left: 30%;
+   }
+   #about .logo{
+      width: 30%;
+   }
+   #about .profile-pic {
+      width: 120px;
+      height: 120px;
+   }
+}
+@media screen and (min-width: 801px) and (max-width: 1366px){
+   #about .text p {
+      margin-left: 25%;
+      margin-right: 25%;
+      width: 50%;
+   }
+   #about .text h2 {
+      margin-left: 25%;
+   }
+   #about .logo{
+      width: 25%;
+   }
+   #about .profile-pic {
+      width: 80px;
+      height: 80px;
+   }
+}
+@media screen and (min-width: 0px) and (max-width: 800px){
+   #about .text p {
+      margin-left: 15%;
+      margin-right: 15%;
+      width: 70%;
+   }
+   #about .text h2 {
+      margin-left: 15%;
+   }
+   #about .logo{
+      opacity: 0;
+   }
+}

@@ -9,8 +9,8 @@
     "menu": {
         "home": "ACASĂ",
         "about": "DESPRE NOI",
-        "presidents": "PREȘEDENȚIE",
         "events": "EVENIMENTE",
+        "archive": "ARHIVĂ",
         "contact": "CONTACT",
         "class_points": "PUNCTE"
     }
