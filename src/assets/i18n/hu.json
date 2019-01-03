@@ -9,9 +9,14 @@
     "menu": {
         "home": "OTTHON",
         "about": "RÓLUNK",
-        "events": "RENDEZVÉNYEK",
         "archive": "ARCHÍVUM",
+        "events": "RENDEZVÉNYEK",
         "contact": "KAPCSOLAT",
         "class_points": "OSZTÁLYPONTOK"
+    },
+
+    "about": {
+        "title" : "Rólunk",
+        "text" : "Akár a többi tisztességes diákszövetség, a Nebulónia is diákjaink jogait képviseli, (egyedi módon). A jogaink megvédése, és a véleményünk tanárokkal való megvitatása helyett inkább különböző programok eltervezésére és megvalósítására fektetünk nagy hangsúlyt. Célunk, hogy életet, színt vigyünk a diákok olykor unalmas, máskor fárasztó hétköznapjaiba. De, ha ez túl hivatalosan hallatszana, \"egyszerűen\" csak szeretnénk, ha a diákok még inkább megismernék egymást, ha részt vennének olyan eseményeken, programokon, melyek kellemes emléknek maradnak az iskolai évekből. A Nebulónia Diákszövetség csapata meglehetősen változatos, szinte mindig hallani új, váratlan ötleteket, vagy akár vicces véleményeket. Az alábbi archívum, képek és egyéb tartalmak azonban még többet mondanak rólunk."
     }
 }
