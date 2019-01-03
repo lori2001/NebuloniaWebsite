@@ -1,0 +1,17 @@
+{
+    "site_name": "Consiliul Elevilor Nebulónia",
+    
+    "title": {
+        "up" : "Consiliul Elevilor",
+        "down" : "Nebulónia"
+    },
+
+    "menu": {
+        "home": "ACASĂ",
+        "about": "DESPRE NOI",
+        "presidents": "PREȘEDENȚIE",
+        "events": "EVENIMENTE",
+        "contact": "CONTACT",
+        "class_points": "PUNCTE"
+    }
+}

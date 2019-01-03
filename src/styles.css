@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+
+/*Fonts*/
 @font-face {
     font-family: octarineBold;
     src: url(assets/fonts/Octarine-Bold.otf) format("opentype");
@@ -15,3 +17,14 @@
     font-family: octarineLightOblique;
     src: url(assets/fonts/Octarine-LightOblique.otf) format("opentype");
   }
+@font-face {
+    font-family: arialBlack;
+    src: url(assets/fonts/Arial-Black.ttf) format("truetype");
+  }
+
+/*Smooth scrolling*/
+/*Non-Compatible with explorer,edge and safari*/
+
+html {
+  scroll-behavior: smooth;
+}

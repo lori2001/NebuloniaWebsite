@@ -1,0 +1,17 @@
+<nav id="nav-wrap" [ngStyle]="{'background-color': 'rgba(51,51,51,'+ (bgopacity) +')'}">
+  <ul id="nav">
+    <li class="main"><a href="#home">{{ 'menu.home' | translate }}</a></li>
+    <li><a href="#about">{{ 'menu.about' | translate }}</a></li>
+    <li><a href="#presidents">{{ 'menu.presidents' | translate }}</a></li>
+    <li><a href="#events">{{ 'menu.events' | translate }}</a></li>
+    <li><a href="#contact">{{ 'menu.contact' | translate }}</a></li>
+    <li><button class="unstyled-button">{{ 'menu.class_points' | translate }}</button></li>
+    <li *ngIf="this.currlanguage === 'hu'">
+      <button class="unstyled-button" (click)="changeLanguage('ro')">RO</button>
+    </li>
+    <li *ngIf="this.currlanguage === 'ro'">
+        <button class="unstyled-button" (click)="changeLanguage('hu')">HU</button>
+      </li>
+  </ul>
+</nav>
+

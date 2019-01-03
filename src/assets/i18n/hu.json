@@ -1,0 +1,17 @@
+{
+    "site_name": "Nebulónia Diákszövetség",
+    
+    "title": {
+        "up" : "Nebulónia",
+        "down" : "Diákszövetség"
+    },
+
+    "menu": {
+        "home": "OTTHON",
+        "about": "RÓLUNK",
+        "presidents": "ELNÖKSÉG",
+        "events": "RENDEZVÉNYEK",
+        "contact": "KAPCSOLAT",
+        "class_points": "OSZTÁLYPONTOK"
+    }
+}
