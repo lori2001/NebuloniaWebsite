@@ -1,44 +1,28 @@
-/* font-family: octarineBold, arialBlack, Arial; */
-/* nav-wrap */
- #nav-wrap ul, #nav-wrap li, #nav-wrap a {
-   margin: 0;
-   padding: 0;
-   border: none;
-   outline: none;
-}
-#nav-wrap {
-   font-size: 12px;
-   font-family: octarineBold, arialBlack, Arial;
-   /*background color defined in typescript, applied in html*/
-   /*background-color: #333 ;*/
-   width: 100%;
-   letter-spacing: 2.5px;
-   margin: 0 auto;
-   z-index: 100;
-   position: fixed;
-   left: 0;
-   top: 0;
-}
-ul#nav {
+/*navbar width and bg-color controlled by typescript*/
+.navbar{
+  position:fixed;
+  z-index: 100;
+
   min-height: 48px;
-  width: auto;
+}
+
+.navbar-nav{
+  font-size: 12px;
+  font-family: octarineBold, arialBlack, Arial;
+  letter-spacing: 2.5px;
 
   /* center align the menu */
-  text-align: center;
-}
-ul#nav li {
-  position: relative;
-  list-style: none;
-  height: 48px;
-  display: inline-block;
+  margin: 0 auto;
 }
 
 /* Links */
-ul#nav li a {
+.navbar-nav a, .navbar .nav-button {
 /* 8px padding top + 8px padding bottom + 32px line-height = 48px */
+  border: none;
+  background: none;
   display: inline-block;
-  padding: 8px 13px;
-  line-height: 32px;
+  padding-top: 8px;
+  padding-left: 13px;
   text-decoration: none;
   text-align: left;
   color: #fff;
@@ -49,38 +33,19 @@ ul#nav li a {
   -ms-transition: color .2s ease-in-out;
   transition: color .2s ease-in-out;
 }
-ul#nav li a:hover { color: #F06000 !important; }
+.navbar-nav a:hover, .navbar-nav .nav-button:hover { 
+  color: #F06000 !important; 
+  cursor:pointer;
+}
+/*hides outline when on focus*/
+.navbar-nav .nav-button:focus{
+  outline: none;
+}
 
-ul#nav li.main a { 
-  color: #F06000;
-  background-color: transparent !important;
- }
-
-/*transparent button for language change('RO' or 'HU')*/
-ul#nav .unstyled-button {
-   border: none;
-   padding: 8px 13px;
-   background: none;
-   display: inline-block;
-   line-height: 32px;
-   text-decoration: none;
-   text-align: left;
-   color: #fff;
-
-   -webkit-transition: color .2s ease-in-out;
-   -moz-transition: color .2s ease-in-out;
-   -o-transition: color .2s ease-in-out;
-   -ms-transition: color .2s ease-in-out;
-   transition: color .2s ease-in-out;
- }
- 
- /*changes color if hovered upon*/
- ul#nav .unstyled-button:hover {
-   color: #F06000 !important;  /* Orange */
-   cursor:pointer;
- }
-
- /*hides outline when on focus*/
- ul#nav .unstyled-button:focus{
-   outline: none;
+.toggler {
+  padding-top: 5px;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  background-color: #F06000 ; 
 }

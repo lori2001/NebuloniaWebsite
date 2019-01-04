@@ -7,31 +7,65 @@ import {TranslateService} from '@ngx-translate/core';
   styleUrls: ['./app.navbar.component.css']
 })
 export class NavbarComponent {
-  // default language defined in app.component.ts
-  // the UI currently supports only 2 languages (dropdwon language switcher is recommended)
-  // append this string only if you added the json file in assets/i18n
-  languages: string[] = ['hu', 'ro'];
-  bgopacity = 0; // background opacity ( defaults to 0 )
+  languages: string[] = ['hu', 'ro']; // default language defined in app.component.ts
+  currlanguage: string; // holds currently diplayed language
 
-  // holds currently diplayed language
-  currlanguage: string;
+  width = '100%'; // background width
+  bgopacity = 0; // background opacity
+
+  mobileMode = false; // enables/disables mobile mode
+  collapse = true; // true if mobile style menu is collapsed
 
   constructor(private translate: TranslateService, public el: ElementRef) {
     // set current language to default when starting
     this.currlanguage = this.translate.getDefaultLang();
+
+    // initialization stuff
+    this.checkMobileMode();
+    this.calcOpacity();
   }
 
-  @HostListener('window:scroll', ['$event'])
   @HostListener('window:resize', ['$event'])
-  checkScroll() {
-    // calculates the background opacity
-    this.bgopacity = window.pageYOffset / window.innerHeight;
+  checkMobileMode() {
+    if ( window.innerWidth < 768) {
+      this.mobileMode = true; // enables mobile mode
+      this.bgopacity = 0; // no background as default
+      this.width = '200px'; // width when shown
+    } else {
+      this.mobileMode = false; // disables mobile mode
 
-    // if it surpasses 1 (100%) it is 1
-    if (this.bgopacity > 1) {
-      this.bgopacity = 1;
+      // max width
+      this.width = '100%';
     }
-}
+  }
+  @HostListener('window:scroll', ['$event'])
+  calcOpacity() {
+    if (!this.mobileMode) {
+
+      // calculates the background opacity
+      this.bgopacity = window.pageYOffset / window.innerHeight;
+
+      // if it surpasses 1(100%) it is 1
+      if (this.bgopacity > 1) {
+        this.bgopacity = 1;
+      }
+    }
+  }
+
+  toggleNavbar() {
+
+    // navbar toggle works only in mobile mode
+    if (this.mobileMode) {
+    this.collapse = !this.collapse;
+
+      if (!this.collapse) {
+        this.bgopacity = 1;
+      } else {
+        this.bgopacity = 0;
+      }
+    }
+
+  }
 
   changeLanguage(language: string) {
 

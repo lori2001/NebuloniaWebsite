@@ -97,7 +97,7 @@ header .scrolldown a:hover {
 }
 
 /*Responsive Design*/
-@media screen and (min-width: 801px){
+@media screen and (min-width: 821px){
    /*size of "Nebulonia Diakszovetseg"*/
    header .banner-text h1 { 
       font-size: 5vw;
@@ -111,7 +111,7 @@ header .scrolldown a:hover {
       font-size: 2.5vw;
    }
 }
-@media screen and (min-width: 461px) and (max-width: 800px){
+@media screen and (min-width: 461px) and (max-width: 820px){
    header .banner-text h1 {
       font-size: 9vw;
    }

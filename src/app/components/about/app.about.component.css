@@ -54,7 +54,7 @@
       height: 120px;
    }
 }
-@media screen and (min-width: 801px) and (max-width: 1366px){
+@media screen and (min-width: 821px) and (max-width: 1366px){
    #about .text p {
       margin-left: 25%;
       margin-right: 25%;
@@ -71,7 +71,7 @@
       height: 80px;
    }
 }
-@media screen and (min-width: 0px) and (max-width: 800px){
+@media screen and (min-width: 0px) and (max-width: 820px){
    #about .text p {
       margin-left: 15%;
       margin-right: 15%;

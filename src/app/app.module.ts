@@ -15,9 +15,6 @@ import { NavbarComponent } from './components/navbar/app.navbar.component';
 import { HomeComponent } from './components/home/app.home.component';
 import { AboutComponent } from './components/about/app.about.component';
 
-// primeng
-import {ButtonModule} from 'primeng/button';
-
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
 }
@@ -34,9 +31,6 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     BrowserAnimationsModule,
     AngularFittextModule,
     AngularFontAwesomeModule,
-
-    // primeng
-    ButtonModule,
 
      // translate modules
      HttpClientModule,

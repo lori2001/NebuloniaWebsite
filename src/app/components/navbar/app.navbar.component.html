@@ -1,17 +1,18 @@
-<nav id="nav-wrap" [ngStyle]="{'background-color': 'rgba(51,51,51,'+ (bgopacity) +')'}">
-  <ul id="nav">
-    <li class="main"><a href="#home">{{ 'menu.home' | translate }}</a></li>
-    <li><a href="#about">{{ 'menu.about' | translate }}</a></li>
-    <li><a href="#presidents">{{ 'menu.archive' | translate }}</a></li>
-    <li><a href="#events">{{ 'menu.events' | translate }}</a></li>
-    <li><a href="#contact">{{ 'menu.contact' | translate }}</a></li>
-    <li><button class="unstyled-button">{{ 'menu.class_points' | translate }}</button></li>
-    <li *ngIf="this.currlanguage === 'hu'">
-      <button class="unstyled-button" (click)="changeLanguage('ro')">RO</button>
-    </li>
-    <li *ngIf="this.currlanguage === 'ro'">
-        <button class="unstyled-button" (click)="changeLanguage('hu')">HU</button>
-      </li>
-  </ul>
-</nav>
-
+<nav class="navbar navbar-expand-md" [ngStyle]="{'background-color': 'rgba(51,51,51,'+ (bgopacity) +')', 'width' : width}">
+    <button class="navbar-toggler" (click)="toggleNavbar()" type="button" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="toggler fa fa-bars"></span>
+    </button>
+  
+    <div class="navbar-collapse" (click)="toggleNavbar()" [hidden]="collapse">
+      <ul class="navbar-nav mr-auto">
+          <a href="#home">{{ 'menu.home' | translate }}</a>
+          <a href="#about">{{ 'menu.about' | translate }}</a>
+          <a href="#archive">{{ 'menu.archive' | translate }}</a>
+          <a href="#events">{{ 'menu.events' | translate }}</a>
+          <a href="#contact">{{ 'menu.contact' | translate }}</a>
+          <button class="nav-button">{{ 'menu.class_points' | translate }}</button>
+          <button *ngIf="this.currlanguage === 'hu'" class="nav-button" (click)="changeLanguage('ro')">RO</button>
+          <button *ngIf="this.currlanguage === 'ro'" class="nav-button" (click)="changeLanguage('hu')">HU</button>
+      </ul>
+    </div>
+  </nav>
