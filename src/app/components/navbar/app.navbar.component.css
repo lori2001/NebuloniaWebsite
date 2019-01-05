@@ -43,9 +43,14 @@
 }
 
 .toggler {
+  border: none;
   padding-top: 5px;
   font-size: 20px;
   width: 30px;
   height: 30px;
   background-color: #F06000 ; 
+}
+/*hides outline when on focus*/
+.navbar-toggler:focus {
+  outline: none;
 }

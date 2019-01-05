@@ -14,6 +14,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/app.navbar.component';
 import { HomeComponent } from './components/home/app.home.component';
 import { AboutComponent } from './components/about/app.about.component';
+import { PresidentsComponent } from './components/presidents/app.presidents.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -24,7 +25,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    PresidentsComponent
   ],
   imports: [
     BrowserModule,

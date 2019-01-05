@@ -18,5 +18,9 @@
     "about": {
         "title" : "Despre noi",
         "text" : "Ca orice consiliu al elevilor, Nebulónia reprezintă interesul elevilor din colegiul nostru. Pe lângă acestea are și activitate de promovare a unor evenimente petrecute în cadrul școlii. Ținta noastră este \"ușurarea\" vieții de elev prin programe educative și distractive. Printre priorități se află și conlucrarea și cunoașterea  elevilor din toate clasele. Avem programe de neuitat, interesante, la care participă întregul colectiv: atât elevii, cât și profesorii. Acesta este subliniat și prin pozele din archivă."
+    },
+
+    "presidents": {
+        "title" : "Preşedenție"
     }
 }

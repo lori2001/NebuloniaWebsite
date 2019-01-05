@@ -1,10 +1,31 @@
 /* font-family: octarineBold, arialBlack, Arial; */
 /* font-family: octarineLight, Arial, arialBlack; */
 
-#about {
-   border-top: 48px solid black;
+.presidents-bg {
+   border-top: 48px solid #2B2B2B;
+   /*applies a dark filter on the background*/
+   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../../assets/images/presidents_bg.jpg) no-repeat center center;
+   background-size: cover !important;
+	-webkit-background-size: cover !important;
+   background-attachment: fixed;
+
+   position: relative;
+   min-height: 400px;
+   width: 100%;
+   overflow: hidden;
+}
+
+.title h2 {
+   padding: 40px;
+   font-family: octarineBold, arialBlack, Arial;
+   text-align: center;
+   color: white;
+}
+
+
+#presidents {
    padding-top: 60px; 
-   padding-bottom: 12px; /*60-48*/
+   padding-bottom: 60px;
    background: #2B2B2B;
    overflow: hidden;
    background-size: cover !important;
@@ -13,22 +34,22 @@
 
 /*makes background color transition seemless*/
 
-#about .text h2 {
+#presidents .text h2 {
    font-family: octarineBold, arialBlack, Arial;
    font-size: 22px;
    margin-bottom: 12px;
    color: white;
 }
-#about .text p {
+#presidents .text p {
    font-family: octarineLight, Arial, arialBlack;
    font-size: 16px;
    line-height: 30px;
    color: #7A7A7A;
 }
-#about .logo{
+#presidents .logo{
    position: absolute;
 }
-#about .profile-pic {
+#presidents .profile-pic {
    position: absolute;
    display: block;
    right: 0px;
@@ -38,49 +59,49 @@
 
 /*Responsive Design*/
 @media screen and (min-width: 1366px){
-   #about .text p {
+   #presidents .text p {
       margin-left: 30%;
       margin-right: 30%;
       width: 40%;
    }
-   #about .text h2 {
+   #presidents .text h2 {
       margin-left: 30%;
    }
-   #about .logo{
+   #presidents .logo{
       width: 30%;
    }
-   #about .profile-pic {
+   #presidents .profile-pic {
       width: 120px;
       height: 120px;
    }
 }
 @media screen and (min-width: 821px) and (max-width: 1366px){
-   #about .text p {
+   #presidents .text p {
       margin-left: 25%;
       margin-right: 25%;
       width: 50%;
    }
-   #about .text h2 {
+   #presidents .text h2 {
       margin-left: 25%;
    }
-   #about .logo{
+   #presidents .logo{
       width: 25%;
    }
-   #about .profile-pic {
+   #presidents .profile-pic {
       width: 80px;
       height: 80px;
    }
 }
 @media screen and (min-width: 0px) and (max-width: 820px){
-   #about .text p {
+   #presidents .text p {
       margin-left: 15%;
       margin-right: 15%;
       width: 70%;
    }
-   #about .text h2 {
+   #presidents .text h2 {
       margin-left: 15%;
    }
-   #about .logo{
+   #presidents .logo{
       opacity: 0;
    }
 }

@@ -30,12 +30,12 @@ export class NavbarComponent {
     if ( window.innerWidth < 768) {
       this.mobileMode = true; // enables mobile mode
       this.bgopacity = 0; // no background as default
+      this.collapse = true; // resolves a bug on mobile
       this.width = '200px'; // width when shown
     } else {
       this.mobileMode = false; // disables mobile mode
 
-      // max width
-      this.width = '100%';
+      this.width = '100%'; // max width
     }
   }
   @HostListener('window:scroll', ['$event'])
