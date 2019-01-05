@@ -1,6 +1,20 @@
-<section class="presidents-bg">
-  <a class="title">
-    <h2>{{'presidents.title' | translate }}</h2>
-  </a>
-</section>
+<section id="presidents">
+  <div class="slider" [ngStyle]="{'width' : width}">
+  <h4>{{'presidents.title' | translate }}</h4>
+
+  <div class="line">
+      <hr>
+  </div>
   
+    <owl-carousel
+    [options]="sliderOPT"
+    [items]="carouselElements"
+    [carouselClasses]="['owl-theme']">
+      <div class="item" *ngFor="let element of carouselElements;let i = index">
+        <img class="element-style" [src]="element.url"/>
+        <h5>{{element.name}}</h5>
+        <p>{{element.position}}</p>
+      </div>
+    </owl-carousel>
+  </div>
+</section>

@@ -21,6 +21,14 @@
     },
 
     "presidents": {
-        "title" : "Elnökség"
+        "title" : "Elnökség",
+        "communications" : "Kommunikációs alelnök",
+        "documentations" : "Dokumentációs alelnök",
+        "financial" : "Pénzügyi alelnök",
+        "foreign_secretary" : "Külügyi alelnök",
+        "home_secretary" : "Belügyi alelnök",
+        "human_resources" : "Human resources",
+        "president" : "Elnök",
+        "technological" : "Médiás alelnök"
     }
 }

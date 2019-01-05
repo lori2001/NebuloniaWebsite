@@ -9,6 +9,9 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 
+// owl carousel
+import { OwlModule } from 'ngx-owl-carousel';
+
 // import components
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/app.navbar.component';
@@ -33,6 +36,9 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     BrowserAnimationsModule,
     AngularFittextModule,
     AngularFontAwesomeModule,
+
+    // owl carousel
+    OwlModule,
 
      // translate modules
      HttpClientModule,

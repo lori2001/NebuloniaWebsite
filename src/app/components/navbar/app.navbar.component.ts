@@ -36,6 +36,7 @@ export class NavbarComponent {
       this.mobileMode = false; // disables mobile mode
 
       this.width = '100%'; // max width
+      this.calcOpacity();
     }
   }
   @HostListener('window:scroll', ['$event'])

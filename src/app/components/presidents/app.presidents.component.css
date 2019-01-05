@@ -1,107 +1,85 @@
-/* font-family: octarineBold, arialBlack, Arial; */
-/* font-family: octarineLight, Arial, arialBlack; */
-
-.presidents-bg {
+#presidents {
    border-top: 48px solid #2B2B2B;
+
    /*applies a dark filter on the background*/
-   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../../assets/images/presidents_bg.jpg) no-repeat center center;
+   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+               url(../../../assets/images/presidents_bg.jpg) no-repeat center center;
+
    background-size: cover !important;
 	-webkit-background-size: cover !important;
    background-attachment: fixed;
 
    position: relative;
-   min-height: 400px;
    width: 100%;
    overflow: hidden;
+   padding-top: 48px;
+   padding-bottom: 50px;
+   text-align: center;
+   margin: 0 auto;
+}
+.slider {
+   /*width controlled in ts and html*/
+   margin: 0 auto;
+   text-align:center;
 }
 
-.title h2 {
-   padding: 40px;
+.slider h4{
+   text-align: center;
+   color: white;
    font-family: octarineBold, arialBlack, Arial;
+   margin-bottom: 20px;
+}
+
+.slider .item {
    text-align: center;
    color: white;
 }
 
-
-#presidents {
-   padding-top: 60px; 
-   padding-bottom: 60px;
-   background: #2B2B2B;
-   overflow: hidden;
-   background-size: cover !important;
-	-webkit-background-size: cover !important;
-}
-
-/*makes background color transition seemless*/
-
-#presidents .text h2 {
+.slider .item h5 {
    font-family: octarineBold, arialBlack, Arial;
-   font-size: 22px;
-   margin-bottom: 12px;
-   color: white;
-}
-#presidents .text p {
-   font-family: octarineLight, Arial, arialBlack;
-   font-size: 16px;
-   line-height: 30px;
-   color: #7A7A7A;
-}
-#presidents .logo{
-   position: absolute;
-}
-#presidents .profile-pic {
-   position: absolute;
-   display: block;
-   right: 0px;
-   margin-right: 10%;
-   border-radius: 100%;
 }
 
-/*Responsive Design*/
-@media screen and (min-width: 1366px){
-   #presidents .text p {
-      margin-left: 30%;
-      margin-right: 30%;
-      width: 40%;
-   }
-   #presidents .text h2 {
-      margin-left: 30%;
-   }
-   #presidents .logo{
-      width: 30%;
-   }
-   #presidents .profile-pic {
-      width: 120px;
-      height: 120px;
-   }
+.slider .item p {
+   font-family: 'Arial Italic', octarineLight, arialBlack;
 }
-@media screen and (min-width: 821px) and (max-width: 1366px){
-   #presidents .text p {
-      margin-left: 25%;
-      margin-right: 25%;
-      width: 50%;
-   }
-   #presidents .text h2 {
-      margin-left: 25%;
-   }
-   #presidents .logo{
-      width: 25%;
-   }
-   #presidents .profile-pic {
-      width: 80px;
-      height: 80px;
-   }
+
+.slider .element-style{
+	width: 120px;
+	height: 120px;
+   border-radius: 100%; /*round*/
+   margin: 0 auto; /* center inside container*/
+   margin-bottom: 20px;
 }
-@media screen and (min-width: 0px) and (max-width: 820px){
-   #presidents .text p {
-      margin-left: 15%;
-      margin-right: 15%;
-      width: 70%;
-   }
-   #presidents .text h2 {
-      margin-left: 15%;
-   }
-   #presidents .logo{
-      opacity: 0;
-   }
+
+.slider .line{
+	border-top: 4px solid #fcac45;
+	width: 60px;
+	margin: 0 auto;
+	margin-top: 15px;
+   margin-bottom: 40px;
 }
+
+.slider .line hr {
+   border-top: 4px solid rgba(252, 172, 69, 0.34);
+   width: 40px;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 10px;
+}
+
+::ng-deep .owl-theme .owl-dots .owl-dot span {
+   background: #D6D6D6!important; /* dots color*/
+   outline: none;
+ }
+
+::ng-deep .owl-theme .owl-dots .owl-dot.active span,
+ .owl-theme .owl-dots .owl-dot:hover span {
+   background: #FCAC45!important; /*active and on hover color*/
+   outline: none;
+}
+/*TODO: Make this HAPPEN*/
+/*
+::ng-deep .owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:focus span {
+   outline: none;
+}*/
