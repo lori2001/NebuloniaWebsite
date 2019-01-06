@@ -67,19 +67,19 @@
 	margin-top: 10px;
 }
 
+/* ::ng-deep is deprecated however at the time of writing*/
+/* there is no alternative for it yet */
 ::ng-deep .owl-theme .owl-dots .owl-dot span {
    background: #D6D6D6!important; /* dots color*/
-   outline: none;
  }
 
 ::ng-deep .owl-theme .owl-dots .owl-dot.active span,
  .owl-theme .owl-dots .owl-dot:hover span {
    background: #FCAC45!important; /*active and on hover color*/
-   outline: none;
 }
-/*TODO: Make this HAPPEN*/
+
+/*shouldw removed borders on focus but doesn't*/
 /*
-::ng-deep .owl-theme .owl-dots .owl-dot.active span,
-.owl-theme .owl-dots .owl-dot:focus span {
-   outline: none;
+::ng-deep .owl-theme .owl-dots .owl-dot:focus {
+   border: 0!important;
 }*/

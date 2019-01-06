@@ -1,4 +1,4 @@
-import { HostListener, Component } from '@angular/core';
+import { HostListener, Component, Input } from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 import { CarouselElement } from 'src/app/models/carousel.element';
 
@@ -9,40 +9,6 @@ import { CarouselElement } from 'src/app/models/carousel.element';
 })
 export class PresidentsComponent {
   width = '60%'; // width of the whole section
-  carouselElements: CarouselElement[];
-
-  constructor(private translate: TranslateService) {
-    this.checkResolution();
-
-    this.translate.get('presidents').subscribe( translations => {
-      this.carouselElements = [
-        { url: '../../../assets/images/presidents/home_secretary.jpg',
-          name: 'Kirsch Edgár',
-          position: translations.home_secretary},
-        { url: '../../../assets/images/presidents/president.jpg',
-          name: 'Vencz Balázs',
-          position: translations.president },
-        { url: '../../../assets/images/presidents/human_resources.jpg',
-          name: 'Bencze Erik Tamás',
-          position: translations.human_resources },
-        { url: '../../../assets/images/presidents/foreign_secretary.jpg',
-          name: 'Szekrény Eveline',
-          position: translations.foreign_secretary },
-        { url: '../../../assets/images/presidents/communications.jpg',
-          name: 'Kelemen Tamás',
-          position: translations.communications },
-        { url: '../../../assets/images/presidents/documentations.jpg',
-          name: 'Römer-Ambrus Júlia',
-          position: translations.documentations },
-        { url: '../../../assets/images/presidents/financial.jpg',
-          name: 'Bucescu Andreea',
-          position: translations.financial },
-        { url: '../../../assets/images/presidents/technological.jpg',
-          name: 'Kristó Attila',
-          position: translations.technological }
-      ];
-    });
-  }
 
   /*owl carousel options from https://owlcarousel2.github.io/OwlCarousel2/docs/api-options.html */
   public sliderOPT: any = {
@@ -67,6 +33,12 @@ export class PresidentsComponent {
         }
     }
   };
+
+  @Input() carouselElements: CarouselElement[];
+
+  constructor(private translate: TranslateService) {
+    this.checkResolution();
+  }
 
     // Responsive width
     @HostListener('window:resize', ['$event'])

@@ -7,7 +7,6 @@ import {TranslateService} from '@ngx-translate/core';
   styleUrls: ['./app.navbar.component.css']
 })
 export class NavbarComponent {
-  languages: string[] = ['hu', 'ro']; // default language defined in app.component.ts
   currlanguage: string; // holds currently diplayed language
 
   width = '100%'; // background width
@@ -69,18 +68,25 @@ export class NavbarComponent {
   }
 
   changeLanguage(language: string) {
+    let langs: any;
+    let found = false;
 
-    // if the specified language is available
-     if (language === this.languages[0] || language === this.languages[1]) {
-      this.currlanguage = language;
-    } else { // if undefined
+    for ( langs in this.translate.getLangs() ) {
+      if (language === this.translate.getLangs()[langs]) {
+        this.currlanguage = language;
+        found = true;
+      }
+    }
+
+    // if the language requested wasn't loaded
+     if (!found) {
       // print error message in console
       alert('Language type not found! Resetting to default languge instead.');
       // set current language to default
       this.currlanguage = this.translate.getDefaultLang();
     }
 
-    // use the language last set
+    // use the language last set (bugfix applied)
     this.translate.use(this.currlanguage);
   }
 }

@@ -9,37 +9,36 @@ import { CarouselElement } from './models/carousel.element';
 })
 export class AppComponent {
   title = this.translate.instant ('site_name');
+  presidents: CarouselElement[];
 
   constructor(private translate: TranslateService) {
+    translate.addLangs(['hu', 'ro']);
     translate.setDefaultLang('hu');
-/*
-    this.translate.get('presidents').subscribe( translations => {
-      this.carousel = [
+      this.presidents = [
         { url: '../../../assets/images/presidents/home_secretary.jpg',
           name: 'Kirsch Edgár',
-          position: translations.home_secretary},
+          position: 'presidents.home_secretary'},
         { url: '../../../assets/images/presidents/president.jpg',
           name: 'Vencz Balázs',
-          position: translations.president },
+          position: 'presidents.president' },
         { url: '../../../assets/images/presidents/human_resources.jpg',
           name: 'Bencze Erik Tamás',
-          position: translations.human_resources },
+          position: 'presidents.human_resources' },
         { url: '../../../assets/images/presidents/foreign_secretary.jpg',
           name: 'Szekrény Eveline',
-          position: translations.foreign_secretary },
+          position: 'presidents.foreign_secretary' },
         { url: '../../../assets/images/presidents/communications.jpg',
           name: 'Kelemen Tamás',
-          position: translations.communications },
+          position: 'presidents.communications' },
         { url: '../../../assets/images/presidents/documentations.jpg',
           name: 'Römer-Ambrus Júlia',
-          position: translations.documentations },
+          position: 'presidents.documentations' },
         { url: '../../../assets/images/presidents/financial.jpg',
           name: 'Bucescu Andreea',
-          position: translations.financial },
+          position: 'presidents.financial' },
         { url: '../../../assets/images/presidents/technological.jpg',
           name: 'Kristó Attila',
-          position: translations.technological }
+          position: 'presidents.technological' }
       ];
-    });*/
-  }
+    }
 }

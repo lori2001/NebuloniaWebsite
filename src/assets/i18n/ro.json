@@ -22,13 +22,13 @@
 
     "presidents": {
         "title" : "Preşedenție",
-        "communications" : "Kommunikációs alelnök",
-        "documentations" : "Dokumentációs alelnök",
-        "financial" : "Pénzügyi alelnök",
-        "foreign_secretary" : "Külügyi alelnök",
-        "home_secretary" : "Belügyi alelnök",
+        "communications" : "VP comunicații",
+        "documentations" : "VP documente",
+        "financial" : "VP finanțe",
+        "foreign_secretary" : "VP afaceri externe",
+        "home_secretary" : "VP afaceri interne",
         "human_resources" : "Human resources",
-        "president" : "Elnök",
-        "technological" : "Médiás alelnök"
+        "president" : "Președinte",
+        "technological" : "VP tehnică"
     }
 }
