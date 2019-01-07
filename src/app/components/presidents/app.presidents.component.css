@@ -1,6 +1,4 @@
 #presidents {
-   border-top: 48px solid #2B2B2B;
-
    /*applies a dark filter on the background*/
    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
                url(../../../assets/images/presidents_bg.jpg) no-repeat center center;
@@ -12,8 +10,8 @@
    position: relative;
    width: 100%;
    overflow: hidden;
-   padding-top: 48px;
-   padding-bottom: 50px;
+   padding-top: 60px;
+   padding-bottom: 60px;
    text-align: center;
    margin: 0 auto;
 }
@@ -23,12 +21,29 @@
    text-align:center;
 }
 
-.slider h4{
+/*Title START*/
+.slider a{
+   border: none;
+   background: none;
+   display: block;
+   text-decoration: none;
    text-align: center;
    color: white;
+      
+   font-size: 28px;
    font-family: octarineBold, arialBlack, Arial;
-   margin-bottom: 20px;
+
+   -webkit-transition: color .2s ease-in-out;
+   -moz-transition: color .2s ease-in-out;
+   -o-transition: color .2s ease-in-out;
+   -ms-transition: color .2s ease-in-out;
+   transition: color .2s ease-in-out;
 }
+.slider a:hover { 
+   color: #F06000 !important; 
+   cursor:pointer;
+}
+/*Title END*/
 
 .slider .item {
    text-align: center;

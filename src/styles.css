@@ -24,7 +24,6 @@
 
 /*Smooth scrolling*/
 /*Non-Compatible with explorer,edge and safari*/
-
 html {
   scroll-behavior: smooth;
 }

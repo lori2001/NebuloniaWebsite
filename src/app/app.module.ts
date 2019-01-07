@@ -18,6 +18,7 @@ import { NavbarComponent } from './components/navbar/app.navbar.component';
 import { HomeComponent } from './components/home/app.home.component';
 import { AboutComponent } from './components/about/app.about.component';
 import { PresidentsComponent } from './components/presidents/app.presidents.component';
+import { EventsComponent } from './components/events/app.events.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -29,7 +30,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     NavbarComponent,
     HomeComponent,
     AboutComponent,
-    PresidentsComponent
+    PresidentsComponent,
+    EventsComponent
   ],
   imports: [
     BrowserModule,

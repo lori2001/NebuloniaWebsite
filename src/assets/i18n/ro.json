@@ -9,9 +9,9 @@
     "menu": {
         "home": "ACASĂ",
         "about": "DESPRE NOI",
-        "archive": "ARHIVĂ",
         "events": "EVENIMENTE",
         "contact": "CONTACT",
+        "archive": "ARHIVĂ",
         "class_points": "PUNCTE"
     },
 
@@ -22,13 +22,13 @@
 
     "presidents": {
         "title" : "Preşedenție",
-        "communications" : "VP comunicații",
-        "documentations" : "VP documente",
-        "financial" : "VP finanțe",
-        "foreign_secretary" : "VP afaceri externe",
-        "home_secretary" : "VP afaceri interne",
-        "human_resources" : "Human resources",
+        "communications" : "Vp. comunicații",
+        "documentations" : "Vp. documente",
+        "financial" : "Vp. finanțe",
+        "foreign_secretary" : "Vp. afaceri externe",
+        "home_secretary" : "Vp. afaceri interne",
+        "human_resources" : "Vp. resurse umane",
         "president" : "Președinte",
-        "technological" : "VP tehnică"
+        "technological" : "Vp. tehnică"
     }
 }

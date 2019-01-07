@@ -9,9 +9,9 @@
     "menu": {
         "home": "OTTHON",
         "about": "RÓLUNK",
-        "archive": "ARCHÍVUM",
         "events": "RENDEZVÉNYEK",
         "contact": "KAPCSOLAT",
+        "archive": "ARCHÍVUM",
         "class_points": "OSZTÁLYPONTOK"
     },
 

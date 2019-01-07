@@ -2,9 +2,8 @@
 /* font-family: octarineLight, Arial, arialBlack; */
 
 #about {
-   border-top: 48px solid black;
    padding-top: 60px; 
-   padding-bottom: 12px; /*60-48*/
+   padding-bottom: 60px;
    background: #2B2B2B;
    overflow: hidden;
    background-size: cover !important;
