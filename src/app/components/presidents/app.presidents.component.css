@@ -22,12 +22,13 @@
 }
 
 /*Title START*/
-.slider a{
-   border: none;
-   background: none;
-   display: block;
-   text-decoration: none;
+.slider .title {
+   width: 100%;
    text-align: center;
+}
+
+.slider .title a{
+   text-decoration: none;
    color: white;
       
    font-size: 28px;
@@ -39,9 +40,8 @@
    -ms-transition: color .2s ease-in-out;
    transition: color .2s ease-in-out;
 }
-.slider a:hover { 
+.slider .title a:hover { 
    color: #F06000 !important; 
-   cursor:pointer;
 }
 /*Title END*/
 
