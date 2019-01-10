@@ -8,7 +8,31 @@ import {TranslateService} from '@ngx-translate/core';
 })
 export class NotFoundComponent {
 
-  constructor(private translate: TranslateService) {
+  constructor(public translate: TranslateService) {
+  }
+
+  changeLanguage(language: string) {
+    let langs: any;
+    let found = false;
+    let currlanguage: string;
+
+    for ( langs in this.translate.getLangs() ) {
+      if (language === this.translate.getLangs()[langs]) {
+        currlanguage = language;
+        found = true;
+      }
+    }
+
+    // if the language requested wasn't loaded
+     if (!found) {
+      // print error message in console
+      alert('Language type not found! Resetting to default languge instead.');
+      // set current language to default
+      currlanguage = this.translate.getDefaultLang();
+    }
+
+    // use the language last set (bugfix applied)
+    this.translate.use(currlanguage);
   }
 }
 

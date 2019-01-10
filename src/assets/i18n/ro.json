@@ -33,6 +33,8 @@
     },
 
     "not-found": {
-        "exclamation": "Az iskoláját!"
+        "exclamation": "Oops!",
+        "description": "Pagina cerută nu a fost găsită!",
+        "go_back": "Înapoi pe pagina principală"
     }
 }

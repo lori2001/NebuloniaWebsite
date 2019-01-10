@@ -11,8 +11,8 @@
           <a [ngx-scroll-to]="'#contact'" [ngx-scroll-to-offset]="offset">{{ 'menu.contact' | translate }}</a>
           <a [ngx-scroll-to]="'#arhive'" [ngx-scroll-to-offset]="offset">{{ 'menu.archive' | translate }}</a>
           <a [ngx-scroll-to]="'#points'" [ngx-scroll-to-offset]="offset">{{ 'menu.class_points' | translate }}</a>
-          <a *ngIf="this.currlanguage === 'hu'" (click)="changeLanguage('ro')">RO</a>
-          <a *ngIf="this.currlanguage === 'ro'" (click)="changeLanguage('hu')">HU</a>
+          <a *ngIf="this.translate.currentLang === 'hu'" (click)="setLanguage('ro')">RO</a>
+          <a *ngIf="this.translate.currentLang === 'ro'" (click)="setLanguage('hu')">HU</a>
       </ul>
     </div>
   </nav>

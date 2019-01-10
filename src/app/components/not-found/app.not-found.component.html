@@ -1,6 +1,22 @@
 <section id="not-found">
-  <h1>
-      {{ 'not-found.exclamation' | translate }}
-  </h1>
+    <a class="back" routerLink="/main">
+        <i class="fa fa-angle-double-left"></i>
+          {{ 'not-found.go_back' | translate }}
+    </a>
+
+    <a class="exclamation" href="http://www.aprilyfogimnazium.ro" target="_blank">
+        {{ 'not-found.exclamation' | translate }}
+    </a>
+
+    <div class="errorcode">
+        404
+    </div>
+
+    <div class="description">
+        {{ 'not-found.description' | translate }}
+    </div>
+
+    <a class="langtoggle" *ngIf="this.translate.currentLang === 'hu'" (click)="changeLanguage('ro')">RO</a>
+    <a class="langtoggle" *ngIf="this.translate.currentLang === 'ro'" (click)="changeLanguage('hu')">HU</a>
 </section>
   

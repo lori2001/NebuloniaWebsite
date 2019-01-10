@@ -7,8 +7,6 @@ import {TranslateService} from '@ngx-translate/core';
   styleUrls: ['./app.navbar.component.css']
 })
 export class NavbarComponent {
-  currlanguage: string; // holds currently diplayed language
-
   width = '100%'; // background width
   bgopacity = 0; // background opacity
 
@@ -16,10 +14,7 @@ export class NavbarComponent {
   collapse = true; // true if mobile style menu is collapsed
   offset = -48; // due to mobile mode's small menu the offset should change
 
-  constructor(private translate: TranslateService) {
-    // set current language to default when starting
-    this.currlanguage = this.translate.getDefaultLang();
-
+  constructor(public translate: TranslateService) {
     // initialization stuff
     this.checkMobileMode();
     this.calcOpacity();
@@ -69,13 +64,14 @@ export class NavbarComponent {
     }
   }
 
-  changeLanguage(language: string) {
+  setLanguage(language: string) {
     let langs: any;
     let found = false;
+    let currlanguage: string; // holds currently diplayed language
 
     for ( langs in this.translate.getLangs() ) {
       if (language === this.translate.getLangs()[langs]) {
-        this.currlanguage = language;
+        currlanguage = language;
         found = true;
       }
     }
@@ -85,11 +81,12 @@ export class NavbarComponent {
       // print error message in console
       alert('Language type not found! Resetting to default languge instead.');
       // set current language to default
-      this.currlanguage = this.translate.getDefaultLang();
+      currlanguage = this.translate.getDefaultLang();
     }
 
     // use the language last set (bugfix applied)
-    this.translate.use(this.currlanguage);
+    this.translate.use(currlanguage);
+    this.translate.currentLang = currlanguage;
   }
 }
 

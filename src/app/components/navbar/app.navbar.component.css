@@ -33,7 +33,7 @@
   -ms-transition: color .2s ease-in-out;
   transition: color .2s ease-in-out;
 }
-.navbar-nav a:hover:hover { 
+.navbar-nav a:hover { 
   color: #F06000 !important; 
   cursor:pointer;
 }

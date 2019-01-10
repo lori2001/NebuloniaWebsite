@@ -1,8 +1,98 @@
 #not-found {
    width: 100%;
    height: 100vh;
-   background: #2B2B2B;
-   overflow: hidden;
+
+   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+   url(../../../assets/images/error_bg.jpg) no-repeat center center;
    background-size: cover !important;
-	-webkit-background-size: cover !important;
+   -webkit-background-size: cover !important;
+   background-repeat:   no-repeat;
+   background-position: left center;              /* optional, center the image */
+   overflow: hidden;
 }
+
+#not-found .back {
+   position: absolute;
+   top: 20px;
+   left: 20px; 
+
+   text-decoration: none;
+   font-size: 1.4vw;
+   color: white;
+   font-family: octarineBold, arialBlack, Arial;
+
+   -webkit-transition: color .2s ease-in-out;
+   -moz-transition: color .2s ease-in-out;
+   -o-transition: color .2s ease-in-out;
+   -ms-transition: color .2s ease-in-out;
+   transition: color .2s ease-in-out;
+   }
+   #not-found .back:hover { 
+      color: #ff9851 !important; 
+      cursor:pointer;
+   }
+   /*hides outline when on focus*/
+   #not-found .back:focus{
+      outline: none;
+   }
+
+#not-found .exclamation {
+   position: absolute;
+   top: 28%;
+   right: 55%;
+   margin-left: auto;
+   text-decoration: none;
+
+   font-size: 4vw;
+   color: white;
+   font-family: octarineBold, arialBlack, Arial;
+}
+
+#not-found .errorcode{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+
+   font-size: 10vw;
+   color: #F06000 !important; 
+   font-family: octarineBold, arialBlack, Arial; 
+}
+
+#not-found .description {
+   position: absolute;
+   bottom: 35%;
+   left: 50%; 
+
+   font-size: 2.2vw;
+   color: white;
+   font-family: octarineBold, arialBlack, Arial; 
+}
+
+#not-found .langtoggle{
+     position: absolute;
+     border: none;
+     background: none;
+     display: block;
+     bottom: 20px;
+     right: 20px;
+     text-decoration: none;
+     text-align: left;
+     color: #fff;
+
+     font-family: octarineBold, arialBlack, Arial; 
+   
+     -webkit-transition: color .2s ease-in-out;
+     -moz-transition: color .2s ease-in-out;
+     -o-transition: color .2s ease-in-out;
+     -ms-transition: color .2s ease-in-out;
+     transition: color .2s ease-in-out;
+   }
+   #not-found .langtoggle:hover { 
+     color: #F06000 !important; 
+     cursor:pointer;
+   }
+   /*hides outline when on focus*/
+   #not-found .langtoggle:focus{
+     outline: none;
+   }
