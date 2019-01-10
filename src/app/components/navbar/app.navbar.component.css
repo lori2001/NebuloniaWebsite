@@ -16,7 +16,7 @@
 }
 
 /* Links */
-.navbar-nav a, .navbar .nav-button {
+.navbar-nav a{
 /* 8px padding top + 8px padding bottom + 32px line-height = 48px */
   border: none;
   background: none;
@@ -33,12 +33,12 @@
   -ms-transition: color .2s ease-in-out;
   transition: color .2s ease-in-out;
 }
-.navbar-nav a:hover, .navbar-nav .nav-button:hover { 
+.navbar-nav a:hover:hover { 
   color: #F06000 !important; 
   cursor:pointer;
 }
 /*hides outline when on focus*/
-.navbar-nav .nav-button:focus{
+.navbar-nav:focus{
   outline: none;
 }
 
@@ -53,4 +53,17 @@
 /*hides outline when on focus*/
 .navbar-toggler:focus {
   outline: none;
+}
+
+/* Normal mode */
+@media screen and (min-width: 768px){
+  .navbar-nav a{
+  line-height: initial;
+  }
+}
+/* Mobile mode */
+@media screen and (min-width: 0px) and (max-width: 768px){
+  .navbar-nav a{
+    line-height: 25px;
+  }
 }

@@ -1,0 +1,5 @@
+/*flickering presidents screen bugfix in edge*/
+#main {
+    background-color: rgb(15, 15, 15); /*dark-grey*/
+    background-size: cover;
+}

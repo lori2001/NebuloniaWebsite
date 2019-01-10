@@ -32,5 +32,7 @@
         "technological" : "Médiás alelnök"
     },
 
-    "description" : "test this string as the description"
+    "not-found": {
+        "exclamation": "Az iskoláját!"
+    }
 }

@@ -14,8 +14,9 @@ export class NavbarComponent {
 
   mobileMode = false; // enables/disables mobile mode
   collapse = true; // true if mobile style menu is collapsed
+  offset = -48; // due to mobile mode's small menu the offset should change
 
-  constructor(private translate: TranslateService, public el: ElementRef) {
+  constructor(private translate: TranslateService) {
     // set current language to default when starting
     this.currlanguage = this.translate.getDefaultLang();
 
@@ -28,14 +29,17 @@ export class NavbarComponent {
   checkMobileMode() {
     if ( window.innerWidth < 768) {
       this.mobileMode = true; // enables mobile mode
+
       this.bgopacity = 0; // no background as default
       this.collapse = true; // resolves a bug on mobile
+      this.offset = 0;
       this.width = '200px'; // width when shown
     } else {
       this.mobileMode = false; // disables mobile mode
 
+      this.offset = -48;
       this.width = '100%'; // max width
-      this.calcOpacity();
+      this.calcOpacity(); // controls this.bgopacity
     }
   }
   @HostListener('window:scroll', ['$event'])
@@ -53,8 +57,7 @@ export class NavbarComponent {
   }
 
   toggleNavbar() {
-
-    // navbar toggle works only in mobile mode
+    // navbar toggle shows only in mobile mode
     if (this.mobileMode) {
     this.collapse = !this.collapse;
 
@@ -64,7 +67,6 @@ export class NavbarComponent {
         this.bgopacity = 0;
       }
     }
-
   }
 
   changeLanguage(language: string) {

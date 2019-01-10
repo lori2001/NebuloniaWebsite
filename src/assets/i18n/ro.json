@@ -30,5 +30,9 @@
         "human_resources" : "Vp. resurse umane",
         "president" : "Președinte",
         "technological" : "Vp. tehnică"
+    },
+
+    "not-found": {
+        "exclamation": "Az iskoláját!"
     }
 }

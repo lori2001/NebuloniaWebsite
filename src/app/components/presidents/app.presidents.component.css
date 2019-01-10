@@ -13,7 +13,7 @@
    padding-top: 60px;
    padding-bottom: 60px;
    text-align: center;
-   margin: 0 auto;
+  /* margin: 0 auto;*/
 }
 .slider {
    /*width controlled in ts and html*/
@@ -42,6 +42,7 @@
 }
 .slider .title a:hover { 
    color: #F06000 !important; 
+   cursor: pointer;
 }
 /*Title END*/
 

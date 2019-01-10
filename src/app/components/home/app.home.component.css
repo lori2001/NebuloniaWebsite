@@ -87,6 +87,7 @@
    color: #F06000; 
    -webkit-text-fill-color: #F06000; /*will override color*/
    -webkit-text-stroke-color: #F06000;
+   cursor: pointer;
 }
 
 /*Responsive Design*/

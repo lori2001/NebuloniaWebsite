@@ -5,14 +5,14 @@
   
     <div class="navbar-collapse" (click)="toggleNavbar()" [hidden]="collapse">
       <ul class="navbar-nav mr-auto">
-          <a href="#home">{{ 'menu.home' | translate }}</a>
-          <a href="#about">{{ 'menu.about' | translate }}</a>
-          <a href="#events">{{ 'menu.events' | translate }}</a>
-          <a href="#contact">{{ 'menu.contact' | translate }}</a>
-          <a href="#archive">{{ 'menu.archive' | translate }}</a>
-          <button class="nav-button">{{ 'menu.class_points' | translate }}</button>
-          <button *ngIf="this.currlanguage === 'hu'" class="nav-button" (click)="changeLanguage('ro')">RO</button>
-          <button *ngIf="this.currlanguage === 'ro'" class="nav-button" (click)="changeLanguage('hu')">HU</button>
+          <a [ngx-scroll-to]="'#home'" [ngx-scroll-to-offset]="offset">{{ 'menu.home' | translate }}</a>
+          <a [ngx-scroll-to]="'#about'" [ngx-scroll-to-offset]="offset">{{ 'menu.about' | translate }}</a>
+          <a [ngx-scroll-to]="'#events'" [ngx-scroll-to-offset]="offset">{{ 'menu.events' | translate }}</a>
+          <a [ngx-scroll-to]="'#contact'" [ngx-scroll-to-offset]="offset">{{ 'menu.contact' | translate }}</a>
+          <a [ngx-scroll-to]="'#arhive'" [ngx-scroll-to-offset]="offset">{{ 'menu.archive' | translate }}</a>
+          <a [ngx-scroll-to]="'#points'" [ngx-scroll-to-offset]="offset">{{ 'menu.class_points' | translate }}</a>
+          <a *ngIf="this.currlanguage === 'hu'" (click)="changeLanguage('ro')">RO</a>
+          <a *ngIf="this.currlanguage === 'ro'" (click)="changeLanguage('hu')">HU</a>
       </ul>
     </div>
   </nav>

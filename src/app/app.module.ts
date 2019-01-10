@@ -12,13 +12,20 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 // owl carousel
 import { OwlModule } from 'ngx-owl-carousel';
 
+// manages which component gets displayed and when
+import { AppRoutingModule } from './app.routes';
+// scrolling (somewhat part of routing)
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+
 // import components
 import { AppComponent } from './app.component';
+import { MainComponent } from './components/main/app.main.component';
 import { NavbarComponent } from './components/navbar/app.navbar.component';
 import { HomeComponent } from './components/home/app.home.component';
 import { AboutComponent } from './components/about/app.about.component';
 import { PresidentsComponent } from './components/presidents/app.presidents.component';
 import { EventsComponent } from './components/events/app.events.component';
+import { NotFoundComponent } from './components/not-found/app.not-found.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -26,18 +33,24 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
 
 @NgModule({
   declarations: [
-    AppComponent,
-    NavbarComponent,
-    HomeComponent,
-    AboutComponent,
-    PresidentsComponent,
-    EventsComponent
+    AppComponent, // Contains routing
+    MainComponent, // Main Page
+      NavbarComponent,
+      HomeComponent,
+      AboutComponent,
+      PresidentsComponent,
+      EventsComponent,
+    NotFoundComponent // 404 Page
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AngularFittextModule,
     AngularFontAwesomeModule,
+
+    // routing
+    ScrollToModule.forRoot(),
+    AppRoutingModule,
 
     // owl carousel
     OwlModule,
