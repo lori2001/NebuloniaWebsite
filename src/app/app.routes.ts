@@ -9,7 +9,7 @@ const routes: Routes = [
     {path : 'main', component : MainComponent},
     {path : 'not-found', component : NotFoundComponent},
     {path : '', redirectTo : '/main', pathMatch: 'full'}, // catches default URL
-    {path: '**', redirectTo: '/not-found'}, // catches wrong URL
+    {path: '**', redirectTo: '/not-found'} // catches wrong URL
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
