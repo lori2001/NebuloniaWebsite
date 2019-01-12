@@ -4,16 +4,18 @@
           {{ 'not-found.go_back' | translate }}
     </a>
 
-    <a class="exclamation" href="http://www.aprilyfogimnazium.ro" target="_blank">
-        {{ 'not-found.exclamation' | translate }}
-    </a>
+    <div class="message">
+        <a class="exclamation" href="http://www.aprilyfogimnazium.ro" target="_blank">
+            {{ 'not-found.exclamation' | translate }}
+        </a>
 
-    <div class="errorcode">
-        404
-    </div>
+        <div class="errorcode">
+            404
+        </div>
 
-    <div class="description">
-        {{ 'not-found.description' | translate }}
+        <div class="description">
+            {{ 'not-found.description' | translate }}
+        </div>
     </div>
 
     <a class="langtoggle" *ngIf="this.translate.currentLang === 'hu'" (click)="changeLanguage('ro')">RO</a>
