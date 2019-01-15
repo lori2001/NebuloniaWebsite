@@ -1,0 +1,82 @@
+#contact {
+   padding-top: 60px; 
+   padding-bottom: 48px;
+   background: #2B2B2B;
+   overflow: hidden;
+   background-size: cover !important;
+	-webkit-background-size: cover !important;
+}
+
+/*makes background color transition seemless*/
+
+#contact .text h2 {
+   font-family: octarineBold, arialBlack, Arial;
+   font-size: 22px;
+   margin-bottom: 12px;
+   color: white;
+}
+#contact .text p {
+   font-family: octarineLight, Arial, arialBlack;
+   font-size: 16px;
+   line-height: 30px;
+   color: #7A7A7A;
+}
+#contact .logo{
+   position: absolute;
+}
+#contact .profile-pic {
+   position: absolute;
+   display: block;
+   right: 0px;
+   margin-right: 10%;
+   border-radius: 100%;
+}
+
+/*Responsive Design*/
+@media screen and (min-width: 1366px){
+   #contact .text p {
+      margin-left: 30%;
+      margin-right: 30%;
+      width: 40%;
+   }
+   #contact .text h2 {
+      margin-left: 30%;
+   }
+   #contact .logo{
+      width: 30%;
+   }
+   #contact .profile-pic {
+      width: 120px;
+      height: 120px;
+   }
+}
+@media screen and (min-width: 821px) and (max-width: 1366px){
+   #contact .text p {
+      margin-left: 25%;
+      margin-right: 25%;
+      width: 50%;
+   }
+   #contact .text h2 {
+      margin-left: 25%;
+   }
+   #contact .logo{
+      width: 25%;
+   }
+   #contact .profile-pic {
+      width: 80px;
+      height: 80px;
+   }
+}
+@media screen and (min-width: 0px) and (max-width: 820px){
+   #contact .text p {
+      margin-left: 15%;
+      margin-right: 15%;
+      width: 70%;
+   }
+   #contact .text h2 {
+      margin-left: 15%;
+   }
+   #contact .logo{
+      opacity: 0;
+   }
+}
