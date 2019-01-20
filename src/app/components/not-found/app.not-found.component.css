@@ -1,41 +1,47 @@
 #not-found {
-   width: 100%;
-   height: 100vh;
-   min-width: 250px;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  min-width: 250px;
 
-   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-   url(../../../assets/images/error_bg.jpg) no-repeat center center;
-   background-size: cover !important;
-   -webkit-background-size: cover !important;
-   background-repeat:   no-repeat;
-   background-position: left center;
-   overflow: hidden;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+  url(../../../assets/images/error_bg.jpg) no-repeat center center;
+  background-size: cover !important;
+  -webkit-background-size: cover !important;
+  background-repeat:   no-repeat;
+  background-position: left center;
+  overflow: hidden;
 }
 
-#not-found .back {
-   position: absolute;
-   top: 20px;
-   left: 20px;
-   font-size: 25px;
+#not-found .back{
+  position: absolute;
+  border: none;
+  background: none;
+  display: block;
+  top: 20px;
+  left: 20px;
+  font-size: 25px;
+  text-decoration: none;
+  text-align: left;
+  color: #fff;
+  z-index: 20; /*bugfix*/
 
-   text-decoration: none;
-   color: white;
-   font-family: octarineBold, arialBlack, Arial;
+  font-family: octarineBold, arialBlack, Arial; 
 
-   -webkit-transition: color .2s ease-in-out;
-   -moz-transition: color .2s ease-in-out;
-   -o-transition: color .2s ease-in-out;
-   -ms-transition: color .2s ease-in-out;
-   transition: color .2s ease-in-out;
-   }
-   #not-found .back:hover { 
-      color: #ff9851 !important; 
-      cursor:pointer;
-   }
-   /*hides outline when on focus*/
-   #not-found .back:focus{
-      outline: none;
-   }
+  -webkit-transition: color .2s ease-in-out;
+  -moz-transition: color .2s ease-in-out;
+  -o-transition: color .2s ease-in-out;
+  -ms-transition: color .2s ease-in-out;
+  transition: color .2s ease-in-out;
+}
+  #not-found .back:hover { 
+    color: #F06000 !important; 
+    cursor:pointer;
+  }
+  /*hides outline when on focus*/
+  #not-found .back:focus{
+    outline: none;
+  }
 
 #not-found .message {
    width: 960px;
@@ -80,24 +86,25 @@
 }
 
 #not-found .langtoggle{
-     position: absolute;
-     border: none;
-     background: none;
-     display: block;
-     bottom: 20px;
-     right: 20px;
-     font-size: 20px;
-     text-decoration: none;
-     text-align: left;
-     color: #fff;
+    position: absolute;
+    border: none;
+    background: none;
+    display: block;
+    bottom: 20px;
+    right: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    text-align: left;
+    color: #fff;
 
-     font-family: octarineBold, arialBlack, Arial; 
-   
-     -webkit-transition: color .2s ease-in-out;
-     -moz-transition: color .2s ease-in-out;
-     -o-transition: color .2s ease-in-out;
-     -ms-transition: color .2s ease-in-out;
-     transition: color .2s ease-in-out;
+    z-index: 20; /*bugfix*/
+    font-family: octarineBold, arialBlack, Arial; 
+  
+    -webkit-transition: color .2s ease-in-out;
+    -moz-transition: color .2s ease-in-out;
+    -o-transition: color .2s ease-in-out;
+    -ms-transition: color .2s ease-in-out;
+    transition: color .2s ease-in-out;
    }
    #not-found .langtoggle:hover { 
      color: #F06000 !important; 
