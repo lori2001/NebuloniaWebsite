@@ -7,39 +7,37 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
 
-  var last_width;
-  var last_height;
+// Custom scripts for responsive plugin
+  var container_width = 0;
+  var container_height = 0;
+  var resize;
 
-// Custom scripts for responsive webpage
-  function resizeFBPlugin(){
-      if ($(".fb-page").length > 0) {
-      // getting parent box width
-      var container_width = (Number($('.fb-page').width()) - Number($('.fb-page').css('padding-left').replace("px", ""))).toFixed(0);
-
-      // same height as instagram - 15(average padding)
-      var container_height = Number($('.instagram-widget').height() - 15);
-
-      if(last_height != container_height || last_width != container_width ) {
-        if (!isNaN(container_width) && !isNaN(container_height)) {
-            $(".fb-page").attr("data-width", container_width).attr("data-height", container_height);
-        }
-        if (typeof FB !== 'undefined' ) {
-            FB.XFBML.parse();
-        }
-
-        last_width = container_width;
-        last_height = container_height;
-      }
-    }
+  function initFBPlugin(){
+    setTimeout(function() {resizeFBPlugin();}, 1500); // timeouts add up!!!
   }
 
-// calls functions when needed
-// deprecated by direct calling
-/*
+  function resizeFBPlugin(){
+    setTimeout(function() {
+      if ($(".fb-page").length > 0) {
+        // getting parent box width
+        container_width = (Number($('.fb-page').width()) - Number($('.fb-page').css('padding-left').replace("px", ""))).toFixed(0);
+
+        // same height as instagram - 15(average padding)
+        container_height = Number($('.instagram-widget').height() - 15);
+      }
+    }, 700); //should be smaller than resize's timeout
+
+    clearTimeout(resize);
+    resize = setTimeout(function() {
+      if (!isNaN(container_width) && !isNaN(container_height)) {
+          $(".fb-page").attr("data-width", container_width).attr("data-height", container_height);
+      }
+      if (typeof FB !== 'undefined' ) {
+          FB.XFBML.parse();
+      }
+    }, 1000);
+  }
+
   $(window).on('resize', function() {
-    setTimeout(function(){resizeFBPlugin()}, 500);
+    resizeFBPlugin();
   });
-  $(window).on('load', function() {
-      setTimeout(function(){resizeFBPlugin()}, 1500);
-  });
-*/

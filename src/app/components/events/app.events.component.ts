@@ -1,8 +1,8 @@
-import { Component, OnInit, AfterViewInit, AfterContentInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 
 // Bugfix -> import custom-javascript code
-declare function resizeFBPlugin(): any;
+ declare function initFBPlugin(): any;
 
 @Component({
   selector: 'app-events',
@@ -11,10 +11,16 @@ declare function resizeFBPlugin(): any;
 })
 export class EventsComponent {
 
+  fbInitalized = false;
+
   constructor(private translate: TranslateService) {
   }
 
+  /*Bugfix*/
   resizeFB() {
-    resizeFBPlugin();
+    if (!this.fbInitalized) {
+      initFBPlugin();
+      this.fbInitalized = true;
+    }
   }
 }

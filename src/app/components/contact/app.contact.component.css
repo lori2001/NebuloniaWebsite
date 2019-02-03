@@ -1,18 +1,29 @@
 #contact {
    padding-top: 60px; 
    padding-bottom: 48px;
-   background: #2B2B2B;
+   background: #191919;
+   width: 100%;
+   height: 600px; 
    overflow: hidden;
    background-size: cover !important;
 	-webkit-background-size: cover !important;
 }
 
-/*makes background color transition seemless*/
+#contact .text { /* first row*/
+   width: 80%;
+   margin-left: 25px;
+}
 
+#contact .announcement .fa { /* second row*/
+   text-align: center;
+   color: white;
+   font-size: 80px;
+   width: 15%;
+}
 #contact .text h2 {
    font-family: octarineBold, arialBlack, Arial;
    font-size: 22px;
-   margin-bottom: 12px;
+   margin-bottom: 20px;
    color: white;
 }
 #contact .text p {
@@ -21,62 +32,40 @@
    line-height: 30px;
    color: #7A7A7A;
 }
-#contact .logo{
-   position: absolute;
-}
-#contact .profile-pic {
-   position: absolute;
-   display: block;
-   right: 0px;
-   margin-right: 10%;
-   border-radius: 100%;
-}
 
 /*Responsive Design*/
-@media screen and (min-width: 1366px){
-   #contact .text p {
-      margin-left: 30%;
-      margin-right: 30%;
-      width: 40%;
-   }
-   #contact .text h2 {
-      margin-left: 30%;
-   }
-   #contact .logo{
-      width: 30%;
-   }
-   #contact .profile-pic {
-      width: 120px;
-      height: 120px;
+@media screen and (min-width: 1281px){
+   #contact .announcement{
+      margin: 0 auto;
+      width: 65%;
    }
 }
-@media screen and (min-width: 821px) and (max-width: 1366px){
+@media screen and (min-width: 821px) and (max-width: 1280px){
+   #contact .announcement {
+      margin: 0 auto;
+      width: 70%;
+   }
    #contact .text p {
-      margin-left: 25%;
-      margin-right: 25%;
-      width: 50%;
+      font-size: 13px!important;
+      line-height: 23px!important;
    }
-   #contact .text h2 {
-      margin-left: 25%;
-   }
-   #contact .logo{
-      width: 25%;
-   }
-   #contact .profile-pic {
-      width: 80px;
-      height: 80px;
+   #contact .announcement .fa {
+      font-size: 60px!important;
    }
 }
 @media screen and (min-width: 0px) and (max-width: 820px){
+   #contact .announcement {
+      margin: 0 auto;
+      width: 80%;
+   }
    #contact .text p {
-      margin-left: 15%;
-      margin-right: 15%;
-      width: 70%;
+      font-size: 12px!important;
+      line-height: 23px!important;
    }
-   #contact .text h2 {
-      margin-left: 15%;
+   #contact .text {
+      margin: 0 auto;
    }
-   #contact .logo{
-      opacity: 0;
+   #contact .announcement .fa {
+      display: none;
    }
 }

@@ -35,8 +35,7 @@
 /*Responsive Design*/
 @media screen and (min-width: 1366px){
    #about .text p {
-      margin-left: 30%;
-      margin-right: 30%;
+      margin: 0 auto;
       width: 40%;
    }
    #about .text h2 {
@@ -50,11 +49,12 @@
       height: 120px;
    }
 }
-@media screen and (min-width: 821px) and (max-width: 1366px){
+@media screen and (min-width: 821px) and (max-width: 1365px){
    #about .text p {
-      margin-left: 25%;
-      margin-right: 25%;
+      margin: 0 auto;
       width: 50%;
+      font-size: 13px!important;
+      line-height: 23px!important;
    }
    #about .text h2 {
       margin-left: 25%;
@@ -69,9 +69,10 @@
 }
 @media screen and (min-width: 0px) and (max-width: 820px){
    #about .text p {
-      margin-left: 15%;
-      margin-right: 15%;
+      margin: 0 auto;
       width: 70%;
+      font-size: 12px!important;
+      line-height: 23px!important;
    }
    #about .text h2 {
       margin-left: 15%;

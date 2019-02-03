@@ -36,5 +36,10 @@
         "exclamation": "Az iskoláját!",
         "description": "A kívánt oldal nem található.",
         "go_back": "Ugorj a főoldalra!"
+    },
+
+    "contact" : {
+        "title" : "Üzenj nekünk!",
+        "text" : "Ha már kihangsúlyoztuk, hogy a Nebulónia sok oldalú, nyitott különböző véleményekre, az alábbiakban lehetőséged van neked is kapcsolatba lépni velünk! A visszajelzéseket, akár kritkákat, új ötleteket, javaslatokat szívesen fogadunk, hiszen alakulhatunk általuk."
     }
 }

@@ -141,7 +141,7 @@
    #not-found .back {font-size: 18px;}
    #not-found .langtoggle{font-size: 16px;}
  }
- @media screen and (min-width: 0px) and (max-width: 330px){
+ @media screen and (min-width: 0px) and (max-width: 329px){
    #not-found .message {transform: translate(-50%, -63%) scale(0.65,0.65);}
    #not-found .message .exclamation { white-space: nowrap; right: 50%; transform: translateX(+50%);}
    #not-found .message .description { white-space: nowrap; left: 50%; transform: translateX(-50%);}
