@@ -36,5 +36,22 @@
         "exclamation": "Scoală-sa!",
         "description": "Pagina cerută nu a fost găsită!",
         "go_back": "Înapoi pe pagina principală"
+    },
+
+    "contact" : {
+        "title" : "Fă legătură cu noi!",
+        "text" : "Dacă tot am menționat faptul că Nebulónia este o organizație mereu deschisă noilor opinii, aici aveți ocazia să luați legătura cu noi! Feedback-ul, critica constructivă și ideile noi sunt bine-venite căci cu ajutorul acestora putem evolua în ceva mai bun.",
+        "mail" : { 
+            "name" : "Nume",
+            "email" : "Email",
+            "title" : "Titlu",
+            "message" : "Mesaj",
+            "send" : "Trimite!"
+        },
+        "address" : {
+            "title" : "Adresă",
+            "name" : "Colegiul Național Áprily Lajos",
+            "location" : "Str. După Ziduri, Nr. 3, Brașov"
+        }
     }
 }

@@ -17,6 +17,11 @@ import { AppRoutingModule } from './app.routes';
 // scrolling (somewhat part of routing)
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
+// primeng
+import {InputTextareaModule} from 'primeng/inputtextarea';
+import {InputTextModule} from 'primeng/inputtext';
+import {ToastModule} from 'primeng/toast';
+
 // import components
 import { AppComponent } from './app.component';
 import { MainComponent } from './components/main/app.main.component';
@@ -56,6 +61,11 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
 
     // owl carousel
     OwlModule,
+
+    // primeng
+    InputTextareaModule,
+    InputTextModule,
+    ToastModule,
 
      // translate modules
      HttpClientModule,

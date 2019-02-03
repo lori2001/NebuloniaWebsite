@@ -39,7 +39,19 @@
     },
 
     "contact" : {
-        "title" : "Üzenj nekünk!",
-        "text" : "Ha már kihangsúlyoztuk, hogy a Nebulónia sok oldalú, nyitott különböző véleményekre, az alábbiakban lehetőséged van neked is kapcsolatba lépni velünk! A visszajelzéseket, akár kritkákat, új ötleteket, javaslatokat szívesen fogadunk, hiszen alakulhatunk általuk."
+        "title" : "Lépj kapcsolatba velünk!",
+        "text" : "Ha már kihangsúlyoztuk, hogy a Nebulónia sok oldalú, nyitott különböző véleményekre, az alábbiakban lehetőséged van neked is kapcsolatba lépni velünk! A visszajelzéseket, akár kritkákat, új ötleteket, javaslatokat szívesen fogadunk, hiszen alakulhatunk általuk.",
+        "mail" : { 
+            "name" : "Név",
+            "email" : "Email",
+            "title" : "Cím",
+            "message" : "Üzenet",
+            "send" : "Küld!"
+        },
+        "address" : {
+            "title" : "Cím",
+            "name" : "Áprily Lajos Főgimnázium",
+            "location" : "După Ziduri utca, 3. szám, Brassó"
+        }
     }
 }

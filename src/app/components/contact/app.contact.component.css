@@ -3,69 +3,91 @@
    padding-bottom: 48px;
    background: #191919;
    width: 100%;
-   height: 600px; 
+   height: 900px; 
    overflow: hidden;
    background-size: cover !important;
 	-webkit-background-size: cover !important;
 }
 
-#contact .text { /* first row*/
-   width: 80%;
-   margin-left: 25px;
-}
-
-#contact .announcement .fa { /* second row*/
+#contact .contact-content .fa { /* first column */
    text-align: center;
    color: white;
    font-size: 80px;
    width: 15%;
 }
-#contact .text h2 {
+#contact .content { /* second column */
+   width: 80%;
+   margin-left: 25px;
+}
+
+#contact .content h2 {
    font-family: octarineBold, arialBlack, Arial;
    font-size: 22px;
    margin-bottom: 20px;
    color: white;
 }
-#contact .text p {
+#contact .content p {
    font-family: octarineLight, Arial, arialBlack;
    font-size: 16px;
    line-height: 30px;
    color: #7A7A7A;
 }
 
+.content .email{
+   float: left;
+   color: white;
+   margin-top: 40px;
+   width: 30%;
+}
+.content .email input, .content .email textarea{
+   width: 100%;
+   margin-bottom: 20px;
+}
+.content .email textarea{
+   resize: none;
+}
+
+.content .google-maps {
+   float: left;
+   margin-top: 40px;
+   margin-left: 5%;
+   width: 65%;
+   height: 400px;
+}
+
 /*Responsive Design*/
 @media screen and (min-width: 1281px){
-   #contact .announcement{
+   #contact .contact-content{
       margin: 0 auto;
       width: 65%;
    }
 }
 @media screen and (min-width: 821px) and (max-width: 1280px){
-   #contact .announcement {
+   #contact .contact-content {
       margin: 0 auto;
       width: 70%;
    }
-   #contact .text p {
+   #contact .content p {
       font-size: 13px!important;
       line-height: 23px!important;
    }
-   #contact .announcement .fa {
+   #contact .contact-content .fa {
       font-size: 60px!important;
    }
 }
 @media screen and (min-width: 0px) and (max-width: 820px){
-   #contact .announcement {
+   #contact .contact-content {
       margin: 0 auto;
       width: 80%;
    }
-   #contact .text p {
+   #contact .content p {
       font-size: 12px!important;
       line-height: 23px!important;
    }
-   #contact .text {
+   #contact .content {
       margin: 0 auto;
    }
-   #contact .announcement .fa {
+   #contact .contact-content .fa {
       display: none;
    }
 }
