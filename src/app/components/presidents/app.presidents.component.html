@@ -11,9 +11,9 @@
   
     <owl-carousel
     [options]="sliderOPT"
-    [items]="carouselElements"
+    [items]="presidentsElement"
     [carouselClasses]="['owl-theme']">
-      <div class="item" *ngFor="let element of carouselElements;let i = index">
+      <div class="item" *ngFor="let element of presidentsElement;let i = index">
         <img class="element-style" [src]="element.url"/>
         <h5>{{element.name}}</h5>
         <p>{{element.position | translate}}</p>

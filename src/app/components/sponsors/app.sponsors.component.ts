@@ -1,40 +1,48 @@
 import { HostListener, Component, Input } from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
-import { PresidentsElement } from 'src/app/models/presidents.element';
+import { CarouselElement } from 'src/app/models/carousel.element';
 
 @Component({
-  selector: 'app-presidents',
-  templateUrl: './app.presidents.component.html',
-  styleUrls: ['./app.presidents.component.css']
+  selector: 'app-sponsors',
+  templateUrl: './app.sponsors.component.html',
+  styleUrls: ['./app.sponsors.component.css']
 })
-export class PresidentsComponent {
+export class SponsorsComponent {
   width = '60%'; // width of the whole section
 
   /*owl carousel options from https://owlcarousel2.github.io/OwlCarousel2/docs/api-options.html */
   public sliderOPT: any = {
-    dots: true,
+    dots: false,
     autoplay: true,
-    autoplayTimeout: 4000,
-    autoplaySpeed: 1000,
-    rewind: true,
+    autoplayTimeout: 3000,
+    autoplaySpeed: 2000,
+    loop: true,
     autoplayHoverPause: true,
-    items: 3,
+    items: 6,
     responsiveClass: true,
     responsive: {
         0: {
-            items: 1,
-            dots: false
+          items: 1
+        },
+        250: {
+          items: 2
+        },
+        450: {
+          items: 3
         },
         576: {
-            items: 2
+          items: 5
         },
-        768: {
-            items: 3
+        768 : {
+          items: 6
+        },
+        950: {
+          items: 7
         }
     }
   };
 
-  @Input() presidentsElement: PresidentsElement[];
+  @Input() carouselElements: CarouselElement[];
 
   constructor(private translate: TranslateService) {
     this.checkResolution();
@@ -46,11 +54,11 @@ export class PresidentsComponent {
       if (window.innerWidth < 576) {
         this.width = '100%';
       } else if (window.innerWidth < 992) {
-        this.width = '90%';
+        this.width = '95%';
       } else if (window.innerWidth  < 1200) {
-        this.width = '80%';
+        this.width = '85%';
       } else {
-        this.width = '60%';
+        this.width = '75%';
       }
     }
 }

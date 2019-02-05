@@ -15,19 +15,19 @@
    text-align: center;
   /* margin: 0 auto;*/
 }
-.slider {
+#presidents .slider {
    /*width controlled in ts and html*/
    margin: 0 auto;
    text-align:center;
 }
 
 /*Title START*/
-.slider .title {
+#presidents .slider .title {
    width: 100%;
    text-align: center;
 }
 
-.slider .title a{
+#presidents .slider .title a{
    text-decoration: none;
    color: white;
       
@@ -40,26 +40,26 @@
    -ms-transition: color .2s ease-in-out;
    transition: color .2s ease-in-out;
 }
-.slider .title a:hover { 
+#presidents .slider .title a:hover { 
    color: #F06000 !important; 
    cursor: pointer;
 }
 /*Title END*/
 
-.slider .item {
+#presidents .slider .item {
    text-align: center;
    color: white;
 }
 
-.slider .item h5 {
+#presidents .slider .item h5 {
    font-family: octarineBold, arialBlack, Arial;
 }
 
-.slider .item p {
+#presidents .slider .item p {
    font-family: octarineLight, Arial, arialBlack;
 }
 
-.slider .element-style{
+#presidents .slider .element-style{
 	width: 120px;
 	height: 120px;
    border-radius: 100%; /*round*/
@@ -67,7 +67,7 @@
    margin-bottom: 20px;
 }
 
-.slider .line{
+#presidents .slider .line{
 	border-top: 4px solid #fcac45;
 	width: 60px;
 	margin: 0 auto;
@@ -75,7 +75,7 @@
    margin-bottom: 40px;
 }
 
-.slider .line hr {
+#presidents .slider .line hr {
    border-top: 4px solid rgba(252, 172, 69, 0.34);
    width: 40px;
 	margin: 0 auto;
@@ -93,9 +93,3 @@
  .owl-theme .owl-dots .owl-dot:hover span {
    background: #FCAC45!important; /*active and on hover color*/
 }
-
-/*shouldw removed borders on focus but doesn't*/
-/*
-::ng-deep .owl-theme .owl-dots .owl-dot:focus {
-   border: 0!important;
-}*/

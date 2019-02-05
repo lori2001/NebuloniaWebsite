@@ -1,0 +1,27 @@
+#sponsors {
+   /*applies a dark filter on the background*/
+   background-color: #0F0F0F;
+
+   width: 100%;
+   height: 200px;
+   overflow: hidden;
+   padding-top: 50px;
+   padding-bottom: 50px;
+   text-align: center;
+}
+#sponsors .slider {
+   /*width controlled in ts and html*/
+   margin: 0 auto;
+   text-align:center;
+}
+
+.slider .item {
+   text-align: center;
+   color: white;
+}
+
+.slider .element-style{
+	width: 100px;
+	height: 100px;
+   margin: 0 auto; /* center inside container*/
+}

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
+import { PresidentsElement } from 'src/app/models/presidents.element';
 import { CarouselElement } from 'src/app/models/carousel.element';
 
 @Component({
@@ -8,7 +9,8 @@ import { CarouselElement } from 'src/app/models/carousel.element';
   styleUrls: ['./app.main.component.css']
 })
 export class MainComponent {
-  presidents: CarouselElement[];
+  presidents: PresidentsElement[];
+  sponsors: CarouselElement[];
 
   constructor(private translate: TranslateService) {
       this.presidents = [
@@ -36,6 +38,25 @@ export class MainComponent {
         { url: '../../../assets/images/presidents/technological.jpg',
           name: 'Kristó Attila',
           position: 'presidents.technological' }
+      ];
+
+      this.sponsors = [
+        { url: '../../../assets/images/sponsors/sponsor1.jpg' },
+        { url: '../../../assets/images/sponsors/sponsor2.jpg' },
+        { url: '../../../assets/images/sponsors/sponsor3.jpg' },
+        { url: '../../../assets/images/sponsors/sponsor4.jpg' },
+        { url: '../../../assets/images/sponsors/sponsor5.jpg' },
+        { url: '../../../assets/images/sponsors/sponsor6.jpg' },
+        { url: '../../../assets/images/sponsors/sponsor7.jpg' },
+        { url: '../../../assets/images/sponsors/sponsor8.jpg' },
+        { url: '../../../assets/images/sponsors/sponsor9.jpg' },
+        { url: '../../../assets/images/sponsors/sponsor10.jpg' },
+        { url: '../../../assets/images/sponsors/sponsor11.jpg' },
+        { url: '../../../assets/images/sponsors/sponsor12.jpg' },
+        { url: '../../../assets/images/sponsors/sponsor13.jpg' },
+        { url: '../../../assets/images/sponsors/sponsor14.jpg' },
+        { url: '../../../assets/images/sponsors/sponsor15.jpg' },
+        { url: '../../../assets/images/sponsors/sponsor16.jpg' }
       ];
     }
 }

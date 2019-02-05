@@ -33,6 +33,7 @@ import { PresidentsComponent } from './components/presidents/app.presidents.comp
 import { EventsComponent } from './components/events/app.events.component';
 import { NotFoundComponent } from './components/not-found/app.not-found.component';
 import { ContactComponent } from './components/contact/app.contact.component';
+import { SponsorsComponent } from './components/sponsors/app.sponsors.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -48,6 +49,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
       PresidentsComponent,
       EventsComponent,
       ContactComponent,
+      SponsorsComponent,
+
     NotFoundComponent // 404 Page
   ],
   imports: [
