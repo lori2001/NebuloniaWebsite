@@ -7,7 +7,8 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
 
-// Custom scripts for responsive plugin
+// Custom Scripts
+/****************Facebook START****************/
   var container_width = 0;
   var container_height = 0;
   var resize;
@@ -41,3 +42,4 @@
   $(window).on('resize', function() {
     resizeFBPlugin();
   });
+/****************Facebook END****************/

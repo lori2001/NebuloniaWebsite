@@ -9,8 +9,8 @@
           <a [ngx-scroll-to]="'#about'" [ngx-scroll-to-offset]="offset">{{ 'menu.about' | translate }}</a>
           <a [ngx-scroll-to]="'#events'" [ngx-scroll-to-offset]="offset">{{ 'menu.events' | translate }}</a>
           <a [ngx-scroll-to]="'#contact'" [ngx-scroll-to-offset]="offset">{{ 'menu.contact' | translate }}</a>
-          <a [ngx-scroll-to]="'#arhive'" [ngx-scroll-to-offset]="offset">{{ 'menu.archive' | translate }}</a>
-          <a [ngx-scroll-to]="'#points'" [ngx-scroll-to-offset]="offset">{{ 'menu.class_points' | translate }}</a>
+          <a>{{ 'menu.archive' | translate }} <div class="pagemark"></div></a>
+          <a>{{ 'menu.class_points' | translate }} <div class="pagemark"></div></a>
           <a *ngIf="this.translate.currentLang === 'hu'" (click)="setLanguage('ro')">RO</a>
           <a *ngIf="this.translate.currentLang === 'ro'" (click)="setLanguage('hu')">HU</a>
       </ul>

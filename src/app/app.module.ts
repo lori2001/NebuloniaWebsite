@@ -21,6 +21,7 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import {InputTextareaModule} from 'primeng/inputtextarea';
 import {InputTextModule} from 'primeng/inputtext';
 import {ToastModule} from 'primeng/toast';
+import {ButtonModule} from 'primeng/button';
 
 // import components
 import { AppComponent } from './app.component';
@@ -66,6 +67,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     InputTextareaModule,
     InputTextModule,
     ToastModule,
+    ButtonModule,
 
      // translate modules
      HttpClientModule,

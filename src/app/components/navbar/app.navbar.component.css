@@ -60,10 +60,26 @@
   .navbar-nav a{
   line-height: initial;
   }
+  .navbar-nav .pagemark {
+    background-color: currentColor;
+    width: 100%;
+  
+    height: 2px;
+    margin-top: 3px;
+  }
 }
 /* Mobile mode */
 @media screen and (min-width: 0px) and (max-width: 767px){
   .navbar-nav a{
     line-height: 25px;
+  }
+  .navbar-nav .pagemark {
+    background-color: currentColor;
+    position: relative;
+    top: -100%;
+    width: 6px;
+  
+    height: 100%;
+    margin-left: -12px;
   }
 }
