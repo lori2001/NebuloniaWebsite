@@ -1,5 +1,5 @@
 :host ::ng-deep .custom-toast .ui-toast-message {
-   background: #f9c263 !important;
+   background: rgb(255, 208, 99) !important;
 }
 
 #contact {

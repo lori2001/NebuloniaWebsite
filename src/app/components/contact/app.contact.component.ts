@@ -1,5 +1,4 @@
 import { Component, ElementRef, ViewChild, HostListener } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
 import { MessageService } from 'primeng/components/common/messageservice';
 
 @Component({
@@ -9,10 +8,9 @@ import { MessageService } from 'primeng/components/common/messageservice';
   providers: [MessageService]
 })
 export class ContactComponent {
-  window_width: number;
+  message_margin = '48px';
 
-  constructor(private translate: TranslateService,
-              private messageService: MessageService) {
+  constructor(private messageService: MessageService) {
     this.checkMobileMode();
   }
 
@@ -23,7 +21,11 @@ export class ContactComponent {
 
   @HostListener('window:resize', ['$event'])
   checkMobileMode() {
-    this.window_width = window.innerWidth;
+    if (window.innerWidth < 768 && window.innerWidth > 370) {
+      this.message_margin = '-7px';
+    } else {
+      this.message_margin = '48px';
+    }
   }
 
   clearmailInput() {
@@ -33,11 +35,17 @@ export class ContactComponent {
       this.mailForm4.nativeElement.value = '';
   }
   showSuccess() {
-    //  this.messageService.add({key: 'custom', severity: 'success', summary: 'Message Sent', detail: 'Your message has been sent'});
-    if (this.window_width < 768 && this.window_width > 370) {
-      this.messageService.add({key: 'marginless', severity: 'warn', summary: 'Message Not Sent', detail: 'Mail service not available yet'});
-    } else {
-      this.messageService.add({key: 'margined', severity: 'warn', summary: 'Message Not Sent', detail: 'Mail service not available yet'});
-    }
+      this.messageService.add({
+        key: 'custom',
+        severity: 'warn',
+        summary: 'contact.message.error.summary',
+        detail: 'contact.message.error.detail'
+      });
+      /*this.messageService.add({
+        key: 'custom',
+        severity: 'success',
+        summary: 'contact.message.success.summary',
+        detail: 'contact.message.success.detail'
+      });*/
   }
 }

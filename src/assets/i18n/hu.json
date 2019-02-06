@@ -52,6 +52,16 @@
             "title" : "Cím",
             "name" : "Áprily Lajos Főgimnázium",
             "location" : "După Ziduri utca, 3. szám, Brassó"
+        },
+        "message" : {
+            "error" : {
+                "summary" : "Sikertelen elküldés!",
+                "detail" : "A szolgáltatás nem elérhető."
+            },
+            "success" : {
+                "summary" : "Üzenet elküldve!",
+                "detail" : "Üzenetét hamarosan megkapjuk."
+            }
         }
     },
 

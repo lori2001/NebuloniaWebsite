@@ -1,5 +1,4 @@
 import { HostListener, Component, Input } from '@angular/core';
-import {TranslateService} from '@ngx-translate/core';
 import { PresidentsElement } from 'src/app/models/presidents.element';
 
 @Component({
@@ -36,7 +35,7 @@ export class PresidentsComponent {
 
   @Input() presidentsElement: PresidentsElement[];
 
-  constructor(private translate: TranslateService) {
+  constructor() {
     this.checkResolution();
   }
 

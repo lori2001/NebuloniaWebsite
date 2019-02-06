@@ -1,6 +1,20 @@
-<p-toast [style]="{marginTop: '48px'}" position="top-right" key="margined" styleClass="custom-toast"></p-toast>
-<p-toast [style]="{marginTop: '-7px'}" position="top-right" key="marginless" styleClass="custom-toast"></p-toast>
-<!--Declares a toast for succesful messages. Can be put almost anywhere-->
+<p-toast [style]="{marginTop: message_margin}" 
+          position="top-right"
+          key="custom"
+          styleClass="custom-toast">
+
+          <ng-template let-message pTemplate="message">
+              <a tabindex="0" class="ui-toast-close-icon pi pi-times" (click)="onCloseIconClick($event)" (keydown.enter)="onCloseIconClick($event)" *ngIf="message.closable !== false"></a>
+              <span class="ui-toast-icon pi"
+              [ngClass]="{'pi-info-circle': message.severity == 'info', 'pi-exclamation-triangle': message.severity == 'warn',
+                  'pi-times': message.severity == 'error', 'pi-check' :message.severity == 'success'}"></span>
+              <div class="ui-toast-message-text-content">
+                  <div class="ui-toast-summary">{{message.summary | translate}}</div>
+                  <div class="ui-toast-detail">{{message.detail | translate}}</div>
+              </div>
+        </ng-template>
+</p-toast>
+<!--Declares a toast for messages. Can be put almost anywhere-->
 
 <section id="contact">
   <i class="fa fa-envelope"></i>
@@ -33,4 +47,3 @@
     </div>
   </div>
 </section>
-

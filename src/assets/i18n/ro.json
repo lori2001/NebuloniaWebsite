@@ -52,6 +52,16 @@
             "title" : "Adresă",
             "name" : "Colegiul Național Áprily Lajos",
             "location" : "Str. După Ziduri, Nr. 3, Brașov"
+        },
+        "message" : {
+            "error" : {
+                "summary" : "Trimitere eșuată!",
+                "detail" : "Serviciu momentan indisponibil."
+            },
+            "success" : {
+                "summary" : "Mesaj trimis!",
+                "detail" : "Mesajul va fi preluat curând."
+            }
         }
     },
 

@@ -23,7 +23,7 @@
 
   -webkit-text-fill-color: #FFB300; /*will override color*/
   -webkit-text-stroke-width: 3px;
-  -webkit-text-stroke-color: #FFB300; /* 585858 */
+  -webkit-text-stroke-color: #FFB300;
 
   -webkit-transition: all .3s ease-in-out;
   -moz-transition: all .3s ease-in-out;
@@ -38,7 +38,7 @@
   cursor: pointer;
 }
 
-#footer .creators-page {
+#footer .creators-page, #footer .copyright {
   position: absolute;
   display: block;
 
@@ -62,9 +62,12 @@
   -webkit-text-fill-color: #F06000; /*will override color*/
   cursor: pointer;
 }
+#footer .copyright {
+  text-align: left;
+}
 
 @media screen and (min-width: 500px){
-  #footer .creators-page {
+  #footer .creators-page, #footer .copyright {
     padding-top: 5px;
     font-size: 1rem;
   }
@@ -79,7 +82,7 @@
   }
 }
 @media screen and (min-width: 280px) and (max-width: 499px){
-  #footer .creators-page {
+  #footer .creators-page, #footer .copyright {
     padding-top: 6px;
     font-size: 0.8rem;
   }
@@ -94,7 +97,7 @@
   }
 }
 @media screen and (min-width: 220px) and (max-width: 279px){
-  #footer .creators-page {
+  #footer .creators-page, #footer .copyright {
     padding-top: 7px;
     font-size: 0.6rem;
   }
@@ -109,7 +112,7 @@
   }
 }
 @media screen and (min-width: 0px) and (max-width: 219px){
-  #footer .creators-page {
+  #footer .creators-page, #footer .copyright {
     display: none;
   }
   #footer .scroll-up {
