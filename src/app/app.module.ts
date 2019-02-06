@@ -34,6 +34,7 @@ import { EventsComponent } from './components/events/app.events.component';
 import { NotFoundComponent } from './components/not-found/app.not-found.component';
 import { ContactComponent } from './components/contact/app.contact.component';
 import { SponsorsComponent } from './components/sponsors/app.sponsors.component';
+import { FooterComponent } from './components/footer/app.footer.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -50,6 +51,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
       EventsComponent,
       ContactComponent,
       SponsorsComponent,
+      FooterComponent,
 
     NotFoundComponent // 404 Page
   ],

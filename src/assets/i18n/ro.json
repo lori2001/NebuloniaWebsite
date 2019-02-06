@@ -53,5 +53,9 @@
             "name" : "Colegiul Național Áprily Lajos",
             "location" : "Str. După Ziduri, Nr. 3, Brașov"
         }
+    },
+
+    "footer" : {
+        "creators_page" : "Pagina creatorilor"
     }
 }

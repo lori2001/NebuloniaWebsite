@@ -1,18 +1,18 @@
 <nav class="navbar navbar-expand-md" [ngStyle]="{'background-color': 'rgba(51,51,51,'+ (bgopacity) +')', 'width' : width}">
-    <button class="navbar-toggler" (click)="toggleNavbar()" type="button" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="toggler fa fa-bars"></span>
-    </button>
-  
-    <div class="navbar-collapse" (click)="toggleNavbar()" [hidden]="collapse">
-      <ul class="navbar-nav mr-auto">
-          <a [ngx-scroll-to]="'#home'" [ngx-scroll-to-offset]="offset">{{ 'menu.home' | translate }}</a>
-          <a [ngx-scroll-to]="'#about'" [ngx-scroll-to-offset]="offset">{{ 'menu.about' | translate }}</a>
-          <a [ngx-scroll-to]="'#events'" [ngx-scroll-to-offset]="offset">{{ 'menu.events' | translate }}</a>
-          <a [ngx-scroll-to]="'#contact'" [ngx-scroll-to-offset]="offset">{{ 'menu.contact' | translate }}</a>
-          <a>{{ 'menu.archive' | translate }} <div class="pagemark"></div></a>
-          <a>{{ 'menu.class_points' | translate }} <div class="pagemark"></div></a>
-          <a *ngIf="this.translate.currentLang === 'hu'" (click)="setLanguage('ro')">RO</a>
-          <a *ngIf="this.translate.currentLang === 'ro'" (click)="setLanguage('hu')">HU</a>
-      </ul>
-    </div>
-  </nav>
+  <button class="navbar-toggler" (click)="toggleNavbar()" type="button" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="toggler fa fa-bars"></span>
+  </button>
+
+  <div class="navbar-collapse" (click)="toggleNavbar()" [hidden]="collapse">
+    <ul class="navbar-nav mr-auto">
+        <a [ngx-scroll-to]="'#home'" [ngx-scroll-to-offset]="offset">{{ 'menu.home' | translate }}</a>
+        <a [ngx-scroll-to]="'#about'" [ngx-scroll-to-offset]="offset">{{ 'menu.about' | translate }}</a>
+        <a [ngx-scroll-to]="'#events'" [ngx-scroll-to-offset]="offset">{{ 'menu.events' | translate }}</a>
+        <a [ngx-scroll-to]="'#contact'" [ngx-scroll-to-offset]="offset">{{ 'menu.contact' | translate }}</a>
+        <a>{{ 'menu.archive' | translate }} <div class="pagemark"></div></a>
+        <a>{{ 'menu.class_points' | translate }} <div class="pagemark"></div></a>
+        <a *ngIf="this.translate.currentLang === 'hu'" (click)="setLanguage('ro')">RO</a>
+        <a *ngIf="this.translate.currentLang === 'ro'" (click)="setLanguage('hu')">HU</a>
+    </ul>
+  </div>
+</nav>

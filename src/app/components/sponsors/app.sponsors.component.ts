@@ -8,7 +8,7 @@ import { CarouselElement } from 'src/app/models/carousel.element';
   styleUrls: ['./app.sponsors.component.css']
 })
 export class SponsorsComponent {
-  width = '60%'; // width of the whole section
+  width = '75%'; // width of the whole section
 
   /*owl carousel options from https://owlcarousel2.github.io/OwlCarousel2/docs/api-options.html */
   public sliderOPT: any = {

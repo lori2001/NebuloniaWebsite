@@ -40,6 +40,7 @@ export class MainComponent {
           position: 'presidents.technological' }
       ];
 
+      // at least 7 items are recommended
       this.sponsors = [
         { url: '../../../assets/images/sponsors/sponsor1.jpg' },
         { url: '../../../assets/images/sponsors/sponsor2.jpg' },
@@ -47,16 +48,7 @@ export class MainComponent {
         { url: '../../../assets/images/sponsors/sponsor4.jpg' },
         { url: '../../../assets/images/sponsors/sponsor5.jpg' },
         { url: '../../../assets/images/sponsors/sponsor6.jpg' },
-        { url: '../../../assets/images/sponsors/sponsor7.jpg' },
-        { url: '../../../assets/images/sponsors/sponsor8.jpg' },
-        { url: '../../../assets/images/sponsors/sponsor9.jpg' },
-        { url: '../../../assets/images/sponsors/sponsor10.jpg' },
-        { url: '../../../assets/images/sponsors/sponsor11.jpg' },
-        { url: '../../../assets/images/sponsors/sponsor12.jpg' },
-        { url: '../../../assets/images/sponsors/sponsor13.jpg' },
-        { url: '../../../assets/images/sponsors/sponsor14.jpg' },
-        { url: '../../../assets/images/sponsors/sponsor15.jpg' },
-        { url: '../../../assets/images/sponsors/sponsor16.jpg' }
+        { url: '../../../assets/images/sponsors/sponsor7.jpg' }
       ];
     }
 }
