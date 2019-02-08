@@ -1,5 +1,4 @@
 import { HostListener, Component, Input } from '@angular/core';
-import {TranslateService} from '@ngx-translate/core';
 import { CarouselElement } from 'src/app/models/carousel.element';
 
 @Component({
@@ -44,7 +43,7 @@ export class SponsorsComponent {
 
   @Input() carouselElements: CarouselElement[];
 
-  constructor(private translate: TranslateService) {
+  constructor() {
     this.checkResolution();
   }
 

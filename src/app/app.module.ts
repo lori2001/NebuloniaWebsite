@@ -35,6 +35,7 @@ import { NotFoundComponent } from './components/not-found/app.not-found.componen
 import { ContactComponent } from './components/contact/app.contact.component';
 import { SponsorsComponent } from './components/sponsors/app.sponsors.component';
 import { FooterComponent } from './components/footer/app.footer.component';
+import { ArchiveComponent } from './components/archive/app.archive.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -53,6 +54,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
       SponsorsComponent,
       FooterComponent,
 
+    ArchiveComponent,
     NotFoundComponent // 404 Page
   ],
   imports: [

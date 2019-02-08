@@ -1,5 +1,4 @@
 import { Component, AfterViewInit } from '@angular/core';
-import {TranslateService} from '@ngx-translate/core';
 
 // Bugfix -> import custom-javascript code
  declare function initFBPlugin(): any;
@@ -13,7 +12,7 @@ export class EventsComponent {
 
   fbInitalized = false;
 
-  constructor(private translate: TranslateService) {
+  constructor() {
   }
 
   /*Bugfix*/

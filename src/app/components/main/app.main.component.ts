@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {TranslateService} from '@ngx-translate/core';
 import { PresidentsElement } from 'src/app/models/presidents.element';
 import { CarouselElement } from 'src/app/models/carousel.element';
 
@@ -12,7 +11,7 @@ export class MainComponent {
   presidents: PresidentsElement[];
   sponsors: CarouselElement[];
 
-  constructor(private translate: TranslateService) {
+  constructor() {
       this.presidents = [
         { url: '../../../assets/images/presidents/home_secretary.jpg',
           name: 'Kirsch Edgár',

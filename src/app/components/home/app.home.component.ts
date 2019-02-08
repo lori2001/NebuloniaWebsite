@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +7,7 @@ import {TranslateService} from '@ngx-translate/core';
 })
 export class HomeComponent {
 
-  constructor(private translate: TranslateService) {
+  constructor() {
   }
 }
 

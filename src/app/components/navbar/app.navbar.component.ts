@@ -1,4 +1,4 @@
-import { Component, HostListener, ElementRef } from '@angular/core';
+import { Component, HostListener, ElementRef, Input } from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 
 @Component({
@@ -14,17 +14,30 @@ export class NavbarComponent {
   collapse = true; // true if mobile style menu is collapsed
   offset = -48; // due to mobile mode's small menu the offset should change
 
+  private _mainPage = true; // checks and behaves differently whether the user is on main page or not
+
   constructor(public translate: TranslateService) {
     // initialization stuff
     this.checkMobileMode();
     this.calcOpacity();
   }
 
+  get mainPage(): boolean {
+    return this._mainPage;
+  }
+
+  @Input()
+  set mainPage(value: boolean) {
+    this._mainPage = value;
+    if (!this._mainPage) {
+      this.bgopacity = 1; // background should never go transparent
+    }
+  }
+
   @HostListener('window:resize', ['$event'])
   checkMobileMode() {
     if ( window.innerWidth < 768) {
       this.mobileMode = true; // enables mobile mode
-
       this.bgopacity = 0; // no background as default
       this.collapse = true; // resolves a bug on mobile
       this.offset = 0;
@@ -48,6 +61,10 @@ export class NavbarComponent {
       if (this.bgopacity > 1) {
         this.bgopacity = 1;
       }
+    }
+
+    if (!this.mainPage) {
+      this.bgopacity = 1;
     }
   }
 

@@ -5,11 +5,20 @@
 
   <div class="navbar-collapse" (click)="toggleNavbar()" [hidden]="collapse">
     <ul class="navbar-nav mr-auto">
-        <a [ngx-scroll-to]="'#home'" [ngx-scroll-to-offset]="offset">{{ 'menu.home' | translate }}</a>
-        <a [ngx-scroll-to]="'#about'" [ngx-scroll-to-offset]="offset">{{ 'menu.about' | translate }}</a>
-        <a [ngx-scroll-to]="'#events'" [ngx-scroll-to-offset]="offset">{{ 'menu.events' | translate }}</a>
-        <a [ngx-scroll-to]="'#contact'" [ngx-scroll-to-offset]="offset">{{ 'menu.contact' | translate }}</a>
-        <a>{{ 'menu.archive' | translate }} <div class="pagemark"></div></a>
+        <a [routerLink]="['/main']" [ngx-scroll-to]="'#home'" [ngx-scroll-to-offset]="offset">{{ 'menu.home' | translate }}</a>
+        <!-- (ugly) BUGFIX START - Contacts don't scroll properly because FB and Insta-->
+        <div *ngIf="this.mainPage === true">        
+          <a [ngx-scroll-to]="'#about'" [ngx-scroll-to-offset]="offset">{{ 'menu.about' | translate }}</a>
+          <a [ngx-scroll-to]="'#events'" [ngx-scroll-to-offset]="offset">{{ 'menu.events' | translate }}</a>
+          <a [ngx-scroll-to]="'#contact'" [ngx-scroll-to-offset]="offset">{{ 'menu.contact' | translate }}</a>
+        </div>
+        <div *ngIf="this.mainPage === false">      
+          <a [routerLink]="['/main']">{{ 'menu.about' | translate }}</a>
+          <a [routerLink]="['/main']">{{ 'menu.events' | translate }}</a>
+          <a [routerLink]="['/main']">{{ 'menu.contact' | translate }}</a>
+        </div>
+        <!-- BUGFIX END -->
+        <a [routerLink]="['/archive']">{{ 'menu.archive' | translate }} <div class="pagemark"></div></a>
         <a>{{ 'menu.class_points' | translate }} <div class="pagemark"></div></a>
         <a *ngIf="this.translate.currentLang === 'hu'" (click)="setLanguage('ro')">RO</a>
         <a *ngIf="this.translate.currentLang === 'ro'" (click)="setLanguage('hu')">HU</a>
