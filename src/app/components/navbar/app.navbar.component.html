@@ -19,7 +19,7 @@
         </div>
         <!-- BUGFIX END -->
         <a [routerLink]="['/archive']">{{ 'menu.archive' | translate }} <div class="pagemark"></div></a>
-        <a>{{ 'menu.class_points' | translate }} <div class="pagemark"></div></a>
+        <a [routerLink]="['/points']">{{ 'menu.class_points' | translate }} <div class="pagemark"></div></a>
         <a *ngIf="this.translate.currentLang === 'hu'" (click)="setLanguage('ro')">RO</a>
         <a *ngIf="this.translate.currentLang === 'ro'" (click)="setLanguage('hu')">HU</a>
     </ul>
