@@ -43,9 +43,9 @@
   display: block;
 
   width: 94%;
-  height: 30px;
+  height: 27px;
   margin-left: 3%;
-  text-align: right;
+  margin-top: 3px;
 
   z-index: 100;
   color: #999795;
@@ -57,13 +57,16 @@
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
+#footer .creators-page {
+  text-align: right;
+}
+#footer .copyright {
+  text-align: left;
+}
 #footer .creators-page a:hover {
   color: #F06000; 
   -webkit-text-fill-color: #F06000; /*will override color*/
   cursor: pointer;
-}
-#footer .copyright {
-  text-align: left;
 }
 
 @media screen and (min-width: 500px){

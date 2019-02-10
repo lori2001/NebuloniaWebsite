@@ -28,6 +28,12 @@
 
 /*Smooth scrolling*/
 /*Non-Compatible with explorer,edge and safari*/
+/*UPDATE: Not used, however left in for safety*/
 html {
   scroll-behavior: smooth;
+}
+
+/*edge and explorer white-line bugfix*/
+body {
+  line-height: 1;
 }

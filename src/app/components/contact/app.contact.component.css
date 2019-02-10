@@ -3,8 +3,8 @@
 }
 
 #contact {
-   padding-top: 48px; 
-   padding-bottom: 48px;
+   padding-top: 54px; 
+   padding-bottom: 54px;
    background: #191919;
    width: 100%;
    height: auto; 
@@ -37,7 +37,7 @@
 #contact .content .email{
    float: left;
    color: white;
-   margin-top: 30px !important;
+   margin-top: 35px !important;
 }
 #contact .content .email input, .content .email textarea{
    width: 100%;
@@ -49,7 +49,7 @@
 
 #contact .content .google-maps {
    float: left;
-   margin-top: 30px !important;
+   margin-top: 35px !important;
    height: 420px;
 }
 
