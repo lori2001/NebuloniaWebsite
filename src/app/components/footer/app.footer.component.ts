@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.footer.component.css']
 })
 export class FooterComponent {
+  @Input() offset = -48;
 }
 

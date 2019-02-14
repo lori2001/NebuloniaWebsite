@@ -12,7 +12,6 @@ export class NavbarComponent {
 
   mobileMode = false; // enables/disables mobile mode
   collapse = true; // true if mobile style menu is collapsed
-  offset = -48; // due to mobile mode's small menu the offset should change
 
   private _mainPage = true; // checks and behaves differently whether the user is on main page or not
 
@@ -30,9 +29,13 @@ export class NavbarComponent {
   set mainPage(value: boolean) {
     this._mainPage = value;
     if (!this._mainPage) {
-      this.bgopacity = 1; // background should never go transparent
+      // should return full opacity background except for mobileMode
+      this.checkMobileMode();
+      this.calcOpacity();
     }
   }
+
+  @Input() offset = -48;
 
   @HostListener('window:resize', ['$event'])
   checkMobileMode() {
@@ -40,12 +43,10 @@ export class NavbarComponent {
       this.mobileMode = true; // enables mobile mode
       this.bgopacity = 0; // no background as default
       this.collapse = true; // resolves a bug on mobile
-      this.offset = 0;
       this.width = '200px'; // width when shown
     } else {
       this.mobileMode = false; // disables mobile mode
 
-      this.offset = -48;
       this.width = '100%'; // max width
       this.calcOpacity(); // controls this.bgopacity
     }
@@ -61,10 +62,11 @@ export class NavbarComponent {
       if (this.bgopacity > 1) {
         this.bgopacity = 1;
       }
-    }
 
-    if (!this.mainPage) {
-      this.bgopacity = 1;
+      // non-main pages look ugly with transparent navbar
+      if (!this.mainPage) {
+        this.bgopacity = 1;
+      }
     }
   }
 

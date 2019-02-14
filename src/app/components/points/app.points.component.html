@@ -1,19 +1,22 @@
+<app-navbar [mainPage] = 'false'></app-navbar>
 <section id="points">
-    <app-navbar [mainPage] = 'false'></app-navbar>
-    <section id="content">
-        <video autoplay muted loop>
-            <source src="../../../assets/videos/flags/1x4/first.mp4" type="video/mp4">
-        </video>
-        <video autoplay muted loop>
-                <source src="../../../assets/videos/flags/1x4/second.mp4" type="video/mp4">
-        </video>
-        <video autoplay muted loop>
-            <source src="../../../assets/videos/flags/1x4/third.mp4" type="video/mp4">
-        </video>
-        <video autoplay muted loop>
-            <source src="../../../assets/videos/flags/1x4/fourth.mp4" type="video/mp4">
-        </video>
-        <img class="edgeonlypic" src="../../../assets/images/points_bg/edge1x4.png">
-    </section>
+    <div *ngFor="let layoutType of layoutTypes">
+        <div *ngIf="layoutType === this.currentLayout">
+            <section class="content{{layoutType}}">
+                <video autoplay muted loop>
+                    <source src="../../../assets/videos/points_bg/{{layoutType}}/first.mp4" type="video/mp4">
+                </video>
+                <video autoplay muted loop>
+                    <source src="../../../assets/videos/points_bg/{{layoutType}}/second.mp4" type="video/mp4">
+                </video>
+                <video autoplay muted loop>
+                    <source src="../../../assets/videos/points_bg/{{layoutType}}/third.mp4" type="video/mp4">
+                </video>
+                <video autoplay muted loop>
+                    <source src="../../../assets/videos/points_bg/{{layoutType}}/fourth.mp4" type="video/mp4">
+                </video>
+                <img class="edgeonlypic" src="../../../assets/images/points_bg/edge{{layoutType}}.png">
+            </section>
+        </div>
+    </div>
 </section>
-  

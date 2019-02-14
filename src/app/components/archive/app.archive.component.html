@@ -1,5 +1,41 @@
+<app-navbar [mainPage] = 'false'></app-navbar>
 <section id="archive">
-    <app-navbar [mainPage] = 'false'></app-navbar>
+
+    <div *ngFor="let archiveElement of archiveElements">
+        <div class= "row">
+            <div class="yearblock">
+                <div class="year">
+                    <h1>{{archiveElement.year}}</h1>
+                </div>
+            </div>
+            <div class="presidents">
+                <app-presidents [setWidth] = 'presidentsWidth'
+                                [presidentsElement] = 'archiveElement.presidents'></app-presidents>
+            </div>
+        </div>
+        <div class= "images row">
+            <div class="column">
+                <div class="image"><img src="{{archiveElement.images[0].url}}"></div>
+                <div class="image"><img src="{{archiveElement.images[1].url}}"></div>
+            </div>
+            <div class="column">
+                <div class="image"><img src="{{archiveElement.images[2].url}}"></div>
+                <div class="image"><img src="{{archiveElement.images[3].url}}"></div>
+            </div>
+            <div class="column">
+                <div class="image"><img src="{{archiveElement.images[4].url}}"></div>
+                <div class="image"><img src="{{archiveElement.images[5].url}}"></div>
+            </div>
+            <div class="column">
+                <div class="image"><img src="{{archiveElement.images[6].url}}"></div>
+                <div class="image"><img src="{{archiveElement.images[7].url}}"></div>
+            </div>
+            <div class="column">
+                <div class="image"><img src="{{archiveElement.images[8].url}}"></div>
+                <div class="image"><img src="{{archiveElement.images[9].url}}"></div>
+            </div>
+        </div>
+    </div>
 
 </section>
   

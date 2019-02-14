@@ -1,21 +1,23 @@
-#content {
+/*Widescreen START*/
+.content1x4 {
    position: absolute;
    width: 100%;
    height: 100vh;
+   min-height: 450px;
    background: white;
    overflow: hidden;
    background-size: cover !important;
 	-webkit-background-size: cover !important;
 }
 
-#content .edgeonlypic{
+.content1x4 .edgeonlypic{
    display: none; /*don't display by default*/
    position: absolute;
    height: 100% !important;
    width: 100% !important;
 }
 @supports (object-fit: fill){
-   #content video {
+   .content1x4 video {
       z-index: -100;
       margin-top: 28px;
       object-fit: fill !important;
@@ -27,13 +29,32 @@
 /*Replace with image in Edge and Explorer*/
 /* IE10+ CSS */
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-   #content video {display:none;} #content .edgeonlypic{display: initial;}
+   .content1x4 video {display:none;} .content .edgeonlypic{display: initial;}
 }
 /* IE Edge 12+ CSS */
 @supports (-ms-accelerator:true) {
-   #content video {display:none;} #content .edgeonlypic{display: initial;}
+   .content1x4 video {display:none;} .content .edgeonlypic{display: initial;}
 }
 /* IE Edge 16+ CSS */ 
 @supports (-ms-ime-align:auto) {
-   #content video {display:none;} #content .edgeonlypic{display: initial;}
+   .content1x4 video {display:none;} .content .edgeonlypic{display: initial;}
 }
+/*Widescreen END*/
+
+/*Medium screen START*/
+.content2x2 .edgeonlypic{
+   display: none; /*don't display by default*/
+   position: absolute;
+   height: 100% !important;
+   width: 100% !important;
+}
+@supports (object-fit: fill){
+   .content2x2 video {
+      z-index: -100;
+      object-fit: fill !important;
+      width: 50%    !important;
+      height: 100%   !important;
+      margin-bottom: -2px;
+   }
+}
+/*Medium screen END*/

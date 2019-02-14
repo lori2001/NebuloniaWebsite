@@ -1,5 +1,5 @@
 import { HostListener, Component, Input } from '@angular/core';
-import { CarouselElement } from 'src/app/models/carousel.element';
+import { LinkElement } from 'src/app/models/link.element';
 
 @Component({
   selector: 'app-sponsors',
@@ -41,7 +41,7 @@ export class SponsorsComponent {
     }
   };
 
-  @Input() carouselElements: CarouselElement[];
+  @Input() carouselElements: LinkElement[];
 
   constructor() {
     this.checkResolution();

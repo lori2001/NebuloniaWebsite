@@ -29,7 +29,11 @@
         "home_secretary" : "Belügyi alelnök",
         "human_resources" : "Human resources",
         "president" : "Elnök",
-        "technological" : "Médiás alelnök"
+        "technological" : "Médiás alelnök",
+
+        "radio" : "Rádiós alelnök",
+        "spokesman" : "Szponzorfelelős alelnök",
+        "legal_representative": "Jogi referens"
     },
 
     "not-found": {

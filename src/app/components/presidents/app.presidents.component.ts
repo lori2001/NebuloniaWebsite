@@ -7,7 +7,8 @@ import { PresidentsElement } from 'src/app/models/presidents.element';
   styleUrls: ['./app.presidents.component.css']
 })
 export class PresidentsComponent {
-  width = '60%'; // width of the whole section
+  width = '80%'; // width of the whole section
+  inputWidth = '0%'; // responsible for changing width if entered in parent class
 
   /*owl carousel options from https://owlcarousel2.github.io/OwlCarousel2/docs/api-options.html */
   public sliderOPT: any = {
@@ -33,7 +34,12 @@ export class PresidentsComponent {
     }
   };
 
+  @Input() offset = -48;
   @Input() presidentsElement: PresidentsElement[];
+  @Input() set setWidth (value: string) {
+    this.inputWidth = value;
+    this.checkResolution();
+  }
 
   constructor() {
     this.checkResolution();
@@ -42,14 +48,18 @@ export class PresidentsComponent {
     // Responsive width
     @HostListener('window:resize', ['$event'])
     checkResolution() {
-      if (window.innerWidth < 576) {
-        this.width = '100%';
-      } else if (window.innerWidth < 992) {
-        this.width = '90%';
-      } else if (window.innerWidth  < 1200) {
-        this.width = '80%';
+      if (this.inputWidth === '0%') {
+        if (window.innerWidth < 576) {
+          this.width = '100%';
+        } else if (window.innerWidth < 992) {
+          this.width = '90%';
+        } else if (window.innerWidth  < 1200) {
+          this.width = '80%';
+        } else {
+          this.width = '60%';
+        }
       } else {
-        this.width = '60%';
+        this.width = this.inputWidth;
       }
     }
 }
