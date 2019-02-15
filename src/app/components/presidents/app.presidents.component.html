@@ -2,7 +2,12 @@
   <div class="slider" [ngStyle]="{'width' : width}">
     
   <div class="title">
-    <a [ngx-scroll-to]="'#presidents'" [ngx-scroll-to-offset]="offset">{{'presidents.title' | translate }}</a>
+    <div *ngIf="titleLink === true">
+      <a [ngx-scroll-to]="'#presidents'" [ngx-scroll-to-offset]="offset">{{'presidents.title' | translate }}</a>
+    </div>
+    <div *ngIf="titleLink === false">
+      <h1>{{'presidents.title' | translate }}</h1>
+    </div>
   </div>
 
   <div class="line">

@@ -11,7 +11,7 @@
 }
 
 .content1x4 .edgeonlypic{
-   display: none; /*don't display by default*/
+   display: block; /*don't display by default*/
    position: absolute;
    height: 100% !important;
    width: 100% !important;
@@ -29,15 +29,15 @@
 /*Replace with image in Edge and Explorer*/
 /* IE10+ CSS */
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-   .content1x4 video {display:none;} .content .edgeonlypic{display: initial;}
+   .content1x4 video {display:none;} .content .edgeonlypic{display: block;}
 }
 /* IE Edge 12+ CSS */
 @supports (-ms-accelerator:true) {
-   .content1x4 video {display:none;} .content .edgeonlypic{display: initial;}
+   .content1x4 video {display:none;} .content .edgeonlypic{display: block;}
 }
 /* IE Edge 16+ CSS */ 
 @supports (-ms-ime-align:auto) {
-   .content1x4 video {display:none;} .content .edgeonlypic{display: initial;}
+   .content1x4 video {display:none;} .content .edgeonlypic{display: block;}
 }
 /*Widescreen END*/
 
@@ -58,3 +58,7 @@
    }
 }
 /*Medium screen END*/
+
+.nosmallscreen {
+   z-index: 200; color:red; position: fixed; bottom:0; margin-bottom:20px; margin-left:15px;
+}

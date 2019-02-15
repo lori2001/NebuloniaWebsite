@@ -39,9 +39,9 @@ export class MainComponent {
       { url: '../../../assets/images/presidents/financial.jpg',
         name: 'Bucescu Andreea',
         position: 'presidents.financial' },
-      { url: '../../../assets/images/presidents/technological.jpg',
+      { url: '../../../assets/images/presidents/technical.jpg',
         name: 'Kristó Attila',
-        position: 'presidents.technological' }
+        position: 'presidents.technical' }
     ];
 
     // at least 7 items are recommended

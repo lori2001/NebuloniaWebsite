@@ -10,6 +10,14 @@ export class PresidentsComponent {
   width = '80%'; // width of the whole section
   inputWidth = '0%'; // responsible for changing width if entered in parent class
 
+  @Input() offset = -48;
+  @Input() presidentsElement: PresidentsElement[];
+  @Input() set setWidth (value: string) {
+    this.inputWidth = value;
+    this.checkResolution();
+  }
+  @Input() titleLink = true; // if false the title doesn't link to anything
+
   /*owl carousel options from https://owlcarousel2.github.io/OwlCarousel2/docs/api-options.html */
   public sliderOPT: any = {
     dots: true,
@@ -33,13 +41,6 @@ export class PresidentsComponent {
         }
     }
   };
-
-  @Input() offset = -48;
-  @Input() presidentsElement: PresidentsElement[];
-  @Input() set setWidth (value: string) {
-    this.inputWidth = value;
-    this.checkResolution();
-  }
 
   constructor() {
     this.checkResolution();
