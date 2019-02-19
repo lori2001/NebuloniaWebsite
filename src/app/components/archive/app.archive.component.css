@@ -2,7 +2,6 @@
     /*padding-top: 48px; /*for navbar*/
     background-color: #191919;
     width: 100%;
-    height: 100%;
     overflow: hidden;
     line-height: 0; /*edge bugfix*/
 }
@@ -69,7 +68,6 @@
 
 .images {
     width: 100%;
-    height: 100%;
     background-color: #0F0F0F;
     padding-bottom: 20px;
     margin: 0 auto;

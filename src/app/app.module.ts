@@ -9,6 +9,9 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 
+// device detector
+import { DeviceDetectorModule } from 'ngx-device-detector';
+
 // owl carousel
 import { OwlModule } from 'ngx-owl-carousel';
 
@@ -64,6 +67,9 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     BrowserAnimationsModule,
     AngularFittextModule,
     AngularFontAwesomeModule,
+
+    // detection of browsers and devices
+    DeviceDetectorModule.forRoot(),
 
     // routing
     ScrollToModule.forRoot(),

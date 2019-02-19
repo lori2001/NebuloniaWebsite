@@ -48,10 +48,23 @@
 }
 
 #contact .content .google-maps {
+   display: block;
    float: left;
    margin-top: 35px !important;
    height: 420px;
 }
+
+/*Safari -> Google Maps BUGFIX START*/
+.safari_only{
+   display: block;
+   background: #161415 url(../../../assets/images/google_maps/safarimap.jpg) no-repeat center;
+
+   float: left;
+   margin-top: 35px !important;
+   height: 420px;
+   z-index: 100;
+}
+/*Safari -> Google Maps BUGFIX END*/
 
 /*Responsive Design*/
 @media screen and (min-width: 1367px){
@@ -69,7 +82,7 @@
    #contact .content .email{
       width: 30%;
    }
-   #contact .content .google-maps {
+   #contact .content .google-maps, .safari_only{
       margin-left: 5%;
       width: 65%;
    }
@@ -89,7 +102,7 @@
    #contact .content .email{
       width: 30%;
    }
-   #contact .content .google-maps {
+   #contact .content .google-maps, .safari_only {
       margin-left: 5%;
       width: 65%;
    }
@@ -109,7 +122,7 @@
    #contact .content .email{
       width: 40%;
    }
-   #contact .content .google-maps {
+   #contact .content .google-maps, .safari_only {
       margin-left: 5%;
       width: 55%;
    }
@@ -128,7 +141,7 @@
    #contact .content .email{
       width: 40%;
    }
-   #contact .content .google-maps {
+   #contact .content .google-maps , .safari_only {
       margin-left: 5%;
       width: 55%;
    }
@@ -151,7 +164,7 @@
       font-size: 14px;
       text-align: center;
    }
-   #contact .content .google-maps {
+   #contact .content .google-maps, .safari_only{
       float: none;
       margin: 0 auto;
       width: 100%;

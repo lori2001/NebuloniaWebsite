@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 // Bugfix -> import custom-javascript code
  declare function initFBPlugin(): any;
@@ -11,9 +11,6 @@ import { Component, AfterViewInit } from '@angular/core';
 export class EventsComponent {
 
   fbInitalized = false;
-
-  constructor() {
-  }
 
   /*Bugfix*/
   resizeFB() {

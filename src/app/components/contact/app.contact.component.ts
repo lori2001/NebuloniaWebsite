@@ -1,5 +1,6 @@
 import { Component, ElementRef, ViewChild, HostListener } from '@angular/core';
 import { MessageService } from 'primeng/components/common/messageservice';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
   selector: 'app-contact',
@@ -8,10 +9,15 @@ import { MessageService } from 'primeng/components/common/messageservice';
   providers: [MessageService]
 })
 export class ContactComponent {
-  message_margin = '48px';
+  message_margin = '48px'; // holds the position of the notification relative to the top
+  fb_messanger = false; // helps fix safari-facebook BUG
 
-  constructor(private messageService: MessageService) {
+  constructor(private messageService: MessageService,
+              private deviceService: DeviceDetectorService) {
     this.checkMobileMode();
+    if (this.deviceService.browser === 'FB-Messanger') {
+      this.fb_messanger = true;
+    }
   }
 
   @ViewChild('mailform1') mailForm1: ElementRef;
