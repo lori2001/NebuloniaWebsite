@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { ArchiveElement } from 'src/app/models/archive.element';
 
 @Component({
@@ -9,9 +9,11 @@ import { ArchiveElement } from 'src/app/models/archive.element';
 export class ArchiveComponent {
 
   archiveElements: ArchiveElement[];
-  presidentsWidth: '80%';
+  presidentsWidth = '100%';
+  offset = -48;
 
   constructor() {
+    this.calcOffset();
     this.archiveElements = [
       { year: '2017-2018',
         presidents: [{ url: '../../../assets/images/archive/2017-2018/presidents/home_secretary.jpg',
@@ -71,5 +73,14 @@ export class ArchiveComponent {
                   ]
     }
     ];
+  }
+
+  @HostListener('window:resize', ['$event'])
+  calcOffset() {
+    if ( window.innerWidth < 768) {
+      this.offset = 0;
+    } else {
+      this.offset = -48;
+    }
   }
 }

@@ -13,12 +13,20 @@
    padding-top: 60px;
    padding-bottom: 60px;
    text-align: center;
-  /* margin: 0 auto;*/
+   line-height: 1;
+   /* margin: 0 auto;*/
+
+  /*centers slider ->BUGGY AF*/
+  /*display: flex;
+  justify-content: center;
+  align-items: center;*/
 }
 #presidents .slider {
    /*width controlled in ts and html*/
-   margin: 0 auto;
    text-align:center;
+
+   /*center horizontally*/
+   margin: 0 auto;
 }
 
 /*Title START*/

@@ -17,6 +17,7 @@ export class PresidentsComponent {
     this.checkResolution();
   }
   @Input() titleLink = true; // if false the title doesn't link to anything
+  @Input() height = 'auto';
 
   /*owl carousel options from https://owlcarousel2.github.io/OwlCarousel2/docs/api-options.html */
   public sliderOPT: any = {

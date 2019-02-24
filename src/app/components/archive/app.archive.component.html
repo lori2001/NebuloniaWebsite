@@ -1,50 +1,37 @@
 <app-navbar [mainPage] = 'false'></app-navbar>
-<div class="nosmallscreen">NO small screen support yet!</div>
 <section id="archive">
     <div *ngFor="let archiveElement of archiveElements">
         <div class="wholeyear" id="{{archiveElement.year}}">
-            <div class= "row header">
-                <div class="yearblock">
-                    <div class="background"
-                    [ngStyle]="{'background-image':'url(../../../assets/images/archive/' + archiveElement.year +'/year_bg.jpg)'}">
-                        <div class="greyhover"
-                             [ngx-scroll-to]="'#' + archiveElement.year"
-                             [ngx-scroll-to-offset]="-48"> 
-                        </div> <!-- adds greyscale when hovered upon-->
-                        <h1 class="year">{{archiveElement.year}}</h1>
-                    </div>
+            <div class="header">
+                <div class="yearblock"
+                     [ngStyle]="{'background-image':'url(../../../assets/images/archive/' + archiveElement.year +'/year_bg.jpg)'}">
+                    <div class="greyhover"
+                            [ngx-scroll-to]="'#' + archiveElement.year"
+                            [ngx-scroll-to-offset]="this.offset"> 
+                            <h1 class="year">{{archiveElement.year}}</h1>
+                    </div> <!-- adds greyscale and link when hovered upon-->
                 </div>
                 <div class="presidents">
-                    <app-presidents [setWidth] = 'presidentsWidth'
+                    <app-presidents [setWidth] = '"100%"'
+                                    [height] = '"100%"'
                                     [presidentsElement] = 'archiveElement.presidents'
                                     [titleLink] = 'false'>
                     </app-presidents>
                 </div>
             </div>
-            <div class= "images row">
-                <div class="column">
-                    <div class="image"><img src="../../../assets/images/archive/{{archiveElement.year}}/images/image1.jpg"></div>
-                    <div class="image"><img src="../../../assets/images/archive/{{archiveElement.year}}/images/image2.jpg"></div>
-                </div>
-                <div class="column">
-                    <div class="image"><img src="../../../assets/images/archive/{{archiveElement.year}}/images/image3.jpg"></div>
-                    <div class="image"><img src="../../../assets/images/archive/{{archiveElement.year}}/images/image4.jpg"></div>
-                </div>
-                <div class="column">
-                    <div class="image"><img src="../../../assets/images/archive/{{archiveElement.year}}/images/image5.jpg"></div>
-                    <div class="image"><img src="../../../assets/images/archive/{{archiveElement.year}}/images/image6.jpg"></div>
-                </div>
-                <div class="column">
-                    <div class="image"><img src="../../../assets/images/archive/{{archiveElement.year}}/images/image7.jpg"></div>
-                    <div class="image"><img src="../../../assets/images/archive/{{archiveElement.year}}/images/image8.jpg"></div>
-                </div>
-                <div class="column">
-                    <div class="image"><img src="../../../assets/images/archive/{{archiveElement.year}}/images/image9.jpg"></div>
-                    <div class="image"><img src="../../../assets/images/archive/{{archiveElement.year}}/images/image10.jpg"></div>
-                </div>
+            <div class="images">
+                    <img src="../../../assets/images/archive/{{archiveElement.year}}/images/image1.jpg">
+                    <img src="../../../assets/images/archive/{{archiveElement.year}}/images/image2.jpg">
+                    <img src="../../../assets/images/archive/{{archiveElement.year}}/images/image3.jpg">
+                    <img src="../../../assets/images/archive/{{archiveElement.year}}/images/image4.jpg">
+                    <img src="../../../assets/images/archive/{{archiveElement.year}}/images/image5.jpg">
+                    <img src="../../../assets/images/archive/{{archiveElement.year}}/images/image6.jpg">
+                    <img src="../../../assets/images/archive/{{archiveElement.year}}/images/image7.jpg">
+                    <img src="../../../assets/images/archive/{{archiveElement.year}}/images/image8.jpg">
+                    <img src="../../../assets/images/archive/{{archiveElement.year}}/images/image9.jpg">
+                    <img src="../../../assets/images/archive/{{archiveElement.year}}/images/image10.jpg">
             </div>
         </div>
     </div>
-
 </section>
   

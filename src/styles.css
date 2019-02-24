@@ -36,4 +36,5 @@ html {
 /*edge and explorer white-line bugfix*/
 body {
   line-height: 1;
+  background-color: #0F0F0F;
 }
