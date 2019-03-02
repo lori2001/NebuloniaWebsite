@@ -22,7 +22,7 @@
   background: none;
   display: inline-block;
   padding-top: 8px;
-  padding-left: 13px;
+  margin-left: 13px;
   text-decoration: none;
   text-align: left;
   color: #fff;
@@ -60,8 +60,9 @@
   .navbar-nav a{
   line-height: initial;
   }
-  .navbar-nav .pagemark i {
-    display: none;
+  .navbar-nav .pagemark {
+    border-bottom: 2px solid white;
+    padding-bottom: 2px;
   }
 }
 /* Mobile mode */
@@ -70,6 +71,6 @@
     line-height: 25px;
   }
   .navbar-nav .pagemark {
-    margin-left: -18px;
+    margin-left: -5px;
   }
 }

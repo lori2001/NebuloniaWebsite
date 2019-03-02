@@ -19,9 +19,9 @@
         </div>
         <!-- BUGFIX END -->
         <a [routerLink]="['/archive']" class="pagemark">
-          <i class="fa fa-square"></i> {{ 'menu.archive' | translate }}</a>
+          <i *ngIf="this.mobileMode === true" class="fa fa-square"></i> {{ 'menu.archive' | translate }}</a>
         <a [routerLink]="['/points']"  class="pagemark">
-          <i class="fa fa-square"></i> {{ 'menu.class_points' | translate }}</a>
+          <i *ngIf="this.mobileMode === true" class="fa fa-square"></i> {{ 'menu.class_points' | translate }}</a>
         <a *ngIf="this.translate.currentLang === 'hu'" (click)="setLanguage('ro')">RO</a>
         <a *ngIf="this.translate.currentLang === 'ro'" (click)="setLanguage('hu')">HU</a>
     </ul>
