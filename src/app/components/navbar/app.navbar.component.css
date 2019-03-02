@@ -60,12 +60,8 @@
   .navbar-nav a{
   line-height: initial;
   }
-  .navbar-nav .pagemark {
-    background-color: currentColor;
-    width: 100%;
-  
-    height: 2px;
-    margin-top: 3px;
+  .navbar-nav .pagemark i {
+    display: none;
   }
 }
 /* Mobile mode */
@@ -74,12 +70,6 @@
     line-height: 25px;
   }
   .navbar-nav .pagemark {
-    background-color: currentColor;
-    position: relative;
-    top: -100%;
-    width: 6px;
-  
-    height: 100%;
-    margin-left: -12px;
+    margin-left: -18px;
   }
 }

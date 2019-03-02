@@ -18,8 +18,10 @@
           <a [routerLink]="['/main']">{{ 'menu.contact' | translate }}</a>
         </div>
         <!-- BUGFIX END -->
-        <a [routerLink]="['/archive']">{{ 'menu.archive' | translate }} <div class="pagemark"></div></a>
-        <a [routerLink]="['/points']">{{ 'menu.class_points' | translate }} <div class="pagemark"></div></a>
+        <a [routerLink]="['/archive']" class="pagemark">
+          <i class="fa fa-square"></i> {{ 'menu.archive' | translate }}</a>
+        <a [routerLink]="['/points']"  class="pagemark">
+          <i class="fa fa-square"></i> {{ 'menu.class_points' | translate }}</a>
         <a *ngIf="this.translate.currentLang === 'hu'" (click)="setLanguage('ro')">RO</a>
         <a *ngIf="this.translate.currentLang === 'ro'" (click)="setLanguage('hu')">HU</a>
     </ul>
