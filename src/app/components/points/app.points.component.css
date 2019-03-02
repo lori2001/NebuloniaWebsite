@@ -1,64 +1,66 @@
 /*Widescreen START*/
 .content1x4 {
-   position: absolute;
+   position: relative;
    width: 100%;
    height: 100vh;
    min-height: 450px;
-   background: white;
    overflow: hidden;
-   background-size: cover !important;
-	-webkit-background-size: cover !important;
 }
 
 .content1x4 .edgeonlypic{
+   z-index: -100;
+   margin-top: 28px;
    display: block; /*don't display by default*/
-   position: absolute;
-   height: 100% !important;
-   width: 100% !important;
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   min-height: 450px;
 }
-@supports (object-fit: fill){
-   .content1x4 video {
-      z-index: -100;
-      margin-top: 28px;
-      object-fit: fill !important;
-      width: 25%    !important;
-      height: 100%   !important;
-   }
-}
-
-/*Replace with image in Edge and Explorer*/
-/* IE10+ CSS */
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-   .content1x4 video {display:none;} .content .edgeonlypic{display: block;}
-}
-/* IE Edge 12+ CSS */
-@supports (-ms-accelerator:true) {
-   .content1x4 video {display:none;} .content .edgeonlypic{display: block;}
-}
-/* IE Edge 16+ CSS */ 
-@supports (-ms-ime-align:auto) {
-   .content1x4 video {display:none;} .content .edgeonlypic{display: block;}
+.content1x4 video {
+   z-index: -100;
+   object-fit: fill;
+   width: 25%;
+   height: 100%;
+   margin-top: 28px;
 }
 /*Widescreen END*/
 
 /*Medium screen START*/
 .content2x2 .edgeonlypic{
-   display: none; /*don't display by default*/
-   position: absolute;
-   height: 100% !important;
-   width: 100% !important;
+   z-index: -100;
+   display: block; /*don't display by default*/
+   position: relative;
+   width: 100%;
+   height: 200vh;
+   max-height: 1560px;
 }
-@supports (object-fit: fill){
-   .content2x2 video {
-      z-index: -100;
-      object-fit: fill !important;
-      width: 50%    !important;
-      height: 100%   !important;
-      margin-bottom: -2px;
-   }
+.content2x2 video {
+   z-index: -100;
+   object-fit: fill;
+   width: 50%;
+   height: 100vh;
+   max-height: 780px;
+   margin-bottom: -2px;
 }
 /*Medium screen END*/
 
-.nosmallscreen {
-   z-index: 200; color:red; position: fixed; bottom:0; margin-bottom:20px; margin-left:15px;
+/*Small screen START*/
+.content4x1 .edgeonlypic{
+   z-index: -100;
+   display: block; /*don't display by default*/
+   position: relative;
+   width: 100%;
+   height: 400vh;
+   min-height: 2200px;
+   max-height: 3000px;
 }
+.content4x1 video {
+   z-index: -100;
+   object-fit: fill;
+   width: 100%;
+   height: 100vh;
+   min-height: 550px;
+   max-height: 750px;
+   margin-bottom: -2px;
+}
+/*Small screen END*/

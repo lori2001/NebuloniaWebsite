@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
   selector: 'app-points',
@@ -8,24 +9,32 @@ import { Component, HostListener } from '@angular/core';
 export class PointsComponent {
 
   aspectRatio: number; // width/height ratio
+  browserisEdge = false;
 
   layoutTypes = ['1x4', '2x2', '4x1']; // all types of layout used
-  currentLayout = this.layoutTypes[0]; // hold the layout currently in use
+  currentLayout = this.layoutTypes[0]; // holds the layout currently in use
 
-  constructor() {
+  constructor(private deviceService: DeviceDetectorService) {
     this.calcAspectRatio();
+
+    if (this.deviceService.browser === 'MS-Edge') {
+      this.browserisEdge = true;
+    }
   }
 
   @HostListener('window:resize', ['$event'])
   calcAspectRatio() {
+    // changes layout type based on width and aspect ratio
     this.aspectRatio = window.innerWidth / window.innerHeight;
 
     // changes layout type based on width and aspect ratio
-    if (this.aspectRatio > 5 / 4) {
+    if (this.aspectRatio >= 1.1) { // 5/4
         this.currentLayout = this.layoutTypes[0];
-    } else if (this.aspectRatio > 4 / 5) {
+    }
+    if (window.innerWidth < 768 || (this.aspectRatio < 1.1 && this.aspectRatio >= 0.6)) {
         this.currentLayout = this.layoutTypes[1];
-    } else {
+    }
+    if (window.innerWidth < 450 || this.aspectRatio < 0.6) {
       this.currentLayout = this.layoutTypes[2];
     }
   }
