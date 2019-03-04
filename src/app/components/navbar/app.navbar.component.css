@@ -58,11 +58,22 @@
 /* Normal mode */
 @media screen and (min-width: 768px){
   .navbar-nav a{
-  line-height: initial;
+    line-height: initial;
   }
   .navbar-nav .pagemark {
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid;
+    color: #fff;
+    border-color: #fff;
     padding-bottom: 2px;
+    -webkit-transition: color .2s ease-in-out, border .2s ease-in-out;
+    -moz-transition: color .2s ease-in-out, border .2s ease-in-out;
+    -o-transition: color .2s ease-in-out, border .2s ease-in-out;
+    -ms-transition: color .2s ease-in-out, border .2s ease-in-out;
+    transition: color .2s ease-in-out, border .2s ease-in-out;
+  }
+  .navbar-nav .pagemark:hover { 
+    color: #F06000 !important; 
+    border-color: #F06000 !important;
   }
 }
 /* Mobile mode */

@@ -1,3 +1,4 @@
+<div class="browsertype">{{this.deviceService.browser}}</div>
 <app-navbar [mainPage] = 'false'></app-navbar>
 <section id="points">
     <div *ngFor="let layoutType of layoutTypes">
@@ -18,6 +19,28 @@
                 <img *ngIf="this.browserisEdge === true"
                      class="edgeonlypic"
                      src="../../../assets/images/points_bg/edge{{layoutType}}.jpg">
+                <div class="pointsoverlay{{layoutType}}">
+                    <div class="house{{layoutType}}">
+                        <img class="A" src="https://via.placeholder.com/150">
+                        <div class="points">123</div>
+                        <div class="tablelink"><a>{{'points.table' | translate}}</a></div>
+                    </div>
+                    <div class="house{{layoutType}}">
+                        <img class="B" src="https://via.placeholder.com/150">
+                        <div class="points">456</div>
+                        <div class="tablelink"><a>{{'points.table' | translate}}</a></div>
+                    </div>
+                    <div class="house{{layoutType}}">
+                        <img class="C" src="https://via.placeholder.com/150">
+                        <div class="points">789</div>
+                        <div class="tablelink"><a>{{'points.table' | translate}}</a></div>
+                    </div>
+                    <div class="house{{layoutType}}">
+                        <img class="D" src="https://via.placeholder.com/150">
+                        <div class="points">1011</div>
+                        <div class="tablelink"><a>{{'points.table' | translate}}</a></div>
+                    </div>
+                </div>
             </section>
         </div>
     </div>

@@ -69,6 +69,10 @@
         }
     },
 
+    "points" : {
+        "table" : "Táblázat"
+    },
+
     "footer" : {
         "creators_page" : "Fejlesztők oldala"
     }

@@ -23,6 +23,44 @@
    height: 100%;
    margin-top: 28px;
 }
+
+.pointsoverlay1x4 {
+   position: absolute; /* Sit on top of the page content */
+   width: 100%;
+   height: 100vh;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: 2;
+   min-height: 450px;
+}
+.house1x4{
+   width: 25%;
+   height: 100%;
+   float: left;
+}
+.house1x4 .A, .house1x4 .D{
+   display: block;
+   margin: 0 auto !important;
+   margin-top: 125px !important;
+   width: 37%;
+   height: auto;
+}
+.house1x4 .B, .house1x4 .C{
+   display: block;
+   margin: 0 auto !important;
+   margin-top: 175px !important;
+   width: 37%;
+   height: auto;
+}
+.house1x4 .points, .house1x4 .tablelink {
+   padding-top: 4vh;
+   font-size: 2.5vw;
+}
+.house1x4 .tablelink a {
+   font-size: 1.5vw !important;
+}
 /*Widescreen END*/
 
 /*Medium screen START*/
@@ -32,6 +70,7 @@
    position: relative;
    width: 100%;
    height: 200vh;
+   min-height: 750px;
    max-height: 1560px;
 }
 .content2x2 video {
@@ -39,8 +78,43 @@
    object-fit: fill;
    width: 50%;
    height: 100vh;
+   min-height: 375px;
    max-height: 780px;
    margin-bottom: -2px;
+}
+
+.pointsoverlay2x2 {
+   position: absolute; /* Sit on top of the page content */
+   width: 100%;
+   height: 200vh;
+   max-height: 1560px;
+   min-height: 300px;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: 2;
+}
+.house2x2{
+   width: 50%;
+   height: 100vh;
+   min-height: 375px;
+   max-height: 780px;
+   float: left;
+}
+.house2x2 .A, .house2x2 .D, .house2x2 .B, .house2x2 .C {
+   display: block;
+   margin: 0 auto !important;
+   margin-top: 100px !important;
+   width: 37%;
+   height: auto;
+}
+.house2x2 .points, .house2x2 .tablelink {
+   padding-top: 4vh;
+   font-size: 4.5vw;
+}
+.house2x2 .tablelink a {
+   font-size: 3vw !important;
 }
 /*Medium screen END*/
 
@@ -61,6 +135,65 @@
    height: 100vh;
    min-height: 550px;
    max-height: 750px;
-   margin-bottom: -2px;
+}
+
+.pointsoverlay4x1 {
+   position: absolute; /* Sit on top of the page content */
+   width: 100%;
+   height: 400vh;
+   min-height: 2200px;
+   max-height: 3000px;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: 2;
+}
+.house4x1{
+   width: 100%;
+   height: 100vh;
+   min-height: 550px;
+   max-height: 750px;
+   float: left;
+}
+.house4x1 .A, .house4x1 .D, .house4x1 .B, .house4x1 .C {
+   display: block;
+   margin: 0 auto !important;
+   margin-top: 100px !important;
+   width: 37%;
+   height: auto;
+}
+.house4x1 .points, .house4x1 .tablelink {
+   padding-top: 5vh;
+   font-size: 8vw;
+}
+.house4x1 .tablelink a {
+   font-size: 6vw !important;
 }
 /*Small screen END*/
+
+/* Common START */
+.points, .tablelink {
+   display: block;
+   font-family: octarineBold, arialBlack, Arial;
+   color: white;
+   text-align: center;
+   text-shadow: 0px 1px 2px rgba(0, 0, 0, .8);
+}
+
+.tablelink a {
+   font-family: octarineLight, Arial, arialBlack !important;
+   text-decoration: none;
+
+   -webkit-transition: all .3s ease-in-out;
+   -moz-transition: all .3s ease-in-out;
+   -o-transition: all .3s ease-in-out;
+   transition: all .3s ease-in-out;
+}
+.tablelink a:hover { 
+   color: #F06000; 
+   cursor: pointer;
+}
+/* Common END */
+
+.browsertype { z-index: 200; font-weight: bold; color:white; position: fixed; bottom: 0; left:0; margin-bottom:10px; margin-left:15px; overflow: hidden;}

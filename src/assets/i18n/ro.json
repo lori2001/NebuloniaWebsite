@@ -69,6 +69,10 @@
         }
     },
 
+    "points" : {
+        "table" : "Tabel"
+    },
+
     "footer" : {
         "creators_page" : "Pagina creatorilor"
     }
