@@ -1,0 +1,71 @@
+CREATE TABLE IF NOT EXISTS `cars` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `model` varchar(255) NOT NULL DEFAULT '',
+  `price` int (10) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+
+
+/******************************************************/
+/******************************************************/
+/******************************************************/
+/******************************************************/
+/******************************************************/
+
+
+CREATE TABLE IF NOT EXISTS `activities` (
+    id INT unsigned AUTO_INCREMENT NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (id)
+)ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+
+INSERT INTO `activities`(`name`) VALUES 
+('Gastró est'),
+('Ping Pong'),
+('Just Dance'),
+('Adományozás'),
+('Focibajnokság'),
+('Film est');
+
+CREATE TABLE IF NOT EXISTS `classes` (
+    id INT unsigned AUTO_INCREMENT NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
+)ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+
+INSERT INTO `classes`(`name`) VALUES
+('9.A'),
+('9.B'),
+('9.C'),
+('9.D'),
+('10.A'),
+('10.B'),
+('10.C'),
+('10.D'),
+('11.A'),
+('11.B'),
+('11.C'),
+('11.D'),
+('12.A'),
+('12.B'),
+('12.C'),
+('12.D');
+
+CREATE TABLE IF NOT EXISTS `points` (
+    id INT unsigned AUTO_INCREMENT NOT NULL,
+    value INT NOT NULL,
+    activity_id INT unsigned NOT NULL,
+    class_id INT unsigned NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (activity_id) REFERENCES activities(id),
+    FOREIGN KEY (class_id) REFERENCES classes(id)
+)ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+
+INSERT INTO `points`(`value`, `activity_id`, `class_id`) VALUES
+(100,1,2),
+(200,1,5),
+(250,4,4),
+(200,2,7),
+(1200,3,9);
+

@@ -1,24 +1,28 @@
-<div class="browsertype">{{this.deviceService.browser}}</div>
+<div class="browsertype">{{this.browserType}}</div>
 <app-navbar [mainPage] = 'false'></app-navbar>
 <section id="points">
     <div *ngFor="let layoutType of layoutTypes">
         <div *ngIf="layoutType === this.currentLayout">
             <section class="content{{layoutType}}">
-                <video *ngIf="this.browserisEdge === false" autoplay muted loop>
+                <video *ngIf="this.staticFlags === false" autoplay muted loop 
+                    poster="../../../assets/images/points_bg/{{layoutType}}/first.jpg">
                     <source src="../../../assets/videos/points_bg/{{layoutType}}/first.mp4" type="video/mp4">
                 </video>
-                <video *ngIf="this.browserisEdge === false" autoplay muted loop>
+                <video *ngIf="this.staticFlags === false" autoplay muted loop
+                    poster="../../../assets/images/points_bg/{{layoutType}}/second.jpg">
                     <source src="../../../assets/videos/points_bg/{{layoutType}}/second.mp4" type="video/mp4">
                 </video>
-                <video *ngIf="this.browserisEdge === false" autoplay muted loop>
+                <video *ngIf="this.staticFlags === false" autoplay muted loop
+                    poster="../../../assets/images/points_bg/{{layoutType}}/third.jpg">
                     <source src="../../../assets/videos/points_bg/{{layoutType}}/third.mp4" type="video/mp4">
                 </video>
-                <video *ngIf="this.browserisEdge === false" autoplay muted loop>
+                <video *ngIf="this.staticFlags === false" autoplay muted loop
+                    poster="../../../assets/images/points_bg/{{layoutType}}/fourth.jpg">
                     <source src="../../../assets/videos/points_bg/{{layoutType}}/fourth.mp4" type="video/mp4">
                 </video>
-                <img *ngIf="this.browserisEdge === true"
+                <img *ngIf="this.staticFlags === true"
                      class="edgeonlypic"
-                     src="../../../assets/images/points_bg/edge{{layoutType}}.jpg">
+                     src="../../../assets/images/points_bg/fullscreen/{{layoutType}}.jpg">
                 <div class="pointsoverlay{{layoutType}}">
                     <div class="house{{layoutType}}">
                         <img class="A" src="https://via.placeholder.com/150">

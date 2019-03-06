@@ -64,6 +64,7 @@
   text-align: left;
 }
 #footer .creators-page a:hover {
+  text-decoration: none;
   color: #F06000; 
   -webkit-text-fill-color: #F06000; /*will override color*/
   cursor: pointer;

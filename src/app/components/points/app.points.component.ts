@@ -9,7 +9,8 @@ import { DeviceDetectorService } from 'ngx-device-detector';
 export class PointsComponent {
 
   aspectRatio: number; // width/height ratio
-  browserisEdge = false;
+  staticFlags = false;
+  browserType: string; // temporary
 
   layoutTypes = ['1x4', '2x2', '4x1']; // all types of layout used
   currentLayout = this.layoutTypes[0]; // holds the layout currently in use
@@ -17,8 +18,12 @@ export class PointsComponent {
   constructor(private deviceService: DeviceDetectorService) {
     this.calcAspectRatio();
 
-    if (this.deviceService.browser === 'MS-Edge') {
-      this.browserisEdge = true;
+    this.browserType = this.deviceService.browser;
+
+    if (this.deviceService.browser === 'MS-Edge' ||
+        this.deviceService.browser === 'FB-Messanger' ||
+        this.deviceService.browser === 'Safari') {
+      this.staticFlags = true;
     }
   }
 

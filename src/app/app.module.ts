@@ -40,6 +40,7 @@ import { SponsorsComponent } from './components/sponsors/app.sponsors.component'
 import { FooterComponent } from './components/footer/app.footer.component';
 import { ArchiveComponent } from './components/archive/app.archive.component';
 import { PointsComponent } from './components/points/app.points.component';
+import { CreatorsComponent } from './components/creators/app.creators.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -60,6 +61,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
 
     ArchiveComponent,
     PointsComponent,
+    CreatorsComponent,
     NotFoundComponent // 404 Page
   ],
   imports: [
