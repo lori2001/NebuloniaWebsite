@@ -44,7 +44,7 @@
 
     "contact" : {
         "title" : "Lépj kapcsolatba velünk!",
-        "text" : "Ha már kihangsúlyoztuk, hogy a Nebulónia sok oldalú, nyitott különböző véleményekre, az alábbiakban lehetőséged van neked is kapcsolatba lépni velünk! A visszajelzéseket, akár kritkákat, új ötleteket, javaslatokat szívesen fogadunk, hiszen alakulhatunk általuk.",
+        "text" : "Ha már kihangsúlyoztuk, hogy a Nebulónia sok oldalú, nyitott különböző véleményekre, az alábbiakban lehetőséged van neked is kapcsolatba lépni velünk! A visszajelzéseket, akár kritkákat, új ötleteket, javaslatokat szívesen fogadjuk, hiszen általuk jobbá válhatunk.",
         "mail" : { 
             "name" : "Név",
             "email" : "Email",
@@ -60,11 +60,11 @@
         "message" : {
             "error" : {
                 "summary" : "Sikertelen elküldés!",
-                "detail" : "A szolgáltatás nem elérhető."
+                "detail" : "A szolgáltatás nem elérhető \n vagy az üzenet hiányos."
             },
             "success" : {
                 "summary" : "Üzenet elküldve!",
-                "detail" : "Üzenetét hamarosan megkapjuk."
+                "detail" : "Üzenetét hamarosan elolvassuk."
             }
         }
     },

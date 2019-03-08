@@ -1,6 +1,8 @@
 import { Component, ElementRef, ViewChild, HostListener } from '@angular/core';
 import { MessageService } from 'primeng/components/common/messageservice';
 import { DeviceDetectorService } from 'ngx-device-detector';
+import { EmailElement } from 'src/app/models/database/email.element';
+import { EmailService } from 'src/app/services/email.service';
 
 @Component({
   selector: 'app-contact',
@@ -11,9 +13,11 @@ import { DeviceDetectorService } from 'ngx-device-detector';
 export class ContactComponent {
   message_margin = '48px'; // holds the position of the notification relative to the top
   fb_messanger = false; // helps fix safari-facebook BUG
+  emailElement = new EmailElement('', '', '', '');
 
   constructor(private messageService: MessageService,
-              private deviceService: DeviceDetectorService) {
+              private deviceService: DeviceDetectorService,
+              private emailService: EmailService) {
     this.checkMobileMode();
     if (this.deviceService.browser === 'FB-Messanger') {
       this.fb_messanger = true;
@@ -35,23 +39,33 @@ export class ContactComponent {
   }
 
   clearmailInput() {
-      this.mailForm1.nativeElement.value = '';
-      this.mailForm2.nativeElement.value = '';
-      this.mailForm3.nativeElement.value = '';
-      this.mailForm4.nativeElement.value = '';
+    if (this.mailForm1.nativeElement.value !== '' &&
+        this.mailForm2.nativeElement.value !== '' &&
+        this.mailForm3.nativeElement.value !== '' &&
+        this.mailForm4.nativeElement.value !== '') {
+          // if there is no empty form clear message boxes
+          this.mailForm1.nativeElement.value = '';
+          this.mailForm2.nativeElement.value = '';
+          this.mailForm3.nativeElement.value = '';
+          this.mailForm4.nativeElement.value = '';
+    }
   }
-  showSuccess() {
-      this.messageService.add({
-        key: 'custom',
-        severity: 'warn',
-        summary: 'contact.message.error.summary',
-        detail: 'contact.message.error.detail'
-      });
-      /*this.messageService.add({
-        key: 'custom',
-        severity: 'success',
-        summary: 'contact.message.success.summary',
-        detail: 'contact.message.success.detail'
-      });*/
+
+  sendEmail() {
+    this.emailElement.name = this.mailForm1.nativeElement.value;
+    this.emailElement.email = this.mailForm2.nativeElement.value;
+    this.emailElement.title = this.mailForm3.nativeElement.value;
+    this.emailElement.message = this.mailForm4.nativeElement.value;
+
+    /*sends email and returns status message through messageService*/
+    this.emailService.sendEmail(this.emailElement, this.messageService);
+
+    // this.showSuccess();
+    this.clearmailInput();
+  }
+
+  /* makes toasts' close-buttons work */
+  onReject() {
+    this.messageService.clear('custom');
   }
 }

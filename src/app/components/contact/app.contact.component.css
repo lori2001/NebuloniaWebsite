@@ -54,6 +54,12 @@
    height: 420px;
 }
 
+#contact .required::after{
+   font-size: 18px;
+   color: #FCAC45;
+   content: " *";
+}
+
 /*Safari -> Google Maps BUGFIX START*/
 .safari_only{
    display: block;

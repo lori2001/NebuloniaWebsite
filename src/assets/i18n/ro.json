@@ -60,7 +60,7 @@
         "message" : {
             "error" : {
                 "summary" : "Trimitere eșuată!",
-                "detail" : "Serviciu momentan indisponibil."
+                "detail" : "Serviciu indisponibil sau mesaj nevalabil."
             },
             "success" : {
                 "summary" : "Mesaj trimis!",

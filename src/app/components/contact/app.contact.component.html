@@ -4,13 +4,13 @@
           styleClass="custom-toast">
 
           <ng-template let-message pTemplate="message">
-              <a tabindex="0" class="ui-toast-close-icon pi pi-times" (click)="onCloseIconClick($event)" (keydown.enter)="onCloseIconClick($event)" *ngIf="message.closable !== false"></a>
+              <a tabindex="0" class="ui-toast-close-icon pi pi-times" (click)="onReject()" *ngIf="message.closable !== false"></a>
               <span class="ui-toast-icon pi"
               [ngClass]="{'pi-info-circle': message.severity == 'info', 'pi-exclamation-triangle': message.severity == 'warn',
                   'pi-times': message.severity == 'error', 'pi-check' :message.severity == 'success'}"></span>
               <div class="ui-toast-message-text-content">
                   <div class="ui-toast-summary">{{message.summary | translate}}</div>
-                  <div class="ui-toast-detail">{{message.detail | translate}}</div>
+                  <div class="ui-toast-detail" style="line-height: 1.4;">{{message.detail | translate}}</div>
               </div>
         </ng-template>
 </p-toast>
@@ -22,16 +22,16 @@
     <h2>{{ 'contact.title' | translate }}</h2>
     <p>{{ 'contact.text' | translate }}</p>
     <div class="email">
-      <span>{{ 'contact.mail.name' | translate }}</span>
-      <input #mailform1 type="text" class="row" pInputText />
-      <span>{{ 'contact.mail.email' | translate }}</span>
-      <input #mailform2 type="text" class="row" pInputText />
-      <span>{{ 'contact.mail.title' | translate }}</span>
-      <input #mailform3 type="text" class="row" pInputText />
+      <span class="required">{{ 'contact.mail.name' | translate }}</span>
+      <input #mailform1 type="text" class="row" pInputText>
+      <span class="required">{{ 'contact.mail.email' | translate }}</span>
+      <input #mailform2 type="text" class="row" pInputText>
+      <span class="required">{{ 'contact.mail.title' | translate }}</span>
+      <input #mailform3 type="text" class="row" pInputText>
 
-      <span>{{ 'contact.mail.message' | translate }}</span>
+      <span class="required">{{ 'contact.mail.message' | translate }}</span>
       <textarea #mailform4 spellcheck="false" class="row" rows="7" cols="30" pInputTextarea></textarea>
-      <p-button (click)="clearmailInput(); showSuccess();" label="{{ 'contact.mail.send' | translate }}" ></p-button>
+      <p-button (click)="sendEmail();" label="{{ 'contact.mail.send' | translate }}" ></p-button>
     </div>
     <a *ngIf="this.fb_messanger === true" class="safari_only" href="https://goo.gl/maps/yCrjqrR1LEu">
     </a>
