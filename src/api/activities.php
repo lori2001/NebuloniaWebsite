@@ -1,6 +1,6 @@
 <?php
 /**
- * Returns the list of cars.
+ * Returns the list of activities.
  */
 require 'connect.php';
     
