@@ -70,7 +70,11 @@
     },
 
     "points" : {
-        "table" : "Táblázat"
+        "table" : "Táblázat",
+        "error" : {
+            "summary" : "Sikertelen kapcsolódás!",
+            "detail" : "A szerver jelenleg nem elérhető. \n Kérjük később próbálja ujra!"
+        }
     },
 
     "footer" : {

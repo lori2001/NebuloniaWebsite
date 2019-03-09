@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
 import { Observable, throwError } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
@@ -11,6 +11,7 @@ import { PointsElement } from '../models/database/points.element';
 export class PointsService {
   baseUrl = 'api';
   points: PointsElement[];
+  errorcode: Observable<number>;
 
 constructor(private http: HttpClient) { }
 
@@ -24,9 +25,7 @@ constructor(private http: HttpClient) { }
   }
 
   private handleError(error: HttpErrorResponse) {
-    console.log(error);
-
     // return an observable with a user friendly message
-    return throwError('Error! something went wrong.');
+    return throwError('Error! Something went wrong!');
   }
 }

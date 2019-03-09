@@ -70,7 +70,11 @@
     },
 
     "points" : {
-        "table" : "Tabel"
+        "table" : "Tabel",
+        "error" : {
+            "summary" : "Connectare eșuată!",
+            "detail" : "Server momentan indisponibil. \n Vă rugăm să reîncercați!"
+        }
     },
 
     "footer" : {

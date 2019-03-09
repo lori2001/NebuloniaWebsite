@@ -64,7 +64,7 @@ export class ContactComponent {
     this.clearmailInput();
   }
 
-  /* makes toasts' close-buttons work */
+  /* makes toasts' close-button work */
   onReject() {
     this.messageService.clear('custom');
   }

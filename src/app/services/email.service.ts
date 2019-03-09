@@ -23,7 +23,6 @@ export class EmailService {
                 summary: 'contact.message.success.summary',
                 detail: 'contact.message.success.detail'
               });
-              return console.log('resp:Message Sent!');
             }
           },
           (error) => {
@@ -34,7 +33,6 @@ export class EmailService {
                 summary: 'contact.message.error.summary',
                 detail: 'contact.message.error.detail'
               });
-              return console.log('err:Error sending message!');
             }
           }
         );
