@@ -1,20 +1,27 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { DeviceDetectorService } from 'ngx-device-detector';
+import { PointsElement } from 'src/app/models/database/points.element';
+import { PointsService } from 'src/app/services/points.service';
 
 @Component({
   selector: 'app-points',
   templateUrl: './app.points.component.html',
   styleUrls: ['./app.points.component.css']
 })
-export class PointsComponent {
+export class PointsComponent implements OnInit {
 
   aspectRatio: number; // width/height ratio
   staticFlags = false;
 
   layoutTypes = ['1x4', '2x2', '4x1']; // all types of layout used
   currentLayout = this.layoutTypes[0]; // holds the layout currently in use
+  points: PointsElement[];
+  totalpoints: number[] = [0, 0, 0, 0];
 
-  constructor(private deviceService: DeviceDetectorService) {
+  table: boolean[] = [false, false, false, false]; // if true the table is shown
+  blocker: boolean[] = [false, false, false, false]; // used to block table collapse
+
+  constructor(private deviceService: DeviceDetectorService, private pointsService: PointsService) {
     this.calcAspectRatio();
 
     if (this.deviceService.browser === 'MS-Edge' ||
@@ -24,8 +31,17 @@ export class PointsComponent {
     }
   }
 
-  table: boolean[] = [false, false, false, false]; // if true the table is shown
-  blocker: boolean[] = [false, false, false, false]; // used to block table collapse
+  ngOnInit() {
+    this.pointsService.getPoints().subscribe(
+      (res: PointsElement[]) => {
+        this.points = res;
+
+        for (let i = 0; i < 16; i++) { // for each class and grade
+          this.totalpoints[i % 4] += res[i].value; // i % 4 for all(4) types add coressponding classes
+        }
+      }
+    );
+  }
 
   toggleTable(num: number) {
     this.table[num] = !this.table[num];
