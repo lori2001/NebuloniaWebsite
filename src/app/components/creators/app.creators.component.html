@@ -1,3 +1,27 @@
+<app-navbar [mainPage] = 'false'></app-navbar>
 <section id="creators">
-    
+    <div class="title">{{ 'creators.title' | translate}}</div>
+    <div class="creator">
+        <div class="content">
+            <img *ngIf="this.clicks <= 4"
+                src="../../../assets/images/creators/szokelori.png"
+                alt="SzokeLorand" (click)="this.clicks = this.clicks+1;" >
+            <img *ngIf="this.clicks > 4"
+                src="../../../assets/images/creators/szokelori_egg.png"
+                alt="SzokeLorand-Easteregg">
+            <div class="name">
+                Szőke András-Loránd
+            </div>
+        </div>
+            <div class="text">
+                A 2019 március 13-án közzétett website készítője vagyok. A weboldal stílusa hasonlít a régihez 
+                viszont a kód teljesen újra van írva. Jó néhány új dolgot implementáltam s az újákészítésben sok-sok 
+                "easter egg"-et rejtettem el, reméllem néhányat megtalálsz. Kezdetnek kattints a képemre ötször. 
+                <i class="fa fa-angellist"></i>
+            </div>
+            <div class="postscript">
+                <b>PS.</b> {{'creators.Lorand.postscript' | translate}} 
+                <a href="https://www.facebook.com/szoke.lori"><i class="fa fa-facebook-square"></i><b> Facebook</b></a>.
+            </div>
+    </div>
 </section>

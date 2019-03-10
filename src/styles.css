@@ -38,3 +38,9 @@ body {
   line-height: 1;
   background-color: #0F0F0F;
 }
+
+/*tricks bold tag by changing font-style into the bold type of the most used font*/
+b{
+  font-weight: normal;
+  font-family: octarineBold, arialBlack, Arial;
+}

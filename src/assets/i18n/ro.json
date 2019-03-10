@@ -79,5 +79,9 @@
 
     "footer" : {
         "creators_page" : "Pagina creatorilor"
+    },
+
+    "creators" : {
+        "title": "Creatori"
     }
 }

@@ -79,5 +79,13 @@
 
     "footer" : {
         "creators_page" : "Fejlesztők oldala"
+    },
+
+    "creators" : {
+        "title": "Fejlesztők",
+        "Lorand": {
+            "text" : "A 2019 március 13-án közzétett website készítője vagyok. A weboldal stílusa hasonlít a régihez viszont a kód teljesen újra van írva. Jó néhány új dolgot implementáltam s az újákészítésben számos \"easter egg\"-et rejtettem el, reméllem néhányat megtalálsz. Kezdetnek kattints a képemre ötször.",
+            "postscript" : "A website Angular-ban volt készítve. Kezelési infókért vagy segítségért keress meg itt:" 
+        }
     }
 }

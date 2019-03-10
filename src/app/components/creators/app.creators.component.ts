@@ -7,6 +7,8 @@ import { PointsService } from 'src/app/services/points.service';
   styleUrls: ['./app.creators.component.css']
 })
 export class CreatorsComponent {
+  clicks = 0;
+  test: number[] = [ 1, 2, 3, 4, 5, 6];
 
   constructor(private pointsService: PointsService) {
   }
