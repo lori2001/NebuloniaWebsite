@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PointsService } from 'src/app/services/points.service';
+import { CreatorElement } from 'src/app/models/creator.element';
 
 @Component({
   selector: 'app-creators',
@@ -7,10 +8,13 @@ import { PointsService } from 'src/app/services/points.service';
   styleUrls: ['./app.creators.component.css']
 })
 export class CreatorsComponent {
-  clicks = 0;
-  test: number[] = [ 1, 2, 3, 4, 5, 6];
+  clicks: number[] = [0, 0, 0, 0];
 
   constructor(private pointsService: PointsService) {
+  }
+
+  addClicksTo(index: number) {
+    this.clicks[index]++;
   }
 
 }

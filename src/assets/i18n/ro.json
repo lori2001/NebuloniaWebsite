@@ -60,7 +60,7 @@
         "message" : {
             "error" : {
                 "summary" : "Trimitere eșuată!",
-                "detail" : "Serviciu indisponibil sau mesaj nevalabil."
+                "detail" : "Mesaj nevalabil sau serviciu indisponibil."
             },
             "success" : {
                 "summary" : "Mesaj trimis!",
@@ -82,6 +82,19 @@
     },
 
     "creators" : {
-        "title": "Creatori"
+        "title": "Creatori",
+        "Lorand": {
+            "text" : "Eu sunt creatorul siteului publicat pe data de 13 martie 2019. Stilul siteului este foarte similar celui anterior însă intern a fost complet refăcut. Am implementat o mulțime de funcțiuni noi printre care și așa-zisele \"easter egg\"-uri. Sper ca acestea să fie descoperite cât mai curând. Pentru început apasă pe imaginea mea de cinci ori.",
+            "postscript" : "Websiteul a fost făcut cu ajutorul technologiei Angular. Pentru informații suplimentare privind modificarea acestuia pot fi contactat pe"  
+        },
+        "Csuti": {
+            "text" : "Eu sunt cel care a actualizat și a menținut în functiune acest site între anii 2017-2018. Printre alte lucruri am schimbat și imaginile președinților și am actualizat și baza de date."
+        },
+        "Marci": {
+            "text" : "Eu sunt responsabil pentru prima verziune a acestei pagini. Acesta a fost construită de mine și de Bacsó Péter Tamás. Anul nostru a fost primul an în care consiliul elevilor a avut siteul său și acesta a devenit imediat o parte esențială a Nebulóniei."
+        },
+        "Bacso": {
+            "text" : "Primul site a fost făcut de mine și de Soos Márton. Am pus foarte mult timp și efort în crearea acestuia. Sper ca întodeauna să fie câte-un elev care să o întrețină, să o țină la curent. Cred că acest site va rămâne relevant mult timp pentru consiliul eleviilor Nebulónia."
+        }
     }
 }

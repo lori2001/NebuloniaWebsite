@@ -60,7 +60,7 @@
         "message" : {
             "error" : {
                 "summary" : "Sikertelen elküldés!",
-                "detail" : "A szolgáltatás nem elérhető \n vagy az üzenet hiányos."
+                "detail" : "Az üzenet hiányos vagy a szolgáltatás nem elérhető."
             },
             "success" : {
                 "summary" : "Üzenet elküldve!",
@@ -84,8 +84,17 @@
     "creators" : {
         "title": "Fejlesztők",
         "Lorand": {
-            "text" : "A 2019 március 13-án közzétett website készítője vagyok. A weboldal stílusa hasonlít a régihez viszont a kód teljesen újra van írva. Jó néhány új dolgot implementáltam s az újákészítésben számos \"easter egg\"-et rejtettem el, reméllem néhányat megtalálsz. Kezdetnek kattints a képemre ötször.",
-            "postscript" : "A website Angular-ban volt készítve. Kezelési infókért vagy segítségért keress meg itt:" 
+            "text" : "A 2019 március 13-án közzétett website készítője vagyok. A weboldal stílusa hasonlít a régihez viszont a kód teljesen újra van írva. Jó néhány új dolgot implementáltam s az újákészítésben sok-sok \"easter egg\"-et rejtettem el, reméllem néhányat megtalálsz. Kezdetnek kattints a képemre ötször.",
+            "postscript" : "A website Angular technológiával volt készítve. Kezelési infókért vagy segítségért keress meg itt:" 
+        },
+        "Csuti": {
+            "text" : "A 2017-2018 as tanév folyamán én kezeltem illetve frissítettem fel a websiteot. Többek között az elnökök képeit is kicseréltem illteve az adatbázist is kezeltem."
+        },
+        "Marci": {
+            "text" : "Én a site első verziójáért vagyok részben felelős. Bacsó Péter Tamással ketten készítettük el az eredeti weboldalt. Ez volt az első olyan alkalom hogy a Nebulónia egy eredeti siteot mondhatott magáénak és azóta is diákszövetségünk részévé vált."
+        },
+        "Bacso": {
+            "text" : "Soos Mártonnal ketten készítettük a Nebulónia legelső weboldalát, amibe sok időt és munkát fektettünk. Remélem, mindig is lesz egy karbantartó, aki gondoskodik az oldal naprakészségéről. Bízok abban, hogy ez a weboldal továbbra is fontos marad a diákszövetség számára."
         }
     }
 }

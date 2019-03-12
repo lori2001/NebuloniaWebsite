@@ -38,7 +38,7 @@
   cursor: pointer;
 }
 
-#footer .creators-page, #footer .copyright {
+#footer .creators-page a, #footer .copyright {
   position: absolute;
   display: block;
 

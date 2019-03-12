@@ -21,10 +21,14 @@
 @media screen and (max-width: 767px){#creators .title{ padding-bottom: 63px !important;}}
 
 #creators .creator{
-   float: left;
+   overflow: hidden;
    width: 100%;
-   padding-left: 5%;
-   padding-bottom: 48px;
+   margin: 0 auto;
+   padding-left: 50px;
+   padding-right: 50px;
+   padding-top: 24px;
+   padding-bottom: 24px;
+   max-width: 1366px;
 }
 #creators .creator .content{
    float: left;
@@ -56,7 +60,6 @@
 #creators .creator .text, #creators .creator .postscript{
    width: 75%;
    float: right;
-   padding-top: 10%;
    padding-right: 20px;
    color: rgb(228, 228, 228) !important;
    font-family: octarineLight, Arial, arialBlack;
@@ -78,25 +81,25 @@
  }
 
 @media screen and (min-width: 1400px) {
-   #creators .creator .text, #creators .creator .postscript{padding-top: 10%; font-size: 20px!important;}
-   #creators .creator .content{width:20%; margin-right: 5%;}
-   #creators .creator .name{font-size: 1.3vw;}
+   #creators .creator .text, #creators .creator .postscript{padding-top: 105px; font-size: 20px!important;}
+   #creators .creator .content{width:20%;}
+   #creators .creator .name{font-size: 22px;}
 }
 @media screen and (min-width: 1015px) and (max-width: 1399px){
    #creators .creator .text, #creators .creator .postscript{padding-top: 9%; font-size: 18px!important;}
-   #creators .creator .content{width:23%; margin-right: 2%;}
+   #creators .creator .content{width:23%;}
    #creators .creator .name{font-size: 1.5vw;}
 }
 @media screen and (min-width: 768px) and (max-width: 1014px){
    #creators .creator .text, #creators .creator .postscript{padding-top: 7.5%; font-size: 16px!important;}
-   #creators .creator .content{width:23%; margin-right: 2%;}
+   #creators .creator .content{width:23%;}
    #creators .creator .name{font-size: 2vw;}
 }
 @media screen and (min-width: 576px) and (max-width: 767px){
    #creators .creator .text, #creators .creator .postscript{
       float:none; width:90%; padding-top: 5%; margin-left: 5%!important; font-size: 3.75vw!important;
    }
-   #creators .creator .content{float:none; width:70%; margin-left: 15%!important;}
+   #creators .creator .content{float:none; width:70%; margin: 0 auto;}
    #creators .creator .name{font-size: 4vw;}
 }
 @media screen and (min-width: 0px) and (max-width: 575px){
@@ -104,7 +107,7 @@
       float:none; width:90%; padding-top: 5%; margin-left: 5%!important; font-size: 4vw!important;
    }
    #creators .title{font-size: 15vw;}
-   #creators .creator .content{float:none; width:90%; margin-left: 5%!important;}
+   #creators .creator .content{float:none; width:90%; margin: 0 auto;}
    #creators .creator .name{font-size: 5vw;}
 }
 
