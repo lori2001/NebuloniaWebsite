@@ -1,3 +1,7 @@
+<!--Easteregg START-->
+<app-presentation [trigger] = "this.presTrigger"></app-presentation>
+<!--Easteregg END-->
+
 <section id="presidents" [ngStyle]="{'height' : height}">
   <div class="slider" [ngStyle]="{'width' : width}">
     
@@ -19,7 +23,7 @@
     [items]="presidentsElement"
     [carouselClasses]="['owl-theme']">
       <div class="item" *ngFor="let element of presidentsElement;let i = index">
-        <img class="element-style" [src]="element.url"/>
+        <img class="element-style" [src]="element.url" (click)="this.countAndCheck(i);" />
         <h5>{{element.name}}</h5>
         <p>{{element.position | translate}}</p>
       </div>

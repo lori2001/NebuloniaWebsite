@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { PointsService } from 'src/app/services/points.service';
-import { CreatorElement } from 'src/app/models/creator.element';
 
 @Component({
   selector: 'app-creators',

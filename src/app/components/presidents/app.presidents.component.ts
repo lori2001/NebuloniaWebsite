@@ -10,6 +10,11 @@ export class PresidentsComponent {
   width = '80%'; // width of the whole section
   inputWidth = '0%'; // responsible for changing width if entered in parent class
 
+   // EASTEREGG START
+  presTrigger = false;
+  clicks: number[] = [0, 0, 0, 0, 0];
+   // EASTEREGG END
+
   @Input() offset = -48;
   @Input() presidentsElement: PresidentsElement[];
   @Input() set setWidth (value: string) {
@@ -46,6 +51,23 @@ export class PresidentsComponent {
   constructor() {
     this.checkResolution();
   }
+
+   // EASTEREGG START
+  countAndCheck(index: number) {
+    if (index < 5) { // use only first four pics
+      this.clicks[index]++;
+
+      if ( this.clicks[0] >= 2 &&
+           this.clicks[1] >= 1 &&
+           this.clicks[2] >= 3 &&
+           this.clicks[3] >= 1 &&
+           this.clicks[4] >= 4) {
+        this.presTrigger = true;
+      }
+    }
+
+  }
+   // EASTEREGG END
 
     // Responsive width
     @HostListener('window:resize', ['$event'])

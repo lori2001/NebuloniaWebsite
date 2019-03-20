@@ -38,7 +38,7 @@
   cursor: pointer;
 }
 
-#footer .creators-page a, #footer .copyright {
+#footer .creators-page, #footer .copyright {
   position: absolute;
   display: block;
 
@@ -62,6 +62,10 @@
 }
 #footer .copyright {
   text-align: left;
+}
+#footer .creators-page a{
+  color: #999795;
+  -webkit-text-fill-color: #999795; /*will override color*/
 }
 #footer .creators-page a:hover {
   text-decoration: none;
