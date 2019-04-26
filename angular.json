@@ -22,6 +22,7 @@
               "src/favicon.ico",
               "src/assets",
               "src/.htaccess",
+              "src/unused",
               "src/api"
             ],
             "styles": [
