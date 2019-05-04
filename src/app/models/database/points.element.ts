@@ -1,9 +1,19 @@
 export class PointsElement {
-    name: string;
+    id: number;
     value: number;
+    class_id: number;
+    className: string;
+    activity_id: number;
+    activity: string;
 
-    constructor(name: string, value: number) {
-        this.name = name;
+    constructor(id: number, value: number,
+                class_id: number, className: string,
+                activity_id: number, activity: string) {
+        this.id = id;
         this.value = value;
+        this.class_id = class_id;
+        this.className = className;
+        this.activity_id = activity_id;
+        this.activity = activity;
     }
 }

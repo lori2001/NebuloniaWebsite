@@ -16,6 +16,13 @@
 </p-toast>
 <!--Declares a toast for messages. Can be put almost anywhere-->
 
+<button pButton icon="fa fa-download"
+                type="button"
+                label="PDF"
+                class="pdfbutton ui-button-raised"
+                (click)="downloadPDF()">
+</button>
+
 <app-navbar [mainPage] = 'false'></app-navbar>
 <section id="points">
     <div *ngFor="let layoutType of layoutTypes">
@@ -43,7 +50,7 @@
                 <div class="pointsoverlay{{layoutType}}">
                     <div class="house{{layoutType}}">
                         <img class="A" src="../../../assets/images/points/sigils/A.png">
-                        <div class="points">{{this.totalpoints[0]}}</div>
+                        <div class="points">{{this.totalPoints[0]}}</div>
                         <div class="tablelink">
                             <a (click)="toggleTable(0)">
                                 {{'points.table' | translate}} 
@@ -51,9 +58,9 @@
                                 <i *ngIf="this.table[0]" class="fa fa-caret-right"></i>
                             </a>
                             <div class="dropdown" *ngIf="this.table[0]">
-                                <div *ngFor="let element of points; let i = index">
+                                <div *ngFor="let element of classPoints; let i = index">
                                     <div *ngIf="i % 4 == 0">
-                                        <h3>{{this.points[i].name}} <b>{{this.points[i].value}}</b></h3>
+                                        <h3>{{this.classPoints[i].name}} <b>{{this.classPoints[i].value}}</b></h3>
                                     </div>
                                 </div>
                             </div>
@@ -61,7 +68,7 @@
                     </div>
                     <div class="house{{layoutType}}">
                         <img class="B" src="../../../assets/images/points/sigils/B.png">
-                        <div class="points">{{this.totalpoints[1]}}</div>
+                        <div class="points">{{this.totalPoints[1]}}</div>
                         <div class="tablelink">
                             <a (click)="toggleTable(1)">
                                 {{'points.table' | translate}} 
@@ -69,9 +76,9 @@
                                 <i *ngIf="this.table[1]" class="fa fa-caret-right"></i>
                             </a>
                             <div class="dropdown" *ngIf="this.table[1]">
-                                <div *ngFor="let element of points; let i = index">
+                                <div *ngFor="let element of classPoints; let i = index">
                                     <div *ngIf="i % 4 == 1">
-                                        <h3>{{this.points[i].name}} <b>{{this.points[i].value}}</b></h3>
+                                        <h3>{{this.classPoints[i].name}} <b>{{this.classPoints[i].value}}</b></h3>
                                     </div>
                                 </div>
                             </div>
@@ -79,7 +86,7 @@
                     </div>
                     <div class="house{{layoutType}}">
                         <img class="C" src="../../../assets/images/points/sigils/C.png">
-                        <div class="points">{{this.totalpoints[2]}}</div>
+                        <div class="points">{{this.totalPoints[2]}}</div>
                         <div class="tablelink">
                             <a (click)="toggleTable(2)">
                                 {{'points.table' | translate}} 
@@ -87,9 +94,9 @@
                                 <i *ngIf="this.table[2]" class="fa fa-caret-right"></i>
                             </a>
                             <div class="dropdown" *ngIf="this.table[2]">
-                                <div *ngFor="let element of points; let i = index">
+                                <div *ngFor="let element of classPoints; let i = index">
                                     <div *ngIf="i % 4 == 2">
-                                        <h3>{{this.points[i].name}} <b>{{this.points[i].value}}</b></h3>
+                                        <h3>{{this.classPoints[i].name}} <b>{{this.classPoints[i].value}}</b></h3>
                                     </div>
                                 </div>
                             </div>
@@ -97,7 +104,7 @@
                     </div>
                     <div class="house{{layoutType}}">
                         <img class="D" src="../../../assets/images/points/sigils/D.png">
-                        <div class="points">{{this.totalpoints[3]}}</div>
+                        <div class="points">{{this.totalPoints[3]}}</div>
                         <div class="tablelink">
                             <a (click)="toggleTable(3)">
                                 {{'points.table' | translate}} 
@@ -105,9 +112,9 @@
                                 <i *ngIf="this.table[3]" class="fa fa-caret-right"></i>
                             </a>
                             <div class="dropdown" *ngIf="this.table[3]">
-                                <div *ngFor="let element of points; let i = index">
+                                <div *ngFor="let element of classPoints; let i = index">
                                     <div *ngIf="i % 4 == 3">
-                                        <h3>{{this.points[i].name}} <b>{{this.points[i].value}}</b></h3>
+                                        <h3>{{this.classPoints[i].name}} <b>{{this.classPoints[i].value}}</b></h3>
                                     </div>
                                 </div>
                             </div>

@@ -3,6 +3,7 @@ import { DeviceDetectorService } from 'ngx-device-detector';
 import { PointsElement } from 'src/app/models/database/points.element';
 import { PointsService } from 'src/app/services/points.service';
 import { MessageService } from 'primeng/components/common/messageservice';
+import * as jsPDF from 'jspdf';
 
 @Component({
   selector: 'app-points',
@@ -18,8 +19,26 @@ export class PointsComponent implements OnInit {
 
   layoutTypes = ['1x4', '2x2', '4x1']; // all types of layout used
   currentLayout = this.layoutTypes[0]; // holds the layout currently in use
-  points: PointsElement[]; // hold server information of classes' points
-  totalpoints: number[] = [0, 0, 0, 0]; // holds the points total of each 'house'
+  points: PointsElement[]; // hold server information for all types of points
+  classPoints: Array<{ value: number, name: string}> = [
+   /* { value: 0, name: ''},
+    { value: 0, name: ''},
+    { value: 0, name: ''},
+    { value: 0, name: ''},
+    { value: 0, name: ''},
+    { value: 0, name: ''},
+    { value: 0, name: ''},
+    { value: 0, name: ''},
+    { value: 0, name: ''},
+    { value: 0, name: ''},
+    { value: 0, name: ''},
+    { value: 0, name: ''},
+    { value: 0, name: ''},
+    { value: 0, name: ''},
+    { value: 0, name: ''},
+    { value: 0, name: ''},*/
+  ]; // holds the points total and name of each class
+  totalPoints: number[] = [0, 0, 0, 0]; // holds the points total of each 'house'
 
   table: boolean[] = [false, false, false, false]; // if true the table is shown
   blocker: boolean[] = [false, false, false, false]; // used to block table collapse
@@ -41,8 +60,20 @@ export class PointsComponent implements OnInit {
       (res: PointsElement[]) => {
         this.points = res;
 
-        for (let i = 0; i < 16; i++) { // for each class and grade
-          this.totalpoints[i % 4] += res[i].value; // i % 4 for all(4) types add coressponding classes
+         for (let i = 0; i < this.points.length; i++) { // for each point ever given
+          // adds together the points of all classes
+          // 9.A, 9.B, 9.C, 9.D, 10.A, 10.B stb..
+           if (this.points[i].class_id - 1 >= this.classPoints.length) {
+            this.classPoints.push({value: this.points[i].value, name: this.points[i].className});
+           } else {
+            this.classPoints[(this.points[i].class_id - 1)].value += this.points[i].value;
+           }
+         }
+
+        for (let i = 0; i < this.classPoints.length; i++) {
+          // adds together the total points of each "house"
+          // 0-A 1-B 2-C 3-D
+          this.totalPoints[i % 4] += this.classPoints[i].value;
         }
       },
       (error) => {
@@ -104,6 +135,51 @@ export class PointsComponent implements OnInit {
   /* makes toasts' close-button work */
   onReject() {
     this.messageService.clear('custom');
+  }
+
+   public downloadPDF() {
+    const doc = new jsPDF();
+
+    /*Title*/
+    doc.setFontSize(20);
+    doc.text('Osztálypontok', 83, 15);
+
+    /*Footer*/
+    doc.setFontSize(10);
+    doc.text('Készítette: Szõke András-Loránd', 155, 295);
+    doc.setFontSize(8);
+
+    let Ypos = 25;
+    let Xpos = 0;
+
+    for (let i = 0; i < this.points.length; i++) { // for each class and grade
+
+      if (i > 0 && this.points[i - 1].activity !== this.points[i].activity) {
+        Ypos += 5;
+      }
+
+      if (Ypos >= 275 && Xpos >= 140) {
+        doc.addPage();
+        Ypos = 25;
+        Xpos = 0;
+
+        /*Footer*/
+        doc.setFontSize(10);
+        doc.text('Készítette: Szõke András-Loránd', 155, 295);
+        doc.setFontSize(8);
+      } else if (Ypos >= 275) {
+        Xpos += 70;
+        Ypos = 25;
+      }
+
+      doc.text(this.points[i].className, Xpos + 10, Ypos);
+      doc.text(this.points[i].activity.toString(), Xpos + 18, Ypos);
+      doc.text(this.points[i].value.toString(), Xpos + 50, Ypos);
+
+      Ypos += 5;
+    }
+
+    doc.save('osztalypontok.pdf');
   }
 }
 
