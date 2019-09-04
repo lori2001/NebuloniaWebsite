@@ -10,8 +10,9 @@ import {TranslateService} from '@ngx-translate/core';
 export class AppComponent {
 
   constructor(private translate: TranslateService) {
-    translate.addLangs(['hu', 'ro']);
-    translate.setDefaultLang('hu');
-    this.translate.currentLang = 'hu';
+    translate.addLangs(['hun', 'rom']);
+
+    translate.setDefaultLang('hun');
+    this.translate.currentLang = 'hun';
   }
 }

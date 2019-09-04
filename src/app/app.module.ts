@@ -26,6 +26,9 @@ import {InputTextModule} from 'primeng/inputtext';
 import {ToastModule} from 'primeng/toast';
 import {ButtonModule} from 'primeng/button';
 
+// cookie manager
+import { CookieService } from 'ngx-cookie-service';
+
 // import components
 import { AppComponent } from './app.component';
 import { MainComponent } from './components/main/app.main.component';
@@ -100,7 +103,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
          }
      })
   ],
-  providers: [ ],
+  providers: [ CookieService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

@@ -28,10 +28,10 @@
         "financial" : "Pénzügyi alelnök",
         "foreign_secretary" : "Külügyi alelnök",
         "home_secretary" : "Belügyi alelnök",
-        "human_resources" : "Human resources",
+        "human_resources" : "Humán erőforrások",
         "president" : "Elnök",
+        "vice_president" : "Alelnök",
         "technical" : "Médiás alelnök",
-
         "radio" : "Rádiós alelnök",
         "spokesman" : "Szponzorfelelős alelnök",
         "legal_representative": "Jogi referens"

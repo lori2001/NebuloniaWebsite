@@ -17,30 +17,32 @@ export class MainComponent {
   constructor() {
     this.calcOffset();
 
+    // please build with ng build --prod --outputHashing=all
+    // if changed
     this.presidents = [
-      { url: '../../../assets/images/presidents/home_secretary.jpg',
-        name: 'Kirsch Edgár',
-        position: 'presidents.home_secretary'},
-      { url: '../../../assets/images/presidents/president.jpg',
-        name: 'Vencz Balázs',
-        position: 'presidents.president' },
-      { url: '../../../assets/images/presidents/human_resources.jpg',
-        name: 'Bencze Erik Tamás',
-        position: 'presidents.human_resources' },
-      { url: '../../../assets/images/presidents/foreign_secretary.jpg',
-        name: 'Szekrény Eveline',
-        position: 'presidents.foreign_secretary' },
-      { url: '../../../assets/images/presidents/communications.jpg',
+      { url: '../../../assets/images/presidents2019/vice_president.jpg',
         name: 'Kelemen Tamás',
-        position: 'presidents.communications' },
-      { url: '../../../assets/images/presidents/documentations.jpg',
-        name: 'Römer-Ambrus Júlia',
+        position: 'presidents.vice_president'},
+      { url: '../../../assets/images/presidents2019/president.jpg',
+        name: 'Nagy Tibor',
+        position: 'presidents.president' },
+      { url: '../../../assets/images/presidents2019/human_resources.jpg',
+        name: 'Nagy Tamás',
+        position: 'presidents.human_resources' },
+      { url: '../../../assets/images/presidents2019/foreign_secretary.jpg',
+        name: 'Bokor Tünde',
+        position: 'presidents.foreign_secretary' },
+      { url: '../../../assets/images/presidents2019/radio.jpg',
+        name: 'Lázár Hunor',
+        position: 'presidents.radio' },
+      { url: '../../../assets/images/presidents2019/documentations.jpg',
+        name: 'Szekrény Eveline',
         position: 'presidents.documentations' },
-      { url: '../../../assets/images/presidents/financial.jpg',
-        name: 'Bucescu Andreea',
+      { url: '../../../assets/images/presidents2019/financial.jpg',
+        name: 'Benedek Orsolya',
         position: 'presidents.financial' },
-      { url: '../../../assets/images/presidents/technical.jpg',
-        name: 'Kristó Attila',
+      { url: '../../../assets/images/presidents2019/technical.jpg',
+        name: 'Szőke András-Loránd',
         position: 'presidents.technical' }
     ];
 
