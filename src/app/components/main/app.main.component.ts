@@ -33,7 +33,7 @@ export class MainComponent {
         name: 'Bokor Tünde',
         position: 'presidents.foreign_secretary' },
       { url: '../../../assets/images/presidents2019/radio.jpg',
-        name: 'Lázár Hunor',
+        name: 'Lázár Miklós Hunor',
         position: 'presidents.radio' },
       { url: '../../../assets/images/presidents2019/documentations.jpg',
         name: 'Szekrény Eveline',
