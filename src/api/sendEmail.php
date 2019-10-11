@@ -24,7 +24,8 @@ if(isset($postdata) && !empty($postdata))
     $message = "Email: " . $email . " -- Név: " . $name . "\n\n" .
                 $message;
 
-    $to ="nebulonia.alf@gmail.com";
+    $to ="office@nebulonia.ro";
+   // $to ="nebulonia.alf@gmail.com";
 
     // send
     $ok = mail($to, $title, $message, $headers);

@@ -80,8 +80,10 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     // detection of browsers and devices
     DeviceDetectorModule.forRoot(),
 
-    // routing
+    // scrolling
     ScrollToModule.forRoot(),
+
+    // routing
     AppRoutingModule,
 
     // owl carousel

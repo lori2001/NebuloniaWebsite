@@ -22,8 +22,8 @@
           <i *ngIf="this.mobileMode === true" class="fa fa-square"></i> {{ 'menu.archive' | translate }}</a>
         <a [routerLink]="['/points']"  class="pagemark">
           <i *ngIf="this.mobileMode === true" class="fa fa-square"></i> {{ 'menu.class_points' | translate }}</a>
-        <a *ngIf="this.translate.currentLang === 'hu'" (click)="setLanguage('ro')">RO</a>
-        <a *ngIf="this.translate.currentLang === 'ro'" (click)="setLanguage('hu')">HU</a>
+        <a *ngIf="this.translate.currentLang === 'hun'" (click)="setLanguage('rom')">RO</a>
+        <a *ngIf="this.translate.currentLang === 'rom'" (click)="setLanguage('hun')">HU</a>
     </ul>
   </div>
 </nav>

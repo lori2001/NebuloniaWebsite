@@ -15,6 +15,33 @@ export class ArchiveComponent {
   constructor() {
     this.calcOffset();
     this.archiveElements = [
+      { year: '2018-2019',
+      presidents: [{ url: '../../../assets/images/archive/2018-2019/presidents/home_secretary.jpg',
+                     name: 'Kirsch Edgár',
+                     position: 'presidents.home_secretary'},
+                   { url: '../../../assets/images/archive/2018-2019/presidents/president.jpg',
+                     name: 'Vencz Balázs',
+                     position: 'presidents.president' },
+                   { url: '../../../assets/images/archive/2018-2019/presidents/human_resources.jpg',
+                     name: 'Bencze Erik Tamás',
+                     position: 'presidents.human_resources' },
+                   { url: '../../../assets/images/archive/2018-2019/presidents/foreign_secretary.jpg',
+                     name: 'Szekrény Eveline',
+                     position: 'presidents.foreign_secretary' },
+                   { url: '../../../assets/images/archive/2018-2019/presidents/communications.jpg',
+                     name: 'Kelemen Tamás',
+                     position: 'presidents.communications' },
+                   { url: '../../../assets/images/archive/2018-2019/presidents/documentations.jpg',
+                     name: 'Römer-Ambrus Júlia',
+                     position: 'presidents.documentations' },
+                   { url: '../../../assets/images/archive/2018-2019/presidents/financial.jpg',
+                     name: 'Bucescu Andreea',
+                     position: 'presidents.financial' },
+                   { url: '../../../assets/images/archive/2018-2019/presidents/technical.jpg',
+                     name: 'Kristó Attila',
+                     position: 'presidents.technical' }
+                  ]
+      },
       { year: '2017-2018',
         presidents: [{ url: '../../../assets/images/archive/2017-2018/presidents/home_secretary.jpg',
                       name: 'Csutak Zsolt',
@@ -42,7 +69,7 @@ export class ArchiveComponent {
                       position: 'presidents.technical' },
                       { url: '../../../assets/images/archive/2017-2018/presidents/radio.jpg',
                       name: 'Keresztes Szende',
-                      position: 'presidents.radio' },
+                      position: 'presidents.radio' }
                     ]
       },
       { year: '2016-2017',
