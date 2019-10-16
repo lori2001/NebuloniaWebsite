@@ -4,8 +4,10 @@
         <div class="wholeyear" id="{{archiveElement.year}}">
             <div class="header">
                 <div class="yearblock"
-                     [ngStyle]="{'background-image':'url(../../../assets/images/archive/' + archiveElement.year +'/year_bg.jpg)'}">
-                    <div class="greyhover"
+                     [ngStyle]="{'background-image':'url(../../../assets/images/archive/' + archiveElement.year +'/year_bg.jpg)'}"
+                     style="background-position: center center;">
+                     
+                     <div class="greyhover"
                             [ngx-scroll-to]="'#' + archiveElement.year"
                             [ngx-scroll-to-offset]="this.offset"> 
                             <h1 class="year">{{archiveElement.year}}</h1>

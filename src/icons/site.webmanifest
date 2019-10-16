@@ -3,17 +3,17 @@
     "short_name": "Nebul\u00f3nia",
     "icons": [
         {
-            "src": "/icons/android-chrome-192x192.png?v=A076YBkv7x",
+            "src": "/icons/android-chrome-192x192.png?v=M4Kb22j5Rj",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/icons/android-chrome-512x512.png?v=A076YBkv7x",
+            "src": "/icons/android-chrome-512x512.png?v=M4Kb22j5Rj",
             "sizes": "512x512",
             "type": "image/png"
         }
     ],
-    "theme_color": "#f29e22",
-    "background_color": "#f29e22",
+    "theme_color": "#ff7e00",
+    "background_color": "#ff7e00",
     "display": "standalone"
 }
