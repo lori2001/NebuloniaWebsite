@@ -4,7 +4,7 @@
   </button>
 
   <div class="navbar-collapse" (click)="toggleNavbar()" [hidden]="collapse">
-    <ul class="navbar-nav mr-auto">
+    <div class="navbar-nav mr-auto">
         <a [routerLink]="['/main']" [ngx-scroll-to]="'#home'" [ngx-scroll-to-offset]="offset">{{ 'menu.home' | translate }}</a>
         <!-- (ugly) BUGFIX START - Contacts don't scroll properly because FB and Insta-->
         <div *ngIf="this.mainPage === true">        
@@ -24,6 +24,6 @@
           <i *ngIf="this.mobileMode === true" class="fa fa-square"></i> {{ 'menu.class_points' | translate }}</a>
         <a *ngIf="this.translate.currentLang === 'hun'" (click)="setLanguage('rom')">RO</a>
         <a *ngIf="this.translate.currentLang === 'rom'" (click)="setLanguage('hun')">HU</a>
-    </ul>
+    </div>
   </div>
 </nav>
