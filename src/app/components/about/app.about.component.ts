@@ -6,8 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.about.component.css']
 })
 export class AboutComponent {
-
-  constructor() {
+  clicks:number = 0;
+  modelIsActive:boolean = false;
+  showModel(){
+    this.clicks++;
+    if(this.clicks >= 3) {
+      this.clicks = 0;
+      this.modelIsActive = true;
+    }
   }
 }
 

@@ -25,6 +25,7 @@ import {InputTextareaModule} from 'primeng/inputtextarea';
 import {InputTextModule} from 'primeng/inputtext';
 import {ToastModule} from 'primeng/toast';
 import {ButtonModule} from 'primeng/button';
+import {PasswordModule} from 'primeng/password';
 
 // cookie manager
 import { CookieService } from 'ngx-cookie-service';
@@ -45,6 +46,7 @@ import { ArchiveComponent } from './components/archive/app.archive.component';
 import { PointsComponent } from './components/points/app.points.component';
 import { CreatorsComponent } from './components/creators/app.creators.component';
 import { PresentationComponent } from './components/eastereggs/presentation/app.presentation.component';
+import { AdminPortalComponent } from './components/admin-portal-component/app.adminportal.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -69,7 +71,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     NotFoundComponent, // 404 Page
 
     // Extra (eastereggs and stuff)
-    PresentationComponent
+    PresentationComponent, AdminPortalComponent
   ],
   imports: [
     BrowserModule,
@@ -94,6 +96,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     InputTextModule,
     ToastModule,
     ButtonModule,
+    PasswordModule,
 
      // translate modules
      HttpClientModule,

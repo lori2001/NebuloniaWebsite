@@ -1,0 +1,55 @@
+<!--<p-toast [style]="{marginTop: message_margin}" 
+          position="top-right"
+          key="custom"
+          styleClass="custom-toast">
+
+          <ng-template let-message pTemplate="message">
+              <a tabindex="0" class="ui-toast-close-icon pi pi-times" (click)="onReject()" *ngIf="message.closable !== false"></a>
+              <span class="ui-toast-icon pi"
+              [ngClass]="{'pi-info-circle': message.severity == 'info', 'pi-exclamation-triangle': message.severity == 'warn',
+                  'pi-times': message.severity == 'error', 'pi-check' :message.severity == 'success'}"></span>
+              <div class="ui-toast-message-text-content">
+                  <div class="ui-toast-summary">{{message.summary | translate}}</div>
+                  <div class="ui-toast-detail" style="line-height: 1.4;">{{message.detail | translate}}</div>
+              </div>
+        </ng-template>
+</p-toast>-->
+<!--Declares a toast for messages. Can be put almost anywhere-->
+
+<app-navbar [mainPage] = 'false'></app-navbar>
+<section id="adminportal">
+  
+  <div class="text" *ngIf="!loginned">
+    <h2>{{ 'adminportal.title' | translate }}</h2>
+    <h3>Login</h3>
+    <input pInputText type="password" placeholder="Jelszó" id="passwordBox">
+    &nbsp;
+    <button pButton type="button" icon="pi pi-check" label="Belépés" (click)="login()"></button>
+  </div>
+  <div class="text" *ngIf="loginned">
+    <h2>{{ 'adminportal.title' | translate }}</h2>
+    <select class="acselect" id="actlist" #actlist (change)="loadPoints(actlist.value)">
+      <option *ngFor="let item of activities" [value]="item.id">{{ item.name }}</option>
+    </select>
+    <br><br>
+    <button pButton type="button" class="ui-button-danger" icon="pi pi-trash" label="Esemény törlése" (click)="deleteActivity()"></button>
+    &nbsp;
+    <button pButton type="button" icon="pi pi-check" label="Pontok mentése" (click)="savePoints()"></button>
+    <br><br>
+    <input pInputText type="text" id="newActNameBox">
+    &nbsp;
+    <button pButton type="button" label="Esemény hozzáadása" (click)="createActivity()"></button>
+    <br><br>
+    <table class="ptable" id="pointsTable">
+      <tr>
+        <th>{{ 'adminportal.classlabel' | translate }}</th>
+        <th>{{ 'adminportal.pointslabel' | translate }}</th>
+      </tr>
+      <tr *ngFor="let item of points">
+        <td>{{ item.className }}</td>
+        <td><div contenteditable="true">{{ item.value }}</div></td>
+      </tr>
+    </table>
+  </div>
+</section>
+  

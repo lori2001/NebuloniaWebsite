@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/nebulonia",
+            "outputPath": "E:/Dev/Work stuff/nebulonia/xampp/htdocs/nebulonia",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -40,7 +40,9 @@
 
               "node_modules/normalize.css/normalize.css",
               
-              "src/styles.css"
+              "src/styles.css",
+              
+              "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.js",
