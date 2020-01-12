@@ -12,7 +12,7 @@ import { ActivitiesElement } from 'src/app/models/database/activities.element';
 })
 export class AdminComponent implements OnInit {
   messageMargin = '48px';
-  isLogged = true;
+  isLogged = false;
   points: PointsElement[];
   activities: ActivitiesElement[];
   currentActivityId: number;
