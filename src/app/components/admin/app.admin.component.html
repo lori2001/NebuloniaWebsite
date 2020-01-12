@@ -39,8 +39,8 @@
       <br><br>
       <table class="ptable" id="pointsTable">
         <tr>
-          <th>{{ 'adminportal.classlabel' | translate }}</th>
-          <th>{{ 'adminportal.pointslabel' | translate }}</th>
+          <th>{{ 'adminportal.class' | translate }}</th>
+          <th>{{ 'adminportal.points' | translate }}</th>
         </tr>
         <tr *ngFor="let item of points">
           <td>{{ item.className }}</td>
@@ -48,13 +48,13 @@
         </tr>
       </table>
       <br>
-      <button pButton type="button" icon="pi pi-check" label="Pontok mentése" (click)="savePoints()"></button>
+      <button pButton type="button" icon="pi pi-check" label="{{ 'admin.save-points' | translate }}" (click)="savePoints()"></button>
     </div>
     <br><br>
     <div class="new-activity">
       <input pInputText type="text" id="newActNameBox">
       &nbsp;
-      <button pButton type="button" label="Esemény hozzáadása" (click)="createActivity()"></button>
+      <button pButton type="button" label="{{ 'admin.new-event-add' | translate }}" (click)="createActivity()"></button>
     </div>
   </div>
   <!--- Admin Page END ------------------------------->
