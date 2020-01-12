@@ -1,5 +1,5 @@
 import { Component, ElementRef, ViewChild, HostListener } from '@angular/core';
-import { MessageService } from 'primeng/components/common/messageservice';
+import { MessageService } from 'primeng/api';
 import { DeviceDetectorService } from 'ngx-device-detector';
 import { EmailElement } from 'src/app/models/database/email.element';
 import { EmailService } from 'src/app/services/email.service';
@@ -11,8 +11,8 @@ import { EmailService } from 'src/app/services/email.service';
   providers: [MessageService]
 })
 export class ContactComponent {
-  message_margin = '48px'; // holds the position of the notification relative to the top
-  fb_messanger = false; // helps fix safari-facebook BUG
+  messageMargin = '48px'; // holds the position of the notification relative to the top
+  fbMessenger = false; // helps fix safari-facebook BUG
   emailElement = new EmailElement('', '', '', '');
 
   constructor(private messageService: MessageService,
@@ -20,21 +20,21 @@ export class ContactComponent {
               private emailService: EmailService) {
     this.checkMobileMode();
     if (this.deviceService.browser === 'FB-Messanger') {
-      this.fb_messanger = true;
+      this.fbMessenger = true;
     }
   }
 
-  @ViewChild('mailform1') mailForm1: ElementRef;
-  @ViewChild('mailform2') mailForm2: ElementRef;
-  @ViewChild('mailform3') mailForm3: ElementRef;
-  @ViewChild('mailform4') mailForm4: ElementRef;
+  @ViewChild('mailform1', {static: false}) mailForm1: ElementRef;
+  @ViewChild('mailform2', {static: false}) mailForm2: ElementRef;
+  @ViewChild('mailform3', {static: false}) mailForm3: ElementRef;
+  @ViewChild('mailform4', {static: false}) mailForm4: ElementRef;
 
-  @HostListener('window:resize', ['$event'])
+  @HostListener('window:resize', [])
   checkMobileMode() {
     if (window.innerWidth < 768 && window.innerWidth > 370) {
-      this.message_margin = '-7px';
+      this.messageMargin = '-7px';
     } else {
-      this.message_margin = '48px';
+      this.messageMargin = '48px';
     }
   }
 

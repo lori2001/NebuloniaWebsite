@@ -43,18 +43,3 @@
     resizeFBPlugin();
   });
 /****************Facebook END****************/
-/***********3D Model Viewer START************/
-
-
-/*var modelPlayer = this['js-3d-model-viewer'];
-var viewerElement = document.getElementById('viewer')
-var scene = modelPlayer.prepareScene(viewerElement)
-modelPlayer.loadObject(scene, './assets/sample.obj')
-
-var fullScreenButton = document.getElementById('fullscreen-button')
-fullScreenButton.addEventListener('click', function () {
-  modelPlayer.goFullScreen(viewerElement)
-})*/
-
-
-/***********3D Model Viewer END**************/

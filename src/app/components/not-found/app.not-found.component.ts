@@ -11,7 +11,7 @@ export class NotFoundComponent {
   constructor(public translate: TranslateService) {
   }
 
-  changeLanguage(language: string) {
+  setLanguage(language: string) {
     let langs: any;
     let found = false;
     let currlanguage: string;
@@ -24,9 +24,9 @@ export class NotFoundComponent {
     }
 
     // if the language requested wasn't loaded
-     if (!found) {
+    if (!found) {
       // print error message in console
-      alert('Language type not found! Resetting to default languge instead.');
+      console.log('Language type not found! Resetting to default language instead.');
       // set current language to default
       currlanguage = this.translate.getDefaultLang();
     }

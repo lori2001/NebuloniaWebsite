@@ -48,7 +48,7 @@ export class SponsorsComponent {
   }
 
     // Responsive width
-    @HostListener('window:resize', ['$event'])
+    @HostListener('window:resize', [])
     checkResolution() {
       if (window.innerWidth < 576) {
         this.width = '100%';

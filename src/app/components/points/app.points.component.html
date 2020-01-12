@@ -1,4 +1,4 @@
-<p-toast [style]="{marginTop: message_margin}" 
+<p-toast [style]="{marginTop: messageMargin}" 
           position="top-right"
           key="custom"
           styleClass="custom-toast">
@@ -23,7 +23,7 @@
                 (click)="downloadPDF()">
 </button>
 
-<app-navbar [mainPage] = 'false'></app-navbar>
+<app-navbar [MainPage] = 'false'></app-navbar>
 <section id="points">
     <div *ngFor="let layoutType of layoutTypes">
         <div *ngIf="layoutType === this.currentLayout">

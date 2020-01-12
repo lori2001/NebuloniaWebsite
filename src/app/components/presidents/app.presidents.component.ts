@@ -17,7 +17,7 @@ export class PresidentsComponent {
 
   @Input() offset = -48;
   @Input() presidentsElement: PresidentsElement[];
-  @Input() set setWidth (value: string) {
+  @Input() set setWidth(value: string) {
     this.inputWidth = value;
     this.checkResolution();
   }
@@ -70,7 +70,7 @@ export class PresidentsComponent {
    // EASTEREGG END
 
     // Responsive width
-    @HostListener('window:resize', ['$event'])
+    @HostListener('window:resize', [])
     checkResolution() {
       if (this.inputWidth === '0%') {
         if (window.innerWidth < 576) {

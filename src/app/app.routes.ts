@@ -7,17 +7,17 @@ import { NotFoundComponent } from './components/not-found/app.not-found.componen
 import { ArchiveComponent } from './components/archive/app.archive.component';
 import { PointsComponent } from './components/points/app.points.component';
 import { CreatorsComponent } from './components/creators/app.creators.component';
-import { AdminPortalComponent } from './components/admin-portal-component/app.adminportal.component';
+import { AdminComponent } from './components/admin/app.admin.component';
 
 const routes: Routes = [
     {path : 'main', component : MainComponent},
     {path : 'archive', component : ArchiveComponent},
     {path : 'points', component : PointsComponent},
-    {path : 'admin', component : AdminPortalComponent},
     {path : 'creators', component : CreatorsComponent},
+    {path : 'admin', component : AdminComponent},
     {path : 'not-found', component : NotFoundComponent},
     {path : '', redirectTo : '/main', pathMatch: 'full'}, // catches default URL
-    {path : '**', redirectTo : '/not-found'} // catches wrong URL
+    {path: '**', redirectTo: '/not-found'} // catches wrong URL
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

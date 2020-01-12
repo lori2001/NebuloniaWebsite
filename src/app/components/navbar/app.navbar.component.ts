@@ -13,7 +13,7 @@ export class NavbarComponent {
   mobileMode = false; // enables/disables mobile mode
   collapse = true; // true if mobile style menu is collapsed
 
-  private _mainPage = true; // checks and behaves differently whether the user is on main page or not
+  mainPage = true; // checks and behaves differently whether the user is on main page or not
 
   constructor(public translate: TranslateService) {
     // initialization stuff
@@ -21,14 +21,14 @@ export class NavbarComponent {
     this.calcOpacity();
   }
 
-  get mainPage(): boolean {
-    return this._mainPage;
+  get MainPage(): boolean {
+    return this.mainPage;
   }
 
   @Input()
-  set mainPage(value: boolean) {
-    this._mainPage = value;
-    if (!this._mainPage) {
+  set MainPage(value: boolean) {
+    this.mainPage = value;
+    if (!this.mainPage) {
       // should return full opacity background except for mobileMode
       this.checkMobileMode();
       this.calcOpacity();
@@ -37,7 +37,7 @@ export class NavbarComponent {
 
   @Input() offset = -48;
 
-  @HostListener('window:resize', ['$event'])
+  @HostListener('window:resize', [])
   checkMobileMode() {
     if ( window.innerWidth < 768) {
       this.mobileMode = true; // enables mobile mode
@@ -51,7 +51,7 @@ export class NavbarComponent {
       this.calcOpacity(); // controls this.bgopacity
     }
   }
-  @HostListener('window:scroll', ['$event'])
+  @HostListener('window:scroll', [])
   calcOpacity() {
     if (!this.mobileMode) {
 
@@ -75,7 +75,7 @@ export class NavbarComponent {
     if (this.mobileMode) {
     this.collapse = !this.collapse;
 
-      if (!this.collapse) {
+    if (!this.collapse) {
         this.bgopacity = 1;
       } else {
         this.bgopacity = 0;
@@ -96,7 +96,7 @@ export class NavbarComponent {
     }
 
     // if the language requested wasn't loaded
-     if (!found) {
+    if (!found) {
       // print error message in console
       alert('Language type not found! Resetting to default languge instead.');
       // set current language to default

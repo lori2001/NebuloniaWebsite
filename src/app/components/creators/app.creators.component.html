@@ -1,8 +1,8 @@
-<app-navbar [mainPage] = 'false'></app-navbar>
+<app-navbar [MainPage] = 'false'></app-navbar>
 <section id="creators">
     <div class="title">{{ 'creators.title' | translate}}</div>
         <div class="creator">
-            <div class="content">
+            <div class="profile">
                 <img *ngIf="this.clicks[4] <= 4"
                     src="../../../assets/images/creators/kovi_lori.png"
                     alt="KovacsLorand" (click)="addClicksTo(4)" >
@@ -15,13 +15,13 @@
             </div>
             <div class="text">
                 {{'creators.KovacsLorand.text' | translate}}
-            </div>
-            <div class="postscript"> 
-                <a href="https://www.facebook.com/kovilori13"><i class="fa fa-facebook-square"></i><b> Facebook</b></a>
+                <div class="postscript"> 
+                    <a href="https://www.facebook.com/kovilori13"><i class="fa fa-facebook-square"></i><b> Facebook</b></a>
+                </div>
             </div>
         </div>
         <div class="creator">
-            <div class="content">
+            <div class="profile">
                 <img *ngIf="this.clicks[3] <= 4"
                     src="../../../assets/images/creators/lori.png"
                     alt="SzokeLorand" (click)="addClicksTo(3)" >
@@ -35,14 +35,14 @@
             <div class="text">
                 {{'creators.Lorand.text' | translate}}
                 <i class="fa fa-angellist"></i>
-            </div>
-            <div class="postscript">
-                <b>PS.</b> {{ 'creators.Lorand.postscript' | translate}} 
-                <a href="https://www.facebook.com/szoke.lori"><i class="fa fa-facebook-square"></i><b> Facebook</b></a>.
+                <div class="postscript">
+                    <b>PS.</b> {{ 'creators.Lorand.postscript' | translate}} 
+                    <a href="https://www.facebook.com/szoke.lori"><i class="fa fa-facebook-square"></i><b> Facebook</b></a>.
+                </div>
             </div>
         </div>
         <div class="creator">
-            <div class="content">
+            <div class="profile">
                 <img *ngIf="this.clicks[2] <= 4"
                     src="../../../assets/images/creators/csuti.png"
                     alt="CsutakZsolt" (click)="addClicksTo(2)" >
@@ -58,7 +58,7 @@
             </div>
         </div>
         <div class="creator">
-            <div class="content">
+            <div class="profile">
                 <img *ngIf="this.clicks[1] <= 4"
                     src="../../../assets/images/creators/marci.png"
                     alt="SoosMarton" (click)="addClicksTo(1)" >
@@ -74,7 +74,7 @@
             </div>
         </div>
         <div class="creator">
-            <div class="content">
+            <div class="profile">
                 <img *ngIf="this.clicks[0] <= 4"
                     src="../../../assets/images/creators/bacso.png"
                     alt="BacsoPeterTamas" (click)="addClicksTo(0)" >

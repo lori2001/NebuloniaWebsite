@@ -58,23 +58,23 @@
             "name" : "Áprily Lajos Főgimnázium",
             "location" : "După Ziduri utca, 3. szám, Brassó"
         },
-        "message" : {
+        "messages" : {
             "error" : {
                 "summary" : "Sikertelen elküldés!",
-                "detail" : "Az üzenet hiányos vagy a szolgáltatás nem elérhető."
+                "details" : "Az üzenet hiányos vagy a szolgáltatás nem elérhető."
             },
             "success" : {
                 "summary" : "Üzenet elküldve!",
-                "detail" : "Üzenetét hamarosan elolvassuk."
+                "details" : "Üzenetét hamarosan elolvassuk."
             }
         }
     },
 
     "points" : {
         "table" : "Táblázat",
-        "error" : {
+        "error-message" : {
             "summary" : "Sikertelen kapcsolódás!",
-            "detail" : "A szerver jelenleg nem elérhető. \n Kérjük később próbálja ujra!"
+            "details" : "A szerver jelenleg nem elérhető. \n Kérjük később próbálja ujra!"
         }
     },
 
@@ -102,11 +102,58 @@
         }
     },
 
-    "adminportal" : {
+    "admin" : {
         "title": "Admin portál",
-        "eventlabel": "Esemény neve",
-        "datelabel": "Dátum",
-        "classlabel": "Osztály",
-        "pointslabel": "Pontok"
+
+        "sign-in": {
+            "login": "Bejelentkezés",
+            "password": "Jelszó",
+            "next": "Tovább"
+        },
+
+        "event-name": "Esemény neve:",
+        "event-delete": "Esemény törlése",
+        "new-event-add": "Esemény hozzádadása",
+        "new-event-name": "Új Esemény neve:",
+        "event-date": "Hozzáadási dátum",
+        "class": "Osztály",
+        "points": "Pontok",
+
+        "confirm dialog": {
+            "message": "Kérjük igazolja az esemény törlését!",
+            "ok": "Törlés",
+            "cancel": "Visszavonás"
+        },
+
+        "messages" : {
+            "connection-error" : {
+                "summary" : "Sikertelen kapcsolódás!",
+                "details" : "Sikertelen kapcsolódás az adatbázishoz!"
+            },
+            "activity-name-error" : {
+                "summary" : "Sikertelen hozzáadás!",
+                "details" : "Az új esemény neve hiányos!"
+            },
+            "points-success" : {
+                "summary" : "Sikeres hozzáadás!",
+                "details" : "Új pontszám táblázat sikeresen hozzáadva!"
+            },
+            "points-input-error" : {
+                "summary" : "Sikertelen hozzáadás!",
+                "details" : "A pontszám táblázat helytelen formátumban van!"
+            },
+            "activity-creation-success" : {
+                "summary" : "Sikeres létrehozás!",
+                "details" : "Új esemény sikeresen létrehozva!"
+            },
+            "activity-deletion-success" : {
+                "summary" : "Sikeres törlés!",
+                "details" : "Az esemény törlése sikeres volt!"
+            },
+            "invalid-password" : {
+                "summary" : "Hibás Jelszó!",
+                "details" : "A beírt jelszó hibás! Kérjük próbálja újra!"
+            }
+        }
     }
 }

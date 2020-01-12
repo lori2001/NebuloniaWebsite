@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 // Bugfix -> import custom-javascript code
- declare function initFBPlugin(): any;
+declare function initFBPlugin(): any;
 
 @Component({
   selector: 'app-events',

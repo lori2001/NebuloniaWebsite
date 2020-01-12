@@ -1,17 +1,5 @@
-CREATE TABLE IF NOT EXISTS `cars` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `model` varchar(255) NOT NULL DEFAULT '',
-  `price` int (10) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
-
-
-/******************************************************/
-/******************************************************/
-/******************************************************/
-/******************************************************/
-/******************************************************/
-
+CREATE DATABASE nebuloni_db CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE nebuloni_db;
 
 CREATE TABLE IF NOT EXISTS `activities` (
     id INT unsigned AUTO_INCREMENT NOT NULL,
@@ -165,20 +153,21 @@ INSERT INTO `points`(`value`, `activity_id`, `class_id`) VALUES
 (0,6,15),
 (0,6,16);
 
+/*------- STANDARD -------------------*/
 INSERT INTO `points`(`value`, `activity_id`, `class_id`) VALUES
-(25,7,1),
-(20,7,2),
-(25,7,3),
-(20,7,4),
-(20,7,5),
-(25,7,7),
-(25,7,7),
-(20,7,8),
-(25,7,9),
-(20,7,10),
-(15,7,11),
-(25,7,12),
-(15,7,13),
-(0,7,14),
-(20,7,15),
-(15,7,16);
+(0,0,1),
+(0,0,2),
+(0,0,3),
+(0,0,4),
+(0,0,5),
+(0,0,7),
+(0,0,7),
+(0,0,8),
+(0,0,9),
+(0,0,10),
+(0,0,11),
+(0,0,12),
+(0,0,13),
+(0,0,14),
+(0,0,15),
+(0,0,16);

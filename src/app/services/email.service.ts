@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { EmailElement } from '../models/database/email.element';
-import { MessageService } from 'primeng/components/common/messageservice';
+import { MessageService } from 'primeng/api';
 
 @Injectable({
   providedIn: 'root'
@@ -20,8 +20,8 @@ export class EmailService {
               messageService.add({
                 key: 'custom',
                 severity: 'success',
-                summary: 'contact.message.success.summary',
-                detail: 'contact.message.success.detail'
+                summary: 'contact.messages.success.summary',
+                detail: 'contact.messages.success.details'
               });
             }
           },
@@ -30,8 +30,8 @@ export class EmailService {
               messageService.add({
                 key: 'custom',
                 severity: 'warn',
-                summary: 'contact.message.error.summary',
-                detail: 'contact.message.error.detail'
+                summary: 'contact.messages.error.summary',
+                detail: 'contact.messages.error.details'
               });
             }
           }

@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { AngularFittextModule } from 'angular-fittext';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 // import ngx-translate and the http loader
@@ -15,8 +14,6 @@ import { DeviceDetectorModule } from 'ngx-device-detector';
 // owl carousel
 import { OwlModule } from 'ngx-owl-carousel';
 
-// manages which component gets displayed and when
-import { AppRoutingModule } from './app.routes';
 // scrolling (somewhat part of routing)
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
@@ -27,8 +24,8 @@ import {ToastModule} from 'primeng/toast';
 import {ButtonModule} from 'primeng/button';
 import {PasswordModule} from 'primeng/password';
 
-// cookie manager
-import { CookieService } from 'ngx-cookie-service';
+// manages which component gets displayed and when
+import { AppRoutingModule } from './app.routes';
 
 // import components
 import { AppComponent } from './app.component';
@@ -46,7 +43,7 @@ import { ArchiveComponent } from './components/archive/app.archive.component';
 import { PointsComponent } from './components/points/app.points.component';
 import { CreatorsComponent } from './components/creators/app.creators.component';
 import { PresentationComponent } from './components/eastereggs/presentation/app.presentation.component';
-import { AdminPortalComponent } from './components/admin-portal-component/app.adminportal.component';
+import { AdminComponent } from './components/admin/app.admin.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -64,6 +61,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
       ContactComponent,
       SponsorsComponent,
       FooterComponent,
+      AdminComponent,
 
     ArchiveComponent,
     PointsComponent,
@@ -71,12 +69,11 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     NotFoundComponent, // 404 Page
 
     // Extra (eastereggs and stuff)
-    PresentationComponent, AdminPortalComponent
+    PresentationComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AngularFittextModule,
     AngularFontAwesomeModule,
 
     // detection of browsers and devices
@@ -108,7 +105,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
          }
      })
   ],
-  providers: [ CookieService ],
-  bootstrap: [ AppComponent ]
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

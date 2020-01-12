@@ -2,7 +2,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { DeviceDetectorService } from 'ngx-device-detector';
 import { PointsElement } from 'src/app/models/database/points.element';
 import { PointsService } from 'src/app/services/points.service';
-import { MessageService } from 'primeng/components/common/messageservice';
+import { MessageService } from 'primeng/api';
 import * as jsPDF from 'jspdf';
 
 @Component({
@@ -14,7 +14,7 @@ import * as jsPDF from 'jspdf';
 export class PointsComponent implements OnInit {
 
   aspectRatio: number; // width/height ratio
-  message_margin = '48px'; // the margin that the error toast has
+  messageMargin = '48px'; // the margin that the error toast has
   staticFlags = false; // true if the flags should be static on some browsers(ex.Edge)
 
   layoutTypes = ['1x4', '2x2', '4x1']; // all types of layout used
@@ -60,13 +60,14 @@ export class PointsComponent implements OnInit {
       (res: PointsElement[]) => {
         this.points = res;
 
-         for (let i = 0; i < this.points.length; i++) { // for each point ever given
+        for (const element of this.points) {
+          // for each point ever given
           // adds together the points of all classes
           // 9.A, 9.B, 9.C, 9.D, 10.A, 10.B stb..
-           if (this.points[i].class_id - 1 >= this.classPoints.length) {
-            this.classPoints.push({value: this.points[i].value, name: this.points[i].className});
+           if (element.class_id - 1 >= this.classPoints.length) {
+            this.classPoints.push({value: element.value, name: element.className});
            } else {
-            this.classPoints[(this.points[i].class_id - 1)].value += this.points[i].value;
+            this.classPoints[(element.class_id - 1)].value += element.value;
            }
          }
 
@@ -81,8 +82,8 @@ export class PointsComponent implements OnInit {
           this.messageService.add({
             key: 'custom',
             severity: 'warn',
-            summary: 'points.error.summary',
-            detail: 'points.error.detail'
+            summary: 'points.error-message.summary',
+            detail: 'points.error-message.details'
           });
         }
       }
@@ -96,7 +97,7 @@ export class PointsComponent implements OnInit {
     }
   }
 
-  @HostListener('document:click', ['$event']) // calls function whenever clicked anywhere on screen
+  @HostListener('document:click', []) // calls function whenever clicked anywhere on screen
   clickedOutside() {
     for (let i = 0; i < 4; i++) {
       if (this.blocker[i]) {
@@ -108,7 +109,7 @@ export class PointsComponent implements OnInit {
     }
   }
 
-  @HostListener('window:resize', ['$event'])
+  @HostListener('window:resize', [])
   calcAspectRatio() {
     // changes layout type based on width and aspect ratio
     this.aspectRatio = window.innerWidth / window.innerHeight;
@@ -126,9 +127,9 @@ export class PointsComponent implements OnInit {
 
     // adjusts message position relative to window size
     if (window.innerWidth < 768 && window.innerWidth > 370) {
-      this.message_margin = '-7px';
+      this.messageMargin = '-7px';
     } else {
-      this.message_margin = '48px';
+      this.messageMargin = '48px';
     }
   }
 

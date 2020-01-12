@@ -4,7 +4,8 @@ import { Observable, throwError } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 import { PointsElement } from '../models/database/points.element';
 import { ActivitiesElement } from '../models/database/activities.element';
-import { AdminPortalComponent } from '../components/admin-portal-component/app.adminportal.component';
+import { AdminComponent } from '../components/admin/app.admin.component';
+import { MessageService } from 'primeng/api';
 
 @Injectable({
   providedIn: 'root'
@@ -16,12 +17,13 @@ export class PointsService {
   errorcode: Observable<number>;
   modpassword: string;
 
-constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   getPoints(): Observable<PointsElement[]> {
     return this.http.get(`${this.baseUrl}/getPoints.php`).pipe(
       map((res) => {
-        this.points = res['data'];
+        const dataKey = 'data';
+        this.points = res[dataKey];
         return this.points;
     }),
     catchError(this.handleError));
@@ -30,26 +32,73 @@ constructor(private http: HttpClient) { }
   getActivities(): Observable<ActivitiesElement[]> {
     return this.http.get(`${this.baseUrl}/getActivities.php`).pipe(
       map((res) => {
-        this.activities = res['data'];
+        const dataKey = 'data';
+        this.activities = res[dataKey];
         return this.activities;
     }),
     catchError(this.handleError));
   }
 
-  setPoints(data) {
-    this.http.post(`${this.baseUrl}/setPoints.php`, {data: data, password: this.modpassword}).subscribe(response=>{alert('Task failed successfully!');});
+  setPoints(data: any, messageService: MessageService) {
+    this.http.post(`${this.baseUrl}/setPoints.php`, {
+      data,
+      password: this.modpassword
+    }).subscribe(response => {
+      messageService.add({
+        key: 'custom',
+        severity: 'success',
+        summary: 'admin.messages.points-success.summary',
+        detail: 'admin.messages.points-success.details'
+      });
+    });
   }
 
-  createNewActivity(name: string, portalcomp: AdminPortalComponent) {
-    this.http.post(`${this.baseUrl}/createActivity.php`, {data: name, password: this.modpassword}).subscribe(response=>{alert('New activity created successfully!'); portalcomp.ngOnInit(); });
+  createNewActivity(name: string, adminComponent: AdminComponent, messageService: MessageService) {
+    this.http.post(`${this.baseUrl}/createActivity.php`, {
+      data: name,
+      password: this.modpassword
+    }).subscribe(response => {
+      messageService.add({
+        key: 'custom',
+        severity: 'success',
+        summary: 'admin.messages.activity-creation-success.summary',
+        detail: 'admin.messages.activity-creation-success.details'
+      });
+      adminComponent.ngOnInit();
+    });
   }
 
-  deleteActivity(name: string, portalcomp: AdminPortalComponent) {
-    this.http.post(`${this.baseUrl}/deleteActivity.php`, {data: name, password: this.modpassword}).subscribe(response=>{alert('Activity deleted successfully!'); portalcomp.ngOnInit(); });
+  deleteActivity(name: string, adminComponent: AdminComponent, messageService: MessageService) {
+    this.http.post(`${this.baseUrl}/deleteActivity.php`, {
+      data: name,
+      password: this.modpassword
+    }).subscribe(response => {
+      messageService.add({
+        key: 'custom',
+        severity: 'success',
+        summary: 'admin.messages.activity-deletion-success.summary',
+        detail: 'admin.messages.activity-deletion-success.details'
+      });
+      adminComponent.ngOnInit();
+    });
   }
 
-  login(password: string, portalcomp: AdminPortalComponent) {
-    this.http.post(`${this.baseUrl}/login.php`, {data: password}).subscribe(response=>{if(response.toString() == "True") { portalcomp.loginned = true; this.modpassword = password; } else alert("Invalid password"); });
+  login(password: string, adminComponent: AdminComponent, messageService: MessageService) {
+    this.http.post(`${this.baseUrl}/login.php`, {
+      data: password
+    }).subscribe(response => {
+      if (response === true) {
+        adminComponent.isLogged = true;
+        this.modpassword = password;
+      } else {
+        messageService.add({
+          key: 'custom',
+          severity: 'warn',
+          summary: 'admin.messages.invalid-password.summary',
+          detail: 'admin.messages.invalid-password.details'
+        });
+      }
+    });
   }
 
   private handleError(error: HttpErrorResponse) {

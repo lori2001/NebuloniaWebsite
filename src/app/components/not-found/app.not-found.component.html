@@ -5,7 +5,11 @@
     </a>
 
     <div class="message">
-        <a class="exclamation" href="http://www.aprilyfogimnazium.ro" target="_blank">
+        <a *ngIf="this.translate.currentLang === this.translate.getDefaultLang()"
+            class="exclamation" href="http://www.aprilyfogimnazium.ro" target="_blank">
+            {{ 'not-found.exclamation' | translate }}
+        </a>
+        <a *ngIf="this.translate.currentLang !== this.translate.getDefaultLang()" class="exclamation">
             {{ 'not-found.exclamation' | translate }}
         </a>
 
@@ -18,7 +22,13 @@
         </div>
     </div>
 
-    <a class="langtoggle" *ngIf="this.translate.currentLang === 'hun'" (click)="changeLanguage('rom')">RO</a>
-    <a class="langtoggle" *ngIf="this.translate.currentLang === 'rom'" (click)="changeLanguage('hun')">HU</a>
+    <a  *ngIf="this.translate.currentLang === this.translate.getLangs()[0]"
+        class="langtoggle"
+        (click)="setLanguage(this.translate.getLangs()[1])">RO
+    </a>
+    <a  *ngIf="this.translate.currentLang === this.translate.getLangs()[1]"
+        class="langtoggle"
+        (click)="setLanguage(this.translate.getLangs()[0])">HU
+    </a>
 </section>
   

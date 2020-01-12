@@ -1,5 +1,5 @@
 <section id="about">
-  <div class="logo" (click)="showModel()">
+  <div class="logo">
     <!--<img class="profile-pic"  src="../../../assets/images/logo.jpg" alt="nebulonia-logo" />--> <!-- Older Version -->
     <video class="profile-pic" autoplay muted loop
            poster="../../../assets/images/logo.jpg">
@@ -9,9 +9,6 @@
   <div class="text">
     <h2>{{ 'about.title' | translate }}</h2>
     <p>{{ 'about.text' | translate }}</p>
-  </div>
-  <div *ngIf="this.modelIsActive" class="modell" id="model-viewer">
-
   </div>
 </section>
   

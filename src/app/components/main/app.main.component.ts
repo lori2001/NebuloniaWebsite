@@ -58,7 +58,7 @@ export class MainComponent {
     ];
     }
 
-    @HostListener('window:resize', ['$event'])
+    @HostListener('window:resize', [])
     calcOffset() {
       if ( window.innerWidth < 768) {
         this.offset = 0;

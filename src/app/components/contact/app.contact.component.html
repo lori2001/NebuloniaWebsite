@@ -1,4 +1,4 @@
-<p-toast [style]="{marginTop: message_margin}" 
+<p-toast [style]="{marginTop: messageMargin}" 
           position="top-right"
           key="custom"
           styleClass="custom-toast">
@@ -33,9 +33,9 @@
       <textarea #mailform4 spellcheck="false" class="row" rows="7" cols="30" pInputTextarea></textarea>
       <p-button (click)="sendEmail();" label="{{ 'contact.mail.send' | translate }}" ></p-button>
     </div>
-    <a *ngIf="this.fb_messanger === true" class="safari_only" href="https://goo.gl/maps/yCrjqrR1LEu">
+    <a *ngIf="this.fbMessenger === true" class="safari_only" href="https://goo.gl/maps/yCrjqrR1LEu">
     </a>
-    <div *ngIf="this.fb_messanger === false" class="google-maps">
+    <div *ngIf="this.fbMessenger === false" class="google-maps">
       <iframe
       width="100%" 
       height="100%"

@@ -1,4 +1,4 @@
-#adminportal {
+#admin {
     padding-top: 60px; 
     padding-bottom: 48px;
     background: #2B2B2B;
@@ -12,7 +12,7 @@
  
  /*makes background color transition seemless*/
  
- #adminportal .text h2 {
+ #admin .text h2 {
     font-family: octarineBold, arialBlack, Arial;
     font-size: 32px;
     margin-top: 12px;
@@ -20,7 +20,7 @@
     text-align: center;
     color: white;
  }
- #adminportal .text h3 {
+ #admin .text h3 {
    font-family: octarineBold, arialBlack, Arial;
    font-size: 24px;
    margin-top: 12px;
@@ -28,45 +28,45 @@
    text-align: center;
    color: white;
 }
- #adminportal .text p {
+ #admin .text p {
     font-family: octarineLight, Arial, arialBlack;
     font-size: 16px;
     line-height: 30px;
     text-align: left;
     color: #7A7A7A;
  }
- #adminportal .text {
+ #admin .text {
      padding: 10px;
  }
- #adminportal .ptable {
+ #admin .ptable {
     color: white;
     border-bottom: 1px solid #888888;
     width: 95%;
     margin-left: 2.5%;
     margin-right: 2.5%;
  }
- #adminportal .ptable tr:nth-child(odd) {
+ #admin .ptable tr:nth-child(odd) {
     background-color: #333333;
  }
- #adminportal .ptable td {
+ #admin .ptable td {
     border-top: 1px solid rgb(124, 124, 124);
     border-bottom: 1px solid rgb(124, 124, 124);
     border-left: 1px solid #888888;
     border-right: 1px solid #888888;
     padding: 10px;
  }
- #adminportal .ptable th {
+ #admin .ptable th {
    border: 1px solid #888888;
    padding: 10px;
 }
-#adminportal .ptable tr:last-child td:first-child {
+#admin .ptable tr:last-child td:first-child {
    border-bottom-left-radius: 10px;
 }
 
-#adminportal .ptable tr:last-child td:last-child {
+#admin .ptable tr:last-child td:last-child {
    border-bottom-right-radius: 10px;
 }
-#adminportal .acselect {
+#admin .acselect {
    border-radius: 3px;
    width: 260px;
    padding: 6px;
@@ -76,12 +76,12 @@
    transition: border 0.2s;
    font-size: 14px;
    appearance: none;
-   background: url('./arrow.png') right no-repeat #585858;
+   background: url('../../../assets/images/arrow.png') right no-repeat #585858;
    background-size: 9%;
 }
-#adminportal .acselect:focus {
+#admin .acselect:focus {
    border: 1px solid #FFB300;
 }
-#adminportal .acselect:hover {
+#admin .acselect:hover {
    border: 1px solid #FFB300;
 }
