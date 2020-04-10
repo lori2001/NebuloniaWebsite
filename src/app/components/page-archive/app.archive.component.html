@@ -1,0 +1,56 @@
+<app-navbar [MainPage] = 'false'></app-navbar>
+<div style="width: 100%;" [ngStyle]="{'height.px' : -offset }"></div> <!-- navbar space-->
+<section id="archive">
+
+    <app-year [offset]="offset" [archiveElement]="archiveElements[3]"></app-year> <!--2019-2020-->
+
+    <div class="special-event" id="logo-memorial">
+        <div class="text">
+            <h1><a [ngx-scroll-to]="'#logo-memorial'" [ngx-scroll-to-offset]="offset">
+                <b>{{ 'archive.logo-memorial.title' | translate }}</b>
+            </a></h1>
+            <p>
+                {{ 'archive.logo-memorial.text.L0' | translate }}<br>
+                {{ 'archive.logo-memorial.text.L1' | translate }}<br>
+                {{ 'archive.logo-memorial.text.L2' | translate }}<br>
+                {{ 'archive.logo-memorial.text.L3' | translate }}<br>
+                {{ 'archive.logo-memorial.text.L4' | translate }}<br>
+                {{ 'archive.logo-memorial.text.L5' | translate }}
+            </p>
+            <p>
+                {{ 'archive.logo-memorial.quote.L0' | translate }}<br>
+                {{ 'archive.logo-memorial.quote.L1' | translate }}<br>
+                {{ 'archive.logo-memorial.quote.L2' | translate }}
+            </p>
+        </div>
+        <div class="logos">
+            <img class="drawing"
+                src="../../../assets/images/archive/logo-change-event/old-logo-drawing.png"
+                style="padding-left: 3vw;"> <!-- distance between the two-->
+            <img class="vector"
+                src="{{this.oldLogoLocation}}" (click)="oldLogoEasterEgg()">
+        </div>
+    </div>
+
+    <app-year [offset]="offset" [archiveElement]="archiveElements[2]"></app-year> <!--2018-2019-->
+    <app-year [offset]="offset" [archiveElement]="archiveElements[1]"></app-year> <!--2017-2018-->
+
+    <div class="special-event" id="2017-promo">
+        <div class="promo">
+            <div class="text">
+                <a [ngx-scroll-to]="'#2017-promo'" [ngx-scroll-to-offset]="offset">
+                    <h1><b>{{ 'archive.promo-video.title' | translate }}</b></h1></a>
+                <p>{{ 'archive.promo-video.subtitle' | translate }}</p>
+            </div>
+            <video controls
+             poster="../../../assets/images/archive/video2017-event/nebulonia-promo-thumbnail.png">
+                <source
+                src="../../../assets/videos/archive/video2017-event/nebulonia-promo.mp4"
+                type="video/mp4">
+            </video> 
+        </div>
+    </div>
+
+    <app-year [offset]="offset" [archiveElement]="archiveElements[0]"></app-year> <!--2016-2017-->
+</section>
+<app-footer></app-footer>

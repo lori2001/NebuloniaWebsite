@@ -1,16 +1,16 @@
 <?php
 
 // db credentials
-/*
+
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 define('DB_NAME', 'nebuloni_db');
-*/
+/*
 define('DB_HOST', 'server60');
 define('DB_USER', 'nebuloni_1');
 define('DB_PASS', 'Wf^Fccq4LKm!');
-define('DB_NAME', 'nebuloni_db');
+define('DB_NAME', 'nebuloni_db');*/
 
 // Connect with the database.
 function connect()

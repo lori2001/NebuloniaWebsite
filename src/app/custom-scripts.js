@@ -1,20 +1,21 @@
+// Custom Scripts
+/****************Facebook START****************/
 // Facebook plugin script
   (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2';
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0';
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
 
-// Custom Scripts
-/****************Facebook START****************/
+// Facebook resize scripts
   var container_width = 0;
   var container_height = 0;
   var resize;
 
   function initFBPlugin(){
-    setTimeout(function() {resizeFBPlugin();}, 1500); // timeouts add up!!!
+    setTimeout(function() {resizeFBPlugin();}, 1200); // timeouts add up!!!
   }
 
   function resizeFBPlugin(){
@@ -38,8 +39,4 @@
       }
     }, 1000);
   }
-
-  $(window).on('resize', function() {
-    resizeFBPlugin();
-  });
 /****************Facebook END****************/

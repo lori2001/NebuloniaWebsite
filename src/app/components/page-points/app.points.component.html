@@ -1,0 +1,139 @@
+<p-toast [style]="{marginTop: messageMargin}" 
+          position="top-right"
+          key="custom"
+          styleClass="custom-toast">
+
+          <ng-template let-message pTemplate="message">
+              <a tabindex="0" class="ui-toast-close-icon pi pi-times" (click)="onReject()" *ngIf="message.closable !== false"></a>
+              <span class="ui-toast-icon pi"
+              [ngClass]="{'pi-info-circle': message.severity == 'info', 'pi-exclamation-triangle': message.severity == 'warn',
+                  'pi-times': message.severity == 'error', 'pi-check' :message.severity == 'success'}"></span>
+              <div class="ui-toast-message-text-content">
+                  <div class="ui-toast-summary">{{message.summary | translate}}</div>
+                  <div class="ui-toast-detail" style="line-height: 1.4;">{{message.detail | translate}}</div>
+              </div>
+        </ng-template>
+</p-toast>
+<!--Declares a toast for messages. Can be put almost anywhere-->
+
+<button pButton icon="fa fa-download"
+                type="button"
+                label="PDF"
+                class="pdfbutton ui-button-raised"
+                (click)="downloadPDF()">
+</button>
+
+<app-navbar [MainPage] = 'false'></app-navbar>
+<section id="points">
+    <div *ngFor="let layoutType of layoutTypes">
+        <div *ngIf="layoutType === this.currentLayout">
+            <section class="content{{layoutType}}">
+                <video *ngIf="this.staticFlags === false" autoplay muted loop 
+                    poster="../../../assets/images/points/background/{{layoutType}}/first.jpg">
+                    <source src="../../../assets/videos/points/{{layoutType}}/first.mp4" type="video/mp4">
+                </video>
+                <video *ngIf="this.staticFlags === false" autoplay muted loop
+                    poster="../../../assets/images/points/background/{{layoutType}}/second.jpg">
+                    <source src="../../../assets/videos/points/{{layoutType}}/second.mp4" type="video/mp4">
+                </video>
+                <video *ngIf="this.staticFlags === false" autoplay muted loop
+                    poster="../../../assets/images/points/background/{{layoutType}}/third.jpg">
+                    <source src="../../../assets/videos/points/{{layoutType}}/third.mp4" type="video/mp4">
+                </video>
+                <video *ngIf="this.staticFlags === false" autoplay muted loop
+                    poster="../../../assets/images/points/background/{{layoutType}}/fourth.jpg">
+                    <source src="../../../assets/videos/points/{{layoutType}}/fourth.mp4" type="video/mp4">
+                </video>
+                <img *ngIf="this.staticFlags === true"
+                     class="edgeonlypic"
+                     src="../../../assets/images/points/background/full/{{layoutType}}.jpg">
+                <div class="pointsoverlay{{layoutType}}" style="line-height: 0.5;">
+                    <div class="house{{layoutType}}">
+                        <img class="A" src="../../../assets/images/points/sigils/A.png">
+                        <div class="points"><b>{{this.totalPoints[0]}}</b></div>
+                        <div class="tablelink">
+                            <a (click)="toggleTable(0)">
+                                {{'points.table' | translate}} 
+                                <i *ngIf="!this.table[0]" class="fa fa-caret-down"></i>
+                                <i *ngIf="this.table[0]" class="fa fa-caret-right"></i>
+                            </a>
+                            <div class="dropdown" *ngIf="this.table[0]">
+                                <div *ngFor="let element of classPoints; let i = index">
+                                    <div *ngIf="i % 4 == 0">
+                                        <h3>
+                                            <b style="color: #fcac45;">{{this.classPoints[i].name}} </b>
+                                            <b style="color: white;">{{this.classPoints[i].value}}</b>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="house{{layoutType}}">
+                        <img class="B" src="../../../assets/images/points/sigils/B.png">
+                        <div class="points"><b>{{this.totalPoints[1]}}</b></div>
+                        <div class="tablelink">
+                            <a (click)="toggleTable(1)">
+                                {{'points.table' | translate}} 
+                                <i *ngIf="!this.table[1]" class="fa fa-caret-down"></i>
+                                <i *ngIf="this.table[1]" class="fa fa-caret-right"></i>
+                            </a>
+                            <div class="dropdown" *ngIf="this.table[1]">
+                                <div *ngFor="let element of classPoints; let i = index">
+                                    <div *ngIf="i % 4 == 1">
+                                        <h3>
+                                            <b style="color: #fcac45;">{{this.classPoints[i].name}} </b>
+                                            <b style="color: white;">{{this.classPoints[i].value}}</b>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="house{{layoutType}}">
+                        <img class="C" src="../../../assets/images/points/sigils/C.png">
+                        <div class="points"><b>{{this.totalPoints[2]}}</b></div>
+                        <div class="tablelink">
+                            <a (click)="toggleTable(2)">
+                                {{'points.table' | translate}} 
+                                <i *ngIf="!this.table[2]" class="fa fa-caret-down"></i>
+                                <i *ngIf="this.table[2]" class="fa fa-caret-right"></i>
+                            </a>
+                            <div class="dropdown" *ngIf="this.table[2]">
+                                <div *ngFor="let element of classPoints; let i = index">
+                                    <div *ngIf="i % 4 == 2">
+                                        <h3>
+                                            <b style="color: #fcac45;">{{this.classPoints[i].name}} </b>
+                                            <b style="color: white;">{{this.classPoints[i].value}}</b>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="house{{layoutType}}">
+                        <img class="D" src="../../../assets/images/points/sigils/D.png">
+                        <div class="points"><b>{{this.totalPoints[3]}}</b></div>
+                        <div class="tablelink">
+                            <a (click)="toggleTable(3)">
+                                {{'points.table' | translate}} 
+                                <i *ngIf="!this.table[3]" class="fa fa-caret-down"></i>
+                                <i *ngIf="this.table[3]" class="fa fa-caret-right"></i>
+                            </a>
+                            <div class="dropdown" *ngIf="this.table[3]">
+                                <div *ngFor="let element of classPoints; let i = index">
+                                    <div *ngIf="i % 4 == 3">
+                                        <h3>
+                                            <b style="color: #fcac45;">{{this.classPoints[i].name}} </b>
+                                            <b style="color: white;">{{this.classPoints[i].value}}</b>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>

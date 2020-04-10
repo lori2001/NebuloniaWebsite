@@ -1,0 +1,283 @@
+#archive {
+    /*padding-top: 48px; /*for navbar*/
+    background-color: #0F0F0F;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0; /*edge bugfix*/ /*TODO: FIX THAT FCKING LINE!!!!*/
+}
+
+.special-event {
+    overflow: hidden;
+    background-color: #191919;
+
+    font-size: 1vw; /*p*/
+    height: 23em;
+
+    padding-left: 7vw;
+    padding-right: 7vw;
+    padding-top: 2em;
+    padding-bottom: 2em;
+
+    color: white; /*text color*/
+    white-space: nowrap;
+}
+
+#logo-memorial .text {
+    width: 40%;
+    float: left;
+
+    padding: auto 0;
+}
+#logo-memorial .text h1 {
+    margin-top: 0;
+    font-size: 2vw;
+}
+#logo-memorial .text p{
+    line-height: normal;
+}
+#logo-memorial .logos {
+    width: 60%;
+    height: 100%;
+    float: right;
+}
+#logo-memorial .logos img {
+    float: right;
+    height: 100%;
+    width: auto;
+    max-width: 50%;
+}
+
+.special-event .promo {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+.promo .text {
+    padding-top: 5em;
+    float: left;
+    height: 100%;
+    text-align: center;
+    width: auto;
+}
+.promo a, a h1 {
+    margin-bottom: 0.2em !important;
+}
+.promo video {
+    float:  right;
+    max-width: 65%;
+    width: auto;
+    height: 100%;
+}
+
+@media screen and (min-width: 1200px) {
+    #logo-memorial .text h1 {
+        margin-top: 0.35em;
+        font-size: 2.1vw;
+        margin-bottom: 20px;
+    }
+    #logo-memorial .text p {
+        font-size: 1vw;
+    }
+    
+    .promo{
+        padding: 0 4.5vw;
+    }
+    .promo h1{
+        font-size: 2.5vw;
+    }
+    .promo p {
+        font-size: 1.2vw;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .special-event {
+        height: 28em;
+    }
+
+    #logo-memorial .logos .drawing {
+        position: absolute;
+        opacity: 0;
+    }
+    #logo-memorial .logos .vector {
+        max-width: 100%;
+    }
+    #logo-memorial .text h1 {
+        font-size: 2.4vw;
+    }
+    #logo-memorial .text p {
+        font-size: 1.4vw;
+    }
+
+    .special-event .promo {
+        padding: 0;
+    }
+    .promo h1{
+        font-size: 2.5vw;
+    }
+    .promo p {
+        font-size: 1.2vw;
+    }
+    .promo .text {
+        padding-top: 8.5em;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .special-event {
+        height:40em;
+        padding-top: 4em;
+        padding-bottom: 4em;
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+    #logo-memorial .logos .drawing {
+        position: absolute;
+        opacity: 0;
+    }
+    #logo-memorial .logos .vector {
+        margin-top: 5%;
+        width: 48%;
+        height: auto;
+    }
+    #logo-memorial .text h1 {
+        font-size: 2.8vw;
+    }
+    #logo-memorial .text p {
+        font-size: 1.8vw;
+    }
+    
+    .special-event .promo {
+        padding: 0;
+    }
+    .promo h1{
+        font-size: 2.4vw;
+        margin-bottom: 0.5em;
+    }
+    .promo p {
+        font-size: 1vw;
+    }
+    .promo .text {
+        padding-top: 12.5em;
+    }
+    .promo video {
+        max-width: 60% !important;
+    }
+}
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .special-event {
+        height: 45em;
+        padding-top: 4em;
+        padding-bottom: 4em;
+        padding-left: 2.5vw;
+        padding-right: 2.5vw;
+    }
+    #logo-memorial .logos .drawing {
+        position: absolute;
+        opacity: 0;
+    }
+    #logo-memorial .logos .vector {
+        margin-top: 10%;
+        width: 45%;
+        height: auto;
+    }
+    #logo-memorial .text h1 {
+        font-size: 3.5vw;
+    }
+    #logo-memorial .text p {
+        font-size: 2vw;
+    }
+        
+    .special-event .promo {
+        padding: 0;
+    }
+    .promo h1{
+        margin-top: 0;
+        font-size: 2.8vw;
+    }
+    .promo p {
+        position: absolute;
+        opacity: 0;
+    }
+    .promo .text {
+        float: none !important;
+        padding-top: 0 !important;
+        margin: 0 auto;
+        height: auto;
+        margin-bottom: 1em;
+    }
+    .promo video {
+        float: none !important;
+        display: block;
+        margin: 0 auto;
+        max-width: 100% !important;
+        height: 85%;
+    }
+}
+@media screen and (max-width: 575px) {
+    .special-event {
+        height: 85em;
+        padding-top: 4em;
+        padding-bottom: 4em;
+        padding-left: 2.5vw;
+        padding-right: 2.5vw;
+    }
+
+    #logo-memorial .text {
+        float: none !important;
+        margin-left: 8vw;
+        width: 82vw !important;
+    }
+    #logo-memorial .text h1 {
+        font-size: 4vw;
+    }
+    #logo-memorial .text p {
+        font-size: 2.5vw;
+    }
+    #logo-memorial .logos {
+        margin-top: 4em !important;
+        display: block;
+        float: none !important;
+        height: 40% !important;
+        width: 85vw !important;
+
+        padding-left: 7.5vw;
+        padding-right: 7.5vw;
+
+        margin: 0 auto;
+    }
+    #logo-memorial .logos .vector {
+        float: left;
+        height: 100%;
+        width: auto;
+    }
+    #logo-memorial .logos .drawing{
+        padding: 0 !important;
+        float: right;
+        height: 100%;
+        width: auto;
+    }
+
+    .special-event .promo {
+        padding: 0;
+    }
+    .promo h1{
+        margin-top: 0;
+        font-size: 6vw;
+    }
+    .promo p {
+        font-size: 2.4vw;
+    }
+    .promo .text {
+        float: none !important;
+        padding-top: 0 !important;
+        margin: 0 auto;
+        height: auto;
+    }
+    .promo video {
+        float: none !important;
+        display: block;
+        margin: 0 auto;
+        max-width: 95% !important;
+        height: 85%;
+    }
+}

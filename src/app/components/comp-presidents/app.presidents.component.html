@@ -1,0 +1,50 @@
+<section id="presidents" [ngStyle]="{'height' : height}">
+  <div class="slider" [ngStyle]="{'width' : width}">
+    
+  <div class="title">
+    <b>
+      <div *ngIf="titleLink === true">
+        <a [ngx-scroll-to]="'#presidents'" [ngx-scroll-to-offset]="offset">{{'presidents.title' | translate }}</a>
+      </div>
+      <div *ngIf="titleLink === false">
+        <h1>{{'presidents.title' | translate }}</h1>
+      </div>
+    </b>
+  </div>
+
+  <div class="line">
+      <hr>
+  </div>
+  
+    <owl-carousel
+    [options]="sliderOPT"
+    [items]="presidentsElement"
+    [carouselClasses]="['owl-theme']">
+      <div class="item" *ngFor="let element of presidentsElement;let i = index">
+        <img class="element-style" [src]="element.url" (click)="this.countAndCheck(i);" />
+        <h5><b>{{element.name}}</b></h5>
+        <p>{{element.position | translate}}</p>
+      </div>
+    </owl-carousel>
+  </div>
+</section>
+
+<!--Easteregg START-->
+<div class="backdrop" [ngStyle]="{'display': presentationState}" style="z-index: 150;"></div>
+<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display': presentationState}" style="z-index: 151; max-width: 1000px;">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content" style="background-color: #191919; padding-bottom: 15px;">
+        <button style="text-align: right; margin-right: 15px;" type="button" class="close" aria-label="Close" (click)="hidePresentation()">
+          <span aria-hidden="true" style="color:white">&times;</span>
+        </button>
+      <div class="modal-body">
+        <video controls style="width: 100%; height:auto;" #presentation>
+           <source
+           src="../../../assets/videos/presidents/egg_video.mp4"
+           type="video/mp4">
+        </video> 
+      </div>
+    </div>
+  </div>
+</div>
+<!--Easteregg END---->

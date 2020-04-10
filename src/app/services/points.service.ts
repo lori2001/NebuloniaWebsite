@@ -4,7 +4,7 @@ import { Observable, throwError } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 import { PointsElement } from '../models/database/points.element';
 import { ActivitiesElement } from '../models/database/activities.element';
-import { AdminComponent } from '../components/admin/app.admin.component';
+import { AdminComponent } from '../components/page-admin/app.admin.component';
 import { MessageService } from 'primeng/api';
 
 @Injectable({

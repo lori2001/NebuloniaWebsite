@@ -29,21 +29,21 @@ import { AppRoutingModule } from './app.routes';
 
 // import components
 import { AppComponent } from './app.component';
-import { MainComponent } from './components/main/app.main.component';
-import { NavbarComponent } from './components/navbar/app.navbar.component';
-import { HomeComponent } from './components/home/app.home.component';
-import { AboutComponent } from './components/about/app.about.component';
-import { PresidentsComponent } from './components/presidents/app.presidents.component';
-import { EventsComponent } from './components/events/app.events.component';
-import { NotFoundComponent } from './components/not-found/app.not-found.component';
-import { ContactComponent } from './components/contact/app.contact.component';
-import { SponsorsComponent } from './components/sponsors/app.sponsors.component';
-import { FooterComponent } from './components/footer/app.footer.component';
-import { ArchiveComponent } from './components/archive/app.archive.component';
-import { PointsComponent } from './components/points/app.points.component';
-import { CreatorsComponent } from './components/creators/app.creators.component';
-import { PresentationComponent } from './components/eastereggs/presentation/app.presentation.component';
-import { AdminComponent } from './components/admin/app.admin.component';
+import { NavbarComponent } from './components/comp-navbar/app.navbar.component';
+import { PresidentsComponent } from './components/comp-presidents/app.presidents.component';
+import { NotFoundComponent } from './components/page-not-found/app.not-found.component';
+import { ArchiveComponent } from './components/page-archive/app.archive.component';
+import { PointsComponent } from './components/page-points/app.points.component';
+import { CreatorsComponent } from './components/page-creators/app.creators.component';
+import { MainComponent } from './components/page-main/app.main.component';
+import { HomeComponent } from './components/page-main/comp-home/app.home.component';
+import { AboutComponent } from './components/page-main/comp-about/app.about.component';
+import { EventsComponent } from './components/page-main/comp-events/app.events.component';
+import { ContactComponent } from './components/page-main/comp-contact/app.contact.component';
+import { SponsorsComponent } from './components/page-main/comp-sponsors/app.sponsors.component';
+import { FooterComponent } from './components/comp-footer/app.footer.component';
+import { AdminComponent } from './components/page-admin/app.admin.component';
+import { YearComponent } from './components/page-archive/comp-year/app.year.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -52,24 +52,25 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent, // Contains routing
-    MainComponent, // Main Page
-      NavbarComponent,
-      HomeComponent,
-      AboutComponent,
-      PresidentsComponent,
-      EventsComponent,
-      ContactComponent,
-      SponsorsComponent,
-      FooterComponent,
-      AdminComponent,
 
+    // Pages
+    MainComponent,
     ArchiveComponent,
     PointsComponent,
     CreatorsComponent,
     NotFoundComponent, // 404 Page
+    AdminComponent,
 
-    // Extra (eastereggs and stuff)
-    PresentationComponent
+    // Other Components
+    NavbarComponent,
+    FooterComponent,
+    PresidentsComponent,
+    HomeComponent,
+    AboutComponent,
+    EventsComponent,
+    ContactComponent,
+    SponsorsComponent,
+    YearComponent
   ],
   imports: [
     BrowserModule,

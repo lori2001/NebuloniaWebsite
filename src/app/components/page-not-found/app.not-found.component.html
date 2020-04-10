@@ -1,0 +1,34 @@
+<section id="not-found">
+    <a class="back" [routerLink]="['/main']">
+        <i class="fa fa-angle-double-left"></i>
+        <b> {{ 'not-found.go_back' | translate }}</b>
+    </a>
+
+    <div class="message">
+        <a *ngIf="this.translate.currentLang === this.translate.getDefaultLang()"
+            class="exclamation" href="http://www.aprilyfogimnazium.ro" target="_blank">
+            <b>{{ 'not-found.exclamation' | translate }}</b>
+        </a>
+        <b *ngIf="this.translate.currentLang !== this.translate.getDefaultLang()" class="exclamation">
+            {{ 'not-found.exclamation' | translate }}
+        </b>
+
+        <div class="errorcode">
+            <b>404</b>
+        </div>
+
+        <div class="description">
+            <b>{{ 'not-found.description' | translate }}</b>
+        </div>
+    </div>
+
+    <a *ngIf="this.translate.currentLang === this.translate.getLangs()[0]"
+       class="langtoggle" (click)="setLanguage(this.translate.getLangs()[1])">
+        <b>RO</b>
+    </a>
+    <a *ngIf="this.translate.currentLang === this.translate.getLangs()[1]"
+       class="langtoggle" (click)="setLanguage(this.translate.getLangs()[0])">
+        <b>HU</b>
+    </a>
+</section>
+  

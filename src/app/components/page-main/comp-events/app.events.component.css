@@ -1,0 +1,143 @@
+/*!!!WARNING!!!*/
+/*The size parameters in this file are very precisely measured and changeing one*/
+/*could lead in misplaced texts and wrongly sized images across diferent devices*/
+/*Sizes also DEPEND on scripts defined in index.html!*/
+/* !!! BEWARE of changeing any size parameter !!! */
+
+#events {
+   padding-top: 48px;
+   padding-bottom: 48px;
+   background-color: rgb(15,15,15);
+   width: 100%;
+
+   text-align: center;
+}
+
+#events .feeds {
+   /*height: 100%;*/
+   /*responsive width*/
+
+   display: table;
+
+   /*center*/
+   margin: 0 auto;
+}
+
+/*INSTAGRAM START*/
+.feeds .instagram{
+   max-width: 425px;
+   min-width: 100px;
+
+   /*responsive width and positioning*/
+}
+
+.feeds .instagram .instagram-widget {
+   width:100%;
+
+   border:0;
+   overflow:hidden;
+}
+/*INSTAGRAM END*/
+
+/*FACEBOOK START*/
+/*
+.feeds .facebook {
+   height: 100%;
+}
+*/
+.feeds .facebook .fb-page {
+   /* facebook api constrains at the time of writing */
+   /* there is no pont in changing these */
+   max-width: 500px;
+   min-width: 180px;
+   min-height: 250px;
+
+   padding-top:10px;
+   margin: 0 auto;
+   
+   display: block;
+   width: 100%; /*fills .facebook*/
+}
+/*FACEBOOK END*/
+
+/*Responsive Design*/
+@media screen and (min-width: 1293px){
+   .feeds a {
+      font-size: 1.5em; /*h2*/
+   }
+
+   #events .feeds {
+      width: 55%;
+   }
+   .instagram{
+      width: 50%;
+      padding-right: 10px;
+      /*position next to facebook page*/
+      float: left;
+   }
+   .facebook{
+      width: 50%;
+      /*position next to instagram page*/
+      float: right;
+   }
+}
+@media screen and (min-width: 864px) and (max-width: 1292px){
+   .feeds a {
+      font-size: 1.3em;
+   }
+
+   #events .feeds {
+      width: 65%;
+   }
+   .instagram{
+      width: 50%;
+      /*position next to facebook page*/
+      float: left;
+   }
+   .facebook{
+      width: 50%;
+      /*position next to instagram page*/
+      float: right;
+   }
+}
+@media screen and (min-width: 768px) and (max-width: 863px){
+   .feeds a {
+      font-size: 1.3em;
+   }
+   
+   #events .feeds {
+      width: 70%;
+   }
+   .instagram{
+      width: 35%;
+      /*position next to facebook page*/
+      float: left;
+   }
+   .facebook{
+      width: 65%;
+      /*position next to instagram page*/
+      float: right;
+   }
+}
+@media screen and (min-width: 0px) and (max-width: 767px){
+   .feeds a {
+      font-size: 1.3em;
+   }
+   
+   #events .feeds {
+      width: 75%;
+   }
+   .instagram{
+      width: 90%;
+      margin: 0 auto;
+      /*position above*/
+      float: none;
+   }
+   .facebook{
+      width: 90%;
+      margin: 0 auto;
+      margin-top: 15px !important;
+      /*position below*/
+      float: none;
+   }
+}

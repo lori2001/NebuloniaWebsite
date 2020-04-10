@@ -1,0 +1,84 @@
+#about {
+   padding-top: 60px; 
+   padding-bottom: 48px;
+   background: #2B2B2B;
+   overflow: hidden;
+   background-size: cover !important;
+   -webkit-background-size: cover !important;
+}
+
+#about .container {
+   max-width: 1700px;
+   margin: 0 auto;
+}
+
+/*makes background color transition seemless*/
+ #about .text {
+   margin: 0 auto;
+   width: 45%;
+}
+#about .text h2 {
+   margin-bottom: 12px;
+   color: white;
+}
+#about .text p {
+   line-height: 30px;
+   color: #7A7A7A;
+}
+#about .profile-pic {
+   position: absolute;
+   display: block;
+   border-radius: 100%;
+}
+
+/*Responsive Design*/
+@media screen and (min-width: 1400px){
+   #about .text p {
+      font-size: 17px;
+   }
+   #about .text h2 {
+      font-size: 22px;
+   }
+   #about .profile-pic {
+      position: relative;
+      float: left !important;
+      margin-left: 15%;
+      
+      width: 9em;
+      margin-top: 0.6em;
+      height: auto;
+   }
+}
+@media screen and (min-width: 821px) and (max-width: 1399px) {
+   #about .text {
+      width: 55%;
+   }
+   #about .text p {
+      font-size: 15px;
+      line-height: 23px;
+   }
+   #about .text h2 {
+      font-size: 22px;
+   }
+   #about .profile-pic {
+      width: 11vw;
+      left: 9.5vw;
+      margin-top: 1%;
+      height: auto;
+   }
+}
+@media screen and (max-width: 820px){
+   #about .text {
+      width: 75%;
+   }
+   #about .text p {
+      font-size: 16px;
+      line-height: 23px;
+   }
+   #about .text h2 {
+      font-size: 22px;
+   }
+   #about .profile-pic {
+      opacity: 0;
+   }
+}

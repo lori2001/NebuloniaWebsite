@@ -1,0 +1,14 @@
+<section id="footer">
+  <div class="copyright">
+    <i class="fa fa-copyright"></i><b> Nebulónia</b>
+  </div>
+  <div class="creators-page">
+    <a [routerLink]="['/creators']">
+      <b>{{ 'footer.creators_page' | translate }}</b>
+    </a>
+  </div>
+  <div class="scroll-up"> 
+    <a (click)="scrollToTop()"
+    class="fa fa-chevron-circle-up"></a>
+  </div>
+</section>

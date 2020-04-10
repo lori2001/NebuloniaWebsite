@@ -1,0 +1,120 @@
+#not-found {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  min-width: 250px;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+  url(../../../assets/images/error_bg.jpg) no-repeat center center;
+  background-size: cover !important;
+  -webkit-background-size: cover !important;
+  background-repeat:   no-repeat;
+  background-position: left center;
+  overflow: hidden;
+}
+
+#not-found .back{
+  position: absolute;
+  border: none;
+  background: none;
+  display: block;
+  top: 20px;
+  left: 20px;
+  font-size: 25px;
+  text-decoration: none;
+  text-align: left;
+  color: #fff;
+  z-index: 20; /*bugfix*/
+}
+
+#not-found .message {
+   width: 960px;
+   min-width: 250px;
+   height: 540px;
+
+   position: absolute;
+   top: 50%;
+   left: 50%;
+}
+
+#not-found .message .exclamation {
+   position: absolute;
+   right: 57%;
+   top: 30%;
+   font-size: 40px;
+   text-decoration: none;
+
+   color: white;
+}
+
+#not-found .message .errorcode{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   font-size: 120px;
+   transform: translate(-50%, -50%);
+
+   color: #F06000 !important; 
+}
+
+#not-found .message .description {
+   position: absolute;
+   left: 50%;
+   bottom: 34%;
+   font-size: 25px;
+
+   color: white;
+}
+
+#not-found .langtoggle{
+    position: absolute;
+    border: none;
+    background: none;
+    display: block;
+    bottom: 20px;
+    right: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    text-align: left;
+    color: #fff;
+
+    z-index: 20; /*bugfix*/
+}
+
+ /*Responsive Design (a bit complicated)*/
+ @media screen and (min-width: 1280px){
+   #not-found .message {transform: translate(-50%, -50%) scale(1.6,1.6);}
+ }
+ @media screen and (min-width: 1100px) and (max-width: 1279px){
+   #not-found .message {transform: translate(-50%, -50%) scale(1.3,1.3);}
+ }
+ @media screen and (min-width: 840px) and (max-width: 1099px){
+   #not-found .message {transform: translate(-50%, -50%) scale(1.1,1.1);}
+ }
+ @media screen and (min-width: 768px) and (max-width: 839px){
+   #not-found .message {transform: translate(-50%, -50%) scale(0.9,0.9);}
+ }
+ /*mobile mode*/
+ @media screen and (min-width: 610px) and (max-width: 767px){
+   #not-found .message {transform: translate(-50%, -50%) scale(0.8,0.8);}
+   #not-found .back {font-size: 20px;}
+   #not-found .langtoggle{font-size: 17px;}
+ }
+ @media screen and (min-width: 330px) and (max-width: 609px){
+   #not-found .message {transform: translate(-50%, -63%) scale(0.8,0.8);}
+   #not-found .message .exclamation { white-space: nowrap; right: 50%; transform: translateX(+50%);}
+   #not-found .message .description { white-space: nowrap; left: 50%; transform: translateX(-50%);}
+   #not-found .back {font-size: 18px;}
+   #not-found .langtoggle{font-size: 16px;}
+ }
+ @media screen and (min-width: 0px) and (max-width: 329px){
+   #not-found .message {transform: translate(-50%, -63%) scale(0.65,0.65);}
+   #not-found .message .exclamation { white-space: nowrap; right: 50%; transform: translateX(+50%);}
+   #not-found .message .description { white-space: nowrap; left: 50%; transform: translateX(-50%);}
+   #not-found .back {font-size: 17px;}
+   #not-found .langtoggle{font-size: 15px;}
+ }
+
+ @media screen and (min-height: 0px) and (max-height: 400px){
+   #not-found .message {transform: translate(-50%, -50%) scale(0.65,0.65);}
+ }

@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 // Page Components
-import { MainComponent } from './components/main/app.main.component';
-import { NotFoundComponent } from './components/not-found/app.not-found.component';
-import { ArchiveComponent } from './components/archive/app.archive.component';
-import { PointsComponent } from './components/points/app.points.component';
-import { CreatorsComponent } from './components/creators/app.creators.component';
-import { AdminComponent } from './components/admin/app.admin.component';
+import { MainComponent } from './components/page-main/app.main.component';
+import { NotFoundComponent } from './components/page-not-found/app.not-found.component';
+import { ArchiveComponent } from './components/page-archive/app.archive.component';
+import { PointsComponent } from './components/page-points/app.points.component';
+import { CreatorsComponent } from './components/page-creators/app.creators.component';
+import { AdminComponent } from './components/page-admin/app.admin.component';
 
 const routes: Routes = [
     {path : 'main', component : MainComponent},

@@ -1,37 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* Most used fonts */
-/* font-family: octarineBold, arialBlack, Arial; */
-/* font-family: octarineLight, Arial, arialBlack; */
+/* font-family: objectivityBold, octarineBold, arialBlack, Arial; */ /*bold*/
+/* font-family: objectivityMedium, Arial; /*medium*/
+/* font-family: objectivityLight, octarineLight, Arial; */ /*light*/
 
 /*Fonts*/
+
+@font-face {
+  font-family: objectivityBlack;
+  src: url(assets/fonts/Objectivity-Black.otf) format("opentype");
+}
+@font-face {
+  font-family: objectivityBold;
+  src: url(assets/fonts/Objectivity-Bold.otf) format("opentype");
+}
+@font-face {
+  font-family: objectivityExtraBold;
+  src: url(assets/fonts/Objectivity-ExtraBold.otf) format("opentype");
+}
+@font-face {
+  font-family: objectivityLight;
+  src: url(assets/fonts/Objectivity-Light.otf) format("opentype");
+}
+@font-face {
+  font-family: objectivityMedium;
+  src: url(assets/fonts/Objectivity-Medium.otf) format("opentype");
+}
+@font-face {
+  font-family: objectivityRegular;
+  src: url(assets/fonts/Objectivity-Regular.otf) format("opentype");
+}
+@font-face {
+  font-family: objectivitySuper;
+  src: url(assets/fonts/Objectivity-Super.otf) format("opentype");
+}
+@font-face {
+  font-family: objectivityThin;
+  src: url(assets/fonts/Objectivity-Thin.otf) format("opentype");
+}
 @font-face {
     font-family: octarineBold;
     src: url(assets/fonts/Octarine-Bold.otf) format("opentype");
-  }
-@font-face {
-    font-family: octarineBoldOblique;
-    src: url(assets/fonts/Octarine-BoldOblique.otf) format("opentype");
   }
 @font-face {
     font-family: octarineLight;
     src: url(assets/fonts/Octarine-Light.otf) format("opentype");
   }
 @font-face {
-    font-family: octarineLightOblique;
-    src: url(assets/fonts/Octarine-LightOblique.otf) format("opentype");
-  }
-@font-face {
     font-family: arialBlack;
     src: url(assets/fonts/Arial-Black.ttf) format("truetype");
   }
-
-/*Smooth scrolling*/
-/*Non-Compatible with explorer,edge and safari*/
-/*UPDATE: Not used, however left in for safety*/
-html {
-  scroll-behavior: smooth;
-}
 
 /*edge and explorer white-line bugfix*/
 body {
@@ -42,11 +61,18 @@ body {
 /*tricks bold tag by changing font-style into the bold type of the most used font*/
 b{
   font-weight: normal;
-  font-family: octarineBold, arialBlack, Arial;
+  font-family: objectivityBold, octarineBold, arialBlack, Arial; 
 }
 
-/*Change ugly scroll color annd shape on firefox*/
 html {
+/*Smooth scrolling*/
+/*Non-Compatible with explorer,edge and safari*/
+/*UPDATE: Not used, however left in for safety*/
+scroll-behavior: smooth;
+
+font-family: objectivityMedium, Arial; /*default font*/
+
+/*Change ugly scroll color and shape on firefox(and other browsers)*/
   --scrollbarBG: rgba(51, 51, 51);
   --thumbBG: #6e6e70;
   scrollbar-width: thin;
@@ -59,7 +85,29 @@ body::-webkit-scrollbar-track {
   background: var(--scrollbarBG);
 }
 body::-webkit-scrollbar-thumb {
-  background-color: var(--thumbBG) ;
+  background-color: var(--thumbBG);
   border-radius: 6px;
   border: 3px solid var(--scrollbarBG);
+}
+
+/*Link hover-on effect*/
+html a, html a:visited, html a:link {
+  text-decoration: none;
+  color: white;
+
+  -webkit-transition: color .25s ease-in-out;
+  -moz-transition: color .25s ease-in-out;
+  -o-transition: color .25s ease-in-out;
+  -ms-transition: color .25s ease-in-out;
+  transition: color .25s ease-in-out;
+}
+html a:hover {
+  text-decoration: none;
+  color: #F06000 !important; 
+  
+  cursor:pointer;
+}
+/*hides outline when on focus*/
+html a:focus{
+  outline: none;
 }

@@ -1,0 +1,75 @@
+/*navbar width and bg-color controlled by typescript*/
+.navbar{
+  position:fixed;
+  z-index: 100;
+
+  min-height: 48px;
+}
+
+.navbar-nav{
+  font-size: 12px;
+  font-family: octarineBold, arialBlack, Arial;
+  letter-spacing: 2.5px;
+
+  /* center align the menu */
+  margin: 0 auto;
+}
+
+/*hides outline when on focus*/
+.navbar-nav:focus{
+  outline: none;
+}
+
+/* Links */
+.navbar-nav a{
+/* 8px padding top + 8px padding bottom + 32px line-height = 48px */
+  background: none;
+  display: inline-block;
+  padding-top: 8px;
+  margin-left: 13px;
+  text-decoration: none;
+  text-align: left;
+  color: #fff;
+}
+
+.toggler {
+  padding-top: 5px;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  background-color: #F06000; 
+}
+
+.navbar-nav .pagemark {
+  color: #fff;
+  border-color: #fff;
+  -webkit-transition: color .2s ease-in-out, border .2s ease-in-out;
+  -moz-transition: color .2s ease-in-out, border .2s ease-in-out;
+  -o-transition: color .2s ease-in-out, border .2s ease-in-out;
+  -ms-transition: color .2s ease-in-out, border .2s ease-in-out;
+  transition: color .2s ease-in-out, border .2s ease-in-out;
+}
+.navbar-nav .pagemark:hover { 
+  color: #F06000 !important; 
+  border-color: #F06000 !important;
+}
+
+/* Normal mode */
+@media screen and (min-width: 768px){
+  .navbar-nav a{
+    line-height: initial;
+  }
+  .navbar-nav .pagemark {
+    border-bottom: 2px solid;
+    padding-bottom: 2px;
+  }
+}
+/* Mobile mode */
+@media screen and (min-width: 0px) and (max-width: 767px){
+  .navbar-nav a{
+    line-height: 25px;
+  }
+  .navbar-nav .pagemark {
+    margin-left: -5px;
+  }
+}
