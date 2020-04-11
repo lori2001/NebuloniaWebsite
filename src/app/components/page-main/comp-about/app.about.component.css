@@ -78,7 +78,8 @@
    #about .text h2 {
       font-size: 22px;
    }
-   #about .profile-pic {
+   #about .profile-pic, video {
       opacity: 0;
+      width: 0 !important;
    }
 }

@@ -14,7 +14,6 @@
   /* center align the menu */
   margin: 0 auto;
 }
-
 /*hides outline when on focus*/
 .navbar-nav:focus{
   outline: none;
@@ -38,6 +37,9 @@
   width: 30px;
   height: 30px;
   background-color: #F06000; 
+}
+.navbar-toggler:focus{
+  outline: none;
 }
 
 .navbar-nav .pagemark {

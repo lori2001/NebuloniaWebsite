@@ -98,6 +98,7 @@
     #logo-memorial .logos .drawing {
         position: absolute;
         opacity: 0;
+        width: 0;
     }
     #logo-memorial .logos .vector {
         max-width: 100%;
@@ -133,6 +134,7 @@
     #logo-memorial .logos .drawing {
         position: absolute;
         opacity: 0;
+        width: 0;
     }
     #logo-memorial .logos .vector {
         margin-top: 5%;
@@ -174,6 +176,7 @@
     #logo-memorial .logos .drawing {
         position: absolute;
         opacity: 0;
+        width: 0;
     }
     #logo-memorial .logos .vector {
         margin-top: 10%;
@@ -197,6 +200,7 @@
     .promo p {
         position: absolute;
         opacity: 0;
+        width: 0;
     }
     .promo .text {
         float: none !important;
