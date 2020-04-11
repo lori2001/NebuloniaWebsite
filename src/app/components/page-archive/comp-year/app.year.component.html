@@ -20,8 +20,10 @@
     </div>
     <div class="images">
         <div *ngFor="let image of images; let i = index">
-            <img class="open-img" src="{{image.src}}" data-toggle="modal"
-            [attr.data-target]="'#modalCinema' + archiveElement.year + i">
+            <img class="open-img"
+                [lazyLoad]="lowResImages[i].src" data-toggle="modal"
+                [defaultImage]="'../../../assets/images/archive/placeholder.jpg'"
+                [attr.data-target]="'#modalCinema' + archiveElement.year + i">
             <div class="modal fade" id="modalCinema{{archiveElement.year}}{{i}}"
                  tabindex="-1" role="dialog" aria-labelledby="cinemaView" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered" role="document">
@@ -30,7 +32,7 @@
                       <span aria-hidden="true" style="color:white">&times;</span>
                     </button>
                   <div class="modal-body">
-                      <img src="{{image.src}}" style="width: 100%; height:auto;">
+                      <img [lazyLoad]="image.src" style="width: 100%; height:auto;">
                   </div>
                 </div>
               </div>

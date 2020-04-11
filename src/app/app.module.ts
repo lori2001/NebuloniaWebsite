@@ -17,6 +17,9 @@ import { OwlModule } from 'ngx-owl-carousel';
 // scrolling (somewhat part of routing)
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
+// lazy load
+import { LazyLoadImageModule } from 'ng-lazyload-image';
+
 // primeng
 import {InputTextareaModule} from 'primeng/inputtextarea';
 import {InputTextModule} from 'primeng/inputtext';
@@ -82,6 +85,9 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
 
     // scrolling
     ScrollToModule.forRoot(),
+
+    // lazy load
+    LazyLoadImageModule,
 
     // routing
     AppRoutingModule,
