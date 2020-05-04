@@ -21,7 +21,10 @@
     [items]="presidentsElement"
     [carouselClasses]="['owl-theme']">
       <div class="item" *ngFor="let element of presidentsElement;let i = index">
-        <img class="element-style" [src]="element.url" (click)="this.countAndCheck(i);" />
+        <img class="element-style" (click)="this.countAndCheck(i);"
+                      [lazyLoad]="element.url"
+                      [defaultImage]="'../../../assets/images/archive/presidents-placeholder.png'"
+        />
         <h5><b>{{element.name}}</b></h5>
         <p>{{element.position | translate}}</p>
       </div>
