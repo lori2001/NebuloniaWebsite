@@ -15,7 +15,7 @@ export class AppComponent {
 
     // IMPORTANT: Current layout supports only two languages
     // Ask me(Szoke Lorand(creators' page)) if you want to add a third language (because it's tricky to get right)
-    translate.addLangs(['huV2', 'roV2']);
+    translate.addLangs(['huV3', 'roV3']);
 
     translate.setDefaultLang(this.translate.getLangs()[0]);
     this.translate.currentLang = this.translate.getLangs()[0];

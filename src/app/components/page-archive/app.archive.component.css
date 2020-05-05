@@ -60,14 +60,29 @@
     text-align: center;
     width: auto;
 }
+.promo p {
+    margin-top: 1.3em;
+}
 .promo a, a h1 {
     margin-bottom: 0.2em !important;
 }
-.promo video {
+.promo .content {
     float:  right;
     max-width: 65%;
     width: auto;
     height: 100%;
+}
+.promo img {
+  padding: 3%;
+
+  -webkit-transition: transform .25s ease-in-out;
+  -moz-transition: transform .25s ease-in-out;
+  -o-transition: transform .25s ease-in-out;
+  -ms-transition: transform .25s ease-in-out;
+  transition: transform .25s ease-in-out;
+}
+.promo img:hover {
+    transform: scale(1.15);
 }
 
 @media screen and (min-width: 1200px) {
@@ -161,8 +176,11 @@
     .promo .text {
         padding-top: 12.5em;
     }
-    .promo video {
+    .promo .content {
         max-width: 60% !important;
+    }
+    .promo img {
+        padding: 4%;
     }
 }
 @media screen and (min-width: 576px) and (max-width: 767px) {
@@ -209,7 +227,7 @@
         height: auto;
         margin-bottom: 1em;
     }
-    .promo video {
+    .promo .content {
         float: none !important;
         display: block;
         margin: 0 auto;
@@ -277,11 +295,14 @@
         margin: 0 auto;
         height: auto;
     }
-    .promo video {
+    .promo .content {
         float: none !important;
         display: block;
         margin: 0 auto;
         max-width: 95% !important;
         height: 85%;
+    }
+    .promo img {
+        padding: 11%;
     }
 }

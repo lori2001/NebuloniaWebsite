@@ -187,6 +187,10 @@
         "promo-video" : {
             "title" : "A 25-a aniversare",
             "subtitle" : "Pentru a 25-a aniversare a Nebulóniei, am creat o prezentare."
+        },
+        "onedrive" : {
+            "title" : "Archivă One Drive",
+            "subtitle" : "Aici găsești toate imaginile și înregistrălile create de noi!"
         }
     }
 }
