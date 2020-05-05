@@ -185,11 +185,11 @@
         },
         "promo-video" : {
             "title" : "25-éves ünnepi videónk",
-            "subtitle" : "A nebulónia 25. szülinapja alkalmából készítettünk egy kis bemutatót"
+            "subtitle" : "A nebulónia szülinapja alkalmából készítettünk egy kis videót."
         },
         "onedrive" : {
             "title" : "One Drive archívum",
-            "subtitle" : "Itt megtalálhatod az összes évek során archívált képünk és videónk!"
+            "subtitle" : "Itt megtalálhatod az összes eddig készült képünket és videónkat."
         }
     }
 }

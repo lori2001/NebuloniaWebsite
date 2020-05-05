@@ -87,22 +87,18 @@
 
 @media screen and (min-width: 1200px) {
     #logo-memorial .text h1 {
-        margin-top: 0.35em;
-        font-size: 2.1vw;
-        margin-bottom: 20px;
-    }
-    #logo-memorial .text p {
-        font-size: 1vw;
+        margin-top: -0.2em;
+        margin-bottom: 0.3em;
     }
     
     .promo{
         padding: 0 4.5vw;
     }
-    .promo h1{
+    .promo h1, #logo-memorial .text h1{
         font-size: 2.5vw;
     }
-    .promo p {
-        font-size: 1.2vw;
+    .promo p, #logo-memorial .text p {
+        font-size: 1.15vw;
     }
 }
 @media screen and (min-width: 992px) and (max-width: 1199px) {
@@ -118,24 +114,19 @@
     #logo-memorial .logos .vector {
         max-width: 100%;
     }
-    #logo-memorial .text h1 {
-        font-size: 2.4vw;
-    }
-    #logo-memorial .text p {
-        font-size: 1.4vw;
-    }
 
     .special-event .promo {
         padding: 0;
     }
-    .promo h1{
+    .promo .text {
+        padding-top: 7.5em;
+    }
+    
+    .promo h1, #logo-memorial .text h1{
         font-size: 2.5vw;
     }
-    .promo p {
-        font-size: 1.2vw;
-    }
-    .promo .text {
-        padding-top: 8.5em;
+    .promo p, #logo-memorial .text p  {
+        font-size: 1.4vw;
     }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -171,7 +162,7 @@
         margin-bottom: 0.5em;
     }
     .promo p {
-        font-size: 1vw;
+        font-size: 1.15vw;
     }
     .promo .text {
         padding-top: 12.5em;
@@ -212,8 +203,8 @@
         padding: 0;
     }
     .promo h1{
-        margin-top: 0;
-        font-size: 2.8vw;
+        margin-top: -0.6em;
+        font-size: 3.5vw;
     }
     .promo p {
         position: absolute;
@@ -232,7 +223,7 @@
         display: block;
         margin: 0 auto;
         max-width: 100% !important;
-        height: 85%;
+        height: 90%;
     }
 }
 @media screen and (max-width: 575px) {
@@ -250,7 +241,9 @@
         width: 82vw !important;
     }
     #logo-memorial .text h1 {
-        font-size: 4vw;
+        margin-top: 0;
+        margin-bottom: 0.2em;
+        font-size: 6vw;
     }
     #logo-memorial .text p {
         font-size: 2.5vw;
@@ -287,7 +280,7 @@
         font-size: 6vw;
     }
     .promo p {
-        font-size: 2.4vw;
+        font-size: 3vw;
     }
     .promo .text {
         float: none !important;
@@ -300,9 +293,11 @@
         display: block;
         margin: 0 auto;
         max-width: 95% !important;
-        height: 85%;
+        margin-top: 9em;
+        height: auto;
     }
     .promo img {
         padding: 11%;
+        padding-top: 5%;
     }
 }

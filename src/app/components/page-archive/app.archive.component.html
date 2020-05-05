@@ -6,8 +6,9 @@
     <div class="special-event" id="onedrive">
         <div class="promo">
             <div class="text">
-                <a [ngx-scroll-to]="'#onedrive'" [ngx-scroll-to-offset]="offset">
-                    <h1><b>{{ 'archive.onedrive.title' | translate }}</b></h1></a>
+                <!--<a [ngx-scroll-to]="'#onedrive'" [ngx-scroll-to-offset]="offset">-->
+                    <h1><b>{{ 'archive.onedrive.title' | translate }}</b></h1>
+                <!--</a>-->
                 <p>{{ 'archive.onedrive.subtitle' | translate }}</p>
             </div>
             <a href="https://aprilyfogimnazium-my.sharepoint.com/:f:/g/personal/nebuloniadsz_aprilyfogimnazium_ro/EsG4CrAVkOJEicS6EC-nAewBk8iae-YZhL1yadASXK-7Pg?e=vDzyGC&fbclid=IwAR3uVNDDUBMQrHoc3eDthhzvI9btv1sfkizslHrluYW0im8eei8cWLB8HMM"
@@ -19,6 +20,7 @@
     </div>
     <!-- SHOULD BE ALWAYS ON TOP-->
 
+    <!--INSERT NEW YEARS HERE-->
     <app-year [offset]="offset" [archiveElement]="archiveElements[3]"></app-year> <!--2019-2020-->
 
     <div class="special-event" id="logo-memorial">
@@ -42,10 +44,12 @@
         </div>
         <div class="logos">
             <img class="drawing"
-                src="../../../assets/images/archive/logo-change-event/old-logo-drawing.png"
+                [lazyLoad]="'../../../assets/images/archive/logo-change-event/old-logo-drawing.png'"
+                [defaultImage]="'../../../assets/images/archive/placeholder.jpg'"
                 style="padding-left: 3vw;"> <!-- distance between the two-->
             <img class="vector"
-                src="{{this.oldLogoLocation}}" (click)="oldLogoEasterEgg()">
+                [lazyLoad]="oldLogoLocation"
+                [defaultImage]="'../../../assets/images/archive/placeholder.jpg'" (click)="oldLogoEasterEgg()">
         </div>
     </div>
 
