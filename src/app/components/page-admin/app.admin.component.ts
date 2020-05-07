@@ -142,7 +142,7 @@ export class AdminComponent implements OnInit {
   @HostListener('document:keypress', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
       if (event.key === 'Enter') {
-        if(!this.isLogged) {
+        if (!this.isLogged) {
           this.login();
         } else {
           this.createActivity();

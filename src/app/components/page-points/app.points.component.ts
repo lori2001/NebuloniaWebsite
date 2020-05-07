@@ -43,21 +43,30 @@ export class PointsComponent implements OnInit {
       (res: PointsElement[]) => {
         this.points = res;
 
-        for (const element of this.points) {
-          // for each point ever given
-          // adds together the points of all classes
-          // 9.A, 9.B, 9.C, 9.D, 10.A, 10.B stb..
-           if (element.class_id - 1 >= this.classPoints.length) {
-            this.classPoints.push({value: element.value, name: element.className});
-           } else {
-            this.classPoints[(element.class_id - 1)].value += element.value;
+        if (this.points.length === 0) {
+          this.pointsService.getClasses().subscribe(
+            (result: string[]) => {
+              for (const element of result) {
+                this.classPoints.push({value: 0, name: element});
+              }
+            });
+        } else {
+          for (const element of this.points) {
+            // for each point ever given
+            // adds together the points of all classes
+            // 9.A, 9.B, 9.C, 9.D, 10.A, 10.B stb..
+             if (element.class_id - 1 >= this.classPoints.length) {
+              this.classPoints.push({value: element.value, name: element.className});
+             } else {
+              this.classPoints[(element.class_id - 1)].value += element.value;
+             }
            }
-         }
 
-        for (let i = 0; i < this.classPoints.length; i++) {
-          // adds together the total points of each "house"
-          // 0-A 1-B 2-C 3-D
-          this.totalPoints[i % 4] += this.classPoints[i].value;
+          for (let i = 0; i < this.classPoints.length; i++) {
+            // adds together the total points of each "house"
+            // 0-A 1-B 2-C 3-D
+            this.totalPoints[i % 4] += this.classPoints[i].value;
+          }
         }
       },
       (error) => {

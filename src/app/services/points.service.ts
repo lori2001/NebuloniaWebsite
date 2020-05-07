@@ -13,11 +13,22 @@ import { MessageService } from 'primeng/api';
 export class PointsService {
   baseUrl = 'api';
   points: PointsElement[];
+  classes: string[];
   activities: ActivitiesElement[];
   errorcode: Observable<number>;
   modpassword: string;
 
   constructor(private http: HttpClient) { }
+
+  getClasses(): Observable<string[]> {
+    return this.http.get(`${this.baseUrl}/getClasses.php`).pipe(
+      map((res) => {
+        const dataKey = 'data';
+        this.classes =  res[dataKey];
+        return this.classes;
+      }),
+      catchError(this.handleError));
+  }
 
   getPoints(): Observable<PointsElement[]> {
     return this.http.get(`${this.baseUrl}/getPoints.php`).pipe(
