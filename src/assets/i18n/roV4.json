@@ -147,8 +147,12 @@
                 "details" : "Tabelul de punctaj este in formatul greșit!"
             },
             "activity-creation-success" : {
-                "summary" : "Realizare reușită!",
+                "summary" : "Adăugare reușită!",
                 "details" : "Evenimentul nou a fost realizat cu succes!"
+            },
+            "activity-creation-error" : {
+                "summary" : "Adăugare eșuată!",
+                "details" : "Un eveniment cu aceeași nume există deja!"
             },
             "activity-deletion-success" : {
                 "summary" : "Ștergere reușită!",

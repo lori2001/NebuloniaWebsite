@@ -149,6 +149,10 @@
                 "summary" : "Sikeres létrehozás!",
                 "details" : "Új esemény sikeresen létrehozva!"
             },
+            "activity-creation-error" : {
+                "summary" : "Sikertelen létrehozás!",
+                "details" : "Már létezik egy azonos nevű esemény!"
+            },
             "activity-deletion-success" : {
                 "summary" : "Sikeres törlés!",
                 "details" : "Az esemény törlése sikeres volt!"

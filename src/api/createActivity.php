@@ -16,7 +16,7 @@ if(strcmp($pw, $password) == 0)
     
         if($row['num'] > 0)
         {
-            http_response_code(500);
+            http_response_code(201);
             exit();
         }
     }

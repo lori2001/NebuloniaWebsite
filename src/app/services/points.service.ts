@@ -58,12 +58,13 @@ export class PointsService {
       data: name,
       password: this.modpassword
     }, {observe: 'response'}).subscribe(response => {
-      if (response.status === 500) {
+      console.log('Hello darkness ny old friend');
+      if (response.status === 201) {
         messageService.add({
           key: 'custom',
-          severity: 'success',
-          summary: 'admin.messages.activity-creation-success.summary',
-          detail: 'admin.messages.activity-creation-success.details'
+          severity: 'warn',
+          summary: 'admin.messages.activity-creation-error.summary',
+          detail: 'admin.messages.activity-creation-error.details'
         });
       } else {
         messageService.add({
