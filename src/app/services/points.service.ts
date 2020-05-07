@@ -57,14 +57,23 @@ export class PointsService {
     this.http.post(`${this.baseUrl}/createActivity.php`, {
       data: name,
       password: this.modpassword
-    }).subscribe(response => {
-      messageService.add({
-        key: 'custom',
-        severity: 'success',
-        summary: 'admin.messages.activity-creation-success.summary',
-        detail: 'admin.messages.activity-creation-success.details'
-      });
-      adminComponent.ngOnInit();
+    }, {observe: 'response'}).subscribe(response => {
+      if (response.status === 500) {
+        messageService.add({
+          key: 'custom',
+          severity: 'success',
+          summary: 'admin.messages.activity-creation-success.summary',
+          detail: 'admin.messages.activity-creation-success.details'
+        });
+      } else {
+        messageService.add({
+          key: 'custom',
+          severity: 'success',
+          summary: 'admin.messages.activity-creation-success.summary',
+          detail: 'admin.messages.activity-creation-success.details'
+        });
+        adminComponent.ngOnInit();
+      }
     });
   }
 

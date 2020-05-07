@@ -3,6 +3,7 @@ import { PointsService } from 'src/app/services/points.service';
 import { PointsElement } from 'src/app/models/database/points.element';
 import { MessageService } from 'primeng/api';
 import { ActivitiesElement } from 'src/app/models/database/activities.element';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-admin',
@@ -17,7 +18,8 @@ export class AdminComponent implements OnInit {
   activities: ActivitiesElement[];
   currentActivityId: number;
 
-  constructor(private pointsService: PointsService,
+  constructor(private translate: TranslateService,
+              private pointsService: PointsService,
               private messageService: MessageService) {
       // calculates message margin-top based on device width
       this.calcMessageMargin();
@@ -116,6 +118,7 @@ export class AdminComponent implements OnInit {
     const name = (document.getElementById('newActNameBox') as HTMLInputElement).value;
     if (name !== '') {
       this.pointsService.createNewActivity(name, this, this.messageService);
+      (document.getElementById('newActNameBox') as HTMLInputElement).value = '';
     } else {
       // No Valid Characters
       this.messageService.add({
@@ -130,11 +133,18 @@ export class AdminComponent implements OnInit {
   deleteActivity() {
     const e = document.getElementById('actlist') as HTMLSelectElement;
     const nm = e.options[e.selectedIndex].value as string;
-    if (confirm('Are you sure to delete activity ' + e.options[e.selectedIndex].textContent + '?')) {
+
+    if (confirm(this.translate.instant('admin.confirm-dialog-message') + e.options[e.selectedIndex].textContent)) {
       this.pointsService.deleteActivity(nm, this, this.messageService);
     }
   }
 
+  @HostListener('document:keypress', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) {
+      if (event.key === 'Enter') {
+        this.login();
+      }
+  }
   login() {
     this.pointsService.login((document.getElementById('passwordBox') as HTMLInputElement).value, this, this.messageService);
   }

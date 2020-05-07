@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-about',
@@ -6,8 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.about.component.css']
 })
 export class AboutComponent {
+  presentationState = 'none'; // hidden
 
-  constructor() {
+  constructor() {}
+
+  @ViewChild('presentation', {static: false}) presentation: ElementRef;
+  stopPresVideo() {
+    if (this.presentation !== undefined) {
+      this.presentation.nativeElement.pause();
+    }
+  }
+
+  showPresentation() {
+    this.presentationState = 'block'; // show
+  }
+
+  hidePresentation() {
+    this.presentationState = 'none'; // hide
+    this.stopPresVideo();
   }
 }
 

@@ -9,6 +9,17 @@ $request = json_decode($postdata);
 @$pw = $request->password;
 if(strcmp($pw, $password) == 0)
 {
+    $query = "SELECT COUNT(*) AS num FROM activities WHERE name = '".$actname."'";
+    if($result = mysqli_query($con, $query))
+    {
+        $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+    
+        if($row['num'] > 0)
+        {
+            http_response_code(500);
+            exit();
+        }
+    }
     $query = "INSERT INTO activities (name) VALUES ('".$actname."')";
     mysqli_query($con, $query);
     $query = "SELECT id FROM activities WHERE name = '".$actname."'";

@@ -25,10 +25,21 @@
    line-height: 30px;
    color: #7A7A7A;
 }
-#about .profile-pic {
+#about .profile-vid {
    position: absolute;
    display: block;
    border-radius: 100%;
+
+   -webkit-transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -o-transition: opacity .25s ease-in-out;
+   -ms-transition: opacity .25s ease-in-out;
+   transition: opacity .25s ease-in-out;
+}
+/*workaround: display similar to "grey overlay" without extra code*/
+.profile-vid:hover {
+  cursor:pointer;
+  opacity: 0.65;
 }
 
 /*Responsive Design*/
@@ -39,7 +50,7 @@
    #about .text h2 {
       font-size: 22px;
    }
-   #about .profile-pic {
+   #about .profile-vid {
       position: relative;
       float: left !important;
       margin-left: 15%;
@@ -60,7 +71,7 @@
    #about .text h2 {
       font-size: 22px;
    }
-   #about .profile-pic {
+   #about .profile-vid {
       width: 11vw;
       left: 9.5vw;
       margin-top: 1%;
@@ -78,8 +89,32 @@
    #about .text h2 {
       font-size: 22px;
    }
-   #about .profile-pic, video {
+   #about .profile-vid, video {
       opacity: 0;
       width: 0 !important;
+   }
+}
+
+.backdrop{
+   background-color:rgba(0,0,0,0.6);
+   position:fixed;
+   top:0;
+   left:0;
+   width:100vw;
+   height:100vh !important;
+}
+.modal-dialog {
+   width: 70vw;
+   max-width: 70vw;
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   margin: 0 !important;
+}
+@media screen and (max-width: 767px){
+   .modal-dialog {
+      width: 90vw;
+      max-width: 90vw;
    }
 }
