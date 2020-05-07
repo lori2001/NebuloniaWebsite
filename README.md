@@ -72,8 +72,6 @@ Easter-eggek (amire még emlékszem):
   Ha 5ször rákattintassz a fejlesztõk oldali képekre, megváltoznak  
   Az archívum oldalon a nebulónia logó karácsonykor mikulás ruhát kap  
   Ugyanez a logó többszörös klikkeléskor megváltozik  
-  Dupla clicknél a 3d's animáció "mozi-módba" lép  
-  A konzólon irónikus szöveg vár :)  
 
 A facebook iframe-en van egy "workaround" ami megengedi hogy reszponzíven újraméretezõdjön. Ez mûködésképtelenné vállhat a jövõben.
 
