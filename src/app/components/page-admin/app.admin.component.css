@@ -1,43 +1,32 @@
 #admin {
-    padding-top: 60px; 
-    padding-bottom: 48px;
     background: #2B2B2B;
     overflow: hidden;
     align-items: center;
     text-align: center;
     background-size: cover !important;
      -webkit-background-size: cover !important;
-     min-height: 100vh;
+   min-height: 100vh;
  }
- 
- /*makes background color transition seemless*/
- 
- #admin .text h2 {
-    font-family: octarineBold, arialBlack, Arial;
-    font-size: 32px;
-    margin-top: 12px;
-    margin-bottom: 30px;
-    text-align: center;
-    color: white;
- }
- #admin .text h3 {
-   font-family: octarineBold, arialBlack, Arial;
-   font-size: 24px;
+ #admin h2 {
+   font-size: 32px;
    margin-top: 12px;
-   margin-bottom: 30px;
+   margin-bottom: 20px;
    text-align: center;
    color: white;
 }
- #admin .text p {
-    font-family: octarineLight, Arial, arialBlack;
-    font-size: 16px;
-    line-height: 30px;
-    text-align: left;
-    color: #7A7A7A;
+#admin p {
+   font-size: 16px;
+   line-height: 30px;
+   text-align: left;
+   color: white;
+}
+
+ #admin .content {
+   margin: 0 auto;
+   max-width: 500px;
+   float: left;
  }
- #admin .text {
-     padding: 10px;
- }
+
  #admin .ptable {
     color: white;
     border-bottom: 1px solid #888888;
@@ -85,3 +74,127 @@
 #admin .acselect:hover {
    border: 1px solid #FFB300;
 }
+
+#admin .login-panel {
+   padding: 50px;
+   width: auto;
+   height: auto;
+   position: absolute;
+   top: 55%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background-color: #0F0F0F;
+   border-radius: 25px;
+   white-space: nowrap;
+}
+#admin .login-panel h3 {
+   font-family: octarineBold, arialBlack, Arial;
+   font-size: 30px;
+   margin-bottom: 30px;
+   text-align: center;
+   color: white;
+}
+
+#admin .title {
+   padding-top: 65px;
+   padding-bottom: 15px;
+   text-align: center;
+   text-shadow: 3px 3px 2px black;
+   font-size: 3.5rem;
+   color: white;
+   background: url(../../../assets/images/creators/title_bg.jpg) no-repeat top center;
+
+   background-size: cover !important;
+   -webkit-background-size: cover !important;
+
+   margin-bottom: 40px;
+}
+
+#admin .links h2{
+   margin: 0 auto;
+   margin-bottom: 30px;
+}
+#admin .links .grid {
+   display: inline-block;
+   display: grid;
+   grid-template-columns: auto auto auto;
+   grid-row-gap: 35px;
+   grid-column-gap: 0 0.8vw;
+   width: auto;
+   height: auto;
+   padding-left: 3vw;
+}
+#admin .links .grid p {
+   text-align: center;
+   color: white;
+   margin-bottom: 0;
+   margin-top: 10px;
+   line-height: 1.4;
+}
+#admin .links .grid .image {
+   padding: 5%;
+   width: auto;
+   height: 10vw;
+
+   font-size: 10vw;
+   text-align: center;
+   color: white;
+}
+#admin .links a {
+   -webkit-transition: transform .25s ease-in-out;
+   -moz-transition: transform .25s ease-in-out;
+   -o-transition: transform .25s ease-in-out;
+   -ms-transition: transform .25s ease-in-out;
+   transition: transform .25s ease-in-out;
+ }
+#admin .links a:hover {
+     transform: scale(1.15);
+ }
+
+
+@media screen and (min-width: 1150px)
+{
+   #admin .content {
+      margin-left: 5vw;
+   }
+}
+@media screen and (max-width: 1149px)
+{
+   #admin .content {
+      float: none;
+   }
+   #admin .title {
+      padding-bottom: 55px !important;
+   }
+   #admin .login-panel {
+      top: 68%;
+   }
+   #admin .links .grid .image {
+      padding: 1%;
+      width: auto;
+      height: 13vw;
+      font-size: 13vw;
+   }
+   #admin .links .grid {
+      grid-column-gap: 0 0;
+      width: 85%;
+      margin: 0 auto;
+      padding-left: 0;
+   }
+   #admin .links .grid p {
+      font-size: 2.1vw;
+   }
+}
+@media screen and (max-width: 767px)
+{
+   #admin .links .grid {
+      width: 90%;
+      margin: 0 auto;
+   }
+}
+@media screen and (max-width: 575px){
+   #admin .title {
+      font-size: 9vw;
+   }
+}
+

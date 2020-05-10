@@ -69,7 +69,6 @@ export class PointsService {
       data: name,
       password: this.modpassword
     }, {observe: 'response'}).subscribe(response => {
-      console.log('Hello darkness ny old friend');
       if (response.status === 201) {
         messageService.add({
           key: 'custom',

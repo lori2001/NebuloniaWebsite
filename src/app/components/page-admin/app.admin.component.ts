@@ -116,6 +116,7 @@ export class AdminComponent implements OnInit {
 
   createActivity() {
     const name = (document.getElementById('newActNameBox') as HTMLInputElement).value;
+    console.log(name);
     if (name !== '') {
       this.pointsService.createNewActivity(name, this, this.messageService);
       (document.getElementById('newActNameBox') as HTMLInputElement).value = '';

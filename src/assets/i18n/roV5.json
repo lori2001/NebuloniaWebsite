@@ -110,12 +110,12 @@
 
     
     "admin" : {
-        "title": "Pagină administrativă",
+        "title": "Pg. administrativă",
 
         "sign-in": {
             "login": "Înregistrare",
             "password": "Parolă",
-            "next": "Mai departe"
+            "next": "Continuă"
         },
 
         "event-name": "Nume eveniment:",
@@ -124,7 +124,7 @@
         "new-event-name": "Numele noului eveniment:",
         "event-date": "Data adăugării",
         "class": "Clasa",
-        "save-points": "Salvarea punctelor",
+        "save-points": "Salvează numărul de puncte",
         "points": "Puncte",
 
         "confirm-dialog-message": "Sunteți sigur că vreți să ștergeți următorul eveniment?\n",
@@ -162,7 +162,15 @@
                 "summary" : "Parolă greșită!",
                 "details" : "Parola introdusă este greșită! Vă rugăm reîincercați!"
             }
-        }  
+        },
+
+        "important-links" : "Linkuri importante",
+        "ndsz-apps" : "Aplicații NDSZ",
+        "data" : "Date private ale Nebulóniei",
+        "google-apps": "Aplicații Google",
+        "facebook": "Facebookul Nebulóniei",
+        "instagram": "Instagramul Nebulóniei",
+        "cpanel": "Cpanelul websiteului"
     },
 
     "archive" : {

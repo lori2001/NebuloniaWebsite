@@ -123,7 +123,7 @@
         "new-event-name": "Új Esemény neve:",
         "event-date": "Hozzáadási dátum",
         "class": "Osztály",
-        "save-points": "Pontok mentése",
+        "save-points": "Pontszám mentése",
         "points": "Pontok",
 
         "confirm-dialog-message": "Biztos benne hogy le akarja törölni a következő eseményt?\n",
@@ -161,7 +161,15 @@
                 "summary" : "Hibás Jelszó!",
                 "details" : "A beírt jelszó hibás! Kérjük próbálja újra!"
             }
-        }  
+        },
+
+        "important-links" : "Fontos Linkek",
+        "ndsz-apps" : "NDSZ applikációk",
+        "data" : "NDSZ privát adatgyüjtemény",
+        "google-apps": "Google Appek",
+        "facebook": "Nebulónia Facebook",
+        "instagram": "Nebulónia Instagram",
+        "cpanel": "Weboldal Cpanel"
     },
 
     "archive" : {
