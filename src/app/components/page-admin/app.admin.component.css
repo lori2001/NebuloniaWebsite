@@ -20,6 +20,10 @@
    text-align: left;
    color: white;
 }
+#admin button {
+   margin-top: 10px;
+   margin-bottom: 5px;
+}
 
  #admin .content {
    margin: 0 auto;
@@ -197,4 +201,3 @@
       font-size: 9vw;
    }
 }
-
