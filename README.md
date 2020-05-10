@@ -68,7 +68,6 @@ Ha ötletekrõl írok, az admin-pagebe beszúrhattok egy "kapusbácsi lógassa a
 Easter-eggek (amire még emlékszem):  
   Az elnökségi képek összenyomogatásakor(nem emlékszem pontosan mi) megjelenik egy külön erre a célra vágott videó  
   Az error page-en az "Az iskoláját!" szöveg belinkeli az iskolát  
-  Hivatalból mindenki kap 0 pontot a pontok pdf-szerint  
   Ha 5ször rákattintassz a fejlesztõk oldali képekre, megváltoznak  
   Az archívum oldalon a nebulónia logó karácsonykor mikulás ruhát kap  
   Ugyanez a logó többszörös klikkeléskor megváltozik  
