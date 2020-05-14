@@ -47,6 +47,7 @@ import { SponsorsComponent } from './components/page-main/comp-sponsors/app.spon
 import { FooterComponent } from './components/comp-footer/app.footer.component';
 import { AdminComponent } from './components/page-admin/app.admin.component';
 import { YearComponent } from './components/page-archive/comp-year/app.year.component';
+import { SpecialEventComponent } from './components/page-special-event/app.special-event.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -63,7 +64,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     CreatorsComponent,
     NotFoundComponent, // 404 Page
     AdminComponent,
-
+    SpecialEventComponent,
+    
     // Other Components
     NavbarComponent,
     FooterComponent,

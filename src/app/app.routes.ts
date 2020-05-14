@@ -8,6 +8,7 @@ import { ArchiveComponent } from './components/page-archive/app.archive.componen
 import { PointsComponent } from './components/page-points/app.points.component';
 import { CreatorsComponent } from './components/page-creators/app.creators.component';
 import { AdminComponent } from './components/page-admin/app.admin.component';
+import { SpecialEventComponent } from './components/page-special-event/app.special-event.component';
 
 const routes: Routes = [
     {path : 'main', component : MainComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
     {path : 'points', component : PointsComponent},
     {path : 'creators', component : CreatorsComponent},
     {path : 'admin', component : AdminComponent},
+    {path : 'special-event', component : SpecialEventComponent},
     {path : 'not-found', component : NotFoundComponent},
     {path : '', redirectTo : '/main', pathMatch: 'full'}, // catches default URL
     {path: '**', redirectTo: '/not-found'} // catches wrong URL
