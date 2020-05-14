@@ -58,7 +58,10 @@ Ha egy fordítás hibásan jelenik meg akkor caching-problémád van. Ezt úgy k
 A siteot kell "compile"-olni. Erre fent, angolul kapsz útmutatást, ha nem jön össze megkérdezhetsz facebookon (a fejlesztõk oldalán megtalálod, itt is nem linkelek).  
 
 A file megírásakor a siteot ftp-szerveren kezeljük. Erre a feltöltés problémás. Csak azokat a fileokat töltsd fel amiken változtattál.  
-  
+
+Az osztálypontokat itt kezelheted, illetve ugyancsak itt fontosabb linkeket is elérhetsz:  
+http://www.nebulonia.ro/admin
+
 ## Fontosabb megemlítenivalók
 
 Az instagram https://lightwidget.com/ - rõl megy. Sokszor nem updateolódik rendesen és nem engedi hogy a siteból https-t csináljunk (így néhány antivirus leblokálja). Egyszeri fizetéssel meg lehet vásárolni (ami a jelent illeti), ajánlom.

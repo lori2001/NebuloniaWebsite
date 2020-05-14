@@ -1,0 +1,38 @@
+<p-toast [style]="{marginTop: messageMargin}" 
+          position="top-right"
+          key="custom"
+          styleClass="custom-toast">
+
+          <ng-template let-message pTemplate="message">
+              <a tabindex="0" class="ui-toast-close-icon pi pi-times" (click)="onReject()" *ngIf="message.closable !== false"></a>
+              <span class="ui-toast-icon pi"
+              [ngClass]="{'pi-info-circle': message.severity == 'info', 'pi-exclamation-triangle': message.severity == 'warn',
+                  'pi-times': message.severity == 'error', 'pi-check' :message.severity == 'success'}"></span>
+              <div class="ui-toast-message-text-content">
+                  <div class="ui-toast-summary">{{message.summary | translate}}</div>
+                  <div class="ui-toast-detail" style="line-height: 1.4;">{{message.detail | translate}}</div>
+              </div>
+        </ng-template>
+</p-toast>
+<!--Declares a toast for messages. Can be put almost anywhere-->
+<app-navbar [MainPage] = 'false'></app-navbar>
+<section id="special-event">
+  <br><br>
+  <div class="banner-image"></div>
+  <h2>Fortnite sucks bajnokság</h2>
+  <br>
+  <div class="embed-player-container">
+    <iframe class="embed-player" src="https://www.youtube.com/embed/FMIZEfjYmtM" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <br><br>
+  <h2>VALORANT</h2>
+  <br>
+  <div class="embed-player-container">
+    <iframe class="embed-player" src="https://www.youtube.com/embed/g8amyzDHOKw" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <br><br>
+  <div class="teams-container">
+      <h2>Csapatok</h2>
+  </div>
+</section>
+  

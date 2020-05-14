@@ -1,0 +1,203 @@
+#special-event {
+    background: #2B2B2B;
+    overflow: hidden;
+    align-items: center;
+    text-align: center;
+    background-size: cover !important;
+     -webkit-background-size: cover !important;
+   min-height: 100vh;
+ }
+ #special-event h2 {
+   font-size: 32px;
+   margin-top: 12px;
+   margin-bottom: 20px;
+   text-align: center;
+   color: white;
+}
+#special-event p {
+   font-size: 16px;
+   line-height: 30px;
+   text-align: left;
+   color: white;
+}
+#special-event button {
+   margin-top: 10px;
+   margin-bottom: 5px;
+}
+
+ #special-event .content {
+   margin: 0 auto;
+   max-width: 500px;
+   float: left;
+ }
+
+ #special-event .embed-player-container {
+   width: 100%;
+   text-align: center;
+ }
+
+ #special-event .embed-player {
+   margin: auto;
+   display: inline-block;
+   top: 0;
+   left: 0;
+   --variable-width: 75vw;
+   width: var(--variable-width);
+   height: calc(0.5625 * var(--variable-width));
+ }
+
+ #special-event .teams-container {
+    padding: 30px;
+    background-color: #111;
+    text-align: left;
+ }
+ #special-event .teams-container
+
+ #special-event .ptable {
+    color: white;
+    border-bottom: 1px solid #888888;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+ }
+ #special-event .ptable tr:nth-child(odd) {
+    background-color: #333333;
+ }
+ #special-event .ptable td {
+    border-top: 1px solid rgb(124, 124, 124);
+    border-bottom: 1px solid rgb(124, 124, 124);
+    border-left: 1px solid #888888;
+    border-right: 1px solid #888888;
+    padding: 10px;
+ }
+ #special-event .ptable th {
+   border: 1px solid #888888;
+   padding: 10px;
+}
+#special-event .ptable tr:last-child td:first-child {
+   border-bottom-left-radius: 10px;
+}
+
+#special-event .ptable tr:last-child td:last-child {
+   border-bottom-right-radius: 10px;
+}
+#special-event .acselect {
+   border-radius: 3px;
+   width: 260px;
+   padding: 6px;
+   color: white;
+   font-family: "Open Sans", "Helvetica Neue", sans-serif;
+   border: 1px solid transparent;
+   transition: border 0.2s;
+   font-size: 14px;
+   appearance: none;
+   background: url('../../../assets/images/arrow.png') right no-repeat #585858;
+   background-size: 9%;
+}
+#special-event .acselect:focus {
+   border: 1px solid #FFB300;
+}
+#special-event .acselect:hover {
+   border: 1px solid #FFB300;
+}
+
+#special-event .banner-image {
+   width: 100%;
+   height: 200px;
+   background-image: url("../../../assets/images/special-events/esports2020.png") no-repeat;
+   z-index: 10;
+}
+
+#special-event .links h2{
+   margin: 0 auto;
+   margin-bottom: 30px;
+}
+#special-event .links .grid {
+   display: inline-block;
+   display: grid;
+   grid-template-columns: auto auto auto;
+   grid-row-gap: 35px;
+   grid-column-gap: 0 0.8vw;
+   width: auto;
+   height: auto;
+   padding-left: 3vw;
+}
+#special-event .links .grid p {
+   text-align: center;
+   color: white;
+   margin-bottom: 0;
+   margin-top: 10px;
+   line-height: 1.4;
+}
+#special-event .links .grid .image {
+   padding: 5%;
+   width: auto;
+   height: 10vw;
+
+   font-size: 10vw;
+   text-align: center;
+   color: white;
+}
+#special-event .links a {
+   -webkit-transition: transform .25s ease-in-out;
+   -moz-transition: transform .25s ease-in-out;
+   -o-transition: transform .25s ease-in-out;
+   -ms-transition: transform .25s ease-in-out;
+   transition: transform .25s ease-in-out;
+ }
+#special-event .links a:hover {
+     transform: scale(1.15);
+ }
+
+
+@media screen and (min-width: 1150px)
+{
+   #special-event .content {
+      margin-left: 5vw;
+   }
+}
+@media screen and (max-width: 1149px)
+{
+   #special-event .content {
+      float: none;
+   }
+   #special-event .title {
+      padding-bottom: 55px !important;
+   }
+
+   #special-event .links .grid .image {
+      padding: 1%;
+      width: auto;
+      height: 13vw;
+      font-size: 13vw;
+   }
+   #special-event .links .grid {
+      grid-column-gap: 0 0;
+      width: 85%;
+      margin: 0 auto;
+      padding-left: 0;
+   }
+   #special-event .links .grid p {
+      font-size: 2.1vw;
+   }
+}
+@media screen and (max-width: 767px)
+{
+   #special-event .links .grid {
+      width: 90%;
+      margin: 0 auto;
+   }
+
+   #special-event .embed-player {
+      --variable-width: 95vw;
+   }
+
+   #special-event .banner-image {
+      background-image: url("../../../assets/images/special-events/esports2020m.png");
+   }
+}
+@media screen and (max-width: 575px){
+   #special-event .title {
+      font-size: 9vw;
+   }
+}
