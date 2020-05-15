@@ -1,14 +1,14 @@
-<app-navbar [MainPage] = 'false'></app-navbar>
-<div style="width: 100%;" [ngStyle]="{'height.px' : -offset }"></div> <!-- navbar space-->
+<app-navbar [OpacityType] = '2'></app-navbar>
 <section id="archive">
+    <div style="width: 100%;" [ngStyle]="{'height.px' : -offset }"></div> <!-- navbar space-->
 
     <!-- SHOULD BE ALWAYS ON TOP-->
     <div class="special-event" id="onedrive">
         <div class="promo">
             <div class="text">
-                <!--<a [ngx-scroll-to]="'#onedrive'" [ngx-scroll-to-offset]="offset">-->
+                <a [ngx-scroll-to]="'#onedrive'" [ngx-scroll-to-offset]="offset">
                     <h1><b>{{ 'archive.onedrive.title' | translate }}</b></h1>
-                <!--</a>-->
+                </a>
                 <p>{{ 'archive.onedrive.subtitle' | translate }}</p>
             </div>
             <a href="https://aprilyfogimnazium-my.sharepoint.com/:f:/g/personal/nebuloniadsz_aprilyfogimnazium_ro/EsG4CrAVkOJEicS6EC-nAewBk8iae-YZhL1yadASXK-7Pg?e=vDzyGC&fbclid=IwAR3uVNDDUBMQrHoc3eDthhzvI9btv1sfkizslHrluYW0im8eei8cWLB8HMM"
@@ -56,10 +56,10 @@
     <app-year [offset]="offset" [archiveElement]="archiveElements[2]"></app-year> <!--2018-2019-->
     <app-year [offset]="offset" [archiveElement]="archiveElements[1]"></app-year> <!--2017-2018-->
 
-    <div class="special-event" id="2017-promo">
+    <div class="special-event" id="video2017">
         <div class="promo">
             <div class="text">
-                <a [ngx-scroll-to]="'#2017-promo'" [ngx-scroll-to-offset]="offset">
+                <a [ngx-scroll-to]="'#video2017'" [ngx-scroll-to-offset]="offset">
                     <h1><b>{{ 'archive.promo-video.title' | translate }}</b></h1></a>
                 <p>{{ 'archive.promo-video.subtitle' | translate }}</p>
             </div>

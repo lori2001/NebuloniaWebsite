@@ -6,12 +6,12 @@ import { ActivitiesElement } from 'src/app/models/database/activities.element';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-special-event',
-  templateUrl: './app.special-event.component.html',
-  styleUrls: ['./app.special-event.component.css'],
+  selector: 'app-esports-event',
+  templateUrl: './app.esports-event.component.html',
+  styleUrls: ['./app.esports-event.component.css'],
   providers: [MessageService]
 })
-export class SpecialEventComponent implements OnInit {
+export class EsportsEventComponent implements OnInit {
   messageMargin = '48px';
 
   constructor(private messageService: MessageService) {
@@ -20,7 +20,7 @@ export class SpecialEventComponent implements OnInit {
   }
 
   ngOnInit() {
-    
+
   }
 
   @HostListener('window:resize', [])

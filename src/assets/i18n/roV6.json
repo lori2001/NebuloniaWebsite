@@ -30,7 +30,7 @@
         "home_secretary" : "Vp. afaceri interne",
         "human_resources" : "Vp. resurse umane",
         "president" : "Președinte",
-        "vice_president" : "Vicepresedinte",
+        "vice_president" : "Vicepreședinte",
         "technical" : "Vp. tehnică",
         "radio" : "Vp. radio",
         "spokesman" : "Vp. sponzorizări",
@@ -189,7 +189,7 @@
             "quote": {
                 "L0": "\"Logoul are 8 variante de combinații de culori.",
                 "L1": "Deoarece eu l-am desenat, eu am hotărât ca acesta să fie verde cu galben.",
-                "L2": "Până și în ziua de azi am schița original a logoului.\" - Széplaki Zita"
+                "L2": "Până și în ziua de azi am schița originală a logoului.\" - Széplaki Zita"
             }
         },
         "promo-video" : {
@@ -200,6 +200,11 @@
             "title" : "Archivă One Drive",
             "subtitle" : "Aici găsești toate imaginile și înregistrălile create de noi!"
         }
+    },
+    
+    "work-in-progress" : {
+        "summary" : "Sub Construcție",
+        "message" : "Echipa noastră muncește din plin la această pagină. Această pagina va în curând disponibilă."
     }
 }
 

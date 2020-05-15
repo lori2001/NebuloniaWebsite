@@ -13,12 +13,12 @@
             <a [ngx-scroll-to]="'#contact'" [ngx-scroll-to-offset]="offset"><b>{{ 'menu.contact' | translate }}</b></a>
           </div>
           <div *ngIf="this.mainPage === false">      
-            <a [routerLink]="['/main']"><b>{{ 'menu.about' | translate }}</b></a>
-            <a [routerLink]="['/main']"><b>{{ 'menu.events' | translate }}</b></a>
-            <a [routerLink]="['/main']"><b>{{ 'menu.contact' | translate }}</b></a>
+            <a [routerLink]="['/main']" [ngx-scroll-to]="'#home'" [ngx-scroll-to-offset]="offset"><b>{{ 'menu.about' | translate }}</b></a>
+            <a [routerLink]="['/main']" [ngx-scroll-to]="'#home'" [ngx-scroll-to-offset]="offset"><b>{{ 'menu.events' | translate }}</b></a>
+            <a [routerLink]="['/main']" [ngx-scroll-to]="'#home'" [ngx-scroll-to-offset]="offset" ><b>{{ 'menu.contact' | translate }}</b></a>
           </div>
           <!-- BUGFIX END -->
-          <a [routerLink]="['/archive']" class="pagemark">
+          <a [routerLink]="['/archive']" [ngx-scroll-to]="'#archive'" [ngx-scroll-to-offset]="offset" class="pagemark">
             <i *ngIf="this.mobileMode === true" class="fa fa-square"></i><b> {{ 'menu.archive' | translate }}</b></a>
           <a [routerLink]="['/points']"  class="pagemark">
             <i *ngIf="this.mobileMode === true" class="fa fa-square"></i><b> {{ 'menu.class_points' | translate }}</b></a>

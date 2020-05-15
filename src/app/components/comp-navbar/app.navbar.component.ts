@@ -13,7 +13,17 @@ export class NavbarComponent {
   mobileMode = false; // enables/disables mobile mode
   collapse = true; // true if mobile style menu is collapsed
 
-  mainPage = true; // checks and behaves differently whether the user is on main page or not
+  mainPage = false; // checks and applies offset to links whether the user is on main page or not
+  get MainPage(): boolean {
+    return this.mainPage;
+  }
+  @Input()
+  set MainPage(value: boolean) {
+    this.mainPage = value;
+  }
+
+  // 0 - zeroOpacity, 1 - dependable, 2>= - fullOpacity
+  opacityType = 1; // different background opacity calculations
 
   constructor(public translate: TranslateService) {
     // initialization stuff
@@ -21,14 +31,14 @@ export class NavbarComponent {
     this.calcOpacity();
   }
 
-  get MainPage(): boolean {
-    return this.mainPage;
+  get OpacityType(): number {
+    return this.opacityType;
   }
 
   @Input()
-  set MainPage(value: boolean) {
-    this.mainPage = value;
-    if (!this.mainPage) {
+  set OpacityType(value: number) {
+    this.opacityType = value;
+    if (this.opacityType !== 1) {
       // should return full opacity background except for mobileMode
       this.checkMobileMode();
       this.calcOpacity();
@@ -54,17 +64,18 @@ export class NavbarComponent {
   @HostListener('window:scroll', [])
   calcOpacity() {
     if (!this.mobileMode) {
+      // calculate opacity differently based on what opacity type is used
+      if (this.opacityType === 0) {
+        this.bgopacity = 0;
+      } else if (this.opacityType === 1) {
+        // calculates the background opacity
+        this.bgopacity = window.pageYOffset / window.innerHeight;
 
-      // calculates the background opacity
-      this.bgopacity = window.pageYOffset / window.innerHeight;
-
-      // if it surpasses 1(100%) it is 1
-      if (this.bgopacity > 1) {
-        this.bgopacity = 1;
-      }
-
-      // non-main pages look ugly with transparent navbar
-      if (!this.mainPage) {
+        // if it surpasses 1(100%) it is 1
+        if (this.bgopacity > 1) {
+          this.bgopacity = 1;
+        }
+      } else {
         this.bgopacity = 1;
       }
     }

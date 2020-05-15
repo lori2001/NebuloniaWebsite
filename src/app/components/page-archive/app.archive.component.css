@@ -54,7 +54,7 @@
     height: 100%;
 }
 .promo .text {
-    padding-top: 5em;
+    padding-top: 6em;
     float: left;
     height: 100%;
     text-align: center;
@@ -64,6 +64,7 @@
     margin-top: 1.3em;
 }
 .promo a, a h1 {
+    margin-top: 0;
     margin-bottom: 0.2em !important;
 }
 .promo .content {
@@ -119,7 +120,7 @@
         padding: 0;
     }
     .promo .text {
-        padding-top: 7.5em;
+        padding-top: 8.5em;
     }
     
     .promo h1, #logo-memorial .text h1{
@@ -203,8 +204,10 @@
         padding: 0;
     }
     .promo h1{
-        margin-top: -0.6em;
         font-size: 3.5vw;
+    }
+    #video2017 h1{
+        margin-top: -0.6em;
     }
     .promo p {
         position: absolute;
@@ -224,6 +227,9 @@
         margin: 0 auto;
         max-width: 100% !important;
         height: 90%;
+    }
+    .promo img {
+        padding: 4%;
     }
 }
 @media screen and (max-width: 575px) {

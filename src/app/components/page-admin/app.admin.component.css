@@ -92,7 +92,6 @@
    white-space: nowrap;
 }
 #admin .login-panel h3 {
-   font-family: octarineBold, arialBlack, Arial;
    font-size: 30px;
    margin-bottom: 30px;
    text-align: center;
@@ -154,7 +153,6 @@
 #admin .links a:hover {
      transform: scale(1.15);
  }
-
 
 @media screen and (min-width: 1150px)
 {

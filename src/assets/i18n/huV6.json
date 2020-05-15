@@ -199,5 +199,10 @@
             "title" : "One Drive archívum",
             "subtitle" : "Itt megtalálhatod az összes eddig készült képünket és videónkat."
         }
+    },
+
+    "work-in-progress" : {
+        "summary" : "Fejlesztés alatt",
+        "message" : "Csapatunk jelenleg dolgozik ezen az oldalon! Hamarosan elérhető lesz. Kérjük jöjjön vissza később."
     }
 }

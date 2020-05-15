@@ -23,7 +23,7 @@
                 (click)="downloadPDF()">
 </button>
 
-<app-navbar [MainPage] = 'false'></app-navbar>
+<app-navbar [OpacityType] = '2'></app-navbar>
 <section id="points">
     <div *ngFor="let layoutType of layoutTypes">
         <div *ngIf="layoutType === this.currentLayout">

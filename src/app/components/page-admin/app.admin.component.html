@@ -16,13 +16,13 @@
 </p-toast>
 <!--Declares a toast for messages. Can be put almost anywhere-->
 
-<app-navbar [MainPage] = 'false'></app-navbar>
+<app-navbar [OpacityType] = '2'></app-navbar>
 <section id="admin">
   <div class="title"><b>{{ 'admin.title' | translate}}</b></div>
   <!--- Login Page START ----------------------------->
   <div *ngIf="!isLogged">
     <div class="login-panel">
-      <h3>{{ 'admin.sign-in.login' | translate }}</h3>
+      <h3><b>{{ 'admin.sign-in.login' | translate }}</b></h3>
       <div class="input">
         <input pInputText type="password" placeholder="{{ 'admin.sign-in.password' | translate }}" id="passwordBox">&nbsp;
         <button pButton type="button" icon="pi pi-check" label="{{ 'admin.sign-in.next' | translate }}" (click)="login()"></button>

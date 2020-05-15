@@ -1,0 +1,10 @@
+<!--  Put this element into any site to block everything else and show work-ing-progress screen instead  -->
+<section id="work-in-progress">
+  <app-navbar [OpacityType] = '0'></app-navbar>
+
+  <div class="message">
+    <b><i class="fa fa-wrench"></i> {{ 'work-in-progress.summary' | translate}}</b>
+    <p> {{ 'work-in-progress.message' | translate }}</p>
+  </div>
+</section>
+<!--Easteregg END---->
