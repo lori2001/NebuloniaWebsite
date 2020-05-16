@@ -1,3 +1,4 @@
+<!--Declares a toast for messages. Can be put almost anywhere-->
 <p-toast [style]="{marginTop: messageMargin}" 
           position="top-right"
           key="custom"
@@ -15,20 +16,41 @@
         </ng-template>
 </p-toast>
 
-
-<!--Declares a toast for messages. Can be put almost anywhere-->
-<!--<app-navbar [MainPage] = 'false'></app-navbar>-->
+<!--<app-navbar [OpacityType] = '2'></app-navbar>-->
 <app-work-in-progress></app-work-in-progress>
 
 <section id="esports-event">
-  <br><br>
   <div class="banner-image"></div>
-  <h2>Test cím</h2>
   <br>
+  <h2>Live stream</h2>
+  
   <div class="embed-player-container">
-    <iframe class="embed-player" src="https://www.youtube.com/embed/FMIZEfjYmtM" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe class="embed-player" src="https://www.youtube.com/embed/FMIZEfjYmtM"
+            frameborder="0"
+            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
   </div>
+
+  <div class="teams-container">
+    <h2>Csapatok</h2>
+  </div>
+  
   <br><br>
+  
+  <h2><b>League of Legends</b></h2>
+  
+  <div class="embed-player-container">
+    <iframe class="embed-player" src="https://www.youtube.com/embed/FMIZEfjYmtM"
+            frameborder="0"
+            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
+  </div>
+  
+  <br><br>
+  
+  
+  
+  <!--
   <h2>VALORANT</h2>
   <br>
   <div class="embed-player-container">
@@ -37,6 +59,6 @@
   <br><br>
   <div class="teams-container">
       <h2>Csapatok</h2>
-  </div>
+  </div>-->
 </section>
   
