@@ -16,7 +16,6 @@ export class EsportsEventComponent implements OnInit {
   esportsTeams: EsportsTeamElement[];
   esportsStreamLinks: Map<string, string>;
 
-
   constructor(private messageService: MessageService,
               private esportsService: EsportsService,
               private domSanitizer: DomSanitizer) {
@@ -58,13 +57,10 @@ export class EsportsEventComponent implements OnInit {
   }
 
   getLink(key: string, embed: boolean) {
-    if(embed)
-    {
-      return this.domSanitizer.bypassSecurityTrustResourceUrl("https://youtube.com/embed/" + this.esportsStreamLinks[key]);
-    }
-    else
-    {
-      return this.domSanitizer.bypassSecurityTrustResourceUrl("https://youtube.com/watch?v=" + this.esportsStreamLinks[key]);
+    if (embed) {
+      return this.domSanitizer.bypassSecurityTrustResourceUrl('https://youtube.com/embed/' + this.esportsStreamLinks[key]);
+    } else {
+      return this.domSanitizer.bypassSecurityTrustResourceUrl('https://youtube.com/watch?v=' + this.esportsStreamLinks[key]);
     }
   }
 

@@ -1,7 +1,7 @@
 <?php
 // Returns the YouTube livestream tokens for esports competitions
 // By:. Kovacs Lorand @ 2020 :))
-require 'connect.php';
+require '../connect.php';
     
 $tokenlist= [];
 

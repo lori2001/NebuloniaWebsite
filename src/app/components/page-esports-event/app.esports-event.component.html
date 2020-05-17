@@ -24,7 +24,7 @@
   <br>
   <h1>Live stream</h1>
   
-  <div *ngFor="let token of esportsStreamLinks | keyvalue">
+  <div *ngFor="let token of esportsStreamLinks | keyvalue; let i = index">
     <a class="stream-link" [href]="getLink(token.key, false)"><b>{{ token.key }}</b></a>
     <br><br><br>
     <div class="embed-player-container">

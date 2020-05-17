@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse, HttpResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 import { EsportsTeamElement } from '../models/database/esportsteam.element';
@@ -8,7 +8,7 @@ import { EsportsTeamElement } from '../models/database/esportsteam.element';
   providedIn: 'root'
 })
 export class EsportsService {
-  baseUrl = 'api';
+  baseUrl = 'api/esports-event';
   teams: EsportsTeamElement[];
   streamLinks: Map<string, string>;
   errorcode: Observable<number>;
@@ -34,7 +34,7 @@ export class EsportsService {
     }),
     catchError(this.handleError));
   }
-  
+
   private handleError(error: HttpErrorResponse) {
     // return an observable with a user friendly message
     return throwError('Error! Something went wrong!');
