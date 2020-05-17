@@ -7,6 +7,7 @@
     -webkit-background-size: cover !important;
   min-height: 100vh;
   padding-top: 48px;
+  color: white;
 }
 
 
@@ -41,7 +42,8 @@
 }
 
 #esports-event .teams-container {
-   padding: 30px;
+   margin: 20px 200px;
+
    text-align: left;
 }
 
@@ -54,6 +56,18 @@
   background: url("../../../assets/images/special-events/esports2020.png") no-repeat;
   background-size: 100% auto;
   background-position: right center;
+}
+
+#esports-event .line {
+  width: 100%;
+  height: 5px;
+  background-color: white;
+}
+
+#esports-event .teams-container .team {
+  width: 50%;
+  height: 300px;
+  background-color: red;
 }
 
 @media screen and (max-width: 767px)
