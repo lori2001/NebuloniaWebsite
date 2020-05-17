@@ -22,33 +22,23 @@
 <section id="esports-event">
   <div class="banner-image"></div>
   <br>
-  <h2>Live stream</h2>
+  <h1>Live stream</h1>
   
-  <div class="embed-player-container">
-    <iframe class="embed-player" src="https://www.youtube.com/embed/RP4x9CyYiJw"
-    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-
-  <div class="teams-container">
-    <h2>Csapatok</h2>
-    <div class="team">
-
-
+  <div *ngFor="let token of esportsStreamLinks | keyvalue">
+    <a class="stream-link" [href]="getLink(token.key, false)"><b>{{ token.key }}</b></a>
+    <br><br><br>
+    <div class="embed-player-container">
+      <iframe class="embed-player" [src]="getLink(token.key, true)"
+              frameborder="0"
+              allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      </iframe>
     </div>
+    <br><br>
+    <div class="teams-container">
+      <p class="team-title">Csapatok</p>
+      <p class="team-member" *ngFor="let team of esportsTeams"><span *ngIf="team.game == token.key"><span class="team-name">{{ team.name }}</span> {{ team.members }}</span></p>
+    </div>
+    <br><br><br>
   </div>
-  
-  <br><div class = "line"></div><br>
-  
-  <h2>League of Legends</h2>
-  
-  <div class="embed-player-container">
-    <!--<iframe class="embed-player" src="https://www.youtube.com/embed/FMIZEfjYmtM"
-            frameborder="0"
-            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-    </iframe>-->
-  </div>
-
-  <br><br>
-  
 </section>
   
