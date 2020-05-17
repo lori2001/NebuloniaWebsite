@@ -17,48 +17,27 @@
 </p-toast>
 
 <!--<app-navbar [OpacityType] = '2'></app-navbar>-->
-<app-work-in-progress></app-work-in-progress>
+<!--<app-work-in-progress></app-work-in-progress>-->
 
 <section id="esports-event">
   <div class="banner-image"></div>
   <br>
-  <h2>Live stream</h2>
-  
-  <div class="embed-player-container">
-    <iframe class="embed-player" src="https://www.youtube.com/embed/FMIZEfjYmtM"
-            frameborder="0"
-            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-    </iframe>
+  <h1><b>Live stream!</b></h1>
+  <div *ngFor="let token of esportsStreamLinks | keyvalue">
+    <a class="stream-link" [href]="getLink(token.key, false)"><b>{{ token.key }}</b></a>
+    <br><br><br>
+    <div class="embed-player-container">
+      <iframe class="embed-player" [src]="getLink(token.key, true)"
+              frameborder="0"
+              allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      </iframe>
+    </div>
+    <br><br>
+    <div class="teams-container">
+      <p class="team-title">Csapatok</p>
+      <p class="team-member" *ngFor="let team of esportsTeams"><span *ngIf="team.game == token.key"><span class="team-name">{{ team.name }}</span> {{ team.members }}</span></p>
+    </div>
+    <br><br><br>
   </div>
-
-  <div class="teams-container">
-    <h2>Csapatok</h2>
-  </div>
-  
-  <br><br>
-  
-  <h2><b>League of Legends</b></h2>
-  
-  <div class="embed-player-container">
-    <iframe class="embed-player" src="https://www.youtube.com/embed/FMIZEfjYmtM"
-            frameborder="0"
-            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-    </iframe>
-  </div>
-  
-  <br><br>
-  
-  
-  
-  <!--
-  <h2>VALORANT</h2>
-  <br>
-  <div class="embed-player-container">
-    <iframe class="embed-player" src="https://www.youtube.com/embed/g8amyzDHOKw" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-  <br><br>
-  <div class="teams-container">
-      <h2>Csapatok</h2>
-  </div>-->
 </section>
   

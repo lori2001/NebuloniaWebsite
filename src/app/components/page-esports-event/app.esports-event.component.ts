@@ -1,8 +1,8 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { PointsService } from 'src/app/services/points.service';
-import { PointsElement } from 'src/app/models/database/points.element';
+import { EsportsService } from 'src/app/services/esports.service';
+import { EsportsTeamElement } from 'src/app/models/database/esportsteam.element';
 import { MessageService } from 'primeng/api';
-import { ActivitiesElement } from 'src/app/models/database/activities.element';
+import { DomSanitizer } from '@angular/platform-browser';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -13,14 +13,59 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class EsportsEventComponent implements OnInit {
   messageMargin = '48px';
+  esportsTeams: EsportsTeamElement[];
+  esportsStreamLinks: Map<string, string>;
 
-  constructor(private messageService: MessageService) {
+
+  constructor(private messageService: MessageService,
+              private esportsService: EsportsService,
+              private domSanitizer: DomSanitizer) {
       // calculates message margin-top based on device width
       this.calcMessageMargin();
   }
 
   ngOnInit() {
+    this.esportsService.getTeams().subscribe(
+      (res: EsportsTeamElement[]) => {
+        this.esportsTeams = res;
+      },
+      (error) => {
+        if (error !== null) {
+          this.messageService.add({
+            key: 'custom',
+            severity: 'warn',
+            summary: 'admin.messages.connection-error.summary',
+            detail: 'admin.messages.connection-error.details'
+          });
+        }
+      }
+    );
+    this.esportsService.getStreamLinks().subscribe(
+      (res: Map<string, string>) => {
+        this.esportsStreamLinks = res;
+      },
+      (error) => {
+        if (error !== null) {
+          this.messageService.add({
+            key: 'custom',
+            severity: 'warn',
+            summary: 'admin.messages.connection-error.summary',
+            detail: 'admin.messages.connection-error.details'
+          });
+        }
+      }
+    );
+  }
 
+  getLink(key: string, embed: boolean) {
+    if(embed)
+    {
+      return this.domSanitizer.bypassSecurityTrustResourceUrl("https://youtube.com/embed/" + this.esportsStreamLinks[key]);
+    }
+    else
+    {
+      return this.domSanitizer.bypassSecurityTrustResourceUrl("https://youtube.com/watch?v=" + this.esportsStreamLinks[key]);
+    }
   }
 
   @HostListener('window:resize', [])

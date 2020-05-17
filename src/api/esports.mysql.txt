@@ -1,0 +1,18 @@
+/*
+    For creation of tables
+*/
+
+CREATE TABLE esports_stream_links (game text, link text);
+CREATE TABLE esports_teams (team text, members text, game text);
+
+/*
+    For adding teams
+*/
+
+INSERT INTO esports_teams (team, members, game) VALUES ("teamname", "member member member member", "game")
+
+/*
+    For adding stream links
+*/
+
+INSERT INTO esports_stream_links (game, link) VALUES ("game", "just the token after https://www.youtube.com/watch?v=")

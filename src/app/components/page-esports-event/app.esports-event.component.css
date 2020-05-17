@@ -6,7 +6,7 @@
    background-size: cover !important;
     -webkit-background-size: cover !important;
   min-height: 100vh;
-  padding-top: 48px;
+  padding-top: 0px;
 }
 
 
@@ -14,6 +14,18 @@
   font-family: NexaLight;
   src: url(../../../assets/fonts/special-event/Nexa-Light.otf) format("opentype");
 }
+
+#esports-event h1 {
+  font-size: 48px;
+  margin-top: 12px;
+  margin-bottom: 20px;
+
+  font-family: NexaLight, objectivityBold, octarineBold, Arial;
+
+  text-align: center;
+  color: white;
+}
+
 #esports-event h2 {
   font-size: 32px;
   margin-top: 12px;
@@ -24,6 +36,17 @@
   text-align: center;
   color: white;
 }
+
+#esports-event .stream-link {
+  font-size: 32px;
+  margin-top: 12px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  font-family: NexaLight, objectivityBold, octarineBold, Arial;
+  text-align: center;
+  color: white;
+}
+
 
 #esports-event .embed-player-container {
   width: 100%;
@@ -43,6 +66,26 @@
 #esports-event .teams-container {
    padding: 30px;
    text-align: left;
+   background-color: rgb(2, 0, 12);
+}
+
+#esports-event .team-title {
+  text-align: left;
+  color: white;
+  font-family: objectivityBold, octarineBold, 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
+  font-size: 32px;
+}
+
+#esports-event .team-member {
+  text-align: left;
+  color: white;
+  font-family: NexaLight, objectivityBold, octarineBold, 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
+  font-size: 32px;
+}
+
+#esports-event .team-name {
+  font-family: objectivityBold, octarineBold, 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
+  color: rgb(90, 87, 255);
 }
 
 #esports-event .banner-image {
@@ -60,7 +103,11 @@
 {
   #esports-event {
    padding-top: 0px;
- }
+  }
+
+  #esports-event .team-title {
+    text-align: center;
+  }
  
   #esports-event .embed-player {
      --variable-width: 95vw;
@@ -77,4 +124,9 @@
   }
 }
 @media screen and (max-width: 575px){
+
+  #esports-event .embed-player {
+    --variable-width: 100vw;
+  }
+
 }
