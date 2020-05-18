@@ -81,7 +81,7 @@ export class EsportsEventComponent implements OnInit {
     }
   }
 
-  separator = ' ';
+  separator = '|';
   getArrayOfMembers(membersSource: string) {
     let names = membersSource.split(this.separator);
     return names;
