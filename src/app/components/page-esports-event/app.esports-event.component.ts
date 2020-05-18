@@ -16,8 +16,7 @@ export class EsportsEventComponent implements OnInit {
   esportsTeams: EsportsTeamElement[];
   esportsStreamLinks: Map<string, string>;
 
-  teamNames: Map<string, string[]>; // key game
-  teamMembers: Map<string, string[]>; /// key teamName
+  teams: Map<string, Map<string, string[]>>; // key game, key teamname => members
  
   embedLinks: Map<string, SafeResourceUrl>;
 
@@ -29,23 +28,16 @@ export class EsportsEventComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.teamNames = new Map<string, string[]>();
-    this.teamMembers = new Map<string, string[]>();
+    this.teams = new Map<string, Map<string, string[]>>();
     this.esportsService.getTeams().subscribe(
       (res: EsportsTeamElement[]) => {
         this.esportsTeams = res;
-        for(const element of this.esportsTeams) {
-          /// ITT VAN EGY NAGY BAJ
-          /// ITT VAN EGY NAGY BAJ
-          /// ITT VAN EGY NAGY BAJ
-          let tmp: string[];
-          for(const key in this.teamNames) {
-            tmp.push(this.teamNames[key]);
-          }
-          tmp.push(element.name);
-          this.teamNames.set(element.game, tmp);
-          this.teamMembers.set(element.name, this.getArrayOfMembers(element.members));
-        }
+        this.esportsTeams.forEach((element: EsportsTeamElement) => {
+          /// ITT NINCS EGY NAGY BAJ
+          if(!this.teams.has(element.game)) this.teams.set(element.game, new Map<string, string[]>());
+          this.teams.get(element.game).set(element.name, this.getArrayOfMembers(element.members));
+        });
+        console.log(this.teams);
       },
       (error) => {
         if (error !== null) {
@@ -89,10 +81,14 @@ export class EsportsEventComponent implements OnInit {
     }
   }
 
-  separator = '|';
+  separator = ' ';
   getArrayOfMembers(membersSource: string) {
     let names = membersSource.split(this.separator);
     return names;
+  }
+
+  getTeamsIteration(game: string) {
+    return this.teams.get(game);
   }
 
   @HostListener('window:resize', [])
