@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, Input } from '@angular/core';
 import { EsportsService } from 'src/app/services/esports.service';
 import { EsportsTeamElement } from 'src/app/models/database/esportsteam.element';
 import { MessageService } from 'primeng/api';
@@ -21,6 +21,8 @@ export class EsportsEventComponent implements OnInit {
   embedLinks: Map<string, SafeResourceUrl>;
   separator = '|';
 
+  @Input() notification = false;
+
   constructor(private messageService: MessageService,
               private esportsService: EsportsService,
               private domSanitizer: DomSanitizer) {
@@ -39,7 +41,6 @@ export class EsportsEventComponent implements OnInit {
           }
           this.teams.get(element.game).set(element.name, this.getArrayOfMembers(element.members));
         });
-        console.log(this.teams);
       },
       (error) => {
         if (error !== null) {

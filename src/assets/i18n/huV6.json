@@ -207,6 +207,7 @@
     },
 
     "esports-event" : {
-        "teams": "Csapatok"
+        "teams": "Csapatok",
+        "now": "Most"
     }
 }

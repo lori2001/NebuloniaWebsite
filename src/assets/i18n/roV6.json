@@ -208,7 +208,8 @@
     },
     
     "esports-event" : {
-        "teams": "Echipe"
+        "teams": "Echipe",
+        "now": "Acum"
     }
 }
 

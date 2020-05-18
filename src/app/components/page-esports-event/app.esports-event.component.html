@@ -16,10 +16,8 @@
         </ng-template>
 </p-toast>
 
-<app-navbar [OpacityType] = '2'></app-navbar>
-<!--<app-work-in-progress></app-work-in-progress>-->
-
-<section id="esports-event">
+  <app-navbar *ngIf="this.notification === false" [OpacityType] = '2'></app-navbar>
+  <section *ngIf="this.notification === false" id="esports-event">
   <div class="banner-image"></div>
   
   <div *ngFor="let token of esportsStreamLinks | keyvalue; let i = index">
@@ -50,3 +48,7 @@
   </div>
   <app-footer></app-footer>
 </section>
+<!--<app-work-in-progress></app-work-in-progress>-->
+<div *ngIf="this.notification === true" class="notification">
+  <a [routerLink]="['/esports-event']" [ngx-scroll-to]="'#esports-event'" >{{ 'esports-event.now' | translate }}: Esports</a>
+</div>

@@ -26,7 +26,7 @@ b {
   font-family: NexaBold, objectivityBold, octarineBold, Arial !important;
 }
 
-#esports-event a:hover {
+#esports-event a:hover, .notification a:hover {
   color: rgb(90, 87, 255) !important; 
 }
 
@@ -151,6 +151,27 @@ b {
   z-index: 1;
 }
 
+@keyframes notification-in {
+  0%   { top: 80px; right: -240px;}
+  100% { top: 80px; right:0;}
+}
+.notification {
+  position: fixed;
+  width: 240px;
+  height: 70px;
+  background-color: #2F255A;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  opacity: 0.85;
+  padding-top: 0.5em;
+  z-index: 80;
+
+  animation-name: notification-in;
+  top: 80px; right:0;
+  animation-duration: 0.8s;
+}
+
 @media screen and (max-width: 767px)
 {
   #esports-event {
@@ -199,5 +220,17 @@ b {
   }
   #esports-event .team-title {
     font-size: 6vw;
+  }
+
+  @keyframes notification-in {
+    0%   { top: 15px; right: -220px;}
+    100% { top: 15px; right:0;}
+  }
+  .notification {
+    top: 15px; right:0;
+    
+    height: 60px;
+    font-size: 1.7em;
+    padding-top: 0.5em;
   }
 }
