@@ -21,11 +21,11 @@
 
 <section id="esports-event">
   <div class="banner-image"></div>
-  <br>
   
   <div *ngFor="let token of esportsStreamLinks | keyvalue; let i = index">
-    <br>
-    <h1><a [href]="getLink(token.key, false)"><b>{{ token.key }} - Live stream</b></a></h1>
+    <div class="line"></div>
+    <br><br><br>
+    <h1><a [href]="getLink(token.key, false)"><b>{{ token.key }}<!-- - Live stream--></b></a></h1>
     <br><br>
     <div class="embed-player-container">
       <iframe class="embed-player" [src]="embedLinks.get(token.key)"
@@ -34,18 +34,19 @@
       </iframe>
     </div>
     <br><br>
-    <p class="team-title"><b>Csapatok</b></p>
+    <p class="team-title"><b>{{ 'esports-event.teams' | translate }}</b></p>
     <br><br>
     <div class="teams-container">
       <div class="team" *ngFor="let teamName of getTeamsIteration(token.key) | keyvalue">
-        <img src="../../../assets/images/special-events/{{ teamName.key }}.jpg">
+        <img  [lazyLoad]="'../../../assets/images/special-events/' + teamName.key + '.jpg'"
+              [defaultImage]="'../../../assets/images/special-events/default_logo.jpg'">
         <div class="team-name">
           <b>{{ teamName.key }}</b>
         </div>
         <div class="team-member" *ngFor="let teamMember of teamName.value">{{ teamMember }}</div>
       </div>
     </div>
-    <br><br>
+    <br><br><br>
   </div>
   <app-footer></app-footer>
 </section>

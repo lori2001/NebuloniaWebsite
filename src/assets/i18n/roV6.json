@@ -205,6 +205,10 @@
     "work-in-progress" : {
         "summary" : "Sub Construcție",
         "message" : "Echipa noastră muncește din plin la această pagină. Această pagina va în curând disponibilă."
+    },
+    
+    "esports-event" : {
+        "teams": "Echipe"
     }
 }
 

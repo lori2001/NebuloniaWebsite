@@ -33,9 +33,16 @@ INSERT INTO esports_teams  (team, members, game) VALUES
 "FusterCluck13 - Fleischman Raul|Just a Wannabe - Schwetter Loránd|aGalamb - Fleischman Krisztián|CL0S3R - Balogh Dávid|Zidane - Fejér Krisztián", 
 "League of Legends");
 INSERT INTO esports_teams  (team, members, game) VALUES 
-("NL2H", "NepROst12 - Cichi Loránt|DuckingBrilliant - Szőke Loránd|Kiraly13 - Szőke Hunor|RhinoPower - Steiger Norbert|Bakó Norbert - Nightshaine|son of muki - Vajda Aniszia",
+("NL2H", "NepROst12 - Cichi Loránt|DuckingBrilliant - Szőke Loránd|Kiraly13 - Szőke Hunor|RhinoPower - Steiger Norbert|nightshaine - Bakó Norbert|son of muki - Vajda Aniszia",
 "League of Legends");
 INSERT INTO esports_teams  (team, members, game) 
 VALUES ("qBan", 
 "NoobMast3r69 - Dezső Bálint|NoobMást3r69 - Könczei István|gEkko Ekko - Ungureanu Robert|DOUGHNUTS17 -  Barti Dávid|BlooXP - Igyártó Szabolcs",
 "League of Legends");
+
+INSERT INTO esports_stream_links (game, link) VALUES ("CS:GO", "test");
+
+INSERT INTO esports_teams (team, members, game) VALUES 
+("No Name", 
+"FusterCluck13 - Fleischman Raul|Just a Wannabe - Schwetter Loránd|aGalamb - Fleischman Krisztián|CL0S3R - Balogh Dávid|Zidane - Fejér Krisztián", 
+"CS:GO");
