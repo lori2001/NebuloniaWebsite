@@ -17,8 +17,9 @@ export class EsportsEventComponent implements OnInit {
   esportsStreamLinks: Map<string, string>;
 
   teams: Map<string, Map<string, string[]>>; // key game, key teamname => members
- 
+
   embedLinks: Map<string, SafeResourceUrl>;
+  separator = '|';
 
   constructor(private messageService: MessageService,
               private esportsService: EsportsService,
@@ -33,8 +34,9 @@ export class EsportsEventComponent implements OnInit {
       (res: EsportsTeamElement[]) => {
         this.esportsTeams = res;
         this.esportsTeams.forEach((element: EsportsTeamElement) => {
-          /// ITT NINCS EGY NAGY BAJ
-          if(!this.teams.has(element.game)) this.teams.set(element.game, new Map<string, string[]>());
+          if (!this.teams.has(element.game)) {
+            this.teams.set(element.game, new Map<string, string[]>());
+          }
           this.teams.get(element.game).set(element.name, this.getArrayOfMembers(element.members));
         });
         console.log(this.teams);
@@ -56,7 +58,7 @@ export class EsportsEventComponent implements OnInit {
     this.esportsService.getStreamLinks().subscribe(
       (res: Map<string, string>) => {
         this.esportsStreamLinks = res;
-        for(const key in res) {
+        for (const key in res) {
           this.embedLinks.set(key, this.getLink(key, true));
         }
       },
@@ -81,10 +83,8 @@ export class EsportsEventComponent implements OnInit {
     }
   }
 
-  separator = '|';
   getArrayOfMembers(membersSource: string) {
-    let names = membersSource.split(this.separator);
-    return names;
+    return membersSource.split(this.separator);
   }
 
   getTeamsIteration(game: string) {

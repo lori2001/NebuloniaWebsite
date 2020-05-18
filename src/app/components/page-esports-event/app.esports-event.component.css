@@ -26,8 +26,12 @@ b {
   font-family: NexaBold, objectivityBold, octarineBold, Arial !important;
 }
 
+#esports-event a:hover {
+  color: rgb(90, 87, 255) !important; 
+}
+
 #esports-event h1 {
-  font-size: 48px;
+  font-size: 45px;
   margin-top: 12px;
   margin-bottom: 20px;
 
@@ -53,7 +57,6 @@ b {
   color: white;
 }
 
-
 #esports-event .embed-player-container {
   width: 100%;
   text-align: center;
@@ -64,7 +67,7 @@ b {
   display: inline-block;
   top: 0;
   left: 0;
-  --variable-width: 75vw;
+  --variable-width: 80vw;
   width: var(--variable-width);
   height: calc(0.5625 * var(--variable-width));
 }
@@ -72,11 +75,20 @@ b {
 #esports-event .team-title {
   text-align: center;
   color: white;
-  font-size: 32px;
+  font-size: 36px;
+  margin-bottom: 0;
 }
 
 #esports-event .team-name {
+  float: right;
+  width: 80%;
+  text-align: center;
+
+  font-size: 2.5vw;
+  line-height: 2.63;
+  margin-bottom: 25px;
   color: rgb(90, 87, 255);
+  background-color: #B1BAFC;
 }
 
 #esports-event .banner-image {
@@ -90,31 +102,42 @@ b {
   background-position: right center;
 }
 
-#esports-event .line {
-  width: 100%;
-  height: 5px;
-  background-color: white;
-}
-
-
-
 #esports-event .teams-container {
-   margin: 20px 200px;
+   margin: 0 10vw;
+   margin-bottom: 40px;
    display: grid;
-   grid-template-columns: auto auto;
+   grid-template-columns: 50% 50%;
    grid-gap: 20px;
    text-align: center;
 }
 
 #esports-event .teams-container .team {
-  text-align: left;
+  position: relative;
+  text-align: center;
+  padding-bottom: 20px;
+  line-height: 1.25;
 
-  width: 50%;
-  height: 300px;
-  font-size: 32px;
+  width: 100%;
   
   color: white;
-  background-color: red;
+  background-color: #2F255A;
+}
+
+#esports-event .teams-container .team img {
+  width: 20%;
+  height: auto;
+  float: left;
+
+  position: absolute;
+  top:0;
+  left:0;
+}
+
+#esports-event .teams-container .team-name {
+  font-size: 3vw;
+}
+#esports-event .teams-container .team-member {
+  font-size: 1.8vw;
 }
 
 @media screen and (max-width: 767px)
@@ -123,10 +146,6 @@ b {
    padding-top: 0px;
   }
 
-  #esports-event .team-title {
-    text-align: center;
-  }
- 
   #esports-event .embed-player {
      --variable-width: 95vw;
   }
@@ -140,11 +159,34 @@ b {
     background-size: 100% auto;
     background-image: url("../../../assets/images/special-events/esports2020m.png");
   }
-}
-@media screen and (max-width: 575px){
-
-  #esports-event .embed-player {
-    --variable-width: 100vw;
+  #esports-event .team-name {
+    font-size: 6vw;
+    line-height: 2.545;
+    margin-bottom: 20px;
+  }
+  #esports-event .teams-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+    text-align: center;
+  }
+  
+  #esports-event .teams-container {
+    margin: 0 5vw;
+    grid-template-columns: 100%;
   }
 
+  #esports-event .teams-container .team-name {
+    font-size: 7vw;
+  }
+  #esports-event .teams-container .team-member {
+    font-size: 4vw;
+  }
+  #esports-event h1 {
+    font-size: 5.5vw;
+    line-height: 0.1;
+  }
+  #esports-event .team-title {
+    font-size: 5.5vw;
+  }
 }
