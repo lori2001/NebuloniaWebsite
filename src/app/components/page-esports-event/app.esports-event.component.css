@@ -224,13 +224,16 @@ b {
 
   @keyframes notification-in {
     0%   { top: 15px; right: -220px;}
+    50%   { top: 15px; right: -220px;}
     100% { top: 15px; right:0;}
   }
   .notification {
     top: 15px; right:0;
     
+    width: 220px;
     height: 60px;
     font-size: 1.7em;
-    padding-top: 0.5em;
+    padding-top: 0.55em;
+    animation-duration: 2s;
   }
 }
