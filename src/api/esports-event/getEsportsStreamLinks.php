@@ -3,14 +3,17 @@
 // By:. Kovacs Lorand @ 2020 :))
 require '../connect.php';
     
-$tokenlist= [];
+$tokenlist = [];
 
 $sql = "SELECT * FROM esports_stream_links";
 if($result = mysqli_query($con, $sql))
 {
+  $index = 0;
   while($row = mysqli_fetch_assoc($result))
   {
-    $tokenlist[$row['game']] = $row['link'];
+    $tokenlist[$index]['link'] = $row['link'];
+    $tokenlist[$index]['game'] = $row['game'];
+    $index++;
   }
   echo json_encode(['data'=>$tokenlist]);
 }

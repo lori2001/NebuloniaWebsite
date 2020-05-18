@@ -9,10 +9,19 @@ CREATE TABLE esports_teams (team text, members text, game text);
     For adding teams
 */
 
-INSERT INTO esports_teams (team, members, game) VALUES ("teamname", "member member member member", "game")
+INSERT INTO esports_teams  (team, members, game) VALUES ("Team Name", "kovilori12 - Kovács Loránd|DuckingBrilliant - Szõke Loránd", "League of Legends");
 
 /*
     For adding stream links
 */
 
-INSERT INTO esports_stream_links (game, link) VALUES ("game", "just the token after https://www.youtube.com/watch?v=")
+INSERT INTO esports_stream_links (game, link) VALUES ("League of Legends", "a95HMCEQqTw"); /*token after https://www.youtube.com/watch?v=*/
+
+
+/*multiple videos test*/
+INSERT INTO esports_teams  (team, members, game) VALUES ("Csapatnév", "FullDuck - Barabás Nándor|NagyEMBER - Király Loránd", "CS:GO");
+INSERT INTO esports_stream_links (game, link) VALUES ("CS:GO", "a95HMCEQqTw");
+
+/*multiple teams test*/
+INSERT INTO esports_teams  (team, members, game) VALUES ("Csapatnév", "kovilori12 - Kovács Loránd|DuckingBrilliant - Szõke Loránd", "CS:GO");
+

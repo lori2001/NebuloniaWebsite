@@ -21,24 +21,32 @@
 
 <section id="esports-event">
   <div class="banner-image"></div>
-  <br>
-  <h1>Live stream</h1>
   
-  <div *ngFor="let token of esportsStreamLinks | keyvalue; let i = index">
-    <a class="stream-link" [href]="getLink(token.key, false)"><b>{{ token.key }}</b></a>
+  <div *ngFor="let game of this.gameNames; let i = index">
+    <br><br>
+    <a class="stream-link">{{ token.key }} - Live stream</a>
     <br><br><br>
     <div class="embed-player-container">
-      <iframe class="embed-player" [src]="getLink(token.key, true)"
+      <iframe class="embed-player" [src]="this.links[i]"
               frameborder="0"
               allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
       </iframe>
     </div>
     <br><br>
+    <p class="team-title"><b>Csapatok</b></p>
     <div class="teams-container">
-      <p class="team-title">Csapatok</p>
-      <p class="team-member" *ngFor="let team of esportsTeams"><span *ngIf="team.game == token.key"><span class="team-name">{{ team.name }}</span> {{ team.members }}</span></p>
+      <div *ngFor="let teams of teamsName[i]">
+        <div *ngFor="let team of teams; let j = index">
+          <div class="team">
+            <span class="team-name">{{ team.name }}</span>
+            <div *ngFor="let member of teamMembers[j]">
+              {{ member }}
+            </div> 
+          </div>
+        </div>
+      </div>
     </div>
-    <br><br><br>
+    <br><br>
   </div>
 </section>
   

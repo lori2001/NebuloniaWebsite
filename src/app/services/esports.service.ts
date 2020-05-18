@@ -3,6 +3,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 import { EsportsTeamElement } from '../models/database/esportsteam.element';
+import { EsportsLinkElement } from '../models/database/esportslink.element';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ import { EsportsTeamElement } from '../models/database/esportsteam.element';
 export class EsportsService {
   baseUrl = 'api/esports-event';
   teams: EsportsTeamElement[];
-  streamLinks: Map<string, string>;
+  streamLinks: EsportsLinkElement[];
   errorcode: Observable<number>;
 
   constructor(private http: HttpClient) { }
@@ -25,7 +26,7 @@ export class EsportsService {
     catchError(this.handleError));
   }
 
-  getStreamLinks(): Observable<Map<string, string>> {
+  getStreamLinks(): Observable<EsportsLinkElement[]> {
     return this.http.get(`${this.baseUrl}/getEsportsStreamLinks.php`).pipe(
       map((res) => {
         const dataKey = 'data';

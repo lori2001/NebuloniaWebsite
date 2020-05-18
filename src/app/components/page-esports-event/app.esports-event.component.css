@@ -8,6 +8,8 @@
   background-size: cover !important;
   -webkit-background-size: cover !important;
   min-height: 100vh;
+
+  font-family: NexaLight, objectivityLight, octarineLight, Arial !important;
 }
 
 
@@ -15,13 +17,19 @@
   font-family: NexaLight;
   src: url(../../../assets/fonts/special-event/Nexa-Light.otf) format("opentype");
 }
+@font-face {
+  font-family: NexaBold;
+  src: url(../../../assets/fonts/special-event/Nexa-Bold.otf) format("opentype");
+}
+
+b {
+  font-family: NexaBold, objectivityBold, octarineBold, Arial !important;
+}
 
 #esports-event h1 {
   font-size: 48px;
   margin-top: 12px;
   margin-bottom: 20px;
-
-  font-family: NexaLight, objectivityBold, octarineBold, Arial;
 
   text-align: center;
   color: white;
@@ -32,8 +40,6 @@
   margin-top: 12px;
   margin-bottom: 20px;
 
-  font-family: NexaLight, objectivityBold, octarineBold, Arial;
-
   text-align: center;
   color: white;
 }
@@ -43,7 +49,6 @@
   margin-top: 12px;
   margin-bottom: 20px;
   text-decoration: none;
-  font-family: NexaLight, objectivityBold, octarineBold, Arial;
   text-align: center;
   color: white;
 }
@@ -64,29 +69,13 @@
   height: calc(0.5625 * var(--variable-width));
 }
 
-#esports-event .teams-container {
-   margin: 20px 200px;
-
-   text-align: left;
-   background-color: rgb(2, 0, 12);
-}
-
 #esports-event .team-title {
-  text-align: left;
+  text-align: center;
   color: white;
-  font-family: objectivityBold, octarineBold, 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
-  font-size: 32px;
-}
-
-#esports-event .team-member {
-  text-align: left;
-  color: white;
-  font-family: NexaLight, objectivityBold, octarineBold, 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
   font-size: 32px;
 }
 
 #esports-event .team-name {
-  font-family: objectivityBold, octarineBold, 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
   color: rgb(90, 87, 255);
 }
 
@@ -107,9 +96,24 @@
   background-color: white;
 }
 
+
+
+#esports-event .teams-container {
+   margin: 20px 200px;
+   display: grid;
+   grid-template-columns: auto auto;
+   grid-gap: 20px;
+   text-align: center;
+}
+
 #esports-event .teams-container .team {
+  text-align: left;
+
   width: 50%;
   height: 300px;
+  font-size: 32px;
+  
+  color: white;
   background-color: red;
 }
 
