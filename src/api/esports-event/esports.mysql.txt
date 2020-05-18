@@ -33,7 +33,7 @@ INSERT INTO esports_teams  (team, members, game) VALUES
 "FusterCluck13 - Fleischman Raul|Just a Wannabe - Schwetter Loránd|aGalamb - Fleischman Krisztián|CL0S3R - Balogh Dávid|Zidane - Fejér Krisztián", 
 "League of Legends");
 INSERT INTO esports_teams  (team, members, game) VALUES 
-("NL2H", "NepROst12 - Cichi Loránt|DuckingBrilliant - Szőke Loránd| Kiraly13 - Szőke Hunor|RhinoPower - Steiger Norbert|Bakó Norbert - Nightshaine ",
+("NL2H", "NepROst12 - Cichi Loránt|DuckingBrilliant - Szőke Loránd|Kiraly13 - Szőke Hunor|RhinoPower - Steiger Norbert|Bakó Norbert - Nightshaine|son of muki - Vajda Aniszia",
 "League of Legends");
 INSERT INTO esports_teams  (team, members, game) 
 VALUES ("qBan", 
