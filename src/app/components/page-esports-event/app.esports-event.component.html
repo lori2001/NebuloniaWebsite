@@ -28,7 +28,7 @@
     <a class="stream-link" [href]="getLink(token.key, false)"><b>{{ token.key }}</b></a>
     <br><br><br>
     <div class="embed-player-container">
-      <iframe class="embed-player" [src]="getLink(token.key, true)"
+      <iframe class="embed-player" [src]="embedLinks.get(token.key)"
               frameborder="0"
               allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
       </iframe>

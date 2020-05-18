@@ -2,7 +2,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import { EsportsService } from 'src/app/services/esports.service';
 import { EsportsTeamElement } from 'src/app/models/database/esportsteam.element';
 import { MessageService } from 'primeng/api';
-import { DomSanitizer } from '@angular/platform-browser';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -15,6 +15,7 @@ export class EsportsEventComponent implements OnInit {
   messageMargin = '48px';
   esportsTeams: EsportsTeamElement[];
   esportsStreamLinks: Map<string, string>;
+  embedLinks: Map<string, SafeResourceUrl>;
 
   constructor(private messageService: MessageService,
               private esportsService: EsportsService,
@@ -39,9 +40,17 @@ export class EsportsEventComponent implements OnInit {
         }
       }
     );
+    this.embedLinks = new Map<string, SafeResourceUrl>();
+    this.esportsStreamLinks = new Map<string, string>();
     this.esportsService.getStreamLinks().subscribe(
       (res: Map<string, string>) => {
         this.esportsStreamLinks = res;
+        console.log(res);
+        for(var key in res)
+        {
+          this.embedLinks.set(key, this.getLink(key, true));
+        }
+        console.log(this.embedLinks);
       },
       (error) => {
         if (error !== null) {
