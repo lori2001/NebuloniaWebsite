@@ -153,6 +153,7 @@ b {
 
 @keyframes notification-in {
   0%   { top: 80px; right: -240px;}
+  50%   { top: 80px; right: -240px;}
   100% { top: 80px; right:0;}
 }
 .notification {
@@ -169,7 +170,7 @@ b {
 
   animation-name: notification-in;
   top: 80px; right:0;
-  animation-duration: 0.8s;
+  animation-duration: 1.6s;
 }
 
 @media screen and (max-width: 767px)
