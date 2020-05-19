@@ -38,7 +38,6 @@ INSERT INTO esports_stream_links (game, link) VALUES ("CS:GO", "a95HMCEQqTw");
 
 /* Actual inserts used */
 INSERT INTO esports_stream_links (game, link) VALUES ("League of Legends", "MgDhWQ8OI3E"); /*token after https://www.youtube.com/watch?v=*/
-INSERT INTO esports_stream_links (game, link) VALUES ("Rocket League", "g50iPquVqHY");
 
 INSERT INTO esports_teams  (team, members, game) VALUES 
 ("The Big Flex", 
@@ -52,27 +51,14 @@ VALUES ("qBan",
 "NoobMast3r69 - Dezső Bálint|NoobMást3r69 - Könczei István|gEkko Ekko - Ungureanu Robert|DOUGHNUTS17 -  Barti Dávid|BlooXP - Igyártó Szabolcs",
 "League of Legends");
 
+INSERT INTO esports_stream_links (game, link) VALUES ("Rocket League", "g50iPquVqHY");
+
 INSERT INTO esports_teams (team, members, game) VALUES 
-("Team1 1v1", 
+("Team1", 
 "Antrakinon - Kelemen Tamás", 
 "Rocket League");
 
 INSERT INTO esports_teams (team, members, game) VALUES 
-("Team2 1v1", 
+("Team2", 
 "Rebelrob21 - Kónya Előd Róbert", 
-"Rocket League");
-
-INSERT INTO esports_teams (team, members, game) VALUES 
-("Team3 1v1", 
-"TurboDiesel ^-^ - Bereczki Tamás", 
-"Rocket League");
-
-INSERT INTO esports_teams (team, members, game) VALUES 
-("Team4 1v1", 
-"Pipszi Popszi Opszokopolisz - Szentpáli Levente", 
-"Rocket League");
-
-INSERT INTO esports_teams (team, members, game) VALUES 
-("Team5 1v1", 
-"Beatee - Bálint Tamás", 
 "Rocket League");
