@@ -5,7 +5,7 @@ require '../connect.php';
     
 $tokenlist= [];
 
-$sql = "SELECT * FROM esports_stream_links";
+$sql = "SELECT * FROM esports_stream_links ORDER BY `id` DESC";
 if($result = mysqli_query($con, $sql))
 {
   while($row = mysqli_fetch_assoc($result))

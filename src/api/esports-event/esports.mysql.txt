@@ -2,8 +2,20 @@
     For creation of tables
 */
 
-CREATE TABLE esports_stream_links (game text, link text);
-CREATE TABLE esports_teams (team text, members text, game text);
+CREATE TABLE IF NOT EXISTS `esports_stream_links` (
+    id INT unsigned AUTO_INCREMENT NOT NULL,
+    game VARCHAR(255) NOT NULL,
+    link VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
+)ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `esports_teams` (
+    id INT unsigned AUTO_INCREMENT NOT NULL,
+    game VARCHAR(255) NOT NULL,
+    team VARCHAR(255) NOT NULL,
+    members VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
+)ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
 /*
     For adding teams
@@ -24,7 +36,6 @@ INSERT INTO esports_teams  (team, members, game) VALUES ("Csapatnév", "kovilori
 INSERT INTO esports_teams  (team, members, game) VALUES ("Csapatnév", "FullDuck - Barabás Nándor|NagyEMBER - Király Loránd", "CS:GO");
 INSERT INTO esports_stream_links (game, link) VALUES ("CS:GO", "a95HMCEQqTw");
 
-
 /* Actual inserts used */
 INSERT INTO esports_stream_links (game, link) VALUES ("League of Legends", "MgDhWQ8OI3E"); /*token after https://www.youtube.com/watch?v=*/
 
@@ -40,9 +51,14 @@ VALUES ("qBan",
 "NoobMast3r69 - Dezső Bálint|NoobMást3r69 - Könczei István|gEkko Ekko - Ungureanu Robert|DOUGHNUTS17 -  Barti Dávid|BlooXP - Igyártó Szabolcs",
 "League of Legends");
 
-INSERT INTO esports_stream_links (game, link) VALUES ("CS:GO", "test");
+INSERT INTO esports_stream_links (game, link) VALUES ("Rocket League", "g50iPquVqHY");
 
 INSERT INTO esports_teams (team, members, game) VALUES 
-("No Name", 
-"FusterCluck13 - Fleischman Raul|Just a Wannabe - Schwetter Loránd|aGalamb - Fleischman Krisztián|CL0S3R - Balogh Dávid|Zidane - Fejér Krisztián", 
-"CS:GO");
+("Team1", 
+"Antrakinon - Kelemen Tamás", 
+"Rocket League");
+
+INSERT INTO esports_teams (team, members, game) VALUES 
+("Team2", 
+"Rebelrob21 - Kónya Előd Róbert", 
+"Rocket League");
