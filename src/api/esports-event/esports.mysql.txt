@@ -76,3 +76,69 @@ INSERT INTO esports_teams (team, members, game) VALUES
 ("Team5 1v1", 
 "Beatee - Bálint Tamás", 
 "Rocket League");
+
+INSERT INTO esports_stream_links (game, link) VALUES ("CS:GO", "z0lX8tlFL-I");
+
+INSERT INTO esports_teams  (team, members, game) 
+VALUES ("qBan", 
+"Danube - Dezső Bálint|hack - Vári András|Steven Cigar - Ungureanu Robert|Treyvis skot - Igyártó Szabolcs|@мєяνιη - Maróti Ervin",
+"CS:GO");
+
+INSERT INTO esports_teams  (team, members, game) 
+VALUES ("VersaceVersace", 
+"spectaQlar - Săpătaru Mark|Cichi Lorant - Cichi Lóránt|AlexAvfc - Văduva Alex|Capitanu’ - Bogdan George|Horside - Victor Muncaciu",
+"CS:GO");
+
+INSERT INTO esports_teams  (team, members, game) 
+VALUES ("OverYou", 
+"Szilárdka - Szász Szilárd|GödriAndrás - Gödri András|DavidSoos - Soos Dávid|CzimborAndor - Czimbor Andor|ErvinSimon - Simon Ervin",
+"CS:GO");
+
+INSERT INTO esports_teams  (team, members, game) 
+VALUES ("Kallos", 
+"PiPike - Szász Ottó|NándorBalázs - Balázs Nándor|Rebelrob21#7341 - Kónya Előd Róbert|BothZoltan - Both Zoltán|Robihero01 - Gogoncea Róbert",
+"CS:GO");
+
+INSERT INTO esports_teams  (team, members, game) 
+VALUES ("Skull69", 
+"GellertToth - Tóth Gellért|Rickie - Fülöp Norbert|Sanyikafrags - Papp Csongor|SolidHeadshot - Both Ákos|Scream - Székely Roland Leonárd",
+"CS:GO");
+
+INSERT INTO esports_teams  (team, members, game) 
+VALUES ("Neon Dragons", 
+"SutoTamas - Sütő Tamás|TurboDiesel^-^ - Bereczki Tamás|NorbeY#5763 - Mihály Schiller Norbert|Nimrod23 - Novák Nimród|Zenoo - Keresztes Bence Zyon",
+"CS:GO");
+
+/*
+INSERT INTO esports_stream_links (game, link) VALUES ("Rainbow Six Siege", "test");
+
+INSERT INTO esports_teams  (team, members, game) 
+VALUES ("MiniKallos 3v3", 
+"MkP.Nandor08 - Balázs Nándor|JADEN_MACHINE - Dobán András|MkP.Pipkei12 - Szász Ottó",
+"Rainbow Six Siege");
+
+INSERT INTO esports_teams  (team, members, game) 
+VALUES ("Bandi trick 3v3", 
+"SAbendeguySWBD - Szentpáli Attila|Shot_A_Shot - László Zsolt|Kovi_Dell-83 - Köpe Sándor",
+"Rainbow Six Siege");
+
+INSERT INTO esports_teams  (team, members, game) 
+VALUES ("United Duckies 3v3", 
+"floorz UD|Benking UD|pan1c UD",
+"Rainbow Six Siege");
+
+INSERT INTO esports_teams  (team, members, game) 
+VALUES ("FCA Clan 5v5", 
+"Ninja-FCA|Juan-FCA|AzzBlack-FCA|Alphagreek-FCA|MrK-FCA",
+"Rainbow Six Siege");
+
+INSERT INTO esports_teams  (team, members, game) 
+VALUES ("Bandi trick 5v5", 
+"SAbendeguySWBD - Szentpáli Attila|KLMNOP - Kelemen Tamás|Shot_A_Shot - László Zsolt|Kovi_Dell-83 - Köpe Sándor|CrafterBoy14 - Gödri András",
+"Rainbow Six Siege");
+
+INSERT INTO esports_teams  (team, members, game) 
+VALUES ("Kallos 5v5", 
+"MkP.Doctore - Both Zoltán|MkP.Nandor08 - Balázs Nándor|MkP.Pipkei12 - Szász Ottó|JADEN_MACHINE - Dobán András|THC..ZLYWick - Csuka Zoltán",
+"Rainbow Six Siege");
+*/

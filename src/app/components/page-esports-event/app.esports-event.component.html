@@ -20,7 +20,7 @@
   <section *ngIf="this.notification === false" id="esports-event">
   <div class="banner-image"></div>
   
-  <div *ngFor="let token of esportsStreamLinks | keyvalue; let i = index">
+  <div *ngFor="let token of esportsStreamLinks | keyvalue">
     <div class="line"></div>
     <br><br><br>
     <h1><a [href]="getLink(token.key, false)"><b>{{ token.key }}<!-- - Live stream--></b></a></h1>
