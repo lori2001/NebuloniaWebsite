@@ -9,6 +9,7 @@ import { PointsComponent } from './components/page-points/app.points.component';
 import { CreatorsComponent } from './components/page-creators/app.creators.component';
 import { AdminComponent } from './components/page-admin/app.admin.component';
 import { EsportsEventComponent } from './components/page-esports-event/app.esports-event.component';
+import { WorkInProgressComponent } from './components/comp-work-in-progress/app.work-in-progress.component';
 
 const routes: Routes = [
     {path : 'main', component : MainComponent},
@@ -19,6 +20,9 @@ const routes: Routes = [
 
     // EVENT
     {path : 'esports-event', component : EsportsEventComponent},
+
+    // fallback for components under construction
+    {path : 'work-in-progress', component : WorkInProgressComponent},
 
     // FALLBACKS
     {path : 'not-found', component : NotFoundComponent},
