@@ -20,15 +20,41 @@ if(isset($postdata) && !empty($postdata))
     }
 
     // Removing vulnerabilities
-    $headers = "From: NebuloniaWebsite";
-    $message = "Email: " . $email . " -- Név: " . $name . "\n\n" .
+    $headers = "From:" .$email. "\r\n";
+    $message = "Név: " . $name . "\n\n" .
                 $message;
 
     $to ="office@nebulonia.ro";
-   // $to ="nebulonia.alf@gmail.com";
+    // $to ="nebulonia.alf@gmail.com";
 
     // send
     $ok = mail($to, $title, $message, $headers);
+
+    // send response
+    $headers = "From:" .$to. "\r\n";
+    $headers .= "Reply-To: ". strip_tags($email) . "\r\n";
+    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+
+    $to = $email;
+    $message =
+    "<!doctype html>
+    <html lang=\"hu\">
+        <body>
+        Üzenetét magkaptuk! Hamarosan elolvassuk!<br>
+        Mesajul dumneavoastră a fost primit! îl vom citi imediat!<br>
+        Your message has been submited! We will read it shortly!<br>
+        <br><br>
+        -Robot-
+        <a href=\"www.nebulonia.ro\">www.nebulonia.ro</a>
+        <br>
+        <img src=\"http://www.nebulonia.ro/assets/images/logo.png\" width=\"200px\" height=\"200px\" />
+        </body>
+    </html>
+    ";
+
+    $title = "Mesajul a fost primit - Üzenetét megkaptuk - We recieved your message";
+
+    mail($to, $title, $message, $headers);
 
     // if something went wrong throw an error
 	if(!($ok)){
