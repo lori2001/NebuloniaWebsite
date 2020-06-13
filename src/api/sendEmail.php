@@ -21,6 +21,8 @@ if(isset($postdata) && !empty($postdata))
 
     // Removing vulnerabilities
     $headers = "From:" .$email. "\r\n";
+    $headers .= "Content-Type: text/html; charset=UTF-8\r\n"; // ékezeteknek
+
     $message = "Név: " . $name . "\n\n" .
                 $message;
 
@@ -33,7 +35,7 @@ if(isset($postdata) && !empty($postdata))
     // send response
     $headers = "From:" .$to. "\r\n";
     $headers .= "Reply-To: ". strip_tags($email) . "\r\n";
-    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+    $headers .= "Content-Type: text/html; charset=UTF-8\r\n"; // ékezeteknek
 
     $to = $email;
     $message =
