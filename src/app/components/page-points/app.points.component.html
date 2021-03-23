@@ -30,18 +30,22 @@
             <section class="content{{layoutType}}">
                 <video *ngIf="this.staticFlags === false" autoplay muted loop 
                     poster="../../../assets/images/points/background/{{layoutType}}/first.jpg">
+                    <source src="../../../assets/videos/points/{{layoutType}}/first.webm" type="video/webm">
                     <source src="../../../assets/videos/points/{{layoutType}}/first.mp4" type="video/mp4">
                 </video>
                 <video *ngIf="this.staticFlags === false" autoplay muted loop
                     poster="../../../assets/images/points/background/{{layoutType}}/second.jpg">
+                    <source src="../../../assets/videos/points/{{layoutType}}/second.webm" type="video/webm">
                     <source src="../../../assets/videos/points/{{layoutType}}/second.mp4" type="video/mp4">
                 </video>
                 <video *ngIf="this.staticFlags === false" autoplay muted loop
                     poster="../../../assets/images/points/background/{{layoutType}}/third.jpg">
+                    <source src="../../../assets/videos/points/{{layoutType}}/third.webm" type="video/webm">
                     <source src="../../../assets/videos/points/{{layoutType}}/third.mp4" type="video/mp4">
                 </video>
                 <video *ngIf="this.staticFlags === false" autoplay muted loop
                     poster="../../../assets/images/points/background/{{layoutType}}/fourth.jpg">
+                    <source src="../../../assets/videos/points/{{layoutType}}/fourth.webm" type="video/webm">
                     <source src="../../../assets/videos/points/{{layoutType}}/fourth.mp4" type="video/mp4">
                 </video>
                 <img *ngIf="this.staticFlags === true"

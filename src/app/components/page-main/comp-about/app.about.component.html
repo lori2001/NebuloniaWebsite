@@ -3,6 +3,7 @@
     <video class="profile-vid" autoplay muted loop
       	    (click)="this.showPresentation()"
             poster="../../../assets/images/logo.png">
+            <source src="../../../assets/videos/logo.webm" type="video/webm">
             <source src="../../../assets/videos/logo.mp4" type="video/mp4">
     </video>
     <div class="text">
@@ -21,9 +22,8 @@
         </button>
       <div class="modal-body">
         <video controls style="width: 100%; height:auto;" preload="none" #presentation>
-           <source
-           src="../../../assets/videos/logo-fullhd.mp4"
-           type="video/mp4">
+           <source src="../../../assets/videos/logo-fullhd.webm" type="video/webm">
+           <source src="../../../assets/videos/logo-fullhd.mp4" type="video/mp4">
         </video> 
       </div>
     </div>
