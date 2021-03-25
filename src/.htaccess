@@ -1,5 +1,11 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
+
+# redirect to secure site (FORCE APPLY SSL)
+RewriteCond %{HTTPS} off 
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# simplify url
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.html [L]
