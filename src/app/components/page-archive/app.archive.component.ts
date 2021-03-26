@@ -107,9 +107,9 @@ export class ArchiveComponent {
                   { url: '../../../assets/images/presidents2019/president.jpg',
                     name: 'Nagy Tibor',
                     position: 'presidents.president' },
-                  { url: '../../../assets/images/presidents2019/human_resources.jpg',
-                    name: 'Nagy Tamás',
-                    position: 'presidents.human_resources' },
+                  { url: '../../../assets/images/presidents2019/technical.jpg',
+                    name: 'Szőke András-Loránd',
+                    position: 'presidents.technical' },
                   { url: '../../../assets/images/presidents2019/foreign_secretary.jpg',
                     name: 'Bokor Tünde',
                     position: 'presidents.foreign_secretary' },
@@ -122,9 +122,9 @@ export class ArchiveComponent {
                   { url: '../../../assets/images/presidents2019/financial.jpg',
                     name: 'Benedek Orsolya',
                     position: 'presidents.financial' },
-                  { url: '../../../assets/images/presidents2019/technical.jpg',
-                    name: 'Szőke András-Loránd',
-                    position: 'presidents.technical' }
+                    { url: '../../../assets/images/presidents2019/human_resources.jpg',
+                    name: 'Nagy Tamás',
+                    position: 'presidents.human_resources' }
                   ]
         }
     ];

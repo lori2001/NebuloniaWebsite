@@ -1,12 +1,15 @@
-import { Component, HostListener, Input } from '@angular/core';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import {TranslateService} from '@ngx-translate/core';
+import { LanguageComponent } from 'src/app/language.component';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './app.navbar.component.html',
   styleUrls: ['./app.navbar.component.css']
 })
-export class NavbarComponent {
+export class NavbarComponent extends LanguageComponent implements OnInit {
   width = '100%'; // background width
   bgopacity = 0; // background opacity
 
@@ -25,11 +28,19 @@ export class NavbarComponent {
   // 0 - zeroOpacity, 1 - dependable, 2>= - fullOpacity
   opacityType = 1; // different background opacity calculations
 
-  constructor(public translate: TranslateService) {
+  constructor(activatedRoute : ActivatedRoute,
+    translate: TranslateService,
+    router: Router,
+    location: Location)
+  {
+    super(activatedRoute, translate, router, location);
+    
     // initialization stuff
     this.checkMobileMode();
     this.calcOpacity();
   }
+
+  ngOnInit() {} // disables reinitialization of language component(thus speedin up page)
 
   get OpacityType(): number {
     return this.opacityType;
@@ -92,31 +103,6 @@ export class NavbarComponent {
         this.bgopacity = 0;
       }
     }
-  }
-
-  setLanguage(language: string) {
-    let langs: any;
-    let found = false;
-    let currlanguage: string; // holds currently diplayed language
-
-    for ( langs in this.translate.getLangs() ) {
-      if (language === this.translate.getLangs()[langs]) {
-        currlanguage = language;
-        found = true;
-      }
-    }
-
-    // if the language requested wasn't loaded
-    if (!found) {
-      // print error message in console
-      alert('Language type not found! Resetting to default languge instead.');
-      // set current language to default
-      currlanguage = this.translate.getDefaultLang();
-    }
-
-    // use the language last set (bugfix applied)
-    this.translate.use(currlanguage);
-    this.translate.currentLang = currlanguage;
   }
 }
 
