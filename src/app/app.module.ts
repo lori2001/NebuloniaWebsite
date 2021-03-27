@@ -49,7 +49,6 @@ import { AdminComponent } from './components/page-admin/app.admin.component';
 import { YearComponent } from './components/page-archive/comp-year/app.year.component';
 import { WorkInProgressComponent } from './components/comp-work-in-progress/app.work-in-progress.component';
 import { EsportsEventComponent } from './components/page-esports-event/app.esports-event.component';
-import { LanguageComponent } from './language.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -57,8 +56,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
 
 @NgModule({
   declarations: [
-    AppComponent, // Contains language component
-    LanguageComponent, // Contains routing
+    AppComponent, // Contains routing
 
     // Pages
     MainComponent,
