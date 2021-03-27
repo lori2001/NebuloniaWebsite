@@ -32,8 +32,8 @@ const routes: Routes = [
       // FALLBACKS
       {path : 'not-found', component : NotFoundComponent},
 
-      {path : '', redirectTo : 'main', pathMatch: 'full'},
-      {path: '**', redirectTo: 'not-found', pathMatch: 'full'}
+      {path : '', redirectTo : 'main', pathMatch: 'prefix'},
+      {path: '**', redirectTo: 'not-found', pathMatch: 'prefix'}
     ]
   },
 

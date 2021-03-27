@@ -35,47 +35,47 @@ export class LanguageComponent implements OnInit {
   }
 
   public setLanguageAddVer(language: string) {
-    if(language !== undefined && language !== this.currLangNoVer) {
+  //  if(language !== undefined && language !== this.currLangNoVer) {
       this.setLanguageNoChecks(language + this.langVer);
-    }
+   // }
   }
 
   public setLanguage(language: string) {
-    if(language !== undefined && language !== this.translate.currentLang) {
+   // if(language !== undefined && language !== this.translate.currentLang) {
       this.setLanguageNoChecks(language);
-    }
+   // }
   }
 
   setLanguageNoChecks(language: string) {
-      let found = false;
-      let currlanguage: string;
+     // let found = false;
+     let currlanguage: string;
 
-      for (const langs in this.translate.getLangs()) {
-        if (language === this.translate.getLangs()[langs]) {
+     // for (const langs in this.translate.getLangs()) {
+     //   if (language === this.translate.getLangs()[langs]) {
           currlanguage = language;
-          found = true;
-          break;
-        }
-      }
+      //    found = true;
+      //    break;
+      //  }
+      //}
 
       // if the language requested wasn't loaded
-      if (!found) {
+      // if (!found) {
         // print warning message in console
-        console.log(language, '- Language type not found! Resetting to default language instead.');
+        // console.log(language, '- Language type not found! Resetting to default language instead.');
         // set current language to default
-        currlanguage = this.translate.getDefaultLang();
-      }
+        // currlanguage = this.translate.getDefaultLang();
+      // }
 
       // use the language set
       this.translate.use(currlanguage);
       this.currLangNoVer = currlanguage.substring(0, currlanguage.length - this.langVer.length);
 
-      if (!found) {
-        this.router.navigate([this.currLangNoVer + '/not-found']);
-      } else {
+      // if (!found) {
+      //   this.router.navigate([this.currLangNoVer + '/not-found']);
+     // } else {
         // update url bar
         const pg = this.router.url.substring(this.router.url.lastIndexOf('/'));
         this.location.go(this.currLangNoVer + pg);
-      }
+     /// }
   }
 }
