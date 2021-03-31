@@ -68,12 +68,13 @@
     margin-bottom: 0.2em !important;
 }
 .promo .content {
+    position: relative;
     float:  right;
     max-width: 65%;
     width: auto;
     height: 100%;
 }
-.promo img {
+#onedrive .content {
   padding: 3%;
 
   -webkit-transition: transform .25s ease-in-out;
@@ -82,8 +83,28 @@
   -ms-transition: transform .25s ease-in-out;
   transition: transform .25s ease-in-out;
 }
-.promo img:hover {
+#onedrive .content img {
+    height: 100%;
+    width: auto;
+    float: right;
+}
+#onedrive .content:hover {
     transform: scale(1.15);
+}
+#onedrive .prompt {
+    font-size: 2.8vw;
+    font-family: objectivityBold, octarineBold, arialBlack, Arial;
+    color: #ed8618;
+    text-shadow: -0.075em 0.075em 0px #000000;
+
+    line-height: 1;
+    text-align: right;
+
+    position: absolute;
+    right: 8%;
+    bottom: 10%;
+
+    transform: rotate(-17deg);
 }
 
 @media screen and (min-width: 1200px) {
@@ -171,11 +192,14 @@
     .promo .content {
         max-width: 60% !important;
     }
-    .promo img {
+    #onedrive .content {
         padding: 4%;
     }
+    #onedrive .prompt {
+        font-size: 4.5vw;
+    }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media screen and (min-width: 576px) and (max-width: 768px) {
     .special-event {
         height: 45em;
         padding-top: 4em;
@@ -210,9 +234,11 @@
         margin-top: -0.6em;
     }
     .promo p {
-        position: absolute;
+        /*position: absolute;
         opacity: 0;
-        width: 0;
+        width: 0;*/
+        font-size: 1.7vw;
+        margin-top:  -0.1em;
     }
     .promo .text {
         float: none !important;
@@ -228,11 +254,21 @@
         max-width: 100% !important;
         height: 90%;
     }
+    #onedrive .content img {
+        display: block;
+        float: none !important;
+        margin: 0 auto;
+    }
+    #onedrive .prompt {
+        font-size: 3.4vw;
+        right: 33%;
+        bottom: 19%;
+    }
     .promo img {
         padding: 4%;
     }
 }
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 576px) {
     .special-event {
         height: 85em;
         padding-top: 4em;
@@ -302,8 +338,23 @@
         margin-top: 9em;
         height: auto;
     }
+    #onedrive .content img {
+        display: block;
+        width: 85vw;
+        height: 100%;
+        float: none !important;
+        margin: 0 auto;
+    }
+    #onedrive .prompt {
+        font-size: 7.6vw;
+        right: 17%;
+        bottom: 18%;
+    }
     .promo img {
         padding: 11%;
         padding-top: 5%;
+    }
+    #logo-memorial{
+        padding-top: 5px;
     }
 }

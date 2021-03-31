@@ -197,7 +197,9 @@
         },
         "onedrive" : {
             "title" : "One Drive archívum",
-            "subtitle" : "Itt megtalálhatod az összes eddig készült képünket és videónkat."
+            "subtitle" : "Itt megtalálhatod az összes eddig készült képünket és videónkat.",
+            "click": "Kattints",
+            "here": "ide!"
         }
     },
 

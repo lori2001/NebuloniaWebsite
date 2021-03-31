@@ -1,81 +1,62 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import {Location} from '@angular/common';
 
 @Component({
   template : `<router-outlet></router-outlet>`
 })
 export class LanguageComponent implements OnInit {
   // IMPORTANT: Current layout supports only two languages
-  // Adding a 3rd language might be tricky. You can ask me for help (Szoke Lorand(creators' page))
-  langVer: string;
-
-  currLangNoVer: string;//  current language no version
+  // Adding a 3rd language might be tricky. You can ask me for help in case you need some (Szoke Lorand(creators' page))
 
   constructor(public activatedRoute : ActivatedRoute,
     public translate: TranslateService,
-    private router: Router,
-    private location: Location) {
+    private router: Router) {
 
-    // change version number when language packs change to avoid catching issues!
-    // always add one to the version to avoid reusage(caching) of old versions
-    this.langVer = 'V8';
-
-    translate.addLangs(['hu' + this.langVer, 'ro' + this.langVer]);
+    translate.addLangs(['hu', 'ro']);
 
     translate.setDefaultLang(this.translate.getLangs()[0]);
-    this.translate.currentLang = this.translate.getLangs()[0];
   }
 
   ngOnInit() {
     this.activatedRoute.params.subscribe( (params : Params) => {
-        this.setLanguageAddVer(params['lang']);
+        this.setLanguageAfterParams(params['lang']);
     });    
   }
 
-  public setLanguageAddVer(language: string) {
-    if(language !== undefined && language !== this.currLangNoVer) {
-      this.setLanguageNoChecks(language + this.langVer);
+  setLanguageAfterParams(language: string) {
+    let ind: number, pg: string;
+    if (this.translate.currentLang === undefined && language !== undefined )
+    {
+      ind = this.router.url.lastIndexOf(language) + language.length;
+      pg = this.router.url.substring(ind);
+      this.translate.use(language);
     }
-  }
-
-  public setLanguage(language: string) {
-    if(language !== undefined && language !== this.translate.currentLang) {
-      this.setLanguageNoChecks(language);
-    }
-  }
-
-  setLanguageNoChecks(language: string) {
+    else if(language !== undefined && language !== this.translate.currentLang) {
       let found = false;
-      let currlanguage: string;
-
       for (const langs in this.translate.getLangs()) {
         if (language === this.translate.getLangs()[langs]) {
-          currlanguage = language;
           found = true;
           break;
         }
       }
-
-      // if the language requested wasn't loaded
-      if (!found) {
-        // print warning message in console
+      
+      if (!found) { // if the language requested wasn't loaded reset to default
         console.log(language, '- Language type not found! Resetting to default language instead.');
-        // set current language to default
-        currlanguage = this.translate.getDefaultLang();
-      }
-
-      // use the language set
-      this.translate.use(currlanguage);
-      this.currLangNoVer = currlanguage.substring(0, currlanguage.length - this.langVer.length);
-
-      if (!found) {
-        this.router.navigate([this.currLangNoVer + '/not-found']);
+        this.translate.use(this.translate.getDefaultLang());
+        this.router.navigate([this.translate.currentLang + '/not-found']);
       } else {
-        // update url bar
-        const pg = this.router.url.substring(this.router.url.lastIndexOf('/'));
-        this.location.go(this.currLangNoVer + pg);
+        ind = this.router.url.lastIndexOf(this.translate.currentLang);
+        pg = this.router.url.substring(this.router.url.lastIndexOf(this.translate.currentLang) + this.translate.currentLang.length);
+        this.translate.use(language);
       }
+    }
+  }
+
+  public setLanguage(language: string) {
+      let ind: number, pg: string;
+      ind = this.router.url.lastIndexOf(this.translate.currentLang);
+      pg = this.router.url.substring(this.router.url.lastIndexOf(this.translate.currentLang) + this.translate.currentLang.length);
+      this.router.navigate([language + pg]);
   }
 }

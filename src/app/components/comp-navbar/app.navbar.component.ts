@@ -2,7 +2,6 @@ import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import {TranslateService} from '@ngx-translate/core';
 import { LanguageComponent } from 'src/app/language.component';
-import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
@@ -30,17 +29,16 @@ export class NavbarComponent extends LanguageComponent implements OnInit {
 
   constructor(activatedRoute : ActivatedRoute,
     translate: TranslateService,
-    router: Router,
-    location: Location)
+    router: Router)
   {
-    super(activatedRoute, translate, router, location);
+    super(activatedRoute, translate, router);
     
     // initialization stuff
     this.checkMobileMode();
     this.calcOpacity();
   }
 
-  ngOnInit() {} // disables reinitialization of language component(thus speedin up page)
+  // ngOnInit() {} // disables reinitialization of language component(thus speedin up page)
 
   get OpacityType(): number {
     return this.opacityType;

@@ -61,11 +61,11 @@
         "message" : {
             "error" : {
                 "summary" : "Trimitere eșuată!",
-                "detail" : "Mesaj nevalabil sau serviciu indisponibil."
+                "details" : "Mesaj nevalabil sau serviciu indisponibil."
             },
             "success" : {
                 "summary" : "Mesaj trimis!",
-                "detail" : "Mesajul va fi preluat curând."
+                "details" : "Mesajul va fi preluat curând."
             }
         }
     },
@@ -74,7 +74,7 @@
         "table" : "Tabel",
         "error-message" : {
             "summary" : "Connectare eșuată!",
-            "detail" : "Server momentan indisponibil. \n Vă rugăm să reîncercați!"
+            "details" : "Server momentan indisponibil. Vă rugăm să reîncercați!"
         }
     },
 
@@ -198,7 +198,9 @@
         },
         "onedrive" : {
             "title" : "Archivă One Drive",
-            "subtitle" : "Aici găsești toate imaginile și înregistrălile create de noi!"
+            "subtitle" : "Aici găsești toate imaginile și înregistrălile create de noi!",
+            "click": "Apasă",
+            "here": "aici!"
         }
     },
     
