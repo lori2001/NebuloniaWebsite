@@ -38,7 +38,7 @@ export class NavbarComponent extends LanguageComponent implements OnInit {
     this.calcOpacity();
   }
 
-  // ngOnInit() {} // disables reinitialization of language component(thus speedin up page)
+  ngOnInit() {} // disables reinitialization of language component(thus speedin up page)
 
   get OpacityType(): number {
     return this.opacityType;
