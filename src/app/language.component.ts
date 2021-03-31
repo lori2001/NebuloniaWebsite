@@ -25,14 +25,7 @@ export class LanguageComponent implements OnInit {
   }
 
   setLanguageAfterParams(language: string) {
-    let ind: number, pg: string;
-    if (this.translate.currentLang === undefined && language !== undefined )
-    {
-      ind = this.router.url.lastIndexOf(language) + language.length;
-      pg = this.router.url.substring(ind);
-      this.translate.use(language);
-    }
-    else if(language !== undefined && language !== this.translate.currentLang) {
+    if(language !== undefined) {
       let found = false;
       for (const langs in this.translate.getLangs()) {
         if (language === this.translate.getLangs()[langs]) {
@@ -40,16 +33,16 @@ export class LanguageComponent implements OnInit {
           break;
         }
       }
-      
+
       if (!found) { // if the language requested wasn't loaded reset to default
         console.log(language, '- Language type not found! Resetting to default language instead.');
         this.translate.use(this.translate.getDefaultLang());
         this.router.navigate([this.translate.currentLang + '/not-found']);
       } else {
-        ind = this.router.url.lastIndexOf(this.translate.currentLang);
-        pg = this.router.url.substring(this.router.url.lastIndexOf(this.translate.currentLang) + this.translate.currentLang.length);
         this.translate.use(language);
       }
+    } else {
+      console.log("Language is undefined, thus can't be set!");
     }
   }
 
