@@ -3,7 +3,7 @@ import { DeviceDetectorService } from 'ngx-device-detector';
 import { PointsElement } from 'src/app/models/database/points.element';
 import { PointsService } from 'src/app/services/points.service';
 import { MessageService } from 'primeng/api';
-import * as jsPDF from 'jspdf';
+import { jsPDF } from 'jspdf';
 
 @Component({
   selector: 'app-points',
