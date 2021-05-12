@@ -25,7 +25,7 @@ export class PresidentsComponent {
   @Input() height = 'auto';
 
   /*owl carousel options from https://owlcarousel2.github.io/OwlCarousel2/docs/api-options.html */
-  public sliderOPT: any = {
+  sliderOPT: any = {
     dots: true,
     autoplay: true,
     autoplayTimeout: 4000,
@@ -48,6 +48,12 @@ export class PresidentsComponent {
     }
   };
 
+  constructor() {
+    this.checkResolution();
+    this.hidePresentation();
+  }
+
+  // EASTEREGG START
   @ViewChild('presentation', {static: false}) presentation: ElementRef;
   stopPresVideo() {
     if (this.presentation !== undefined) {
@@ -55,12 +61,6 @@ export class PresidentsComponent {
     }
   }
 
-  constructor() {
-    this.checkResolution();
-    this.hidePresentation();
-  }
-
-  // EASTEREGG START
   countAndCheck(index: number) {
     if (index < 3) { // use only first three pics
       this.clicks[index]++;

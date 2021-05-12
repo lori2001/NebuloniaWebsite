@@ -24,8 +24,8 @@
     "@ngx-translate/http-loader": "^4.0.0",
     "@nicky-lenaers/ngx-scroll-to": "^3.0.1",
     "@types/jquery": "^3.3.38",
-    "angular-font-awesome": "^3.1.2",
     "bootstrap": "^4.5.0",
+    "codelyzer": "^6.0.2",
     "font-awesome": "^4.7.0",
     "jspdf": "^2.3.1",
     "ng-lazyload-image": "^7.1.0",
@@ -57,7 +57,7 @@
     "karma-jasmine-html-reporter": "^1.5.4",
     "protractor": "^5.4.4",
     "ts-node": "~7.0.0",
-    "tslint": "~5.15.0",
+    "tslint": "^5.15.0",
     "typescript": "~3.5.3"
   }
 }

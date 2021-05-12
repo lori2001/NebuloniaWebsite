@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 // import ngx-translate and the http loader
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
@@ -86,7 +85,6 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AngularFontAwesomeModule,
 
     // detection of browsers and devices
     DeviceDetectorModule.forRoot(),
