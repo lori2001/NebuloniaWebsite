@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 // import ngx-translate and the http loader
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
@@ -118,6 +118,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
          }
      })
   ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [],
   bootstrap: [AppComponent]
 })
