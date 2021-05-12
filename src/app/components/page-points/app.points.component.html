@@ -1,4 +1,4 @@
-<p-toast [style]="{marginTop: messageMargin}" 
+<p-toast [style]="{marginTop: messageMargin}"
           position="top-right"
           key="custom"
           styleClass="custom-toast">
@@ -6,7 +6,7 @@
           <ng-template let-message pTemplate="message">
               <a tabindex="0" class="ui-toast-close-icon pi pi-times" (click)="onReject()" *ngIf="message.closable !== false"></a>
               <span class="ui-toast-icon pi"
-              [ngClass]="{'pi-info-circle': message.severity == 'info', 'pi-exclamation-triangle': message.severity == 'warn',
+                  [ngClass]="{'pi-info-circle': message.severity == 'info', 'pi-exclamation-triangle': message.severity == 'warn',
                   'pi-times': message.severity == 'error', 'pi-check' :message.severity == 'success'}"></span>
               <div class="ui-toast-message-text-content">
                   <div class="ui-toast-summary">{{message.summary | translate}}</div>
@@ -28,7 +28,7 @@
     <div *ngFor="let layoutType of layoutTypes">
         <div *ngIf="layoutType === this.currentLayout">
             <section class="content{{layoutType}}">
-                <video *ngIf="this.staticFlags === false" autoplay muted loop 
+                <video *ngIf="this.staticFlags === false" autoplay muted loop
                     poster="../../../assets/images/points/background/{{layoutType}}/first.jpg">
                     <source src="../../../assets/videos/points/{{layoutType}}/first.webm" type="video/webm">
                     <source src="../../../assets/videos/points/{{layoutType}}/first.mp4" type="video/mp4">
@@ -57,7 +57,7 @@
                         <div class="points"><b>{{this.totalPoints[0]}}</b></div>
                         <div class="tablelink">
                             <a (click)="toggleTable(0)">
-                                {{'points.table' | translate}} 
+                                {{'points.table' | translate}}
                                 <i *ngIf="!this.table[0]" class="fa fa-caret-down"></i>
                                 <i *ngIf="this.table[0]" class="fa fa-caret-right"></i>
                             </a>
@@ -78,7 +78,7 @@
                         <div class="points"><b>{{this.totalPoints[1]}}</b></div>
                         <div class="tablelink">
                             <a (click)="toggleTable(1)">
-                                {{'points.table' | translate}} 
+                                {{'points.table' | translate}}
                                 <i *ngIf="!this.table[1]" class="fa fa-caret-down"></i>
                                 <i *ngIf="this.table[1]" class="fa fa-caret-right"></i>
                             </a>
@@ -99,7 +99,7 @@
                         <div class="points"><b>{{this.totalPoints[2]}}</b></div>
                         <div class="tablelink">
                             <a (click)="toggleTable(2)">
-                                {{'points.table' | translate}} 
+                                {{'points.table' | translate}}
                                 <i *ngIf="!this.table[2]" class="fa fa-caret-down"></i>
                                 <i *ngIf="this.table[2]" class="fa fa-caret-right"></i>
                             </a>
@@ -120,7 +120,7 @@
                         <div class="points"><b>{{this.totalPoints[3]}}</b></div>
                         <div class="tablelink">
                             <a (click)="toggleTable(3)">
-                                {{'points.table' | translate}} 
+                                {{'points.table' | translate}}
                                 <i *ngIf="!this.table[3]" class="fa fa-caret-down"></i>
                                 <i *ngIf="this.table[3]" class="fa fa-caret-right"></i>
                             </a>

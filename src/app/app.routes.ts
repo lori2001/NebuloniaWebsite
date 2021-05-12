@@ -10,11 +10,11 @@ import { CreatorsComponent } from './components/page-creators/app.creators.compo
 import { AdminComponent } from './components/page-admin/app.admin.component';
 import { EsportsEventComponent } from './components/page-esports-event/app.esports-event.component';
 import { WorkInProgressComponent } from './components/comp-work-in-progress/app.work-in-progress.component';
-import { LanguageComponent } from './language.component';
+import { LanguageComponent } from './app.language.component';
 
 const routes: Routes = [
   {path : 'admin', redirectTo : 'hu/admin', pathMatch: 'full'}, // for convenience
-  
+
   { path : ':lang', component: LanguageComponent,
     children: [
       {path : 'main', component : MainComponent},
