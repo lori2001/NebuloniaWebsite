@@ -1,18 +1,6 @@
-<p-toast [style]="{marginTop: messageMargin}" 
+<p-toast [style]="{marginTop: messageMargin}"
           position="top-right"
-          key="custom"
-          styleClass="custom-toast">
-
-          <ng-template let-message pTemplate="message">
-              <a tabindex="0" class="ui-toast-close-icon pi pi-times" (click)="onReject()" *ngIf="message.closable !== false"></a>
-              <span class="ui-toast-icon pi"
-              [ngClass]="{'pi-info-circle': message.severity == 'info', 'pi-exclamation-triangle': message.severity == 'warn',
-                  'pi-times': message.severity == 'error', 'pi-check' :message.severity == 'success'}"></span>
-              <div class="ui-toast-message-text-content">
-                  <div class="ui-toast-summary">{{message.summary | translate}}</div>
-                  <div class="ui-toast-detail" style="line-height: 1.4;">{{message.detail | translate}}</div>
-              </div>
-        </ng-template>
+          key="custom">
 </p-toast>
 <!--Declares a toast for messages. Can be put almost anywhere-->
 
@@ -65,21 +53,21 @@
     <div class="links">
       <div class="row"><h2><b>{{ 'admin.important-links' | translate}}</b></h2></div>
       <div class="grid">
-          <a href="https://github.com/Nebulonia" target="_blank"> 
+          <a href="https://github.com/Nebulonia" target="_blank">
             <img src="../../../assets/images/admin/github.png">
             <p>{{ 'admin.ndsz-apps' | translate}}</p>
           </a>
           <a href="https://aprilyfogimnazium-my.sharepoint.com/:f:/g/personal/nebuloniadsz_aprilyfogimnazium_ro/EoC1R8EsFuFBhe7eCSbcxEMBV-kZZ76Moo3dCNpwh1J0mQ?e=JXaFKN"
-          target="_blank"> 
+          target="_blank">
             <img src="../../../assets/images/admin/onedrive.png">
             <p>{{ 'admin.data' | translate}}</p>
             <p style="margin-top: 0;">nebuloniadsz@aprilyfogimnazium.ro</p>
           </a>
-          <a href="https://server46.romania-webhosting.com:2096/logout?" target="_blank"> 
+          <a href="https://server46.romania-webhosting.com:2096/logout?" target="_blank">
             <img src="../../../assets/images/admin/email.png">
             <p>office@nebulonia.ro</p>
           </a>
-          <a href="http://cpanel46.claus.ro/" target="_blank"> 
+          <a href="http://cpanel46.claus.ro/" target="_blank">
             <img src="../../../assets/images/admin/cpanel.png">
             <p>{{ 'admin.cpanel' | translate}}</p>
           </a>
@@ -89,4 +77,3 @@
   </div>
   <!--- Admin Page END ------------------------------->
 </section>
-  

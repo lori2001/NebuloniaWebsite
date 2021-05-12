@@ -1,9 +1,11 @@
+@import url("../../../../primestyle.css");
+
 :host ::ng-deep .custom-toast .ui-toast-message {
    background: rgb(255, 208, 99) !important;
 }
 
 #contact {
-   padding-top: 54px; 
+   padding-top: 54px;
    padding-bottom: 54px;
    background: #191919;
    /*width: 100%;

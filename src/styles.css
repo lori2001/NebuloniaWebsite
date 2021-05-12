@@ -61,7 +61,7 @@ body {
 /*tricks bold tag by changing font-style into the bold type of the most used font*/
 b{
   font-weight: normal;
-  font-family: objectivityBold, octarineBold, arialBlack, Arial; 
+  font-family: objectivityBold, octarineBold, arialBlack, Arial;
 }
 
 html {
@@ -103,8 +103,8 @@ html a, html a:visited, html a:link {
 }
 html a:hover {
   text-decoration: none;
-  color: #F06000 !important; 
-  
+  color: #F06000 !important;
+
   cursor:pointer;
 }
 /*hides outline when on focus*/

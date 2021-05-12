@@ -10,7 +10,7 @@ export class AboutComponent {
 
   constructor() {}
 
-  @ViewChild('presentation', {static: false}) presentation: ElementRef;
+  @ViewChild('presentation') presentation: ElementRef;
   stopPresVideo() {
     if (this.presentation !== undefined) {
       this.presentation.nativeElement.pause();

@@ -3,6 +3,7 @@ import { MessageService } from 'primeng/api';
 import { DeviceDetectorService } from 'ngx-device-detector';
 import { EmailElement } from 'src/app/models/database/email.element';
 import { EmailService } from 'src/app/services/email.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
@@ -17,6 +18,7 @@ export class ContactComponent {
 
   constructor(private messageService: MessageService,
               private deviceService: DeviceDetectorService,
+              private translate: TranslateService,
               private emailService: EmailService) {
     this.checkMobileMode();
     if (this.deviceService.browser === 'FB-Messanger') {
@@ -24,10 +26,10 @@ export class ContactComponent {
     }
   }
 
-  @ViewChild('mailform1', {static: false}) mailForm1: ElementRef;
-  @ViewChild('mailform2', {static: false}) mailForm2: ElementRef;
-  @ViewChild('mailform3', {static: false}) mailForm3: ElementRef;
-  @ViewChild('mailform4', {static: false}) mailForm4: ElementRef;
+  @ViewChild('mailform1') mailForm1: ElementRef;
+  @ViewChild('mailform2') mailForm2: ElementRef;
+  @ViewChild('mailform3') mailForm3: ElementRef;
+  @ViewChild('mailform4') mailForm4: ElementRef;
 
   @HostListener('window:resize', [])
   checkMobileMode() {
@@ -58,7 +60,7 @@ export class ContactComponent {
     this.emailElement.message = this.mailForm4.nativeElement.value;
 
     /*sends email and returns status message through messageService*/
-    this.emailService.sendEmail(this.emailElement, this.messageService);
+    this.emailService.sendEmail(this.emailElement, this.messageService, this.translate);
 
     // this.showSuccess();
     this.clearmailInput();

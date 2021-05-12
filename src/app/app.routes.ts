@@ -41,7 +41,7 @@ const routes: Routes = [
   {path: '**', redirectTo: 'hu/not-found', pathMatch: 'full'} // catches wrong URL*/
 ];
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}

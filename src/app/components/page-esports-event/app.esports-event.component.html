@@ -1,25 +1,13 @@
 <!--Declares a toast for messages. Can be put almost anywhere-->
-<p-toast [style]="{marginTop: messageMargin}" 
+<p-toast [style]="{marginTop: messageMargin}"
           position="top-right"
-          key="custom"
-          styleClass="custom-toast">
-
-          <ng-template let-message pTemplate="message">
-              <a tabindex="0" class="ui-toast-close-icon pi pi-times" (click)="onReject()" *ngIf="message.closable !== false"></a>
-              <span class="ui-toast-icon pi"
-              [ngClass]="{'pi-info-circle': message.severity == 'info', 'pi-exclamation-triangle': message.severity == 'warn',
-                  'pi-times': message.severity == 'error', 'pi-check' :message.severity == 'success'}"></span>
-              <div class="ui-toast-message-text-content">
-                  <div class="ui-toast-summary">{{message.summary | translate}}</div>
-                  <div class="ui-toast-detail" style="line-height: 1.4;">{{message.detail | translate}}</div>
-              </div>
-        </ng-template>
+          key="custom">
 </p-toast>
 
   <app-navbar *ngIf="this.notification === false" [OpacityType] = '2'></app-navbar>
   <section *ngIf="this.notification === false" id="esports-event">
   <div class="banner-image"></div>
-  
+
   <div *ngFor="let token of esportsStreamLinks | keyvalue">
     <div class="line"></div>
     <br><br><br>

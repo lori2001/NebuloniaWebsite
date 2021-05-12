@@ -36,8 +36,8 @@ export class AdminComponent implements OnInit {
           this.messageService.add({
             key: 'custom',
             severity: 'warn',
-            summary: 'admin.messages.connection-error.summary',
-            detail: 'admin.messages.connection-error.details'
+            summary: this.translate.instant('admin.messages.connection-error.summary'),
+            detail: this.translate.instant('admin.messages.connection-error.details')
           });
         }
       }
@@ -76,8 +76,8 @@ export class AdminComponent implements OnInit {
       this.messageService.add({
         key: 'custom',
         severity: 'warn',
-        summary: 'admin.messages.points-input-error.summary',
-        detail: 'admin.messages.points-input-error.details'
+        summary: this.translate.instant('admin.messages.points-input-error.summary'),
+        detail: this.translate.instant('admin.messages.points-input-error.details')
       });
     } else {
       this.pointsService.setPoints(info, this.messageService);
@@ -95,8 +95,8 @@ export class AdminComponent implements OnInit {
           this.messageService.add({
             key: 'custom',
             severity: 'warn',
-            summary: 'admin.messages.connection-error.summary',
-            detail: 'admin.messages.connection-error.details'
+            summary: this.translate.instant('admin.messages.connection-error.summary'),
+            detail: this.translate.instant('admin.messages.connection-error.details')
           });
         }
       }
@@ -125,8 +125,8 @@ export class AdminComponent implements OnInit {
       this.messageService.add({
         key: 'custom',
         severity: 'warn',
-        summary: 'admin.messages.activity-name-error.summary',
-        detail: 'admin.messages.activity-name-error.details'
+        summary: this.translate.instant('admin.messages.activity-name-error.summary'),
+        detail: this.translate.instant('admin.messages.activity-name-error.details')
       });
     }
   }

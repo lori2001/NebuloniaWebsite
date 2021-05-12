@@ -1,0 +1,54 @@
+/*
+  @import url("../primestyle.css");
+*/
+
+/*Normal Button*/
+::ng-deep .p-button{
+  background-color: #FFB300;
+  border: 1px solid #FFB300;
+}
+::ng-deep .p-button:focus{
+  background-color: #FFB300 !important;
+}
+::ng-deep .p-button:hover{
+  background-color: #F06000 !important;
+  border: 1px solid #F06000 !important;
+}
+
+/*Danger button*/
+::ng-deep .ui-button-danger{
+  color: white !important;
+  background-color: #e91224;
+  border: 1px solid #e91224;
+}
+::ng-deep .ui-button-danger:focus{
+  background-color: #e91224 !important;
+}
+::ng-deep .ui-button-danger:hover{
+  background-color: #c01120 !important;
+  border: 1px solid #c01120 !important;
+}
+
+/*Toast*/
+::ng-deep .p-inputtext {
+  color: #dedede;
+  background: #585858;
+}
+::ng-deep .p-toast{
+  opacity: 1;
+}
+::ng-deep .p-toast-message {
+  background-color: #f7dc92;
+  width: 290px;
+  float: right;
+}
+::ng-deep .p-toast-message-content {
+  padding: 1rem 0.4rem !important;
+  position: relative;
+}
+::ng-deep .p-toast-icon-close {
+  position: absolute !important;
+  right: 5px;
+  top: 5px;
+}
+

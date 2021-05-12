@@ -54,7 +54,7 @@ export class PresidentsComponent {
   }
 
   // EASTEREGG START
-  @ViewChild('presentation', {static: false}) presentation: ElementRef;
+  @ViewChild('presentation') presentation: ElementRef;
   stopPresVideo() {
     if (this.presentation !== undefined) {
       this.presentation.nativeElement.pause();

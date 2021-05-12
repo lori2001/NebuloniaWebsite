@@ -1,3 +1,5 @@
+@import url("../../../primestyle.css");
+
 #esports-event {
   padding-top: 48px;
   color: white;
@@ -27,7 +29,7 @@ b {
 }
 
 #esports-event a:hover, .notification a:hover {
-  color: rgb(90, 87, 255) !important; 
+  color: rgb(90, 87, 255) !important;
 }
 
 #esports-event h1 {
@@ -123,7 +125,7 @@ b {
   line-height: 1.25;
 
   width: 100%;
-  
+
   color: white;
   background-color: #2F255A;
 }
@@ -188,9 +190,9 @@ b {
   #esports-event .banner-image {
     width: 100vw;
     --banner-height: calc(0.301923 * 100vw);
-  
+
     height: var(--banner-height);
-  
+
     background-size: 100% auto;
     background-image: url("../../../assets/images/special-events/esports2020m.png");
   }
@@ -205,7 +207,7 @@ b {
     grid-gap: 20px;
     text-align: center;
   }
-  
+
   #esports-event .teams-container {
     margin: 0 5vw;
     grid-template-columns: 100%;
@@ -232,7 +234,7 @@ b {
   }
   .notification {
     top: 15px; right:0;
-    
+
     width: 220px;
     height: 60px;
     font-size: 1.7em;

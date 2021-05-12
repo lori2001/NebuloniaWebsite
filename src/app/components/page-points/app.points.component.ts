@@ -4,6 +4,7 @@ import { PointsElement } from 'src/app/models/database/points.element';
 import { PointsService } from 'src/app/services/points.service';
 import { MessageService } from 'primeng/api';
 import { jsPDF } from 'jspdf';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-points',
@@ -27,6 +28,7 @@ export class PointsComponent implements OnInit {
   blocker: boolean[] = [false, false, false, false]; // used to block table collapse
 
   constructor(private deviceService: DeviceDetectorService,
+              private translate: TranslateService,
               private pointsService: PointsService,
               private messageService: MessageService) {
     this.calcAspectRatio();
@@ -74,8 +76,8 @@ export class PointsComponent implements OnInit {
           this.messageService.add({
             key: 'custom',
             severity: 'warn',
-            summary: 'points.error-message.summary',
-            detail: 'points.error-message.details'
+            summary: this.translate.instant('points.error-message.summary'),
+            detail: this.translate.instant('points.error-message.details')
           });
         }
       }

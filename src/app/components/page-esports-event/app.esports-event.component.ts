@@ -3,6 +3,7 @@ import { EsportsService } from 'src/app/services/esports.service';
 import { EsportsTeamElement } from 'src/app/models/database/esportsteam.element';
 import { MessageService } from 'primeng/api';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-esports-event',
@@ -25,6 +26,7 @@ export class EsportsEventComponent implements OnInit {
 
   constructor(private messageService: MessageService,
               private esportsService: EsportsService,
+              private translate: TranslateService,
               private domSanitizer: DomSanitizer) {
       // calculates message margin-top based on device width
       this.calcMessageMargin();
@@ -47,8 +49,8 @@ export class EsportsEventComponent implements OnInit {
           this.messageService.add({
             key: 'custom',
             severity: 'warn',
-            summary: 'admin.messages.connection-error.summary',
-            detail: 'admin.messages.connection-error.details'
+            summary: this.translate.instant('admin.messages.connection-error.summary'),
+            detail: this.translate.instant('admin.messages.connection-error.details')
           });
         }
       }
@@ -68,8 +70,8 @@ export class EsportsEventComponent implements OnInit {
           this.messageService.add({
             key: 'custom',
             severity: 'warn',
-            summary: 'admin.messages.connection-error.summary',
-            detail: 'admin.messages.connection-error.details'
+            summary: this.translate.instant('admin.messages.connection-error.summary'),
+            detail: this.translate.instant('admin.messages.connection-error.details')
           });
         }
       }

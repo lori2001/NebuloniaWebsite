@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { EmailElement } from '../models/database/email.element';
 import { MessageService } from 'primeng/api';
+import { TranslateService } from '@ngx-translate/core';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class EmailService {
 
     constructor(private http: HttpClient) {}
 
-    sendEmail(emailElement: EmailElement, messageService: MessageService) {
+    sendEmail(emailElement: EmailElement, messageService: MessageService, translate: TranslateService) {
 
         this.http.post(`${this.baseUrl}/sendEmail.php`, emailElement)
         .subscribe(
@@ -20,8 +21,8 @@ export class EmailService {
               messageService.add({
                 key: 'custom',
                 severity: 'success',
-                summary: 'contact.messages.success.summary',
-                detail: 'contact.messages.success.details'
+                summary: translate.instant('contact.messages.success.summary'),
+                detail: translate.instant('contact.messages.success.details')
               });
             }
           },
@@ -30,8 +31,8 @@ export class EmailService {
               messageService.add({
                 key: 'custom',
                 severity: 'warn',
-                summary: 'contact.messages.error.summary',
-                detail: 'contact.messages.error.details'
+                summary: translate.instant('contact.messages.error.summary'),
+                detail: translate.instant('contact.messages.error.details')
               });
             }
           }
