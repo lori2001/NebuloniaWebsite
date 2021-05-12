@@ -54,9 +54,54 @@
 
    padding-top:10px;
    margin: 0 auto;
-   
+
    display: block;
    width: 100%; /*fills .facebook*/
+}
+
+.fb-placeholder {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  background-image: linear-gradient(120deg, #0e1f56, #3b5998 );
+  /*outline: 5px solid #6d84b4;
+  outline-offset: -5px;
+  /*border-radius: 20px;*/
+}
+.warn, .name {
+  color: white;
+  font-family: objectivityBold, Arial; /*default font*/
+  width: 100%;
+  padding: 20% 17px;
+}
+.warn{
+  font-size: 1.2rem;
+}
+.name {
+  font-size: 2.3rem;
+  position: absolute;
+  top: 100%;
+  transform: translate(0, -100%);
+}
+.logo{
+  border-radius: 50%;
+  border: 6px solid #d8dfea;
+  width: 55%;
+  height: auto;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  -webkit-transition: border .25s ease-in-out;
+  -moz-transition: border .25s ease-in-out;
+  -o-transition: border .25s ease-in-out;
+  -ms-transition: border .25s ease-in-out;
+  transition: border .25s ease-in-out;
+}
+.logo:hover{
+  border: 6px solid #F06000;
 }
 /*FACEBOOK END*/
 
@@ -86,6 +131,13 @@
       font-size: 1.3em;
    }
 
+   .warn{
+    font-size: 1.1rem;
+  }
+  .name {
+    font-size: 1.9rem;
+  }
+
    #events .feeds {
       width: 65%;
    }
@@ -104,7 +156,7 @@
    .feeds a {
       font-size: 1.3em;
    }
-   
+
    #events .feeds {
       width: 70%;
    }
@@ -123,7 +175,7 @@
    .feeds a {
       font-size: 1.3em;
    }
-   
+
    #events .feeds {
       width: 75%;
    }
@@ -140,4 +192,12 @@
       /*position below*/
       float: none;
    }
+   @media screen and (min-width: 0px) and (max-width: 450px){
+    .warn{
+      font-size: 1.1rem;
+    }
+    .name {
+      font-size: 1.7rem;
+    }
+  }
 }
