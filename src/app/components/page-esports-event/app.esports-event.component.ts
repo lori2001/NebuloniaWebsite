@@ -61,7 +61,7 @@ export class EsportsEventComponent implements OnInit {
     this.esportsService.getStreamLinks().subscribe(
       (res: Map<string, string>) => {
         this.esportsStreamLinks = res;
-        for (const key in res) {
+        for (const key of Object.keys(res)) {
           this.embedLinks.set(key, this.getLink(key, true));
         }
       },

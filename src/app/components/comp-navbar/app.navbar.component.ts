@@ -9,13 +9,6 @@ import { LanguageComponent } from 'src/app/app.language.component';
   styleUrls: ['./app.navbar.component.css']
 })
 export class NavbarComponent extends LanguageComponent implements OnInit {
-  width = '100%'; // background width
-  bgopacity = 0; // background opacity
-
-  mobileMode = false; // enables/disables mobile mode
-  collapse = true; // true if mobile style menu is collapsed
-
-  mainPage = false; // checks and applies offset to links whether the user is on main page or not
   get MainPage(): boolean {
     return this.mainPage;
   }
@@ -24,12 +17,9 @@ export class NavbarComponent extends LanguageComponent implements OnInit {
     this.mainPage = value;
   }
 
-  // 0 - zeroOpacity, 1 - dependable, 2>= - fullOpacity
-  opacityType = 1; // different background opacity calculations
-
-  constructor(activatedRoute : ActivatedRoute,
-    translate: TranslateService,
-    router: Router)
+  constructor(activatedRoute: ActivatedRoute,
+              translate: TranslateService,
+              router: Router)
   {
     super(activatedRoute, translate, router);
 
@@ -37,8 +27,6 @@ export class NavbarComponent extends LanguageComponent implements OnInit {
     this.checkMobileMode();
     this.calcOpacity();
   }
-
-  ngOnInit() {} // disables reinitialization of language component(thus speedin up page)
 
   get OpacityType(): number {
     return this.opacityType;
@@ -53,8 +41,20 @@ export class NavbarComponent extends LanguageComponent implements OnInit {
       this.calcOpacity();
     }
   }
+  width = '100%'; // background width
+  bgopacity = 0; // background opacity
+
+  mobileMode = false; // enables/disables mobile mode
+  collapse = true; // true if mobile style menu is collapsed
+
+  mainPage = false; // checks and applies offset to links whether the user is on main page or not
+
+  // 0 - zeroOpacity, 1 - dependable, 2>= - fullOpacity
+  opacityType = 1; // different background opacity calculations
 
   @Input() offset = -48;
+
+  ngOnInit() {} // disables reinitialization of language component(thus speedin up page)
 
   @HostListener('window:resize', [])
   checkMobileMode() {

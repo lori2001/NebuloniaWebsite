@@ -10,9 +10,9 @@ import { LanguageComponent } from 'src/app/app.language.component';
 })
 export class NotFoundComponent extends LanguageComponent {
 
- constructor(activatedRoute : ActivatedRoute,
-  translate: TranslateService,
-  router: Router){
+ constructor(activatedRoute: ActivatedRoute,
+             translate: TranslateService,
+             router: Router){
    super(activatedRoute, translate, router);
  }
 
