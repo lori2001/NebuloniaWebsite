@@ -1,6 +1,6 @@
 {
     "site_name": "Nebulónia Diákszövetség",
-    
+
     "title": {
         "up" : "Nebulónia",
         "down" : "Diákszövetség"
@@ -37,6 +37,10 @@
         "legal_representative": "Jogi referens"
     },
 
+    "events" : {
+      "tracker-warning": "A trackerek most éppen lógnak! Sajnos csak linkelni tudjuk facebook oldalunkat."
+    },
+
     "not-found": {
         "exclamation": "Az iskoláját!",
         "description": "A kívánt oldal nem található.",
@@ -46,7 +50,7 @@
     "contact" : {
         "title" : "Lépj kapcsolatba velünk!",
         "text" : "Ha már kihangsúlyoztuk, hogy a Nebulónia sok oldalú, nyitott különböző véleményekre, az alábbiakban lehetőséged van neked is kapcsolatba lépni velünk! A visszajelzéseket, akár kritkákat, új ötleteket, javaslatokat szívesen fogadjuk, hiszen általuk jobbá válhatunk.",
-        "mail" : { 
+        "mail" : {
             "name" : "Név",
             "email" : "Email",
             "title" : "Cím",
@@ -89,7 +93,7 @@
         },
         "Lorand": {
             "text" : "A 2019 március 13-án közzétett website készítője vagyok. A weboldal stílusa hasonlít a régihez viszont a kód teljesen újra van írva. Jó néhány új dolgot implementáltam s az újjákészítésben sok-sok \"easter egg\"-et rejtettem el, remélem néhányat megtalálsz. Kezdetnek kattints a képemre ötször.",
-            "postscript" : "A website Angular technológiával volt készítve. Kezelési infókért vagy segítségért keress meg itt:" 
+            "postscript" : "A website Angular technológiával volt készítve. Kezelési infókért vagy segítségért keress meg itt:"
         },
         "Csuti": {
             "text" : "A 2017-2018 as tanév folyamán én kezeltem illetve frissítettem fel a websiteot. Többek között az elnökök képeit is kicseréltem illteve az adatbázist is kezeltem."

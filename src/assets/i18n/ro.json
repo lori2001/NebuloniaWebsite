@@ -1,6 +1,6 @@
 {
     "site_name": "Consiliul Elevilor Nebulónia",
-    
+
     "title": {
         "up" : "Consiliul Elevilor",
         "down" : "Nebulónia"
@@ -37,6 +37,10 @@
         "legal_representative": "Consilier Juridic"
     },
 
+    "events" : {
+      "tracker-warning": "Trackerii chiulesc de pe site! Din păcate avem doar link la pagina noastră de facebook."
+    },
+
     "not-found": {
         "exclamation": "Fir-ar!",
         "description": "Pagina cerută nu a fost găsită!",
@@ -46,7 +50,7 @@
     "contact" : {
         "title" : "Fă legătură cu noi!",
         "text" : "Dacă tot am menționat faptul că Nebulónia este o organizație mereu deschisă noilor opinii, aici aveți ocazia să luați legătura cu noi! Feedback-ul, critica constructivă și ideile noi sunt bine-venite căci cu ajutorul acestora putem evolua în ceva mai bun.",
-        "mail" : { 
+        "mail" : {
             "name" : "Nume",
             "email" : "Email",
             "title" : "Titlu",
@@ -89,7 +93,7 @@
         },
         "Lorand": {
             "text" : "Eu sunt creatorul siteului publicat pe data de 13 martie 2019. Stilul siteului este foarte similar celui anterior însă intern a fost complet refăcut. Am implementat o mulțime de funcțiuni noi printre care și așa-zisele \"easter egg\"-uri. Sper ca acestea să fie descoperite cât mai curând. Pentru început apasă pe imaginea mea de cinci ori.",
-            "postscript" : "Websiteul a fost făcut cu ajutorul technologiei Angular. Pentru informații suplimentare privind modificarea acestuia pot fi contactat pe"  
+            "postscript" : "Websiteul a fost făcut cu ajutorul technologiei Angular. Pentru informații suplimentare privind modificarea acestuia pot fi contactat pe"
         },
         "Csuti": {
             "text" : "Eu sunt cel care a actualizat și a menținut în functiune acest site între anii 2017-2018. Printre alte lucruri am schimbat și imaginile președinților și am actualizat și baza de date."
@@ -108,7 +112,7 @@
         }
     },
 
-    
+
     "admin" : {
         "title": "Pg. administrativă",
 
@@ -203,12 +207,12 @@
             "here": "aici!"
         }
     },
-    
+
     "work-in-progress" : {
         "summary" : "Sub Construcție",
         "message" : "Echipa noastră muncește din plin la această pagină. Această pagina va în curând disponibilă."
     },
-    
+
     "esports-event" : {
         "teams": "Echipe",
         "now": "Acum"
