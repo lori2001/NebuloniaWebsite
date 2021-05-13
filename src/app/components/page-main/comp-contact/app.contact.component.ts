@@ -26,10 +26,10 @@ export class ContactComponent {
     }
   }
 
-  @ViewChild('mailform1') mailForm1: ElementRef;
-  @ViewChild('mailform2') mailForm2: ElementRef;
-  @ViewChild('mailform3') mailForm3: ElementRef;
-  @ViewChild('mailform4') mailForm4: ElementRef;
+  @ViewChild('mailform1', {static: false}) mailForm1: ElementRef;
+  @ViewChild('mailform2', {static: false}) mailForm2: ElementRef;
+  @ViewChild('mailform3', {static: false}) mailForm3: ElementRef;
+  @ViewChild('mailform4', {static: false}) mailForm4: ElementRef;
 
   @HostListener('window:resize', [])
   checkMobileMode() {

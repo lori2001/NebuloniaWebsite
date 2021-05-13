@@ -5,7 +5,7 @@
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0';
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0&appId=2318953551684085&autoLogAppEvents=1';
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
 
@@ -15,7 +15,7 @@
   var resize;
 
   function initFBPlugin(){
-    setTimeout(function() {resizeFBPlugin();}, 800); // timeouts add up!!!
+    setTimeout(function() {resizeFBPlugin();}, 700); // timeouts add up!!!
   }
 
   function resizeFBPlugin(){
@@ -39,6 +39,6 @@
       if (typeof FB !== 'undefined' ) {
           FB.XFBML.parse();
       }
-    }, 1000);
+    }, 800);
   }
 /****************Facebook END****************/

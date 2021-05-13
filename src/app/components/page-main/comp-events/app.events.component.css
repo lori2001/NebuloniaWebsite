@@ -40,27 +40,29 @@
 /*INSTAGRAM END*/
 
 /*FACEBOOK START*/
-/*
 .feeds .facebook {
-   height: 100%;
+  position: relative;
 }
-*/
 .feeds .facebook .fb-page {
-   /* facebook api constrains at the time of writing */
-   /* there is no pont in changing these */
-   max-width: 500px;
-   min-width: 180px;
-   min-height: 250px;
-
-   padding-top:10px;
+   padding-top: 10px;
    margin: 0 auto;
 
    display: block;
    width: 100%; /*fills .facebook*/
 }
 
+.feeds .facebook .fb-page, .fb-placeholder, .fb-span {
+   max-width: 500px;
+   min-width: 180px;
+   min-height: 400px;
+}
+
 .fb-placeholder {
-  position: relative;
+  position: absolute;
+  top: 1.5em;
+  margin-top: 13px;
+  left: 50%;
+  transform: translate(-50%, 0);
   width: 100%;
   height: 800px;
   background-image: linear-gradient(120deg, #0e1f56, #3b5998 );
@@ -130,6 +132,9 @@
    .feeds a {
       font-size: 1.3em;
    }
+   .fb-placeholder {
+      top: 1.3em;
+   }
 
    .warn{
     font-size: 1.1rem;
@@ -156,6 +161,9 @@
    .feeds a {
       font-size: 1.3em;
    }
+   .fb-placeholder {
+      top: 1.3em;
+   }
 
    #events .feeds {
       width: 70%;
@@ -175,6 +183,9 @@
    .feeds a {
       font-size: 1.3em;
    }
+   .fb-placeholder {
+      top: 1.3em;
+   }
 
    #events .feeds {
       width: 75%;
@@ -192,12 +203,21 @@
       /*position below*/
       float: none;
    }
-   @media screen and (min-width: 0px) and (max-width: 450px){
-    .warn{
-      font-size: 1.1rem;
-    }
-    .name {
-      font-size: 1.7rem;
-    }
+
+   .fb-placeholder
+   {
+     max-width: 425px;
+     max-height: 400px;
+   }
+  .warn{
+    font-size: 1.1rem;
+    padding-top: 6%;
+  }
+  .name {
+    padding-bottom: 4%;
+    font-size: 1.7rem;
+  }
+  .logo{
+    width: 45%;
   }
 }
