@@ -10,32 +10,32 @@ export class YearComponent implements OnInit {
   @Input() offset = -48;
   @Input() archiveElement: ArchiveElement;
 
-  lowResImages: any;
+  thumbnails: any;
   images: any;
 
   ngOnInit() {
    this.images = [
-      { src: '../../../assets/images/archive/' + this.archiveElement.year + '/images/high-res (1).jpg'},
-      { src: '../../../assets/images/archive/' + this.archiveElement.year + '/images/high-res (2).jpg'},
-      { src: '../../../assets/images/archive/' + this.archiveElement.year + '/images/high-res (3).jpg'},
-      { src: '../../../assets/images/archive/' + this.archiveElement.year + '/images/high-res (4).jpg'},
-      { src: '../../../assets/images/archive/' + this.archiveElement.year + '/images/high-res (5).jpg'},
-      { src: '../../../assets/images/archive/' + this.archiveElement.year + '/images/high-res (6).jpg'},
-      { src: '../../../assets/images/archive/' + this.archiveElement.year + '/images/high-res (7).jpg'},
-      { src: '../../../assets/images/archive/' + this.archiveElement.year + '/images/high-res (8).jpg'},
-      { src: '../../../assets/images/archive/' + this.archiveElement.year + '/images/high-res (9).jpg'},
-      { src: '../../../assets/images/archive/' + this.archiveElement.year + '/images/high-res (10).jpg'}];
+      { src: '../../../assets/images/archive/' + this.archiveElement.year + '/images/1.jpg'},
+      { src: '../../../assets/images/archive/' + this.archiveElement.year + '/images/2.jpg'},
+      { src: '../../../assets/images/archive/' + this.archiveElement.year + '/images/3.jpg'},
+      { src: '../../../assets/images/archive/' + this.archiveElement.year + '/images/4.jpg'},
+      { src: '../../../assets/images/archive/' + this.archiveElement.year + '/images/5.jpg'},
+      { src: '../../../assets/images/archive/' + this.archiveElement.year + '/images/6.jpg'},
+      { src: '../../../assets/images/archive/' + this.archiveElement.year + '/images/7.jpg'},
+      { src: '../../../assets/images/archive/' + this.archiveElement.year + '/images/8.jpg'},
+      { src: '../../../assets/images/archive/' + this.archiveElement.year + '/images/9.jpg'},
+      { src: '../../../assets/images/archive/' + this.archiveElement.year + '/images/10.jpg'}];
 
-   this.lowResImages = [
-        { src: '../../../assets/images/archive/' + this.archiveElement.year + '/images/low-res (1).jpg'},
-        { src: '../../../assets/images/archive/' + this.archiveElement.year + '/images/low-res (2).jpg'},
-        { src: '../../../assets/images/archive/' + this.archiveElement.year + '/images/low-res (3).jpg'},
-        { src: '../../../assets/images/archive/' + this.archiveElement.year + '/images/low-res (4).jpg'},
-        { src: '../../../assets/images/archive/' + this.archiveElement.year + '/images/low-res (5).jpg'},
-        { src: '../../../assets/images/archive/' + this.archiveElement.year + '/images/low-res (6).jpg'},
-        { src: '../../../assets/images/archive/' + this.archiveElement.year + '/images/low-res (7).jpg'},
-        { src: '../../../assets/images/archive/' + this.archiveElement.year + '/images/low-res (8).jpg'},
-        { src: '../../../assets/images/archive/' + this.archiveElement.year + '/images/low-res (9).jpg'},
-        { src: '../../../assets/images/archive/' + this.archiveElement.year + '/images/low-res (10).jpg'}];
+   this.thumbnails = [
+        { src: '../../../assets/images/archive/thumbnails/' + this.archiveElement.year + '/images/1.jpg'},
+        { src: '../../../assets/images/archive/thumbnails/' + this.archiveElement.year + '/images/2.jpg'},
+        { src: '../../../assets/images/archive/thumbnails/' + this.archiveElement.year + '/images/3.jpg'},
+        { src: '../../../assets/images/archive/thumbnails/' + this.archiveElement.year + '/images/4.jpg'},
+        { src: '../../../assets/images/archive/thumbnails/' + this.archiveElement.year + '/images/5.jpg'},
+        { src: '../../../assets/images/archive/thumbnails/' + this.archiveElement.year + '/images/6.jpg'},
+        { src: '../../../assets/images/archive/thumbnails/' + this.archiveElement.year + '/images/7.jpg'},
+        { src: '../../../assets/images/archive/thumbnails/' + this.archiveElement.year + '/images/8.jpg'},
+        { src: '../../../assets/images/archive/thumbnails/' + this.archiveElement.year + '/images/9.jpg'},
+        { src: '../../../assets/images/archive/thumbnails/' + this.archiveElement.year + '/images/10.jpg'}];
   }
 }

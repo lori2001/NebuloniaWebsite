@@ -1,10 +1,11 @@
 {
   "name": "nebulonia",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "scripts": {
+    "serve": "node thumbnail-generator.js && ng serve",
+    "prod": "node thumbnail-generator.js && ng build --prod",
+    "watch": "node thumbnail-generator.js && ng build --watch",
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -28,9 +29,11 @@
     "codelyzer": "^6.0.0",
     "font-awesome": "^4.7.0",
     "jspdf": "^2.3.1",
+    "make-dir": "^3.1.0",
     "ng-lazyload-image": "^7.1.0",
     "ngx-device-detector": "^1.5.2",
     "ngx-owl-carousel": "^2.0.7",
+    "node-thumbnail": "^0.15.0",
     "normalize.css": "^8.0.1",
     "primeicons": "^2.0.0",
     "primeng": "^11.4.1",

@@ -3,10 +3,10 @@
         <div class="yearblock"
                 [ngStyle]="{'background-image':'url(../../../assets/images/archive/' + archiveElement.year +'/year_bg.jpg)'}"
                 style="background-position: center center;">
-                
+
                 <div class="greyhover"
                     [ngx-scroll-to]="'#' + archiveElement.year"
-                    [ngx-scroll-to-offset]="this.offset"> 
+                    [ngx-scroll-to-offset]="this.offset">
                     <h1 class="year"><b>{{archiveElement.year}}</b></h1>
             </div> <!-- adds greyscale and link when hovered upon-->
         </div>
@@ -21,7 +21,7 @@
     <div class="images">
         <div *ngFor="let image of images; let i = index">
             <img class="open-img"
-                [lazyLoad]="lowResImages[i].src" data-toggle="modal"
+                [lazyLoad]="thumbnails[i].src" data-toggle="modal"
                 [defaultImage]="'../../../assets/images/archive/placeholder.jpg'"
                 [attr.data-target]="'#modalCinema' + archiveElement.year + i">
             <div class="modal fade" id="modalCinema{{archiveElement.year}}{{i}}"
