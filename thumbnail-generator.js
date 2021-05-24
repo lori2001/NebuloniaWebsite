@@ -2,7 +2,7 @@ var thumb = require('node-thumbnail').thumb;
 const makeDir = require('make-dir');
 
 const STARTING_YEAR = 2016;
-var OVERWRITE = false;
+var OVERWRITE = true;
 
 var year = STARTING_YEAR; // THE FIRST YEAR FROM WHICH THINGS SHOULD BE GENERATED
 var shouldRun = true;
