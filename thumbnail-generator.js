@@ -2,6 +2,7 @@ var thumb = require('node-thumbnail').thumb;
 const makeDir = require('make-dir');
 
 const STARTING_YEAR = 2016;
+var OVERWRITE = false;
 
 var year = STARTING_YEAR; // THE FIRST YEAR FROM WHICH THINGS SHOULD BE GENERATED
 var shouldRun = true;
@@ -20,7 +21,7 @@ function thumbGenerator() {
       source: importFolder + '/' + subfolder,
       destination: exportDir,
       width: 600,
-      overwrite: true
+      overwrite: OVERWRITE
     }, function(files, err, stdout, stderr) {
       if(err === null) {
         console.log("Success for images in: ", exportDir);
