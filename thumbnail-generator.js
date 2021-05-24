@@ -1,12 +1,14 @@
 var thumb = require('node-thumbnail').thumb;
 const makeDir = require('make-dir');
 
-var year = 2016; // THE FIRST YEAR FROM WHICH THINGS SHOULD BE GENERATED
+const STARTING_YEAR = 2016;
+
+var year = STARTING_YEAR; // THE FIRST YEAR FROM WHICH THINGS SHOULD BE GENERATED
 var shouldRun = true;
 function thumbGenerator() {
   return new Promise(function(resolve) {
     const importFolder = 'src/assets/images/archive';
-    const exportFolder = 'src/assets/images/archive/thumbnails';
+    const exportFolder = 'src/assets/images/archive/[thumbnails]';
 
     const subfolder =  year + '-' + (year + 1) + '/images';
 
@@ -29,6 +31,7 @@ function thumbGenerator() {
       var n = err.toString().search("Source");
       if(n !== -1) {
         shouldRun = false;
+        console.info("THUMBNAILS [BEING] GENERATED FROM YEAR", STARTING_YEAR, '-', STARTING_YEAR+1, "UNTIL YEAR", year-1, '-', year);
       }
       n = err.toString().search("Destination");
       if(n !== -1) {
@@ -45,8 +48,6 @@ function recThumbGen() {
       if(shouldRun){
         year++;
         recThumbGen();
-      } else {
-        console.info("Thumbnails generating until year:", year-1, '-', year);
       }
     }
   );

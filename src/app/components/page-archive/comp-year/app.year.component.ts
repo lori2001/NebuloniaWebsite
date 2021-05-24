@@ -27,15 +27,15 @@ export class YearComponent implements OnInit {
       { src: '../../../assets/images/archive/' + this.archiveElement.year + '/images/10.jpg'}];
 
    this.thumbnails = [
-        { src: '../../../assets/images/archive/thumbnails/' + this.archiveElement.year + '/images/1.jpg'},
-        { src: '../../../assets/images/archive/thumbnails/' + this.archiveElement.year + '/images/2.jpg'},
-        { src: '../../../assets/images/archive/thumbnails/' + this.archiveElement.year + '/images/3.jpg'},
-        { src: '../../../assets/images/archive/thumbnails/' + this.archiveElement.year + '/images/4.jpg'},
-        { src: '../../../assets/images/archive/thumbnails/' + this.archiveElement.year + '/images/5.jpg'},
-        { src: '../../../assets/images/archive/thumbnails/' + this.archiveElement.year + '/images/6.jpg'},
-        { src: '../../../assets/images/archive/thumbnails/' + this.archiveElement.year + '/images/7.jpg'},
-        { src: '../../../assets/images/archive/thumbnails/' + this.archiveElement.year + '/images/8.jpg'},
-        { src: '../../../assets/images/archive/thumbnails/' + this.archiveElement.year + '/images/9.jpg'},
-        { src: '../../../assets/images/archive/thumbnails/' + this.archiveElement.year + '/images/10.jpg'}];
+        { src: '../../../assets/images/archive/[thumbnails]/' + this.archiveElement.year + '/images/1.jpg'},
+        { src: '../../../assets/images/archive/[thumbnails]/' + this.archiveElement.year + '/images/2.jpg'},
+        { src: '../../../assets/images/archive/[thumbnails]/' + this.archiveElement.year + '/images/3.jpg'},
+        { src: '../../../assets/images/archive/[thumbnails]/' + this.archiveElement.year + '/images/4.jpg'},
+        { src: '../../../assets/images/archive/[thumbnails]/' + this.archiveElement.year + '/images/5.jpg'},
+        { src: '../../../assets/images/archive/[thumbnails]/' + this.archiveElement.year + '/images/6.jpg'},
+        { src: '../../../assets/images/archive/[thumbnails]/' + this.archiveElement.year + '/images/7.jpg'},
+        { src: '../../../assets/images/archive/[thumbnails]/' + this.archiveElement.year + '/images/8.jpg'},
+        { src: '../../../assets/images/archive/[thumbnails]/' + this.archiveElement.year + '/images/9.jpg'},
+        { src: '../../../assets/images/archive/[thumbnails]/' + this.archiveElement.year + '/images/10.jpg'}];
   }
 }
