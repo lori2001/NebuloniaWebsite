@@ -13,7 +13,7 @@
   var resize;
 
   function initFBPlugin(){
-    setTimeout(function() {resizeFBPlugin();}, 700); // timeouts add up!!!
+    setTimeout(function() {resizeFBPlugin();}, 350); // timeouts add up!!!
   }
 
   function resizeFBPlugin(){
@@ -27,7 +27,7 @@
 
         $(".fb-placeholder").attr("style", "height:" + (container_height - 6).toString() + "px");
       //}
-    }, 500); //should be smaller than resize's timeout
+    }, 600); //should be smaller than resize's timeout
 
     clearTimeout(resize);
     resize = setTimeout(function() {
@@ -37,5 +37,5 @@
       if (typeof FB !== 'undefined' ) {
           FB.XFBML.parse();
       }
-    }, 800);
+    }, 700);
   }

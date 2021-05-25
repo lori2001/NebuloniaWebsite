@@ -1,8 +1,8 @@
 /*!!!WARNING!!!*/
-/*The size parameters in this file are very precisely measured and changeing one*/
+/*The size parameters in this file are very precisely measured and changing one*/
 /*could lead in misplaced texts and wrongly sized images across diferent devices*/
-/*Sizes also DEPEND on scripts defined in index.html!*/
-/* !!! BEWARE of changeing any size parameter !!! */
+/*Sizes also DEPEND on scripts defined in facebook-resizer.js!*/
+/* !!! BEWARE of changing any size parameter !!! */
 
 #events {
    padding-top: 48px;
@@ -11,6 +11,7 @@
    width: 100%;
 
    text-align: center;
+   overflow: hidden;
 }
 
 #events .feeds {
