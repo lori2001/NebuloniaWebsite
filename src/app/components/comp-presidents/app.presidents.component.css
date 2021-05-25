@@ -1,6 +1,6 @@
 #presidents {
    /*applies a dark filter on the background*/
-   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
                url(../../../assets/images/presidents_bg.jpg) no-repeat center center;
 
    background-size: cover !important;
@@ -72,6 +72,7 @@
 /*EASTER-EGG START*/
 .backdrop{
    background-color:rgba(0,0,0,0.6);
+   display: none;
    position:fixed;
    top:0;
    left:0;
