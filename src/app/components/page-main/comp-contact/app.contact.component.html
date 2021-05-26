@@ -24,15 +24,29 @@
     <a *ngIf="this.fbMessenger === true" class="safari_only" href="https://goo.gl/maps/yCrjqrR1LEu">
     </a>
     <div *ngIf="this.fbMessenger === false" class="google-maps">
+      <!-- HUNGARIAN MAP -->
       <iframe
+        *ngIf="this.translate.currentLang == translate.getLangs()[0]"
+        width="100%"
+        height="100%"
+        id="gmap_canvas"
+        frameborder="0"
+        scrolling="no"
+        marginheight="0"
+        marginwidth="0"
+       src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB7aqBXX4mJYcIbhaiAGLGFEp1OOB129W4&maptype=satellite&q=Colegiul%20Na%C8%9Bional%20%C3%81prily%20Lajos+(Nebulonia%20Diakszovetseg)&language=hu">
+      </iframe>
+      <!-- ROMANIAN MAP -->
+      <iframe
+      *ngIf="this.translate.currentLang != translate.getLangs()[0]"
       width="100%"
       height="100%"
       id="gmap_canvas"
-      src="https://maps.google.com/maps?width=100%&amp;height=420&amp;hl=en&amp;coord=45.6445937,25.587875322418967&amp;q=Colegiul%20Na%C8%9Bional%20%C3%81prily%20Lajos+(Nebulonia%20Diakszovetseg)&amp;ie=UTF8&amp;t=h&amp;z=16&amp;iwloc=B&amp;output=embed"
       frameborder="0"
       scrolling="no"
       marginheight="0"
-      marginwidth="0">
+      marginwidth="0"
+      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB7aqBXX4mJYcIbhaiAGLGFEp1OOB129W4&maptype=satellite&q=Colegiul%20Na%C8%9Bional%20%C3%81prily%20Lajos+(Nebulonia%20Diakszovetseg)&language=ro">
       </iframe>
     </div>
   </div>

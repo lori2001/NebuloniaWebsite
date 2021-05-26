@@ -18,7 +18,7 @@ export class ContactComponent {
 
   constructor(private messageService: MessageService,
               private deviceService: DeviceDetectorService,
-              private translate: TranslateService,
+              public translate: TranslateService,
               private emailService: EmailService) {
     this.checkMobileMode();
     if (this.deviceService.browser === 'FB-Messanger') {
