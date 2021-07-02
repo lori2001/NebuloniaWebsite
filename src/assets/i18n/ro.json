@@ -88,12 +88,12 @@
 
     "creators" : {
         "title": "Creatori",
+        "contactLinks" : "Mă poţi găsi pe:",
         "KovacsLorand": {
             "text" : "Eu am creat site-ul de administratori pentru Nebulónia. Fă click de 5 ori pe imaginea mea! :)"
         },
         "Lorand": {
-            "text" : "Eu sunt creatorul siteului publicat pe data de 13 martie 2019. Stilul siteului este foarte similar celui anterior însă intern a fost complet refăcut. Am implementat o mulțime de funcțiuni noi printre care și așa-zisele \"easter egg\"-uri. Sper ca acestea să fie descoperite cât mai curând. Pentru început apasă pe imaginea mea de cinci ori.",
-            "postscript" : "Websiteul a fost făcut cu ajutorul technologiei Angular. Pentru informații suplimentare privind modificarea acestuia pot fi contactat pe"
+            "text" : "Eu sunt creatorul siteului publicat pe data de 13 martie 2019. Siteul nou este creat cu technologia Angular. Am implementat o mulțime de funcțiuni noi printre care și așa-zisele \"easter egg\"-uri. Sper ca acestea să fie descoperite cât mai curând. Pentru început apasă pe imaginea mea de cinci ori."
         },
         "Csuti": {
             "text" : "Eu sunt cel care a actualizat și a menținut în functiune acest site între anii 2017-2018. Printre alte lucruri am schimbat și imaginile președinților și am actualizat și baza de date."

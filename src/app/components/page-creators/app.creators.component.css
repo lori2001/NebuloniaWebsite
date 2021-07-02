@@ -36,7 +36,7 @@
 #creators .creator .profile img {
    width: 100%;
    height: auto;
-   
+
    -webkit-transition: transform .5s ease-in-out;
    -moz-transition: transform .5s ease-in-out;
    -o-transition: transform .5s ease-in-out;
@@ -73,7 +73,7 @@
 #creators .creator .postscript a{
    color:rgb(228, 228, 228) !important;
    text-decoration: none !important;
- 
+
    -webkit-transition: color .3s ease-in-out;
    -moz-transition: color .3s ease-in-out;
    -o-transition: color .3s ease-in-out;
@@ -86,27 +86,32 @@
 
 @media screen and (min-width: 1400px) {
    #creators .creator .text{margin-left: 5%; font-size: 20px;}
+   #creators .creator .webIcon {width: 20px; height: auto;}
    #creators .creator .profile{width:20%;}
    #creators .creator .name{font-size: 22px;}
 }
 @media screen and (min-width: 1015px) and (max-width: 1399px){
    #creators .creator .text{margin-left: 2%; font-size: 18px;}
+   #creators .creator .webIcon {width: 20px; height: auto;}
    #creators .creator .profile{width:23%;}
    #creators .creator .name{font-size: 1.5vw;}
 }
 @media screen and (min-width: 768px) and (max-width: 1014px){
    #creators .creator .text{margin-left: 2%; font-size: 16px;}
+   #creators .creator .webIcon {width: 16px; height: auto;}
    #creators .creator .profile{width:23%;}
    #creators .creator .name{font-size: 2vw;}
 }
 @media screen and (min-width: 576px) and (max-width: 767px){
    #creators .creator .text{display:block; width:85%; padding-top: 5%; margin: 0 auto; font-size: 3.75vw;}
+   #creators .creator .webIcon {width: 3.75vw; height: auto;}
    #creators .creator .profile{display:block; width:70%; margin: 0 auto;}
    #creators .creator .name{font-size: 4vw;}
 }
 @media screen and (max-width: 575px){
    #creators .creator{padding: 14px 25px;}
    #creators .creator .text{display:block; width:90%; padding-top: 5%; margin: 0 auto; font-size: 4vw;}
+   #creators .creator .webIcon {width: 4vw; height: auto;}
    #creators .title{font-size: 15vw;}
    #creators .creator .profile{display:block; width:90%; margin: 0 auto;}
    #creators .creator .name{font-size: 5vw;}
@@ -115,5 +120,5 @@
 #creators .creator .postscript{
    padding-top: 25px !important;
 }
- 
+
 
