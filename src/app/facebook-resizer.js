@@ -18,7 +18,7 @@
 
   function resizeFBPlugin(){
     setTimeout(function() {
-      //if ($(".fb-page").length > 0) {
+      if ($(".fb-page").length > 0) {
         // getting parent box width
         container_width = (Number($('.fb-page').width()) - Number($('.fb-page').css('padding-left').replace("px", ""))).toFixed(0);
 
@@ -26,7 +26,7 @@
         container_height = Number($('.instagram-widget').height() - 15);
 
         $(".fb-placeholder").attr("style", "height:" + (container_height - 6).toString() + "px");
-      //}
+      }
     }, 600); //should be smaller than resize's timeout
 
     clearTimeout(resize);

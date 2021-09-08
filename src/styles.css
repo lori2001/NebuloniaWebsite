@@ -40,39 +40,39 @@
   src: url(assets/fonts/Objectivity-Thin.otf) format("opentype");
 }
 @font-face {
-    font-family: octarineBold;
-    src: url(assets/fonts/Octarine-Bold.otf) format("opentype");
-  }
+  font-family: octarineBold;
+  src: url(assets/fonts/Octarine-Bold.otf) format("opentype");
+}
 @font-face {
-    font-family: octarineLight;
-    src: url(assets/fonts/Octarine-Light.otf) format("opentype");
-  }
+  font-family: octarineLight;
+  src: url(assets/fonts/Octarine-Light.otf) format("opentype");
+}
 @font-face {
-    font-family: arialBlack;
-    src: url(assets/fonts/Arial-Black.ttf) format("truetype");
-  }
+  font-family: arialBlack;
+  src: url(assets/fonts/Arial-Black.ttf) format("truetype");
+}
 
 /*edge and explorer white-line bugfix*/
 body {
   line-height: 1;
-  background-color: #0F0F0F;
+  background-color: #0f0f0f;
 }
 
 /*tricks bold tag by changing font-style into the bold type of the most used font*/
-b{
+b {
   font-weight: normal;
   font-family: objectivityBold, octarineBold, arialBlack, Arial;
 }
 
 html {
-/*Smooth scrolling*/
-/*Non-Compatible with explorer,edge and safari*/
-/*UPDATE: Not used, however left in for safety*/
-scroll-behavior: smooth;
+  /*Smooth scrolling*/
+  /*Non-Compatible with explorer,edge and safari*/
+  /*UPDATE: Not used, however left in for safety*/
+  scroll-behavior: smooth;
 
-font-family: objectivityMedium, Arial; /*default font*/
+  font-family: objectivityMedium, Arial; /*default font*/
 
-/*Change ugly scroll color and shape on firefox(and other browsers)*/
+  /*Change ugly scroll color and shape on firefox(and other browsers)*/
   --scrollbarBG: rgba(51, 51, 51);
   --thumbBG: #6e6e70;
   scrollbar-width: thin;
@@ -91,23 +91,25 @@ body::-webkit-scrollbar-thumb {
 }
 
 /*Link hover-on effect*/
-html a, html a:visited, html a:link {
+html a,
+html a:visited,
+html a:link {
   text-decoration: none;
   color: white;
 
-  -webkit-transition: color .25s ease-in-out;
-  -moz-transition: color .25s ease-in-out;
-  -o-transition: color .25s ease-in-out;
-  -ms-transition: color .25s ease-in-out;
-  transition: color .25s ease-in-out;
+  -webkit-transition: color 0.25s ease-in-out;
+  -moz-transition: color 0.25s ease-in-out;
+  -o-transition: color 0.25s ease-in-out;
+  -ms-transition: color 0.25s ease-in-out;
+  transition: color 0.25s ease-in-out;
 }
 html a:hover {
   text-decoration: none;
-  color: #F06000 !important;
+  color: #f06000 !important;
 
-  cursor:pointer;
+  cursor: pointer;
 }
 /*hides outline when on focus*/
-html a:focus{
+html a:focus {
   outline: none;
 }

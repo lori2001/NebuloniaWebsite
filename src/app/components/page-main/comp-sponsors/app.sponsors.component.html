@@ -1,13 +1,18 @@
 <section id="sponsors">
   <div class="slider" [ngStyle]="{'width' : width}">
-    
-    <owl-carousel
-    [options]="sliderOPT"
-    [items]="carouselElements"
-    [carouselClasses]="['owl-theme']">
-      <div class="item" *ngFor="let element of carouselElements;let i = index">
-        <img class="element-style" [src]="element.url"/>
-      </div>
-    </owl-carousel>
+
+    <owl-carousel-o
+      [options]="sliderOPT"
+      [items]="carouselElements"
+      [carouselClasses]="['owl-theme']">
+      <ng-container *ngFor="let element of carouselElements">
+        <ng-template carouselSlide>
+          <div class="item">
+            <img class="element-style" [src]="element.url"/>
+          </div>
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
+
   </div>
 </section>

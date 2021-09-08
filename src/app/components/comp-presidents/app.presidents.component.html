@@ -1,6 +1,6 @@
 <section id="presidents" [ngStyle]="{'height' : height}">
   <div class="slider" [ngStyle]="{'width' : width}">
-    
+
   <div class="title">
     <b>
       <div *ngIf="titleLink === true">
@@ -15,20 +15,24 @@
   <div class="line">
       <hr>
   </div>
-  
-    <owl-carousel
+
+  <owl-carousel-o
     [options]="sliderOPT"
     [items]="presidentsElement"
     [carouselClasses]="['owl-theme']">
-      <div class="item" *ngFor="let element of presidentsElement;let i = index">
-        <img class="element-style" (click)="this.countAndCheck(i);"
-                      [lazyLoad]="element.url"
-                      [defaultImage]="'../../../assets/images/archive/presidents-placeholder.png'"
-        />
-        <h5><b>{{element.name}}</b></h5>
-        <p>{{element.position | translate}}</p>
-      </div>
-    </owl-carousel>
+    <ng-container *ngFor="let slide of presidentsElement;let i = index">
+      <ng-template class="item" carouselSlide>
+        <div class="item">
+          <img class="element-style" (click)="this.countAndCheck(i);"
+          [lazyLoad]="slide.url"
+          [defaultImage]="'../../../assets/images/archive/presidents-placeholder.png'"/>
+          <h5><b>{{slide.name}}</b></h5>
+          <p>{{slide.position | translate}}</p>
+        </div>
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
+
   </div>
 </section>
 
@@ -44,7 +48,7 @@
         <video controls style="width: 100%; height:auto;" preload="none" #presentation>
           <source src="../../../assets/videos/presidents/egg_video.webm" type="video/webm">
           <source src="../../../assets/videos/presidents/egg_video.mp4" type="video/mp4">
-        </video> 
+        </video>
       </div>
     </div>
   </div>
