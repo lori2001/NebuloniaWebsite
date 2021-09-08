@@ -4,7 +4,7 @@
   <div class="title">
     <b>
       <div *ngIf="titleLink === true">
-        <a [ngx-scroll-to]="'#presidents'" [ngx-scroll-to-offset]="offset">{{'presidents.title' | translate }}</a>
+        <a [ngxScrollTo]="'#presidents'" [ngxScrollToOffset]="offset">{{'presidents.title' | translate }}</a>
       </div>
       <div *ngIf="titleLink === false">
         <h1>{{'presidents.title' | translate }}</h1>
