@@ -1,12 +1,12 @@
-import { Component, HostListener, Input, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import {TranslateService} from '@ngx-translate/core';
-import { LanguageComponent } from 'src/app/app.language.component';
+import { Component, HostListener, Input, OnInit } from "@angular/core";
+import { ActivatedRoute, Router } from "@angular/router";
+import { TranslateService } from "@ngx-translate/core";
+import { LanguageComponent } from "src/app/app.language.component";
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './app.navbar.component.html',
-  styleUrls: ['./app.navbar.component.css']
+  selector: "app-navbar",
+  templateUrl: "./app.navbar.component.html",
+  styleUrls: ["./app.navbar.component.css"],
 })
 export class NavbarComponent extends LanguageComponent implements OnInit {
   get MainPage(): boolean {
@@ -17,10 +17,11 @@ export class NavbarComponent extends LanguageComponent implements OnInit {
     this.mainPage = value;
   }
 
-  constructor(activatedRoute: ActivatedRoute,
-              translate: TranslateService,
-              router: Router)
-  {
+  constructor(
+    activatedRoute: ActivatedRoute,
+    translate: TranslateService,
+    router: Router
+  ) {
     super(activatedRoute, translate, router);
 
     // initialization stuff
@@ -41,7 +42,7 @@ export class NavbarComponent extends LanguageComponent implements OnInit {
       this.calcOpacity();
     }
   }
-  width = '100%'; // background width
+  width = "100%"; // background width
   bgopacity = 0; // background opacity
 
   mobileMode = false; // enables/disables mobile mode
@@ -53,24 +54,25 @@ export class NavbarComponent extends LanguageComponent implements OnInit {
   opacityType = 1; // different background opacity calculations
 
   @Input() offset = -48;
+  @Input() backgroundColorRGB = "51, 51, 51";
 
   ngOnInit() {} // disables reinitialization of language component(thus speedin up page)
 
-  @HostListener('window:resize', [])
+  @HostListener("window:resize", [])
   checkMobileMode() {
-    if ( window.innerWidth < 768) {
+    if (window.innerWidth < 768) {
       this.mobileMode = true; // enables mobile mode
       this.bgopacity = 0; // no background as default
       this.collapse = true; // resolves a bug on mobile
-      this.width = '200px'; // width when shown
+      this.width = "200px"; // width when shown
     } else {
       this.mobileMode = false; // disables mobile mode
 
-      this.width = '100%'; // max width
+      this.width = "100%"; // max width
       this.calcOpacity(); // controls this.bgopacity
     }
   }
-  @HostListener('window:scroll', [])
+  @HostListener("window:scroll", [])
   calcOpacity() {
     if (!this.mobileMode) {
       // calculate opacity differently based on what opacity type is used
@@ -93,9 +95,9 @@ export class NavbarComponent extends LanguageComponent implements OnInit {
   toggleNavbar() {
     // navbar toggle shows only in mobile mode
     if (this.mobileMode) {
-    this.collapse = !this.collapse;
+      this.collapse = !this.collapse;
 
-    if (!this.collapse) {
+      if (!this.collapse) {
         this.bgopacity = 1;
       } else {
         this.bgopacity = 0;
@@ -103,4 +105,3 @@ export class NavbarComponent extends LanguageComponent implements OnInit {
     }
   }
 }
-

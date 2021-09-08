@@ -1,4 +1,4 @@
-<section id="footer">
+<section id="footer" [ngStyle]="{'background-color': 'rgb(' + backgroundColorRGB + ')'}">
   <div class="copyright">
     <i class="fa fa-copyright"></i><b> Nebulónia</b>
   </div>
@@ -7,7 +7,7 @@
       <b>{{ 'footer.creators_page' | translate }}</b>
     </a>
   </div>
-  <div class="scroll-up"> 
+  <div class="scroll-up">
     <a (click)="scrollToTop()"
     class="fa fa-chevron-circle-up"></a>
   </div>

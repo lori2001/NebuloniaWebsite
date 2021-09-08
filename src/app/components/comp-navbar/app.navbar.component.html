@@ -1,4 +1,6 @@
-<nav class="navbar navbar-expand-md" [ngStyle]="{'background-color': 'rgba(51,51,51,'+ (bgopacity) +')', 'width' : width}">
+<nav class="navbar navbar-expand-md"
+     [ngStyle]="{'background-color': 'rgba(' + backgroundColorRGB + ','+ (bgopacity) +')',
+                'width' : width}">
   <button class="navbar-toggler" (click)="toggleNavbar()" type="button" aria-expanded="false" aria-label="Toggle navigation">
     <span class="toggler fa fa-bars"></span>
   </button>
@@ -7,12 +9,12 @@
       <div class="navbar-nav mr-auto">
           <a [routerLink]="['../main']" [ngx-scroll-to]="'#home'" [ngx-scroll-to-offset]="offset"><b>{{ 'menu.home' | translate }}</b></a>
           <!-- (ugly) BUGFIX START - Contacts don't scroll properly because FB and Insta-->
-          <div *ngIf="this.mainPage === true">        
+          <div *ngIf="this.mainPage === true">
             <a [ngx-scroll-to]="'#about'" [ngx-scroll-to-offset]="offset"><b>{{ 'menu.about' | translate }}</b></a>
             <a [ngx-scroll-to]="'#events'" [ngx-scroll-to-offset]="offset"><b>{{ 'menu.events' | translate }}</b></a>
             <a [ngx-scroll-to]="'#contact'" [ngx-scroll-to-offset]="offset"><b>{{ 'menu.contact' | translate }}</b></a>
           </div>
-          <div *ngIf="this.mainPage === false">      
+          <div *ngIf="this.mainPage === false">
             <a [routerLink]="['../main']" [ngx-scroll-to]="'#home'" [ngx-scroll-to-offset]="offset"><b>{{ 'menu.about' | translate }}</b></a>
             <a [routerLink]="['../main']" [ngx-scroll-to]="'#home'" [ngx-scroll-to-offset]="offset"><b>{{ 'menu.events' | translate }}</b></a>
             <a [routerLink]="['../main']" [ngx-scroll-to]="'#home'" [ngx-scroll-to-offset]="offset" ><b>{{ 'menu.contact' | translate }}</b></a>
