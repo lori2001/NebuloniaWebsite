@@ -1,12 +1,19 @@
 <section id="main">
-    <app-navbar [offset]="offset" [MainPage] = 'true' [OpacityType] = '1'></app-navbar>
-    <app-home [offset]="offset"></app-home>
-    <app-about></app-about>
-    <app-presidents [offset]="offset" [presidentsElement]="presidents"></app-presidents>
-    <app-events></app-events>
-    <app-contact></app-contact>
-    <app-sponsors [carouselElements] = "sponsors"></app-sponsors>
-    <app-footer></app-footer>
+  <app-navbar
+    [offset]="offset"
+    [MainPage]="true"
+    [OpacityType]="1"
+  ></app-navbar>
+  <app-home [offset]="offset"></app-home>
+  <app-about></app-about>
+  <app-presidents
+    [offset]="offset"
+    [presidentsElement]="presidents"
+  ></app-presidents>
+  <app-events></app-events>
+  <app-contact></app-contact>
+  <app-sponsors [carouselElements]="sponsors"></app-sponsors>
+  <app-footer></app-footer>
 
-    <!--<app-esports-event [notification] = "true"></app-esports-event>-->
+  <app-esports-event [notification]="true"></app-esports-event>
 </section>
