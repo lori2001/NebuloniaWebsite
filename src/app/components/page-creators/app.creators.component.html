@@ -1,8 +1,10 @@
-<app-navbar [OpacityType] = '2'></app-navbar>
+<app-navbar [OpacityType]="2"></app-navbar>
 <section id="creators">
-    <div class="title"><b>{{ 'creators.title' | translate}}</b></div>
-    <div class="creator">
-        <!--<div class="profile">
+  <div class="title">
+    <b>{{ "creators.title" | translate }}</b>
+  </div>
+  <!--<div class="creator">
+        <div class="profile">
             <img *ngIf="this.clicks[4] <= 4"
                 src="../../../assets/images/creators/kovi_lori.png"
                 alt="KovacsLorand" (click)="addClicksTo(4)" >
@@ -28,97 +30,129 @@
             </div>
         </div>
     </div>-->
+  <div class="creator">
+    <div class="profile">
+      <img
+        *ngIf="this.clicks[3] <= 4"
+        src="../../../assets/images/creators/lori.png"
+        alt="SzokeLorand"
+        (click)="addClicksTo(3)"
+      />
+      <img
+        *ngIf="this.clicks[3] > 4"
+        src="../../../assets/images/creators/lori_egg.png"
+        alt="SzokeLorand-Easteregg"
+      />
+      <div class="name">
+        <b>Szőke András-Loránd</b>
+      </div>
+    </div>
+    <div class="text">
+      {{ "creators.Lorand.text" | translate }}
+      <i class="fa fa-angellist"></i>
+      <div class="postscript">
+        {{ "creators.contactLinks" | translate }}
+        <ul>
+          <li>
+            <a href="https://www.facebook.com/szoke.lori" target="_blank">
+              <i class="fa fa-facebook-square"></i>
+              <b> Facebook</b>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.lorand.eu/" target="_blank">
+              <img
+                class="webIcon"
+                src="https://lorand.eu/assets/icons/favicon.ico"
+              />
+              <b> www.lorand.eu</b>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="creator">
+    <div class="profile">
+      <img
+        *ngIf="this.clicks[2] <= 4"
+        src="../../../assets/images/creators/csuti.png"
+        alt="CsutakZsolt"
+        (click)="addClicksTo(2)"
+      />
+      <img
+        *ngIf="this.clicks[2] > 4"
+        src="../../../assets/images/creators/csuti_egg.png"
+        alt="CsutakZsolt-Easteregg"
+      />
+      <div class="name">
+        <b>Csutak Zsolt</b>
+      </div>
+    </div>
+    <div class="text">
+      {{ "creators.Csuti.text" | translate }}
+    </div>
+  </div>
+  <div class="creator">
+    <div class="profile">
+      <img
+        *ngIf="this.clicks[1] <= 4"
+        src="../../../assets/images/creators/marci.png"
+        alt="SoosMarton"
+        (click)="addClicksTo(1)"
+      />
+      <img
+        *ngIf="this.clicks[1] > 4"
+        src="../../../assets/images/creators/marci_egg.png"
+        alt="SoosMarton-Easteregg"
+      />
+      <div class="name">
+        <b>Soós Márton</b>
+      </div>
+    </div>
+    <div class="text">
+      {{ "creators.Marci.text" | translate }}
+    </div>
+  </div>
+  <div class="creator">
+    <div class="profile">
+      <img
+        *ngIf="this.clicks[0] <= 4"
+        src="../../../assets/images/creators/bacso.png"
+        alt="BacsoPeterTamas"
+        (click)="addClicksTo(0)"
+      />
+      <img
+        *ngIf="this.clicks[0] > 4"
+        src="../../../assets/images/creators/bacso_egg.png"
+        alt="BacsoPeterTamas-Easteregg"
+      />
+      <div class="name">
+        <b>Bacsó Péter Tamás</b>
+      </div>
+    </div>
+    <div class="text">
+      {{ "creators.Bacso.text" | translate }}
+    </div>
+  </div>
+  <!--Thanks section-->
+  <div
+    style="
+      width: 100%;
+      height: auto;
+      background-color: rgb(10, 10, 10);
+      padding-bottom: 15px;
+    "
+  >
     <div class="creator">
-        <div class="profile">
-            <img *ngIf="this.clicks[3] <= 4"
-                src="../../../assets/images/creators/lori.png"
-                alt="SzokeLorand" (click)="addClicksTo(3)" >
-            <img *ngIf="this.clicks[3] > 4"
-                src="../../../assets/images/creators/lori_egg.png"
-                alt="SzokeLorand-Easteregg">
-            <div class="name">
-                <b>Szőke András-Loránd</b>
-            </div>
-        </div>
-        <div class="text">
-            {{'creators.Lorand.text' | translate}}
-            <i class="fa fa-angellist"></i>
-            <div class="postscript">
-                {{ 'creators.contactLinks' | translate}}
-                <ul>
-                  <li>
-                    <a href="https://www.facebook.com/szoke.lori" target="_blank">
-                      <i class="fa fa-facebook-square"></i>
-                      <b> Facebook</b>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.lorand.eu/" target="_blank">
-                      <img class="webIcon" src="https://lorand.eu/assets/icons/favicon.ico">
-                      <b> www.lorand.eu</b>
-                    </a>
-                  </li>
-                </ul>
-            </div>
-        </div>
+      <div
+        class="text"
+        style="display: block; margin: 0 auto; text-align: center"
+      >
+        {{ "creators.thanks.text.L0" | translate }}<br />
+        {{ "creators.thanks.text.L1" | translate }}
+      </div>
     </div>
-    <div class="creator">
-        <div class="profile">
-            <img *ngIf="this.clicks[2] <= 4"
-                src="../../../assets/images/creators/csuti.png"
-                alt="CsutakZsolt" (click)="addClicksTo(2)" >
-            <img *ngIf="this.clicks[2] > 4"
-                src="../../../assets/images/creators/csuti_egg.png"
-                alt="CsutakZsolt-Easteregg">
-            <div class="name">
-                <b>Csutak Zsolt</b>
-            </div>
-        </div>
-        <div class="text">
-            {{'creators.Csuti.text' | translate}}
-        </div>
-    </div>
-    <div class="creator">
-        <div class="profile">
-            <img *ngIf="this.clicks[1] <= 4"
-                src="../../../assets/images/creators/marci.png"
-                alt="SoosMarton" (click)="addClicksTo(1)" >
-            <img *ngIf="this.clicks[1] > 4"
-                src="../../../assets/images/creators/marci_egg.png"
-                alt="SoosMarton-Easteregg">
-            <div class="name">
-                <b>Soós Márton</b>
-            </div>
-        </div>
-        <div class="text">
-            {{'creators.Marci.text' | translate}}
-        </div>
-    </div>
-    <div class="creator">
-        <div class="profile">
-            <img *ngIf="this.clicks[0] <= 4"
-                src="../../../assets/images/creators/bacso.png"
-                alt="BacsoPeterTamas" (click)="addClicksTo(0)" >
-            <img *ngIf="this.clicks[0] > 4"
-                src="../../../assets/images/creators/bacso_egg.png"
-                alt="BacsoPeterTamas-Easteregg">
-            <div class="name">
-                <b>Bacsó Péter Tamás</b>
-            </div>
-        </div>
-        <div class="text">
-            {{'creators.Bacso.text' | translate}}
-        </div>
-    </div>
-    <!--Thanks section-->
-    <div style="width:100%; height: auto; background-color: rgb(10,10,10);
-          padding-bottom: 15px;">
-        <div class="creator">
-            <div class="text" style="display:block; margin: 0 auto; text-align:center;">
-                {{'creators.thanks.text.L0' | translate}}<br>
-                {{'creators.thanks.text.L1' | translate}}
-            </div>
-        </div>
-    </div>
+  </div>
 </section>
 <app-footer></app-footer>
