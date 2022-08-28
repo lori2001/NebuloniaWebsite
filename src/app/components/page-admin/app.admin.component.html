@@ -1,19 +1,39 @@
-<p-toast [style]="{marginTop: messageMargin}"
-          position="top-right"
-          key="custom">
+<p-toast
+  [style]="{ marginTop: messageMargin }"
+  position="top-right"
+  key="custom"
+>
 </p-toast>
 <!--Declares a toast for messages. Can be put almost anywhere-->
 
-<app-navbar [OpacityType] = '2'></app-navbar>
+<app-navbar [OpacityType]="2"></app-navbar>
 <section id="admin">
-  <div class="title"><b>{{ 'admin.title' | translate}}</b></div>
+  <div class="title">
+    <b>{{ "admin.title" | translate }}</b>
+  </div>
   <!--- Login Page START ----------------------------->
   <div *ngIf="!isLogged">
     <div class="login-panel">
-      <h3><b>{{ 'admin.sign-in.login' | translate }}</b></h3>
+      <h3>
+        <b>{{ "admin.sign-in.login" | translate }}</b>
+      </h3>
+      <p>
+        {{ "demo.login-notice" | translate }}
+      </p>
       <div class="input">
-        <input pInputText type="password" placeholder="{{ 'admin.sign-in.password' | translate }}" id="passwordBox">&nbsp;
-        <button pButton type="button" icon="pi pi-check" label="{{ 'admin.sign-in.next' | translate }}" (click)="login()"></button>
+        <input
+          pInputText
+          type="password"
+          placeholder="{{ 'admin.sign-in.password' | translate }}"
+          id="passwordBox"
+        />&nbsp;
+        <button
+          pButton
+          type="button"
+          icon="pi pi-check"
+          label="{{ 'admin.sign-in.next' | translate }}"
+          (click)="login()"
+        ></button>
       </div>
     </div>
   </div>
@@ -22,57 +42,87 @@
   <div *ngIf="isLogged">
     <div class="content">
       <div class="new-activity">
-        <input pInputText type="text" id="newActNameBox">
+        <input pInputText type="text" id="newActNameBox" />
         &nbsp;
-        <button pButton type="button" label="{{ 'admin.new-event-add' | translate }}" (click)="createActivity()"></button>
+        <button
+          pButton
+          type="button"
+          label="{{ 'admin.new-event-add' | translate }}"
+          (click)="createActivity()"
+        ></button>
       </div>
-      <br>
+      <br />
 
       <div class="activity-editor">
-        <select id="actlist" class="acselect" #actlist (change)="this.loadPoints(actlist.value)">
-          <option *ngFor="let item of activities" [value]="item.id">{{ item.name }}</option>
-        </select>&nbsp;
-        <button pButton type="button" class="ui-button-danger" icon="pi pi-trash" label="{{ 'admin.event-delete' | translate }}" (click)="deleteActivity()"></button>
-        <br><br>
+        <select
+          id="actlist"
+          class="acselect"
+          #actlist
+          (change)="this.loadPoints(actlist.value)"
+        >
+          <option *ngFor="let item of activities" [value]="item.id">
+            {{ item.name }}
+          </option></select
+        >&nbsp;
+        <button
+          pButton
+          type="button"
+          class="ui-button-danger"
+          icon="pi pi-trash"
+          label="{{ 'admin.event-delete' | translate }}"
+          (click)="showBlockedMsg()"
+        ></button>
+        <br /><br />
         <table class="ptable" id="pointsTable">
           <tr>
-            <th>{{ 'admin.class' | translate }}</th>
-            <th>{{ 'admin.points' | translate }}</th>
+            <th>{{ "admin.class" | translate }}</th>
+            <th>{{ "admin.points" | translate }}</th>
           </tr>
           <tr *ngFor="let item of points">
             <td>{{ item.className }}</td>
-            <td><div contenteditable="true">{{ item.value }}</div></td>
+            <td>
+              <div contenteditable="true">{{ item.value }}</div>
+            </td>
           </tr>
         </table>
-        <br>
-        <button pButton type="button" icon="pi pi-check" label="{{ 'admin.save-points' | translate }}" (click)="savePoints()"></button>
+        <br />
+        <button
+          pButton
+          type="button"
+          icon="pi pi-check"
+          label="{{ 'admin.save-points' | translate }}"
+          (click)="showBlockedMsg()"
+        ></button>
       </div>
-      <br><br>
+      <br /><br />
     </div>
 
     <div class="links">
-      <div class="row"><h2><b>{{ 'admin.important-links' | translate}}</b></h2></div>
-      <div class="grid">
-          <a href="https://github.com/Nebulonia" target="_blank">
-            <img src="../../../assets/images/admin/github.png">
-            <p>{{ 'admin.ndsz-apps' | translate}}</p>
-          </a>
-          <a href="https://aprilyfogimnazium-my.sharepoint.com/:f:/g/personal/nebuloniadsz_aprilyfogimnazium_ro/EoC1R8EsFuFBhe7eCSbcxEMBV-kZZ76Moo3dCNpwh1J0mQ?e=JXaFKN"
-          target="_blank">
-            <img src="../../../assets/images/admin/onedrive.png">
-            <p>{{ 'admin.data' | translate}}</p>
-            <p style="margin-top: 0;">nebuloniadsz@aprilyfogimnazium.ro</p>
-          </a>
-          <a href="https://server46.romania-webhosting.com:2096/logout?" target="_blank">
-            <img src="../../../assets/images/admin/email.png">
-            <p>office@nebulonia.ro</p>
-          </a>
-          <a href="http://cpanel46.claus.ro/" target="_blank">
-            <img src="../../../assets/images/admin/cpanel.png">
-            <p>{{ 'admin.cpanel' | translate}}</p>
-          </a>
+      <div class="row">
+        <h2>
+          <b>{{ "admin.important-links" | translate }}</b>
+        </h2>
       </div>
-      <br><br><br>
+      <div class="grid">
+        <a href="https://github.com/Nebulonia" target="_blank">
+          <img src="../../../assets/images/admin/github.png" />
+          <p>{{ "admin.ndsz-apps" | translate }}</p>
+        </a>
+        <a (click)="showBlockedMsg()" target="_blank">
+          <img src="../../../assets/images/admin/onedrive.png" />
+          <p>{{ "admin.data" | translate }}</p>
+          <p style="margin-top: 0">nebuloniadsz@aprilyfogimnazium.ro</p>
+        </a>
+        <a href="https://server46.romania-webhosting.com:2096" target="_blank">
+          <img src="../../../assets/images/admin/email.png" />
+          <p>office@nebulonia.ro</p>
+        </a>
+        <a href="http://cpanel46.claus.ro/" target="_blank">
+          <img src="../../../assets/images/admin/cpanel.png" />
+          <p>{{ "admin.cpanel" | translate }}</p>
+        </a>
+      </div>
+      <br /><br /><br />
     </div>
   </div>
   <!--- Admin Page END ------------------------------->

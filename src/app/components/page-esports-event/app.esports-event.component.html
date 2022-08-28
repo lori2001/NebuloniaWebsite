@@ -1,11 +1,16 @@
 <!--Declares a toast for messages. Can be put almost anywhere-->
-<p-toast [style]="{marginTop: messageMargin}"
-          position="top-right"
-          key="custom">
+<p-toast
+  [style]="{ marginTop: messageMargin }"
+  position="top-right"
+  key="custom"
+>
 </p-toast>
 
-<app-navbar *ngIf="this.notification === false"
-[OpacityType]='2' [backgroundColorRGB]="'30,28,40'">
+<app-navbar
+  *ngIf="this.notification === false"
+  [OpacityType]="2"
+  [backgroundColorRGB]="'30,28,40'"
+>
 </app-navbar>
 
 <section *ngIf="this.notification === false" id="esports-event">
@@ -13,33 +18,59 @@
 
   <div *ngFor="let token of esportsStreamLinks | keyvalue">
     <div class="line"></div>
-    <br><br><br>
-    <h1><a [href]="getLink(token.key, false)"><b>{{ token.key }}<!-- - Live stream--></b></a></h1>
-    <br><br>
+    <br /><br /><br />
+    <h1>
+      <a [href]="esportsStreamLinks.get(token.key)"
+        ><b
+          >{{ token.key
+          }}<!-- - Live stream--></b
+        ></a
+      >
+    </h1>
+    <br /><br />
     <div class="embed-player-container">
-      <iframe class="embed-player" [src]="embedLinks.get(token.key)"
-              frameborder="0"
-              allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      <iframe
+        class="embed-player"
+        [src]="embedLinks.get(token.key)"
+        frameborder="0"
+        allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      >
       </iframe>
     </div>
-    <br><br>
-    <p class="team-title"><b>{{ 'esports-event.teams' | translate }}</b></p>
-    <br><br>
+    <br /><br />
+    <p class="team-title">
+      <b>{{ "esports-event.teams" | translate }}</b>
+    </p>
+    <br /><br />
     <div class="teams-container">
-      <div class="team" *ngFor="let teamName of getTeamsIteration(token.key) | keyvalue">
-        <img  [lazyLoad]="'../../../assets/images/special-events/' + teamName.key + '.jpg'"
-              [defaultImage]="'../../../assets/images/special-events/default_logo.jpg'">
+      <div
+        class="team"
+        *ngFor="let teamName of getTeamsIteration(token.key) | keyvalue"
+      >
+        <img
+          [lazyLoad]="
+            '../../../assets/images/special-events/' + teamName.key + '.jpg'
+          "
+          [defaultImage]="
+            '../../../assets/images/special-events/default_logo.jpg'
+          "
+        />
         <div class="team-name">
           <b>{{ teamName.key }}</b>
         </div>
-        <div class="team-member" *ngFor="let teamMember of teamName.value">{{ teamMember }}</div>
+        <div class="team-member" *ngFor="let teamMember of teamName.value">
+          {{ teamMember }}
+        </div>
       </div>
     </div>
-    <br><br><br>
+    <br /><br /><br />
   </div>
   <app-footer [backgroundColorRGB]="'30,28,40'"></app-footer>
 </section>
 <!--<app-work-in-progress></app-work-in-progress>-->
 <div *ngIf="this.notification === true" class="notification">
-  <a [routerLink]="['../esports-event']" [ngxScrollTo]="'#esports-event'" >{{ 'esports-event.now' | translate }}: Esports</a>
+  <a [routerLink]="['../esports-event']" [ngxScrollTo]="'#esports-event'"
+    >{{ "esports-event.now" | translate }}: Esports</a
+  >
 </div>

@@ -1,80 +1,114 @@
-<app-navbar [OpacityType] = '2'></app-navbar>
+<app-navbar [OpacityType]="2"></app-navbar>
 <section id="archive">
-    <div style="width: 100%;" [ngStyle]="{'height.px' : -offset }"></div> <!-- navbar space-->
+  <div style="width: 100%" [ngStyle]="{ 'height.px': -offset }"></div>
+  <!-- navbar space-->
 
-    <!-- SHOULD BE ALWAYS ON TOP-->
-    <div class="special-event" id="onedrive">
-        <div class="promo">
-            <div class="text">
-                <a [ngxScrollTo]="'#onedrive'" [ngxScrollTo]="offset">
-                    <h1><b>{{ 'archive.onedrive.title' | translate }}</b></h1>
-                </a>
-                <p>{{ 'archive.onedrive.subtitle' | translate }}</p>
-            </div>
-            <a href="https://aprilyfogimnazium-my.sharepoint.com/:f:/g/personal/nebuloniadsz_aprilyfogimnazium_ro/EsG4CrAVkOJEicS6EC-nAewBk8iae-YZhL1yadASXK-7Pg?e=vDzyGC&fbclid=IwAR3uVNDDUBMQrHoc3eDthhzvI9btv1sfkizslHrluYW0im8eei8cWLB8HMM"
-            target="_blank" >
-                <div class="content">
-                    <img [lazyLoad]="'../../../assets/images/archive/onedrive-event/onedrive.png'"
-                    [defaultImage]="'../../../assets/images/archive/placeholder.jpg'">
-                    <span class="prompt">{{ 'archive.onedrive.click' | translate }}<br>
-                                        {{ 'archive.onedrive.here' | translate }}</span>
-                </div>
-            </a>
+  <!-- SHOULD BE ALWAYS ON TOP-->
+  <div class="special-event" id="onedrive">
+    <div class="promo">
+      <div class="text">
+        <a [ngxScrollTo]="'#onedrive'" [ngxScrollTo]="offset">
+          <h1>
+            <b>{{ "archive.onedrive.title" | translate }}</b>
+          </h1>
+        </a>
+        <p>{{ "archive.onedrive.subtitle" | translate }}</p>
+      </div>
+      <a
+        href="https://aprilyfogimnazium-my.sharepoint.com/:f:/g/personal/nebuloniadsz_aprilyfogimnazium_ro/EsG4CrAVkOJEicS6EC-nAewBk8iae-YZhL1yadASXK-7Pg?e=vDzyGC&fbclid=IwAR3uVNDDUBMQrHoc3eDthhzvI9btv1sfkizslHrluYW0im8eei8cWLB8HMM"
+        target="_blank"
+      >
+        <div class="content">
+          <img
+            [lazyLoad]="
+              '../../../assets/images/archive/onedrive-event/onedrive.png'
+            "
+            [defaultImage]="'../../../assets/images/archive/placeholder.jpg'"
+          />
+          <span class="prompt"
+            >{{ "archive.onedrive.click" | translate }}<br />
+            {{ "archive.onedrive.here" | translate }}</span
+          >
         </div>
+      </a>
     </div>
-    <!-- SHOULD BE ALWAYS ON TOP-->
+  </div>
+  <!-- SHOULD BE ALWAYS ON TOP-->
 
-    <!--INSERT NEW YEARS HERE-->
-    <app-year [offset]="offset" [archiveElement]="archiveElements[3]"></app-year> <!--2019-2020-->
+  <!--INSERT NEW YEARS HERE-->
+  <app-year [offset]="offset" [archiveElement]="archiveElements[3]"></app-year>
+  <!--2019-2020-->
 
-    <div class="special-event" id="logo-memorial">
-        <div class="text">
-            <h1><a [ngxScrollTo]="'#logo-memorial'" [ngxScrollToOffset]="offset">
-                <b>{{ 'archive.logo-memorial.title' | translate }}</b>
-            </a></h1>
-            <p>
-                {{ 'archive.logo-memorial.text.L0' | translate }}<br>
-                {{ 'archive.logo-memorial.text.L1' | translate }}<br>
-                {{ 'archive.logo-memorial.text.L2' | translate }}<br>
-                {{ 'archive.logo-memorial.text.L3' | translate }}<br>
-                {{ 'archive.logo-memorial.text.L4' | translate }}<br>
-                {{ 'archive.logo-memorial.text.L5' | translate }}
-            </p>
-            <p>
-                {{ 'archive.logo-memorial.quote.L0' | translate }}<br>
-                {{ 'archive.logo-memorial.quote.L1' | translate }}<br>
-                {{ 'archive.logo-memorial.quote.L2' | translate }}
-            </p>
-        </div>
-        <div class="logos">
-            <img class="drawing"
-                [lazyLoad]="'../../../assets/images/archive/logo-change-event/old-logo-drawing.png'"
-                [defaultImage]="'../../../assets/images/archive/placeholder.jpg'"
-                style="padding-left: 3vw;"> <!-- distance between the two-->
-            <img class="vector"
-                [lazyLoad]="oldLogoLocation"
-                [defaultImage]="'../../../assets/images/archive/placeholder.jpg'" (click)="oldLogoEasterEgg()">
-        </div>
+  <div class="special-event" id="logo-memorial">
+    <div class="text">
+      <h1>
+        <a [ngxScrollTo]="'#logo-memorial'" [ngxScrollToOffset]="offset">
+          <b>{{ "archive.logo-memorial.title" | translate }}</b>
+        </a>
+      </h1>
+      <p>
+        {{ "archive.logo-memorial.text.L0" | translate }}<br />
+        {{ "archive.logo-memorial.text.L1" | translate }}<br />
+        {{ "archive.logo-memorial.text.L2" | translate }}<br />
+        {{ "archive.logo-memorial.text.L3" | translate }}<br />
+        {{ "archive.logo-memorial.text.L4" | translate }}<br />
+        {{ "archive.logo-memorial.text.L5" | translate }}
+      </p>
+      <p>
+        {{ "archive.logo-memorial.quote.L0" | translate }}<br />
+        {{ "archive.logo-memorial.quote.L1" | translate }}<br />
+        {{ "archive.logo-memorial.quote.L2" | translate }}
+      </p>
     </div>
-
-    <app-year [offset]="offset" [archiveElement]="archiveElements[2]"></app-year> <!--2018-2019-->
-    <app-year [offset]="offset" [archiveElement]="archiveElements[1]"></app-year> <!--2017-2018-->
-
-    <div class="special-event" id="video2017">
-        <div class="promo">
-            <div class="text">
-                <a [ngxScrollTo]="'#video2017'" [ngxScrollToOffset]="offset">
-                    <h1><b>{{ 'archive.promo-video.title' | translate }}</b></h1></a>
-                <p>{{ 'archive.promo-video.subtitle' | translate }}</p>
-            </div>
-            <video controls preload="none" class="content"
-             poster="../../../assets/images/archive/video2017-event/nebulonia-promo-thumbnail.jpg">
-                <source src="../../../assets/videos/archive/video2017-event/nebulonia-promo.webm" type="video/webm">
-                <source src="../../../assets/videos/archive/video2017-event/nebulonia-promo.mp4" type="video/mp4">
-            </video>
-        </div>
+    <div class="logos">
+      <img
+        class="drawing"
+        [lazyLoad]="
+          '../../../assets/images/archive/logo-change-event/old-logo-drawing.png'
+        "
+        [defaultImage]="'../../../assets/images/archive/placeholder.jpg'"
+        style="padding-left: 3vw"
+      />
+      <!-- distance between the two-->
+      <img
+        class="vector"
+        [lazyLoad]="oldLogoLocation"
+        [defaultImage]="'../../../assets/images/archive/placeholder.jpg'"
+        (click)="oldLogoEasterEgg()"
+      />
     </div>
+  </div>
 
-    <app-year [offset]="offset" [archiveElement]="archiveElements[0]"></app-year> <!--2016-2017-->
+  <app-year [offset]="offset" [archiveElement]="archiveElements[2]"></app-year>
+  <!--2018-2019-->
+  <app-year [offset]="offset" [archiveElement]="archiveElements[1]"></app-year>
+  <!--2017-2018-->
+
+  <div class="special-event" id="video2017">
+    <div class="promo">
+      <div class="text">
+        <a [ngxScrollTo]="'#video2017'" [ngxScrollToOffset]="offset">
+          <h1>
+            <b>{{ "archive.promo-video.title" | translate }}</b>
+          </h1></a
+        >
+        <p>{{ "archive.promo-video.subtitle" | translate }}</p>
+      </div>
+      <video
+        controls
+        preload="none"
+        class="content"
+        poster="../../../assets/images/archive/video2017-event/nebulonia-promo-thumbnail.jpg"
+      >
+        <source
+          src="../../../assets/videos/archive/video2017-event/nebulonia-promo.webm"
+          type="video/webm"
+        />
+      </video>
+    </div>
+  </div>
+
+  <app-year [offset]="offset" [archiveElement]="archiveElements[0]"></app-year>
+  <!--2016-2017-->
 </section>
 <app-footer></app-footer>

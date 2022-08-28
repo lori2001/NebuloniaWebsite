@@ -1,53 +1,87 @@
-<section id="presidents" [ngStyle]="{'height' : height}">
-  <div class="slider" [ngStyle]="{'width' : width}">
-
-  <div class="title">
-    <b>
-      <div *ngIf="titleLink === true">
-        <a [ngxScrollTo]="'#presidents'" [ngxScrollToOffset]="offset">{{'presidents.title' | translate }}</a>
-      </div>
-      <div *ngIf="titleLink === false">
-        <h1>{{'presidents.title' | translate }}</h1>
-      </div>
-    </b>
-  </div>
-
-  <div class="line">
-      <hr>
-  </div>
-
-  <owl-carousel-o
-    [options]="sliderOPT"
-    [items]="presidentsElement"
-    [carouselClasses]="['owl-theme']">
-    <ng-container *ngFor="let slide of presidentsElement;let i = index">
-      <ng-template class="item" carouselSlide>
-        <div class="item">
-          <img class="element-style" (click)="this.countAndCheck(i);"
-          [lazyLoad]="slide.url"
-          [defaultImage]="'../../../assets/images/archive/presidents-placeholder.png'"/>
-          <h5><b>{{slide.name}}</b></h5>
-          <p>{{slide.position | translate}}</p>
+<section id="presidents" [ngStyle]="{ height: height }">
+  <div class="slider" [ngStyle]="{ width: width }">
+    <div class="title">
+      <b>
+        <div *ngIf="titleLink === true">
+          <a [ngxScrollTo]="'#presidents'" [ngxScrollToOffset]="offset">{{
+            "presidents.title" | translate
+          }}</a>
         </div>
-      </ng-template>
-    </ng-container>
-  </owl-carousel-o>
+        <div *ngIf="titleLink === false">
+          <h1>{{ "presidents.title" | translate }}</h1>
+        </div>
+      </b>
+    </div>
 
+    <div class="line">
+      <hr />
+    </div>
+
+    <owl-carousel-o
+      [options]="sliderOPT"
+      [items]="presidentsElement"
+      [carouselClasses]="['owl-theme']"
+    >
+      <ng-container *ngFor="let slide of presidentsElement; let i = index">
+        <ng-template class="item" carouselSlide>
+          <div class="item">
+            <img
+              class="element-style"
+              (click)="this.countAndCheck(i)"
+              [lazyLoad]="slide.url"
+              [defaultImage]="
+                '../../../assets/images/archive/presidents-placeholder.png'
+              "
+            />
+            <h5>
+              <b>{{ slide.name }}</b>
+            </h5>
+            <p>{{ slide.position | translate }}</p>
+          </div>
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
   </div>
 </section>
 
 <!--Easteregg START-->
-<div class="backdrop" [ngStyle]="{'display': presentationState}" style="z-index: 150;"></div>
-<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display': presentationState}" style="z-index: 151; max-width: 1000px;">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content" style="background-color: #191919; padding-bottom: 15px;">
-        <button style="text-align: right; margin-right: 15px;" type="button" class="close" aria-label="Close" (click)="hidePresentation()">
-          <span aria-hidden="true" style="color:white">&times;</span>
-        </button>
+<div
+  class="backdrop"
+  [ngStyle]="{ display: presentationState }"
+  style="z-index: 150"
+></div>
+<div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{ display: presentationState }"
+  style="z-index: 151; max-width: 1000px"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div
+      class="modal-content"
+      style="background-color: #191919; padding-bottom: 15px"
+    >
+      <button
+        style="text-align: right; margin-right: 15px"
+        type="button"
+        class="close"
+        aria-label="Close"
+        (click)="hidePresentation()"
+      >
+        <span aria-hidden="true" style="color: white">&times;</span>
+      </button>
       <div class="modal-body">
-        <video controls style="width: 100%; height:auto;" preload="none" #presentation>
-          <source src="../../../assets/videos/presidents/egg_video.webm" type="video/webm">
-          <source src="../../../assets/videos/presidents/egg_video.mp4" type="video/mp4">
+        <video
+          controls
+          style="width: 100%; height: auto"
+          preload="none"
+          #presentation
+        >
+          <source
+            src="../../../assets/videos/presidents/egg_video.webm"
+            type="video/webm"
+          />
         </video>
       </div>
     </div>

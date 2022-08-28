@@ -1,11 +1,11 @@
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 
 // import ngx-translate and the http loader
-import { TranslateHttpLoader } from "@ngx-translate/http-loader";
-import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
 import { HttpClient, HttpClientModule } from "@angular/common/http";
+import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
+import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 
 // device detector
 import { DeviceDetectorModule } from "ngx-device-detector";
@@ -20,35 +20,35 @@ import { ScrollToModule } from "@nicky-lenaers/ngx-scroll-to";
 import { LazyLoadImageModule } from "ng-lazyload-image";
 
 // primeng
-import { InputTextareaModule } from "primeng/inputtextarea";
-import { InputTextModule } from "primeng/inputtext";
-import { ToastModule } from "primeng/toast";
 import { ButtonModule } from "primeng/button";
+import { InputTextModule } from "primeng/inputtext";
+import { InputTextareaModule } from "primeng/inputtextarea";
 import { PasswordModule } from "primeng/password";
+import { ToastModule } from "primeng/toast";
 
 // manages which component gets displayed and when
 import { AppRoutingModule } from "./app.routes";
 
 // import components
 import { AppComponent } from "./app.component";
+import { LanguageComponent } from "./app.language.component";
+import { FooterComponent } from "./components/comp-footer/app.footer.component";
 import { NavbarComponent } from "./components/comp-navbar/app.navbar.component";
 import { PresidentsComponent } from "./components/comp-presidents/app.presidents.component";
-import { NotFoundComponent } from "./components/page-not-found/app.not-found.component";
-import { ArchiveComponent } from "./components/page-archive/app.archive.component";
-import { PointsComponent } from "./components/page-points/app.points.component";
-import { CreatorsComponent } from "./components/page-creators/app.creators.component";
-import { MainComponent } from "./components/page-main/app.main.component";
-import { HomeComponent } from "./components/page-main/comp-home/app.home.component";
-import { AboutComponent } from "./components/page-main/comp-about/app.about.component";
-import { EventsComponent } from "./components/page-main/comp-events/app.events.component";
-import { ContactComponent } from "./components/page-main/comp-contact/app.contact.component";
-import { SponsorsComponent } from "./components/page-main/comp-sponsors/app.sponsors.component";
-import { FooterComponent } from "./components/comp-footer/app.footer.component";
-import { AdminComponent } from "./components/page-admin/app.admin.component";
-import { YearComponent } from "./components/page-archive/comp-year/app.year.component";
 import { WorkInProgressComponent } from "./components/comp-work-in-progress/app.work-in-progress.component";
+import { AdminComponent } from "./components/page-admin/app.admin.component";
+import { ArchiveComponent } from "./components/page-archive/app.archive.component";
+import { YearComponent } from "./components/page-archive/comp-year/app.year.component";
+import { CreatorsComponent } from "./components/page-creators/app.creators.component";
 import { EsportsEventComponent } from "./components/page-esports-event/app.esports-event.component";
-import { LanguageComponent } from "./app.language.component";
+import { MainComponent } from "./components/page-main/app.main.component";
+import { AboutComponent } from "./components/page-main/comp-about/app.about.component";
+import { ContactComponent } from "./components/page-main/comp-contact/app.contact.component";
+import { EventsComponent } from "./components/page-main/comp-events/app.events.component";
+import { HomeComponent } from "./components/page-main/comp-home/app.home.component";
+import { SponsorsComponent } from "./components/page-main/comp-sponsors/app.sponsors.component";
+import { NotFoundComponent } from "./components/page-not-found/app.not-found.component";
+import { PointsComponent } from "./components/page-points/app.points.component";
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);

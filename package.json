@@ -2,7 +2,8 @@
   "name": "nebulonia",
   "version": "2.2.0",
   "scripts": {
-    "serve": "node thumbnail-generator.js && ng serve",
+    "serve": "ng serve",
+    "start": "node thumbnail-generator.js && ng serve",
     "prod": "node thumbnail-generator.js && ng build --prod",
     "watch": "node thumbnail-generator.js && ng build --watch",
     "ng": "ng",
