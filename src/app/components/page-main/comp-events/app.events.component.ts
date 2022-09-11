@@ -7,10 +7,9 @@ declare function initFBPlugin(): any;
 @Component({
   selector: 'app-events',
   templateUrl: './app.events.component.html',
-  styleUrls: ['./app.events.component.css']
+  styleUrls: ['./app.events.component.css'],
 })
 export class EventsComponent implements AfterViewChecked {
-
   fbInitalized = false;
 
   ngAfterViewChecked() {

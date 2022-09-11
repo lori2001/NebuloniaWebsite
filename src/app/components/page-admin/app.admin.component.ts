@@ -87,7 +87,7 @@ export class AdminComponent implements OnInit {
     // delete points that don't belong to activity
     for (let i = pts.length - 1; i >= 0; i--) {
       // toString fixes weird bug...
-      if (pts[i].activity_id.toString() !== activityId.toString()) {
+      if (pts[i].activityId.toString() !== activityId.toString()) {
         pts.splice(i, 1);
       }
     }

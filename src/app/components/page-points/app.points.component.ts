@@ -1,19 +1,18 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { jsPDF } from 'jspdf';
 import { DeviceDetectorService } from 'ngx-device-detector';
+import { MessageService } from 'primeng/api';
 import { PointsElement } from 'src/app/models/database/points.element';
 import { PointsService } from 'src/app/services/points.service';
-import { MessageService } from 'primeng/api';
-import { jsPDF } from 'jspdf';
-import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-points',
   templateUrl: './app.points.component.html',
   styleUrls: ['./app.points.component.css'],
-  providers: [MessageService]
+  providers: [MessageService],
 })
 export class PointsComponent implements OnInit {
-
   aspectRatio: number; // width/height ratio
   messageMargin = '48px'; // the margin that the error toast has
   staticFlags = false; // true if the flags should be static on some browsers(ex.Edge)
@@ -21,21 +20,25 @@ export class PointsComponent implements OnInit {
   layoutTypes = ['1x4', '2x2', '4x1']; // all types of layout used
   currentLayout = this.layoutTypes[0]; // holds the layout currently in use
   points: PointsElement[]; // hold server information for all types of points
-  classPoints: Array<{ value: number, name: string}> = []; // holds the points total and name of each class
+  classPoints: Array<{ value: number; name: string }> = []; // holds the points total and name of each class
   totalPoints: number[] = [0, 0, 0, 0]; // holds the points total of each 'house'
 
   table: boolean[] = [true, true, true, true]; // if true the table is shown
   blocker: boolean[] = [false, false, false, false]; // used to block table collapse
 
-  constructor(private deviceService: DeviceDetectorService,
-              private translate: TranslateService,
-              private pointsService: PointsService,
-              private messageService: MessageService) {
+  constructor(
+    private deviceService: DeviceDetectorService,
+    private translate: TranslateService,
+    private pointsService: PointsService,
+    private messageService: MessageService
+  ) {
     this.calcAspectRatio();
 
-    if (this.deviceService.browser === 'MS-Edge' ||
-        this.deviceService.browser === 'FB-Messanger' || // no, i didn't type this wrong
-        this.deviceService.browser === 'Safari') {
+    if (
+      this.deviceService.browser === 'MS-Edge' ||
+      this.deviceService.browser === 'FB-Messanger' || // no, i didn't type this wrong
+      this.deviceService.browser === 'Safari'
+    ) {
       this.staticFlags = true;
     }
   }
@@ -46,23 +49,25 @@ export class PointsComponent implements OnInit {
         this.points = res;
 
         if (this.points.length === 0) {
-          this.pointsService.getClasses().subscribe(
-            (result: string[]) => {
-              for (const element of result) {
-                this.classPoints.push({value: 0, name: element});
-              }
-            });
+          this.pointsService.getClasses().subscribe((result: string[]) => {
+            for (const element of result) {
+              this.classPoints.push({ value: 0, name: element });
+            }
+          });
         } else {
           for (const element of this.points) {
             // for each point ever given
             // adds together the points of all classes
             // 9.A, 9.B, 9.C, 9.D, 10.A, 10.B stb..
-             if (element.class_id - 1 >= this.classPoints.length) {
-              this.classPoints.push({value: element.value, name: element.className});
-             } else {
-              this.classPoints[(element.class_id - 1)].value += element.value;
-             }
-           }
+            if (element.classId - 1 >= this.classPoints.length) {
+              this.classPoints.push({
+                value: element.value,
+                name: element.className,
+              });
+            } else {
+              this.classPoints[element.classId - 1].value += element.value;
+            }
+          }
 
           for (let i = 0; i < this.classPoints.length; i++) {
             // adds together the total points of each "house"
@@ -77,7 +82,7 @@ export class PointsComponent implements OnInit {
             key: 'custom',
             severity: 'warn',
             summary: this.translate.instant('points.error-message.summary'),
-            detail: this.translate.instant('points.error-message.details')
+            detail: this.translate.instant('points.error-message.details'),
           });
         }
       }
@@ -109,11 +114,15 @@ export class PointsComponent implements OnInit {
     this.aspectRatio = window.innerWidth / window.innerHeight;
 
     // changes layout type based on width and aspect ratio
-    if (this.aspectRatio >= 1.1) { // 5/4
-        this.currentLayout = this.layoutTypes[0];
+    if (this.aspectRatio >= 1.1) {
+      // 5/4
+      this.currentLayout = this.layoutTypes[0];
     }
-    if (window.innerWidth < 768 || (this.aspectRatio < 1.1 && this.aspectRatio >= 0.6)) {
-        this.currentLayout = this.layoutTypes[1];
+    if (
+      window.innerWidth < 768 ||
+      (this.aspectRatio < 1.1 && this.aspectRatio >= 0.6)
+    ) {
+      this.currentLayout = this.layoutTypes[1];
     }
     if (window.innerWidth < 450 || this.aspectRatio < 0.6) {
       this.currentLayout = this.layoutTypes[2];
@@ -132,7 +141,7 @@ export class PointsComponent implements OnInit {
     this.messageService.clear('custom');
   }
 
-   public downloadPDF() {
+  public downloadPDF() {
     const doc = new jsPDF();
 
     /*Title*/
@@ -147,7 +156,8 @@ export class PointsComponent implements OnInit {
     let Ypos = 25;
     let Xpos = 0;
 
-    for (let i = 0; i < this.points.length; i++) { // for each class and grade
+    for (let i = 0; i < this.points.length; i++) {
+      // for each class and grade
 
       if (i > 0 && this.points[i - 1].activity !== this.points[i].activity) {
         Ypos += 5;
@@ -177,4 +187,3 @@ export class PointsComponent implements OnInit {
     doc.save('osztalypontok.pdf');
   }
 }
-

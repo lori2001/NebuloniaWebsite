@@ -9,27 +9,29 @@ import { TranslateService } from '@ngx-translate/core';
   selector: 'app-contact',
   templateUrl: './app.contact.component.html',
   styleUrls: ['./app.contact.component.css'],
-  providers: [MessageService]
+  providers: [MessageService],
 })
 export class ContactComponent {
   messageMargin = '48px'; // holds the position of the notification relative to the top
   fbMessenger = false; // helps fix safari-facebook BUG
   emailElement = new EmailElement('', '', '', '');
 
-  constructor(private messageService: MessageService,
-              private deviceService: DeviceDetectorService,
-              public translate: TranslateService,
-              private emailService: EmailService) {
+  constructor(
+    private messageService: MessageService,
+    private deviceService: DeviceDetectorService,
+    public translate: TranslateService,
+    private emailService: EmailService
+  ) {
     this.checkMobileMode();
     if (this.deviceService.browser === 'FB-Messanger') {
       this.fbMessenger = true;
     }
   }
 
-  @ViewChild('mailform1', {static: false}) mailForm1: ElementRef;
-  @ViewChild('mailform2', {static: false}) mailForm2: ElementRef;
-  @ViewChild('mailform3', {static: false}) mailForm3: ElementRef;
-  @ViewChild('mailform4', {static: false}) mailForm4: ElementRef;
+  @ViewChild('mailform1', { static: false }) mailForm1: ElementRef;
+  @ViewChild('mailform2', { static: false }) mailForm2: ElementRef;
+  @ViewChild('mailform3', { static: false }) mailForm3: ElementRef;
+  @ViewChild('mailform4', { static: false }) mailForm4: ElementRef;
 
   @HostListener('window:resize', [])
   checkMobileMode() {
@@ -41,15 +43,17 @@ export class ContactComponent {
   }
 
   clearmailInput() {
-    if (this.mailForm1.nativeElement.value !== '' &&
-        this.mailForm2.nativeElement.value !== '' &&
-        this.mailForm3.nativeElement.value !== '' &&
-        this.mailForm4.nativeElement.value !== '') {
-          // if there is no empty form clear message boxes
-          this.mailForm1.nativeElement.value = '';
-          this.mailForm2.nativeElement.value = '';
-          this.mailForm3.nativeElement.value = '';
-          this.mailForm4.nativeElement.value = '';
+    if (
+      this.mailForm1.nativeElement.value !== '' &&
+      this.mailForm2.nativeElement.value !== '' &&
+      this.mailForm3.nativeElement.value !== '' &&
+      this.mailForm4.nativeElement.value !== ''
+    ) {
+      // if there is no empty form clear message boxes
+      this.mailForm1.nativeElement.value = '';
+      this.mailForm2.nativeElement.value = '';
+      this.mailForm3.nativeElement.value = '';
+      this.mailForm4.nativeElement.value = '';
     }
   }
 
@@ -60,7 +64,11 @@ export class ContactComponent {
     this.emailElement.message = this.mailForm4.nativeElement.value;
 
     /*sends email and returns status message through messageService*/
-    this.emailService.sendEmail(this.emailElement, this.messageService, this.translate);
+    this.emailService.sendEmail(
+      this.emailElement,
+      this.messageService,
+      this.translate
+    );
 
     // this.showSuccess();
     this.clearmailInput();

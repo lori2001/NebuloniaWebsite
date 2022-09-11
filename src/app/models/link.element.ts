@@ -1,3 +1,3 @@
 export interface LinkElement {
-    url: string;
+  url: string;
 }

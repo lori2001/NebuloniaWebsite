@@ -1,5 +1,5 @@
 export interface PresidentsElement {
-    url: string;
-    name: string;
-    position: any;
+  url: string;
+  name: string;
+  position: any;
 }

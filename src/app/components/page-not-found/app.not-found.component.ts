@@ -6,15 +6,14 @@ import { LanguageComponent } from 'src/app/app.language.component';
 @Component({
   selector: 'app-not-found',
   templateUrl: './app.not-found.component.html',
-  styleUrls: ['./app.not-found.component.css']
+  styleUrls: ['./app.not-found.component.css'],
 })
 export class NotFoundComponent extends LanguageComponent {
-
- constructor(activatedRoute: ActivatedRoute,
-             translate: TranslateService,
-             router: Router){
-   super(activatedRoute, translate, router);
- }
-
+  constructor(
+    activatedRoute: ActivatedRoute,
+    translate: TranslateService,
+    router: Router
+  ) {
+    super(activatedRoute, translate, router);
+  }
 }
-

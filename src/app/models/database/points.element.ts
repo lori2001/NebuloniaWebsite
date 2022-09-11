@@ -1,19 +1,24 @@
 export class PointsElement {
-    id: number;
-    value: number;
-    class_id: number;
-    className: string;
-    activity_id: number;
-    activity: string;
+  id: number;
+  value: number;
+  classId: number;
+  className: string;
+  activityId: number;
+  activity: string;
 
-    constructor(id: number, value: number,
-                class_id: number, className: string,
-                activity_id: number, activity: string) {
-        this.id = id;
-        this.value = value;
-        this.class_id = class_id;
-        this.className = className;
-        this.activity_id = activity_id;
-        this.activity = activity;
-    }
+  constructor(
+    id: number,
+    value: number,
+    classId: number,
+    className: string,
+    activityId: number,
+    activity: string
+  ) {
+    this.id = id;
+    this.value = value;
+    this.classId = classId;
+    this.className = className;
+    this.activityId = activityId;
+    this.activity = activity;
+  }
 }

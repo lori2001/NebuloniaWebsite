@@ -45,7 +45,7 @@ export class LanguageComponent implements OnInit {
         this.translate.use(language);
       }
     } else {
-      console.log('Language is undefined, thus can\'t be set!');
+      console.log('Language is undefined, thus cannot be set!');
     }
   }
 
