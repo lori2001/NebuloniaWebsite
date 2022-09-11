@@ -1,18 +1,18 @@
-import { Component, Input, AfterViewChecked } from "@angular/core";
+import { Component, Input, AfterViewChecked } from '@angular/core';
 import {
   ScrollToService,
   ScrollToConfigOptions,
-} from "@nicky-lenaers/ngx-scroll-to";
+} from '@nicky-lenaers/ngx-scroll-to';
 
 @Component({
-  selector: "app-footer",
-  templateUrl: "./app.footer.component.html",
-  styleUrls: ["./app.footer.component.css"],
+  selector: 'app-footer',
+  templateUrl: './app.footer.component.html',
+  styleUrls: ['./app.footer.component.css'],
 })
 export class FooterComponent implements AfterViewChecked {
   pageHeight: number;
 
-  @Input() backgroundColorRGB = "25, 25, 25";
+  @Input() backgroundColorRGB = '25, 25, 25';
 
   constructor(private scrollToService: ScrollToService) {}
 

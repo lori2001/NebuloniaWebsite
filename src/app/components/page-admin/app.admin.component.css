@@ -1,12 +1,12 @@
 @import url("../../../primestyle.css");
 
 #admin {
-   background: #2B2B2B;
-   overflow: hidden;
-   align-items: center;
-   text-align: center;
-   background-size: cover !important;
-    -webkit-background-size: cover !important;
+  background: #2b2b2b;
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
+  background-size: cover !important;
+  -webkit-background-size: cover !important;
   min-height: 100vh;
 }
 #admin h2 {
@@ -34,21 +34,21 @@
 }
 
 #admin .ptable {
-   color: white;
-   border-bottom: 1px solid #888888;
-   width: 95%;
-   margin-left: 2.5%;
-   margin-right: 2.5%;
+  color: white;
+  border-bottom: 1px solid #888888;
+  width: 95%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
 }
 #admin .ptable tr:nth-child(odd) {
-   background-color: #333333;
+  background-color: #333333;
 }
 #admin .ptable td {
-   border-top: 1px solid rgb(124, 124, 124);
-   border-bottom: 1px solid rgb(124, 124, 124);
-   border-left: 1px solid #888888;
-   border-right: 1px solid #888888;
-   padding: 10px;
+  border-top: 1px solid rgb(124, 124, 124);
+  border-bottom: 1px solid rgb(124, 124, 124);
+  border-left: 1px solid #888888;
+  border-right: 1px solid #888888;
+  padding: 10px;
 }
 #admin .ptable th {
   border: 1px solid #888888;
@@ -71,14 +71,15 @@
   transition: border 0.2s;
   font-size: 14px;
   appearance: none;
-  background: url('../../../assets/images/admin/arrow.png') right no-repeat #585858;
+  background: url(../../../assets/images/admin/arrow.png) right no-repeat
+    #585858;
   background-size: 9%;
 }
 #admin .acselect:focus {
-  border: 1px solid #FFB300;
+  border: 1px solid #ffb300;
 }
 #admin .acselect:hover {
-  border: 1px solid #FFB300;
+  border: 1px solid #ffb300;
 }
 
 #admin .login-panel {
@@ -89,7 +90,7 @@
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #0F0F0F;
+  background-color: #0f0f0f;
   border-radius: 25px;
   white-space: nowrap;
 }
@@ -107,7 +108,8 @@
   text-shadow: 3px 3px 2px black;
   font-size: 3.5rem;
   color: white;
-  background: url(../../../assets/images/creators/title_bg.jpg) no-repeat top center;
+  background: url(../../../assets/images/creators/title_bg.jpg) no-repeat top
+    center;
 
   background-size: cover !important;
   -webkit-background-size: cover !important;
@@ -115,7 +117,7 @@
   margin-bottom: 40px;
 }
 
-#admin .links h2{
+#admin .links h2 {
   margin: 0 auto;
   margin-bottom: 30px;
 }
@@ -146,58 +148,55 @@
   color: white;
 }
 #admin .links a {
-  -webkit-transition: transform .25s ease-in-out;
-  -moz-transition: transform .25s ease-in-out;
-  -o-transition: transform .25s ease-in-out;
-  -ms-transition: transform .25s ease-in-out;
-  transition: transform .25s ease-in-out;
+  -webkit-transition: transform 0.25s ease-in-out;
+  -moz-transition: transform 0.25s ease-in-out;
+  -o-transition: transform 0.25s ease-in-out;
+  -ms-transition: transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out;
 }
 #admin .links a:hover {
-    transform: scale(1.15);
+  transform: scale(1.15);
 }
 
-@media screen and (min-width: 1150px)
-{
+@media screen and (min-width: 1150px) {
   #admin .content {
-     margin-left: 5vw;
+    margin-left: 5vw;
   }
 }
-@media screen and (max-width: 1149px)
-{
+@media screen and (max-width: 1149px) {
   #admin .content {
-     float: none;
+    float: none;
   }
   #admin .title {
-     padding-bottom: 55px !important;
+    padding-bottom: 55px !important;
   }
   #admin .login-panel {
-     top: 68%;
+    top: 68%;
   }
   #admin .links .grid img {
-     padding: 1%;
-     width: auto;
-     height: 13vw;
-     font-size: 13vw;
+    padding: 1%;
+    width: auto;
+    height: 13vw;
+    font-size: 13vw;
   }
   #admin .links .grid {
-     grid-column-gap: 0 0;
-     width: 85%;
-     margin: 0 auto;
-     padding-left: 0;
+    grid-column-gap: 0 0;
+    width: 85%;
+    margin: 0 auto;
+    padding-left: 0;
   }
   #admin .links .grid p {
-     font-size: 2.1vw;
+    font-size: 2.1vw;
   }
 }
-@media screen and (max-width: 767px)
-{
+@media screen and (max-width: 767px) {
   #admin .links .grid {
-     width: 90%;
-     margin: 0 auto;
+    width: 90%;
+    margin: 0 auto;
   }
 }
-@media screen and (max-width: 575px){
+@media screen and (max-width: 575px) {
   #admin .title {
-     font-size: 9vw;
+    font-size: 9vw;
   }
 }

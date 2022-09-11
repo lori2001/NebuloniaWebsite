@@ -9,47 +9,47 @@
 
 @font-face {
   font-family: objectivityBlack;
-  src: url(assets/fonts/Objectivity-Black.otf) format("opentype");
+  src: url(./assets/fonts/Objectivity-Black.otf) format("opentype");
 }
 @font-face {
   font-family: objectivityBold;
-  src: url(assets/fonts/Objectivity-Bold.otf) format("opentype");
+  src: url(./assets/fonts/Objectivity-Bold.otf) format("opentype");
 }
 @font-face {
   font-family: objectivityExtraBold;
-  src: url(assets/fonts/Objectivity-ExtraBold.otf) format("opentype");
+  src: url(./assets/fonts/Objectivity-ExtraBold.otf) format("opentype");
 }
 @font-face {
   font-family: objectivityLight;
-  src: url(assets/fonts/Objectivity-Light.otf) format("opentype");
+  src: url(./assets/fonts/Objectivity-Light.otf) format("opentype");
 }
 @font-face {
   font-family: objectivityMedium;
-  src: url(assets/fonts/Objectivity-Medium.otf) format("opentype");
+  src: url(./assets/fonts/Objectivity-Medium.otf) format("opentype");
 }
 @font-face {
   font-family: objectivityRegular;
-  src: url(assets/fonts/Objectivity-Regular.otf) format("opentype");
+  src: url(./assets/fonts/Objectivity-Regular.otf) format("opentype");
 }
 @font-face {
   font-family: objectivitySuper;
-  src: url(assets/fonts/Objectivity-Super.otf) format("opentype");
+  src: url(./assets/fonts/Objectivity-Super.otf) format("opentype");
 }
 @font-face {
   font-family: objectivityThin;
-  src: url(assets/fonts/Objectivity-Thin.otf) format("opentype");
+  src: url(./assets/fonts/Objectivity-Thin.otf) format("opentype");
 }
 @font-face {
   font-family: octarineBold;
-  src: url(assets/fonts/Octarine-Bold.otf) format("opentype");
+  src: url(./assets/fonts/Octarine-Bold.otf) format("opentype");
 }
 @font-face {
   font-family: octarineLight;
-  src: url(assets/fonts/Octarine-Light.otf) format("opentype");
+  src: url(./assets/fonts/Octarine-Light.otf) format("opentype");
 }
 @font-face {
   font-family: arialBlack;
-  src: url(assets/fonts/Arial-Black.ttf) format("truetype");
+  src: url(./assets/fonts/Arial-Black.ttf) format("truetype");
 }
 
 /*edge and explorer white-line bugfix*/

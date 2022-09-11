@@ -1,18 +1,18 @@
-import { Component, HostListener, OnInit } from "@angular/core";
-import { TranslateService } from "@ngx-translate/core";
-import { MessageService } from "primeng/api";
-import { ActivitiesElement } from "src/app/models/database/activities.element";
-import { PointsElement } from "src/app/models/database/points.element";
-import { PointsService } from "src/app/services/points.service";
+import { Component, HostListener, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { MessageService } from 'primeng/api';
+import { ActivitiesElement } from 'src/app/models/database/activities.element';
+import { PointsElement } from 'src/app/models/database/points.element';
+import { PointsService } from 'src/app/services/points.service';
 
 @Component({
-  selector: "app-admin",
-  templateUrl: "./app.admin.component.html",
-  styleUrls: ["./app.admin.component.css"],
+  selector: 'app-admin',
+  templateUrl: './app.admin.component.html',
+  styleUrls: ['./app.admin.component.css'],
   providers: [MessageService],
 })
 export class AdminComponent implements OnInit {
-  messageMargin = "48px";
+  messageMargin = '48px';
   isLogged = false;
   points: PointsElement[];
   activities: ActivitiesElement[];
@@ -36,13 +36,13 @@ export class AdminComponent implements OnInit {
       (error) => {
         if (error !== null) {
           this.messageService.add({
-            key: "custom",
-            severity: "warn",
+            key: 'custom',
+            severity: 'warn',
             summary: this.translate.instant(
-              this.translate.instant("admin.messages.connection-error.summary")
+              this.translate.instant('admin.messages.connection-error.summary')
             ),
             detail: this.translate.instant(
-              "admin.messages.connection-error.details"
+              'admin.messages.connection-error.details'
             ),
           });
         }
@@ -50,13 +50,13 @@ export class AdminComponent implements OnInit {
     );
   }
 
-  @HostListener("window:resize", [])
+  @HostListener('window:resize', [])
   calcMessageMargin() {
     // adjusts message position relative to window size
     if (window.innerWidth < 768 && window.innerWidth > 370) {
-      this.messageMargin = "-7px";
+      this.messageMargin = '-7px';
     } else {
-      this.messageMargin = "48px";
+      this.messageMargin = '48px';
     }
   }
 
@@ -69,13 +69,13 @@ export class AdminComponent implements OnInit {
       (error) => {
         if (error !== null) {
           this.messageService.add({
-            key: "custom",
-            severity: "warn",
+            key: 'custom',
+            severity: 'warn',
             summary: this.translate.instant(
-              "admin.messages.connection-error.summary"
+              'admin.messages.connection-error.summary'
             ),
             detail: this.translate.instant(
-              "admin.messages.connection-error.details"
+              'admin.messages.connection-error.details'
             ),
           });
         }
@@ -95,26 +95,26 @@ export class AdminComponent implements OnInit {
   }
 
   createActivity() {
-    const name = (document.getElementById("newActNameBox") as HTMLInputElement)
+    const name = (document.getElementById('newActNameBox') as HTMLInputElement)
       .value;
-    if (name !== "") {
+    if (name !== '') {
       this.messageService.add({
-        key: "custom",
-        severity: "warn",
-        summary: this.translate.instant("demo.blocked-msg-summary"),
-        detail: this.translate.instant("demo.blocked-msg-details"),
+        key: 'custom',
+        severity: 'warn',
+        summary: this.translate.instant('demo.blocked-msg-summary'),
+        detail: this.translate.instant('demo.blocked-msg-details'),
       });
-      (document.getElementById("newActNameBox") as HTMLInputElement).value = "";
+      (document.getElementById('newActNameBox') as HTMLInputElement).value = '';
     } else {
       // No Valid Characters
       this.messageService.add({
-        key: "custom",
-        severity: "warn",
+        key: 'custom',
+        severity: 'warn',
         summary: this.translate.instant(
-          "admin.messages.activity-name-error.summary"
+          'admin.messages.activity-name-error.summary'
         ),
         detail: this.translate.instant(
-          "admin.messages.activity-name-error.details"
+          'admin.messages.activity-name-error.details'
         ),
       });
     }
@@ -122,16 +122,16 @@ export class AdminComponent implements OnInit {
 
   showBlockedMsg() {
     this.messageService.add({
-      key: "custom",
-      severity: "warn",
-      summary: this.translate.instant("demo.blocked-msg-summary"),
-      detail: this.translate.instant("demo.blocked-msg-details"),
+      key: 'custom',
+      severity: 'warn',
+      summary: this.translate.instant('demo.blocked-msg-summary'),
+      detail: this.translate.instant('demo.blocked-msg-details'),
     });
   }
 
-  @HostListener("document:keypress", ["$event"])
+  @HostListener('document:keypress', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
-    if (event.key === "Enter") {
+    if (event.key === 'Enter') {
       if (!this.isLogged) {
         this.login();
       } else {
@@ -145,6 +145,6 @@ export class AdminComponent implements OnInit {
 
   /* makes toasts' close-button work */
   onReject() {
-    this.messageService.clear("custom");
+    this.messageService.clear('custom');
   }
 }

@@ -25,12 +25,10 @@
           autoplay
           muted
           loop
-          poster="../../../assets/images/points/background/{{
-            layoutType
-          }}/first.jpg"
+          poster="./assets/images/points/background/{{ layoutType }}/first.jpg"
         >
           <source
-            src="../../../assets/videos/points/{{ layoutType }}/first.webm"
+            src="./assets/videos/points/{{ layoutType }}/first.webm"
             type="video/webm"
           />
         </video>
@@ -39,12 +37,10 @@
           autoplay
           muted
           loop
-          poster="../../../assets/images/points/background/{{
-            layoutType
-          }}/second.jpg"
+          poster="./assets/images/points/background/{{ layoutType }}/second.jpg"
         >
           <source
-            src="../../../assets/videos/points/{{ layoutType }}/second.webm"
+            src="./assets/videos/points/{{ layoutType }}/second.webm"
             type="video/webm"
           />
         </video>
@@ -53,12 +49,10 @@
           autoplay
           muted
           loop
-          poster="../../../assets/images/points/background/{{
-            layoutType
-          }}/third.jpg"
+          poster="./assets/images/points/background/{{ layoutType }}/third.jpg"
         >
           <source
-            src="../../../assets/videos/points/{{ layoutType }}/third.webm"
+            src="./assets/videos/points/{{ layoutType }}/third.webm"
             type="video/webm"
           />
         </video>
@@ -67,25 +61,21 @@
           autoplay
           muted
           loop
-          poster="../../../assets/images/points/background/{{
-            layoutType
-          }}/fourth.jpg"
+          poster="./assets/images/points/background/{{ layoutType }}/fourth.jpg"
         >
           <source
-            src="../../../assets/videos/points/{{ layoutType }}/fourth.webm"
+            src="./assets/videos/points/{{ layoutType }}/fourth.webm"
             type="video/webm"
           />
         </video>
         <img
           *ngIf="this.staticFlags === true"
           class="edgeonlypic"
-          src="../../../assets/images/points/background/full/{{
-            layoutType
-          }}.jpg"
+          src="./assets/images/points/background/full/{{ layoutType }}.jpg"
         />
         <div class="pointsoverlay{{ layoutType }}" style="line-height: 0.5">
           <div class="house{{ layoutType }}">
-            <img class="A" src="../../../assets/images/points/sigils/A.png" />
+            <img class="A" src="./assets/images/points/sigils/A.png" />
             <div class="points">
               <b>{{ this.totalPoints[0] }}</b>
             </div>
@@ -112,7 +102,7 @@
             </div>
           </div>
           <div class="house{{ layoutType }}">
-            <img class="B" src="../../../assets/images/points/sigils/B.png" />
+            <img class="B" src="./assets/images/points/sigils/B.png" />
             <div class="points">
               <b>{{ this.totalPoints[1] }}</b>
             </div>
@@ -139,7 +129,7 @@
             </div>
           </div>
           <div class="house{{ layoutType }}">
-            <img class="C" src="../../../assets/images/points/sigils/C.png" />
+            <img class="C" src="./assets/images/points/sigils/C.png" />
             <div class="points">
               <b>{{ this.totalPoints[2] }}</b>
             </div>
@@ -166,7 +156,7 @@
             </div>
           </div>
           <div class="house{{ layoutType }}">
-            <img class="D" src="../../../assets/images/points/sigils/D.png" />
+            <img class="D" src="./assets/images/points/sigils/D.png" />
             <div class="points">
               <b>{{ this.totalPoints[3] }}</b>
             </div>

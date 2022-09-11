@@ -49,12 +49,8 @@
         *ngFor="let teamName of getTeamsIteration(token.key) | keyvalue"
       >
         <img
-          [lazyLoad]="
-            '../../../assets/images/special-events/' + teamName.key + '.jpg'
-          "
-          [defaultImage]="
-            '../../../assets/images/special-events/default_logo.jpg'
-          "
+          [lazyLoad]="'./assets/images/special-events/' + teamName.key + '.jpg'"
+          [defaultImage]="'./assets/images/special-events/default_logo.jpg'"
         />
         <div class="team-name">
           <b>{{ teamName.key }}</b>

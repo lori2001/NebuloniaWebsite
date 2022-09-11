@@ -20,10 +20,8 @@
       >
         <div class="content">
           <img
-            [lazyLoad]="
-              '../../../assets/images/archive/onedrive-event/onedrive.png'
-            "
-            [defaultImage]="'../../../assets/images/archive/placeholder.jpg'"
+            [lazyLoad]="'./assets/images/archive/onedrive-event/onedrive.png'"
+            [defaultImage]="'./assets/images/archive/placeholder.jpg'"
           />
           <span class="prompt"
             >{{ "archive.onedrive.click" | translate }}<br />
@@ -64,16 +62,16 @@
       <img
         class="drawing"
         [lazyLoad]="
-          '../../../assets/images/archive/logo-change-event/old-logo-drawing.png'
+          './assets/images/archive/logo-change-event/old-logo-drawing.png'
         "
-        [defaultImage]="'../../../assets/images/archive/placeholder.jpg'"
+        [defaultImage]="'./assets/images/archive/placeholder.jpg'"
         style="padding-left: 3vw"
       />
       <!-- distance between the two-->
       <img
         class="vector"
         [lazyLoad]="oldLogoLocation"
-        [defaultImage]="'../../../assets/images/archive/placeholder.jpg'"
+        [defaultImage]="'./assets/images/archive/placeholder.jpg'"
         (click)="oldLogoEasterEgg()"
       />
     </div>
@@ -98,10 +96,10 @@
         controls
         preload="none"
         class="content"
-        poster="../../../assets/images/archive/video2017-event/nebulonia-promo-thumbnail.jpg"
+        poster="./assets/images/archive/video2017-event/nebulonia-promo-thumbnail.jpg"
       >
         <source
-          src="../../../assets/videos/archive/video2017-event/nebulonia-promo.webm"
+          src="./assets/videos/archive/video2017-event/nebulonia-promo.webm"
           type="video/webm"
         />
       </video>

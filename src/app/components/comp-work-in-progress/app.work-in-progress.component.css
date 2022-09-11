@@ -1,90 +1,88 @@
-#work-in-progress
-{
-   position: fixed;
-   top: 0;
-   left: 0;
+#work-in-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
 
-   width: 100vw;
-   height: 100vh;
-   overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 
-   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-   url(../../../assets/images/work_in_progress_bg.jpg);
-   background-size: cover !important;
-   -webkit-background-size: cover !important;
-   background-position: left center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(../../../assets/images/work_in_progress_bg.jpg);
+  background-size: cover !important;
+  -webkit-background-size: cover !important;
+  background-position: left center;
 
-   z-index: 99;
+  z-index: 99;
 }
 
 #work-in-progress .message {
-   position: absolute;
-   top: 50%;
-   transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
 
-   width: 100%;
-   text-align: center;
-   line-height: 1.15;
-   text-shadow: 2px 2px 8px black;
+  width: 100%;
+  text-align: center;
+  line-height: 1.15;
+  text-shadow: 2px 2px 8px black;
 }
 
 #work-in-progress .message b {
-   font-size: 6.4vw;
-   color: white;
+  font-size: 6.4vw;
+  color: white;
 }
 
 #work-in-progress .message .fa {
-   color: white;
+  color: white;
 }
 
 #work-in-progress .message p {
-   font-size: 1.37vw;
-   color: white;
+  font-size: 1.37vw;
+  color: white;
 }
 
 @media screen and (min-width: 1200px) {
-   #work-in-progress .message {
-      left: 65.5%;
-   }
+  #work-in-progress .message {
+    left: 65.5%;
+  }
 }
 @media screen and (min-width: 992px) and (max-width: 1199px) {
-   #work-in-progress .message {
-      left: 69.5%;
-   }
-   #work-in-progress .message b {
-      font-size: 5.8vw;
-   }
-   #work-in-progress .message p {
-      font-size: 1.25vw;
-   }
+  #work-in-progress .message {
+    left: 69.5%;
+  }
+  #work-in-progress .message b {
+    font-size: 5.8vw;
+  }
+  #work-in-progress .message p {
+    font-size: 1.25vw;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
-   #work-in-progress .message {
-      top: 85%;
-      left: 50%;
-   }
-   #work-in-progress .message b {
-      font-size: 9vw;
-   }
-   #work-in-progress .message p {
-      font-size: 1.9vw;
-   }
+  #work-in-progress .message {
+    top: 85%;
+    left: 50%;
+  }
+  #work-in-progress .message b {
+    font-size: 9vw;
+  }
+  #work-in-progress .message p {
+    font-size: 1.9vw;
+  }
 }
 @media screen and (min-width: 0px) and (max-width: 767px) {
-   #work-in-progress
-   {
-      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+  #work-in-progress {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
       url(../../../assets/images/work_in_progress_bg_mobile.jpg);
-      background-position: top center;
-   }
-   #work-in-progress .message {
-      top: 19%;
-      left: 50%;
-   }
-   #work-in-progress .message b {
-      font-size: 9.8vw;
-   }
-   #work-in-progress .message p {
-      font-size: 2vw;
-   }
+    background-position: top center;
+  }
+  #work-in-progress .message {
+    top: 19%;
+    left: 50%;
+  }
+  #work-in-progress .message b {
+    font-size: 9.8vw;
+  }
+  #work-in-progress .message p {
+    font-size: 2vw;
+  }
 }

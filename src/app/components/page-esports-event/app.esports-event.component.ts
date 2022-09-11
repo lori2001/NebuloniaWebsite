@@ -1,43 +1,43 @@
-import { Component, HostListener, Input, OnInit } from "@angular/core";
-import { DomSanitizer, SafeResourceUrl } from "@angular/platform-browser";
-import { TranslateService } from "@ngx-translate/core";
-import { MessageService } from "primeng/api";
-import { EsportsTeamElement } from "src/app/models/database/esportsteam.element";
-import { EsportsService } from "src/app/services/esports.service";
+import { Component, HostListener, Input, OnInit } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { TranslateService } from '@ngx-translate/core';
+import { MessageService } from 'primeng/api';
+import { EsportsTeamElement } from 'src/app/models/database/esportsteam.element';
+import { EsportsService } from 'src/app/services/esports.service';
 
 @Component({
-  selector: "app-esports-event",
-  templateUrl: "./app.esports-event.component.html",
-  styleUrls: ["./app.esports-event.component.css"],
+  selector: 'app-esports-event',
+  templateUrl: './app.esports-event.component.html',
+  styleUrls: ['./app.esports-event.component.css'],
   providers: [MessageService],
 })
 export class EsportsEventComponent implements OnInit {
-  messageMargin = "48px";
+  messageMargin = '48px';
 
   esportsTeams: EsportsTeamElement[];
   esportsStreamLinks = new Map<string, string>([
-    ["League of Legends", "https://youtube.com/watch?v=MgDhWQ8OI3E"],
-    ["Rocket League", "https://youtube.com/watch?v=g50iPquVqHY"],
+    ['League of Legends', 'https://youtube.com/watch?v=MgDhWQ8OI3E'],
+    ['Rocket League', 'https://youtube.com/watch?v=g50iPquVqHY'],
   ]);
 
   embedLinks = new Map<string, SafeResourceUrl>([
     [
-      "League of Legends",
+      'League of Legends',
       this.domSanitizer.bypassSecurityTrustResourceUrl(
-        "https://youtube.com/embed/MgDhWQ8OI3E"
+        'https://youtube.com/embed/MgDhWQ8OI3E'
       ),
     ],
     [
-      "Rocket League",
+      'Rocket League',
       this.domSanitizer.bypassSecurityTrustResourceUrl(
-        "https://youtube.com/embed/g50iPquVqHY"
+        'https://youtube.com/embed/g50iPquVqHY'
       ),
     ],
   ]);
 
   teams: Map<string, Map<string, string[]>>; // key game, key teamname => members
 
-  separator = "|";
+  separator = '|';
 
   @Input() notification = false;
 
@@ -68,13 +68,13 @@ export class EsportsEventComponent implements OnInit {
       (error) => {
         if (error !== null) {
           this.messageService.add({
-            key: "custom",
-            severity: "warn",
+            key: 'custom',
+            severity: 'warn',
             summary: this.translate.instant(
-              "admin.messages.connection-error.summary"
+              'admin.messages.connection-error.summary'
             ),
             detail: this.translate.instant(
-              "admin.messages.connection-error.details"
+              'admin.messages.connection-error.details'
             ),
           });
         }
@@ -90,18 +90,18 @@ export class EsportsEventComponent implements OnInit {
     return this.teams.get(game);
   }
 
-  @HostListener("window:resize", [])
+  @HostListener('window:resize', [])
   calcMessageMargin() {
     // adjusts message position relative to window size
     if (window.innerWidth < 768 && window.innerWidth > 370) {
-      this.messageMargin = "-7px";
+      this.messageMargin = '-7px';
     } else {
-      this.messageMargin = "48px";
+      this.messageMargin = '48px';
     }
   }
 
   /* makes toasts' close-button work */
   onReject() {
-    this.messageService.clear("custom");
+    this.messageService.clear('custom');
   }
 }

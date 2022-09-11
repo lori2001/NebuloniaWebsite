@@ -1,108 +1,108 @@
 #presidents {
-   /*applies a dark filter on the background*/
-   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-               url(../../../assets/images/presidents_bg.jpg) no-repeat center center;
+  /*applies a dark filter on the background*/
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../../../assets/images/presidents_bg.jpg) no-repeat center center;
 
-   background-size: cover !important;
-	-webkit-background-size: cover !important;
-   background-attachment: fixed;
+  background-size: cover !important;
+  -webkit-background-size: cover !important;
+  background-attachment: fixed;
 
-   position: relative;
-   width: 100%;
-   overflow: hidden;
-   padding-top: 30px;
-   padding-bottom: 30px;
-   text-align: center;
-   line-height: 1;
-   /* margin: 0 auto;*/
-
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+  line-height: 1;
+  /* margin: 0 auto;*/
 }
 #presidents .slider {
-   /*width controlled in ts and html*/
-   text-align:center;
+  /*width controlled in ts and html*/
+  text-align: center;
 
-   /*center horizontally*/
-   margin: 0 auto;
+  /*center horizontally*/
+  margin: 0 auto;
 }
 
 /*Title START*/
 #presidents .slider .title {
-   width: 100%;
-   text-align: center;
+  width: 100%;
+  text-align: center;
 }
-#presidents .slider .title a, #presidents .slider .title h1 {
-   font-size: 28px;
-   color: white;
+#presidents .slider .title a,
+#presidents .slider .title h1 {
+  font-size: 28px;
+  color: white;
 }
 /*Title END*/
 
 #presidents .slider .item {
-   text-align: center;
-   color: white;
+  text-align: center;
+  color: white;
 }
 
 #presidents .slider .item p {
-   padding-top: 8px; /*makes up for edge's line-height bugfix*/
+  padding-top: 8px; /*makes up for edge's line-height bugfix*/
 }
 
-#presidents .slider .element-style{
-	width: 120px;
-	height: 120px;
-   border-radius: 100%; /*round*/
-   margin: 0 auto; /* center inside container*/
-   margin-bottom: 20px;
+#presidents .slider .element-style {
+  width: 120px;
+  height: 120px;
+  border-radius: 100%; /*round*/
+  margin: 0 auto; /* center inside container*/
+  margin-bottom: 20px;
 }
 
-#presidents .slider .line{
-	border-top: 4px solid #fcac45;
-	width: 60px;
-	margin: 0 auto;
-	margin-top: 15px;
-   margin-bottom: 40px;
+#presidents .slider .line {
+  border-top: 4px solid #fcac45;
+  width: 60px;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 40px;
 }
 
 #presidents .slider .line hr {
-   border-top: 4px solid rgba(252, 172, 69, 0.34);
-   width: 40px;
-	margin: 0 auto;
-	text-align: center;
-	margin-top: 10px;
+  border-top: 4px solid rgba(252, 172, 69, 0.34);
+  width: 40px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 10px;
 }
 
 /*EASTER-EGG START*/
-.backdrop{
-   background-color:rgba(0,0,0,0.6);
-   display: none;
-   position:fixed;
-   top:0;
-   left:0;
-   width:100vw;
-   height:100vh !important;
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh !important;
 }
 .modal-dialog {
-   width: 70vw;
-   max-width: 70vw;
-   position: fixed;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   margin: 0 !important;
+  width: 70vw;
+  max-width: 70vw;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 !important;
 }
-@media screen and (max-width: 767px){
-   .modal-dialog {
-      width: 90vw;
-      max-width: 90vw;
-   }
+@media screen and (max-width: 767px) {
+  .modal-dialog {
+    width: 90vw;
+    max-width: 90vw;
+  }
 }
 /*EASTER-EGG END*/
 
 /* ::ng-deep is deprecated however at the time of writing*/
 /* there is no alternative for it yet */
 ::ng-deep .owl-theme .owl-dots .owl-dot span {
-   background: #D6D6D6!important; /* dots color*/
- }
+  background: #d6d6d6 !important; /* dots color*/
+}
 
 ::ng-deep .owl-theme .owl-dots .owl-dot.active span,
- .owl-theme .owl-dots .owl-dot:hover span {
-   background: #FCAC45!important; /*active and on hover color*/
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: #fcac45 !important; /*active and on hover color*/
 }

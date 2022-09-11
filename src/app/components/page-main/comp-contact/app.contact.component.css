@@ -1,184 +1,194 @@
 @import url("../../../../primestyle.css");
 
 :host ::ng-deep .custom-toast .ui-toast-message {
-   background: rgb(255, 208, 99) !important;
+  background: rgb(255, 208, 99) !important;
 }
 
 #contact {
-   padding-top: 54px;
-   padding-bottom: 54px;
-   background: #191919;
-   /*width: 100%;
+  padding-top: 54px;
+  padding-bottom: 54px;
+  background: #191919;
+  /*width: 100%;
    height: 100%;*/
-   overflow: hidden;
-   background-size: cover !important;
-	-webkit-background-size: cover !important;
+  overflow: hidden;
+  background-size: cover !important;
+  -webkit-background-size: cover !important;
 }
 
-#contact .fa-envelope { /* first column */
-   float: left;
-   text-align: right;
-   color: white;
+#contact .fa-envelope {
+  /* first column */
+  float: left;
+  text-align: right;
+  color: white;
 }
 #contact .content {
-   margin: 0 auto;
-   /*height: 100%;*/
+  margin: 0 auto;
+  /*height: 100%;*/
 }
 
 #contact .content h2 {
-   font-size: 22px;
-   margin-bottom: 20px;
-   color: white;
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: white;
 }
 #contact .content p {
-   color: #7A7A7A;
+  color: #7a7a7a;
 }
 
-#contact .content .email{
-   float: left;
-   color: white;
-   margin-top: 35px !important;
+#contact .content .email {
+  float: left;
+  color: white;
+  margin-top: 35px !important;
 }
-#contact .content .email input, .content .email textarea{
-   width: 100%;
-   margin-bottom: 20px;
+#contact .content .email input,
+.content .email textarea {
+  width: 100%;
+  margin-bottom: 20px;
 }
-#contact .content .email textarea{
-   resize: none;
+#contact .content .email textarea {
+  resize: none;
 }
 
 #contact .content .google-maps {
-   display: block;
-   float: left;
-   margin-top: 35px !important;
-   height: 420px;
+  display: block;
+  float: left;
+  margin-top: 35px !important;
+  height: 420px;
 }
 
-#contact .required::after{
-   font-size: 18px;
-   color: #FCAC45;
-   content: " *";
+#contact .required::after {
+  font-size: 18px;
+  color: #fcac45;
+  content: " *";
 }
 
 /*Safari -> Google Maps BUGFIX START*/
-.safari_only{
-   display: block;
-   background: #161415 url(../../../../assets/images/google_maps/safarimap.jpg) no-repeat center;
+.safari_only {
+  display: block;
+  background: #161415 url(../../../../assets/images/google_maps/safarimap.jpg)
+    no-repeat center;
 
-   float: left;
-   margin-top: 35px !important;
-   height: 420px;
-   z-index: 100;
+  float: left;
+  margin-top: 35px !important;
+  height: 420px;
+  z-index: 100;
 }
 /*Safari -> Google Maps BUGFIX END*/
 
 /*Responsive Design*/
-@media screen and (min-width: 1367px){
-   #contact .content{
-      width: 60%;
-   }
-   #contact .fa-envelope { /* first column */
-      font-size: 80px;
-      width: 17.5%;
-   }
-   #contact .content p {
-      font-size: 16px;
-      line-height: 30px;
-   }
-   #contact .content .email{
-      width: 30%;
-   }
-   #contact .content .google-maps, .safari_only{
-      margin-left: 5%;
-      width: 65%;
-   }
+@media screen and (min-width: 1367px) {
+  #contact .content {
+    width: 60%;
+  }
+  #contact .fa-envelope {
+    /* first column */
+    font-size: 80px;
+    width: 17.5%;
+  }
+  #contact .content p {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  #contact .content .email {
+    width: 30%;
+  }
+  #contact .content .google-maps,
+  .safari_only {
+    margin-left: 5%;
+    width: 65%;
+  }
 }
-@media screen and (min-width: 1281px) and (max-width: 1366px){
-   #contact .content{
-      width: 67.5%;
-   }
-   #contact .fa-envelope { /* first column */
-      font-size: 70px;
-      width: 13%;
-   }
-   #contact .content p {
-      font-size: 16px;
-      line-height: 30px;
-   }
-   #contact .content .email{
-      width: 30%;
-   }
-   #contact .content .google-maps, .safari_only {
-      margin-left: 5%;
-      width: 65%;
-   }
+@media screen and (min-width: 1281px) and (max-width: 1366px) {
+  #contact .content {
+    width: 67.5%;
+  }
+  #contact .fa-envelope {
+    /* first column */
+    font-size: 70px;
+    width: 13%;
+  }
+  #contact .content p {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  #contact .content .email {
+    width: 30%;
+  }
+  #contact .content .google-maps,
+  .safari_only {
+    margin-left: 5%;
+    width: 65%;
+  }
 }
-@media screen and (min-width: 821px) and (max-width: 1280px){
-   #contact .content{
-      width: 70%;
-   }
-   #contact .fa-envelope {
-      font-size: 60px;
-      width: 11.5%;
-   }
-   #contact .content p {
-      font-size: 13px;
-      line-height: 23px;
-   }
-   #contact .content .email{
-      width: 40%;
-   }
-   #contact .content .google-maps, .safari_only {
-      margin-left: 5%;
-      width: 55%;
-   }
+@media screen and (min-width: 821px) and (max-width: 1280px) {
+  #contact .content {
+    width: 70%;
+  }
+  #contact .fa-envelope {
+    font-size: 60px;
+    width: 11.5%;
+  }
+  #contact .content p {
+    font-size: 13px;
+    line-height: 23px;
+  }
+  #contact .content .email {
+    width: 40%;
+  }
+  #contact .content .google-maps,
+  .safari_only {
+    margin-left: 5%;
+    width: 55%;
+  }
 }
-@media screen and (min-width: 625px) and (max-width: 820px){
-   #contact .content{
-      width: 80%;
-   }
-   #contact .fa-envelope {
-      display: none;
-   }
-   #contact .content p {
-      font-size: 12px;
-      line-height: 23px;
-   }
-   #contact .content .email{
-      width: 40%;
-   }
-   #contact .content .google-maps , .safari_only {
-      margin-left: 5%;
-      width: 55%;
-   }
+@media screen and (min-width: 625px) and (max-width: 820px) {
+  #contact .content {
+    width: 80%;
+  }
+  #contact .fa-envelope {
+    display: none;
+  }
+  #contact .content p {
+    font-size: 12px;
+    line-height: 23px;
+  }
+  #contact .content .email {
+    width: 40%;
+  }
+  #contact .content .google-maps,
+  .safari_only {
+    margin-left: 5%;
+    width: 55%;
+  }
 }
-@media screen and (min-width: 0px) and (max-width: 624px){
-   #contact .content{
-      width: 80%;
-   }
-   #contact .fa-envelope {
-      display: none;
-   }
-   #contact .content p {
-      font-size: 12px;
-      line-height: 23px;
-   }
-   #contact .content .email{
-      float: none;
-      margin: 0 auto;
-      width: 70%;
-      font-size: 14px;
-      text-align: center;
-   }
-   #contact .content .google-maps, .safari_only{
-      float: none;
-      margin: 0 auto;
-      width: 100%;
-      height: 240px;
-   }
+@media screen and (min-width: 0px) and (max-width: 624px) {
+  #contact .content {
+    width: 80%;
+  }
+  #contact .fa-envelope {
+    display: none;
+  }
+  #contact .content p {
+    font-size: 12px;
+    line-height: 23px;
+  }
+  #contact .content .email {
+    float: none;
+    margin: 0 auto;
+    width: 70%;
+    font-size: 14px;
+    text-align: center;
+  }
+  #contact .content .google-maps,
+  .safari_only {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+    height: 240px;
+  }
 }
-@media screen and (min-width: 0px) and (max-width: 415px){
-   #contact .content .email{
-      width: 100% !important;
-   }
+@media screen and (min-width: 0px) and (max-width: 415px) {
+  #contact .content .email {
+    width: 100% !important;
+  }
 }

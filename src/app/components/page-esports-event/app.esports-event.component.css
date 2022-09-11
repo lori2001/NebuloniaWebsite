@@ -14,10 +14,10 @@
   font-family: NexaLight, objectivityLight, octarineLight, Arial !important;
 }
 
-
 @font-face {
   font-family: NexaLight;
-  src: url(../../../assets/fonts/special-event/Nexa-Light.otf) format("opentype");
+  src: url(../../../assets/fonts/special-event/Nexa-Light.otf)
+    format("opentype");
 }
 @font-face {
   font-family: NexaBold;
@@ -28,7 +28,8 @@ b {
   font-family: NexaBold, objectivityBold, octarineBold, Arial !important;
 }
 
-#esports-event a:hover, .notification a:hover {
+#esports-event a:hover,
+.notification a:hover {
   color: rgb(90, 87, 255) !important;
 }
 
@@ -89,7 +90,7 @@ b {
   line-height: 2.63;
   margin-bottom: 15px;
   color: rgb(90, 87, 255);
-  background-color: #B1BAFC;
+  background-color: #b1bafc;
 
   font-size: 3vw;
   display: block;
@@ -101,7 +102,8 @@ b {
 
   height: var(--banner-height);
 
-  background: url("../../../assets/images/special-events/esports2020.png") no-repeat;
+  background: url(../../../assets/images/special-events/esports2020.png)
+    no-repeat;
   background-size: 100% auto;
   background-position: right center;
 
@@ -110,12 +112,12 @@ b {
 }
 
 #esports-event .teams-container {
-   margin: 0 10vw;
-   margin-bottom: 40px;
-   display: grid;
-   grid-template-columns: 50% 50%;
-   grid-gap: 20px;
-   text-align: center;
+  margin: 0 10vw;
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 20px;
+  text-align: center;
 }
 
 #esports-event .teams-container .team {
@@ -127,7 +129,7 @@ b {
   width: 100%;
 
   color: white;
-  background-color: #2F255A;
+  background-color: #2f255a;
 }
 
 #esports-event .teams-container .team img {
@@ -156,15 +158,24 @@ b {
 }
 
 @keyframes notification-in {
-  0%   { top: 80px; right: -240px;}
-  50%   { top: 80px; right: -240px;}
-  100% { top: 80px; right:0;}
+  0% {
+    top: 80px;
+    right: -240px;
+  }
+  50% {
+    top: 80px;
+    right: -240px;
+  }
+  100% {
+    top: 80px;
+    right: 0;
+  }
 }
 .notification {
   position: fixed;
   width: 240px;
   height: 70px;
-  background-color: #2F255A;
+  background-color: #2f255a;
   color: white;
   font-size: 2em;
   text-align: center;
@@ -173,18 +184,18 @@ b {
   z-index: 80;
 
   animation-name: notification-in;
-  top: 80px; right:0;
+  top: 80px;
+  right: 0;
   animation-duration: 1.6s;
 }
 
-@media screen and (max-width: 767px)
-{
+@media screen and (max-width: 767px) {
   #esports-event {
-   padding-top: 0px;
+    padding-top: 0px;
   }
 
   #esports-event .embed-player {
-     --variable-width: 95vw;
+    --variable-width: 95vw;
   }
 
   #esports-event .banner-image {
@@ -194,7 +205,7 @@ b {
     height: var(--banner-height);
 
     background-size: 100% auto;
-    background-image: url("../../../assets/images/special-events/esports2020m.png");
+    background-image: url(../../../assets/images/special-events/esports2020m.png);
   }
   #esports-event .team-name {
     font-size: 6vw;
@@ -228,12 +239,22 @@ b {
   }
 
   @keyframes notification-in {
-    0%   { top: 15px; right: -220px;}
-    50%   { top: 15px; right: -220px;}
-    100% { top: 15px; right:0;}
+    0% {
+      top: 15px;
+      right: -220px;
+    }
+    50% {
+      top: 15px;
+      right: -220px;
+    }
+    100% {
+      top: 15px;
+      right: 0;
+    }
   }
   .notification {
-    top: 15px; right:0;
+    top: 15px;
+    right: 0;
 
     width: 220px;
     height: 60px;
