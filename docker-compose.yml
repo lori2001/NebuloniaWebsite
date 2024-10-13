@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  nebulonia:
+    image: nebulonia
+    ports:
+      - 4200:4200
+    command: 'ng serve --host 0.0.0.0 --poll=2000 --port 4200 --disable-host-check'
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/usr/local/app
+      - /usr/local/app/node_modules
